@@ -21,7 +21,9 @@ examples/                  lightweight example manifests
 reports/v61_v62_comparison/ summary comparison only
 reports/encoder/           encoder audit and grouped-generalization summaries
 scripts/encoder/           embedding extraction and audit scripts
+scripts/v6_1/              v6.1 baseline scripts
 scripts/v6_2/              minimal v6.2 model/training scripts
+scripts/v6_2_hierarchical/ v6.2 gatekeeper/expert training branch
 src/enhanced_espi_encoder/ future reusable package code
 ```
 
@@ -47,3 +49,11 @@ Before submission:
 - map each manuscript table/figure to a script, config, and report
 - add data/model availability statements
 - tag a stable submission release
+
+## Model Lineage
+
+The included model-development line is documented in:
+
+- `docs/MODEL_LINEAGE.md`
+- `docs/DATA_AND_CODE_DESCRIPTION.md`
+- `docs/DEVELOPMENT_STAGES.md`

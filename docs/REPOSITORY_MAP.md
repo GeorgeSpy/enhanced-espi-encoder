@@ -6,8 +6,11 @@
 - `scripts/encoder/audit_v62_embeddings.py`
 - `scripts/encoder/evaluate_encoder_grouped_generalization.py`
 - `scripts/encoder/make_encoder_technical_report.py`
+- `scripts/v6_1/train_v6_1_head_only.py`
+- `scripts/v6_1/export_v6_1_to_onnx.py`
 - `scripts/v6_2/espi_v6_2_fixed.py`
 - `scripts/v6_2/train_v6_2.py`
+- `scripts/v6_2_hierarchical/train_v6_2_clean.py`
 
 ## Reports
 
