@@ -1,0 +1,49 @@
+# Enhanced ESPI Encoder
+
+Private development repository for the encoder-oriented evolution of the Enhanced ESPI v6.2 line.
+
+The repository is intentionally small. It keeps only the code and evidence needed to develop a publication-grade optics/acoustics package around a Physics-Aligned ESPI Encoder.
+
+## Scope
+
+- preserve the minimal v6.2 encoder code path
+- document the v6.1 to v6.2 improvement
+- audit ESPI embeddings under grouped/domain splits
+- prepare the future acoustic-response prediction layer
+- keep raw data, checkpoints, and feature dumps outside Git
+
+## Layout
+
+```text
+configs/v6_2/              v6.2 config snapshots
+docs/                      methods, reproducibility, data notes
+examples/                  lightweight example manifests
+reports/v61_v62_comparison/ summary comparison only
+reports/encoder/           encoder audit and grouped-generalization summaries
+scripts/encoder/           embedding extraction and audit scripts
+scripts/v6_2/              minimal v6.2 model/training scripts
+src/enhanced_espi_encoder/ future reusable package code
+```
+
+## Publication Direction
+
+The intended optics-paper claim is not "a better classifier". The working claim is:
+
+```text
+The v6.2 ESPI classifier line can be repurposed as a Physics-Aligned Encoder
+for response-relevant full-field interferometric representations under domain shift.
+```
+
+The full acoustic-response claim will require future metadata/frequency/geometry baselines and ablation against ESPI-only and fused models.
+
+## Current Status
+
+This is a private development repo. It is not yet public/reviewer-ready.
+
+Before submission:
+
+- remove machine-specific paths from scripts and docs
+- add exact environment/dependency lock
+- map each manuscript table/figure to a script, config, and report
+- add data/model availability statements
+- tag a stable submission release

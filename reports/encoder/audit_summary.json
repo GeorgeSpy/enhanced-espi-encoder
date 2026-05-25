@@ -1,0 +1,56 @@
+{
+  "features": "features_v62a_epoch25.npz",
+  "n_samples": 12944,
+  "embedding_dim": 1280,
+  "n_classes": 5,
+  "generalization_caveat": "leave_split_group_out removes the held-out group only from the retrieval/probe reference set; the frozen v6.2-A checkpoint itself was trained on the original stratified split, so this is post-hoc representation-geometry evidence, not a true LOBO-trained encoder result.",
+  "split_counts": {
+    "train": 10355,
+    "val": 2589
+  },
+  "split_group_counts": {
+    "W01": 2419,
+    "C01": 2733,
+    "C02": 2319,
+    "C03": 1637,
+    "W02": 2370,
+    "W03": 1466
+  },
+  "knn_rows": 4,
+  "prototype_rows": 1,
+  "linear_probe_rows": 1,
+  "lobo_rows": 30,
+  "quality": [
+    {
+      "check": "n_samples",
+      "value": 12944,
+      "status": "info"
+    },
+    {
+      "check": "embedding_dim",
+      "value": 1280,
+      "status": "info"
+    },
+    {
+      "check": "embedding_nan_count",
+      "value": 0,
+      "status": "pass"
+    },
+    {
+      "check": "embedding_inf_count",
+      "value": 0,
+      "status": "pass"
+    },
+    {
+      "check": "duplicate_path_count",
+      "value": 0,
+      "status": "pass"
+    }
+  ],
+  "plots": [
+    "embedding_audit_v001\\pca_by_label_name.png",
+    "embedding_audit_v001\\pca_by_board.png",
+    "embedding_audit_v001\\pca_by_material.png",
+    "embedding_audit_v001\\pca_by_domain.png"
+  ]
+}

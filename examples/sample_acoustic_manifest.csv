@@ -1,0 +1,2 @@
+specimen_id,material,geometry_id,boundary_condition,excitation,frequency_hz,acoustic_target_ref,espi_ref,split_group,notes
+SAMPLE_001,wood,GEO_A,free-free,sine_sweep,500,artifact://acoustic/SAMPLE_001_500.json,artifact://espi/SAMPLE_001_500.png,board_holdout_demo,placeholder row

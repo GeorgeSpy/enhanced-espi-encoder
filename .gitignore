@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Large research artifacts
+data/
+datasets/
+checkpoints/
+artifacts/
+outputs/
+logs/
+*.pt
+*.pth
+*.onnx
+*.npz
+*.npy
+*.zip
+
+# Local/editor
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

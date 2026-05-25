@@ -1,0 +1,6 @@
+[project]
+name = "enhanced-espi-encoder"
+version = "0.0.0"
+description = "Private development package for Enhanced ESPI encoder research."
+requires-python = ">=3.10"
+dependencies = []

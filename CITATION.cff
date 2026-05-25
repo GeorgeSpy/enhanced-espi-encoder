@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+title: "Enhanced ESPI Encoder"
+message: "Citation metadata will be finalized before public release."
+type: software
+authors:
+  - family-names: Spyridakis
+    given-names: Georgios
+version: 0.0.0
+date-released: 2026-05-25

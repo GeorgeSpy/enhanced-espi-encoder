@@ -1,0 +1,194 @@
+{
+  "created_utc": "2026-04-27T12:18:02.099550+00:00",
+  "source_feature_dump": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\features_v62a_epoch25.npz",
+  "output_dir": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\embedding_audit_v001\\grouped_generalization_v001",
+  "smoke_test": false,
+  "n_samples": 12944,
+  "embedding_dim": 1280,
+  "n_classes": 5,
+  "boards": [
+    "C01",
+    "C02",
+    "C03",
+    "W01",
+    "W02",
+    "W03"
+  ],
+  "materials": [
+    "carbon",
+    "wood"
+  ],
+  "methods": [
+    "knn_cosine_k10",
+    "linear_probe_logistic_regression",
+    "nearest_class_prototype_cosine"
+  ],
+  "lobo_aggregate": [
+    {
+      "method": "knn_cosine_k10",
+      "n_groups": 6,
+      "accuracy_mean": 0.9694835742814695,
+      "accuracy_min": 0.9508061182306738,
+      "accuracy_max": 0.9831686791072082,
+      "macro_recall_mean": 0.9274043829780559,
+      "macro_recall_min": 0.9101658874594394,
+      "macro_recall_max": 0.9401787367526493,
+      "macro_f1_mean": 0.9356408210770706,
+      "macro_f1_min": 0.9081748250444873,
+      "macro_f1_max": 0.9568787325554176
+    },
+    {
+      "method": "linear_probe_logistic_regression",
+      "n_groups": 6,
+      "accuracy_mean": 0.9589531705501403,
+      "accuracy_min": 0.9327296248382924,
+      "accuracy_max": 0.9773143066227589,
+      "macro_recall_mean": 0.9309260537866543,
+      "macro_recall_min": 0.9172238114996525,
+      "macro_recall_max": 0.9540851064415528,
+      "macro_f1_mean": 0.9140110979527246,
+      "macro_f1_min": 0.8801985633458234,
+      "macro_f1_max": 0.9436721875598206
+    },
+    {
+      "method": "nearest_class_prototype_cosine",
+      "n_groups": 6,
+      "accuracy_mean": 0.8007112119622875,
+      "accuracy_min": 0.7408019842910294,
+      "accuracy_max": 0.8653494328576655,
+      "macro_recall_mean": 0.9069582021909586,
+      "macro_recall_min": 0.8833991059520784,
+      "macro_recall_max": 0.9229528439226039,
+      "macro_f1_mean": 0.7097484652508937,
+      "macro_f1_min": 0.6698716815929832,
+      "macro_f1_max": 0.7434889568768628
+    }
+  ],
+  "lomo_aggregate": [
+    {
+      "method": "knn_cosine_k10",
+      "n_groups": 2,
+      "accuracy_mean": 0.968905139007347,
+      "accuracy_min": 0.9654676258992806,
+      "accuracy_max": 0.9723426521154134,
+      "macro_recall_mean": 0.9279960214428362,
+      "macro_recall_min": 0.9271043902555982,
+      "macro_recall_max": 0.9288876526300743,
+      "macro_f1_mean": 0.9348717330088938,
+      "macro_f1_min": 0.9300893427639704,
+      "macro_f1_max": 0.9396541232538173
+    },
+    {
+      "method": "linear_probe_logistic_regression",
+      "n_groups": 2,
+      "accuracy_mean": 0.9571938920682859,
+      "accuracy_min": 0.9454836131095123,
+      "accuracy_max": 0.9689041710270594,
+      "macro_recall_mean": 0.9297094480306374,
+      "macro_recall_min": 0.92905826214201,
+      "macro_recall_max": 0.9303606339192647,
+      "macro_f1_mean": 0.9117049552991083,
+      "macro_f1_min": 0.8918659463230633,
+      "macro_f1_max": 0.9315439642751535
+    },
+    {
+      "method": "nearest_class_prototype_cosine",
+      "n_groups": 2,
+      "accuracy_mean": 0.7965280220135448,
+      "accuracy_min": 0.7579536370903277,
+      "accuracy_max": 0.8351024069367619,
+      "macro_recall_mean": 0.9064352253232304,
+      "macro_recall_min": 0.8915775364126575,
+      "macro_recall_max": 0.9212929142338033,
+      "macro_f1_mean": 0.7134715980640962,
+      "macro_f1_min": 0.689969348067205,
+      "macro_f1_max": 0.7369738480609873
+    }
+  ],
+  "best_worst_lobo_knn": {
+    "best": {
+      "evaluation": "lobo_board",
+      "group": "C03",
+      "method": "knn_cosine_k10",
+      "n_samples": 1637,
+      "n_active_classes": 5,
+      "accuracy": 0.9761759315821625,
+      "macro_recall": 0.9372230028357423,
+      "macro_f1": 0.9568787325554176,
+      "support_0_1_1H": 110,
+      "support_1_1_1T": 74,
+      "support_2_1_2": 98,
+      "support_3_2_1": 117,
+      "support_4_higher": 1238,
+      "train_samples": 11307,
+      "confusion_matrix": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\embedding_audit_v001\\grouped_generalization_v001\\confusion_matrices\\lobo_board_C03_knn_cosine_k10.csv"
+    },
+    "worst": {
+      "evaluation": "lobo_board",
+      "group": "W01",
+      "method": "knn_cosine_k10",
+      "n_samples": 2419,
+      "n_active_classes": 5,
+      "accuracy": 0.9508061182306738,
+      "macro_recall": 0.9101658874594394,
+      "macro_f1": 0.9081748250444873,
+      "support_0_1_1H": 116,
+      "support_1_1_1T": 107,
+      "support_2_1_2": 177,
+      "support_3_2_1": 185,
+      "support_4_higher": 1834,
+      "train_samples": 10525,
+      "confusion_matrix": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\embedding_audit_v001\\grouped_generalization_v001\\confusion_matrices\\lobo_board_W01_knn_cosine_k10.csv"
+    }
+  },
+  "best_worst_lomo_knn": {
+    "best": {
+      "evaluation": "lomo_material",
+      "group": "wood_to_carbon",
+      "method": "knn_cosine_k10",
+      "n_samples": 6689,
+      "n_active_classes": 5,
+      "accuracy": 0.9723426521154134,
+      "macro_recall": 0.9288876526300743,
+      "macro_f1": 0.9396541232538173,
+      "support_0_1_1H": 373,
+      "support_1_1_1T": 356,
+      "support_2_1_2": 296,
+      "support_3_2_1": 351,
+      "support_4_higher": 5313,
+      "train_samples": 6255,
+      "confusion_matrix": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\embedding_audit_v001\\grouped_generalization_v001\\confusion_matrices\\lomo_material_wood_to_carbon_knn_cosine_k10.csv"
+    },
+    "worst": {
+      "evaluation": "lomo_material",
+      "group": "carbon_to_wood",
+      "method": "knn_cosine_k10",
+      "n_samples": 6255,
+      "n_active_classes": 5,
+      "accuracy": 0.9654676258992806,
+      "macro_recall": 0.9271043902555982,
+      "macro_f1": 0.9300893427639704,
+      "support_0_1_1H": 280,
+      "support_1_1_1T": 313,
+      "support_2_1_2": 442,
+      "support_3_2_1": 418,
+      "support_4_higher": 4802,
+      "train_samples": 6689,
+      "confusion_matrix": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\embedding_audit_v001\\grouped_generalization_v001\\confusion_matrices\\lomo_material_carbon_to_wood_knn_cosine_k10.csv"
+    }
+  },
+  "skipped": [],
+  "warnings": [],
+  "wording": {
+    "use": [
+      "frozen grouped embedding evaluation",
+      "v6.2-A frozen ESPI encoder candidate",
+      "not a validated Physics-Aligned Encoder yet"
+    ],
+    "avoid": [
+      "true validated encoder",
+      "final LOBO proof",
+      "metamaterials-ready encoder"
+    ]
+  }
+}

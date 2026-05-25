@@ -1,0 +1,104 @@
+{
+  "manifest": "C:\\ESPI\\manifest\\manifest_v1_5class.npz",
+  "config_v62": "C:\\ESPI\\FIXED_PACKAGE\\config.antigravity.5class.yaml",
+  "n_val_samples": 2589,
+  "v61": {
+    "checkpoint": "C:\\ESPI\\checkpoints\\espi_modes_v6_1_head.pt",
+    "load_audit": {
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    "accuracy": 0.9436075704905369,
+    "macro_recall": 0.9105476556694917,
+    "macro_f1": 0.8764871263216895,
+    "per_class": [
+      {
+        "class": 0,
+        "support": 131,
+        "precision": 0.9022556390977443,
+        "recall": 0.916030534351145,
+        "f1": 0.9090909090909091
+      },
+      {
+        "class": 1,
+        "support": 134,
+        "precision": 0.9765625,
+        "recall": 0.9328358208955224,
+        "f1": 0.9541984732824427
+      },
+      {
+        "class": 2,
+        "support": 147,
+        "precision": 0.6336633663366337,
+        "recall": 0.8707482993197279,
+        "f1": 0.7335243553008596
+      },
+      {
+        "class": 3,
+        "support": 154,
+        "precision": 0.7541899441340782,
+        "recall": 0.8766233766233766,
+        "f1": 0.8108108108108109
+      },
+      {
+        "class": 4,
+        "support": 2023,
+        "precision": 0.9938366718027735,
+        "recall": 0.9565002471576866,
+        "f1": 0.9748110831234257
+      }
+    ]
+  },
+  "v62": {
+    "checkpoint": "C:\\ESPI\\FIXED_PACKAGE\\baseline_v62_5class\\checkpoints\\checkpoint_epoch25_20260211_035150.pt",
+    "load_audit": {
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    "accuracy": 0.9617612977983777,
+    "macro_recall": 0.927028515066359,
+    "macro_f1": 0.9097493867091042,
+    "per_class": [
+      {
+        "class": 0,
+        "support": 131,
+        "precision": 0.8322147651006712,
+        "recall": 0.9465648854961832,
+        "f1": 0.8857142857142858
+      },
+      {
+        "class": 1,
+        "support": 134,
+        "precision": 0.9541984732824428,
+        "recall": 0.9328358208955224,
+        "f1": 0.9433962264150944
+      },
+      {
+        "class": 2,
+        "support": 147,
+        "precision": 0.8333333333333334,
+        "recall": 0.8843537414965986,
+        "f1": 0.858085808580858
+      },
+      {
+        "class": 3,
+        "support": 154,
+        "precision": 0.8625,
+        "recall": 0.8961038961038961,
+        "f1": 0.8789808917197451
+      },
+      {
+        "class": 4,
+        "support": 2023,
+        "precision": 0.9899648770697441,
+        "recall": 0.9752842313395946,
+        "f1": 0.9825697211155378
+      }
+    ]
+  },
+  "delta_v62_minus_v61": {
+    "accuracy": 0.018153727307840817,
+    "macro_recall": 0.016480859396867276,
+    "macro_f1": 0.033262260387414755
+  }
+}

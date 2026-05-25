@@ -1,0 +1,95 @@
+SOURCE: C:\Users\George mini-PC\Downloads\Tech_Appendix_ESPI_v62_Encoder_v2.docx
+PARAGRAPHS: 102
+TABLES: 17
+
+# HEADINGS
+[016] (Heading 1) Περιεχόμενα
+[032] (Heading 1) 1. Σκοπός και θέση του τεχνικού παραρτήματος
+[036] (Heading 1) 2. Συνοπτική εικόνα του υπάρχοντος ESPI οικοσυστήματος
+[041] (Heading 1) 3. Τεκμήρια υλοποίησης και αρχεία αναφοράς
+[044] (Heading 1) 4. v6.1: πρακτικό baseline ταξινόμησης ιδιομορφών
+[049] (Heading 1) 5. v6.2-A: reportable baseline και αποτελέσματα αξιολόγησης
+[054] (Heading 2) 5.1 Apples-to-apples v6.1 vs v6.2
+[059] (Heading 2) 5.2 Reproducibility και LOBO pilot
+[061] (Heading 1) 6. Πλήρης φυσικά καθοδηγούμενος ESPI αγωγός
+[067] (Heading 1) 7. Hierarchical v6.2 και ρόλος ως ερευνητική επέκταση
+[071] (Heading 1) 8. Από baseline σε Physics-Aligned Encoder
+[076] (Heading 1) 9. Προτεινόμενη υλοποίηση της διατριβής
+[079] (Heading 2) 9.1 Δομή manifest-first dataset και αντιστοίχιση δεδομένων
+[082] (Heading 1) 10. Μετάβαση προς acoustic metamaterials και operator learning
+[088] (Heading 1) 11. Όρια ισχυρισμών και επόμενα τεχνικά βήματα
+[091] (Heading 2) 11.1 Επόμενα τεχνικά βήματα
+[098] (Heading 1) 12. Συμπέρασμα
+[101] (Heading 1) Παράρτημα Α — Σύντομο γλωσσάρι τεχνικών όρων
+
+# KEY TABLES
+## TABLE 1
+Σημείωση οριοθέτησης Τα επίσημα reportable v6.2 metrics προέρχονται από το ResNet18-based v6.2-A baseline. Η πλήρης hierarchical / physics v6.2 αρχιτεκτονική παρουσιάζεται ως ερευνητική βάση για μελλοντικό encoder και δεν ταυτίζεται με το reportable validation αποτέλεσμα.
+## TABLE 2
+Επίπεδο | Σύντομη περιγραφή | Ρόλος στη διατριβή
+v6.1 | Frozen ResNet-18 backbone και εκπαιδευόμενο 5-class head. | Σημείο αναφοράς για απλή και σταθερή ταξινόμηση ιδιομορφών.
+v6.2-A reportable baseline | ResNet18-style baseline με domain/noise-aware training strategy. | Επίσημο baseline αποτέλεσμα και apples-to-apples σύγκριση με v6.1.
+Hierarchical / physics v6.2 | Physics/Fourier front-end, gatekeeper, expert branch, ArcFace. | Ερευνητική βάση για Physics-Aligned Encoder.
+Enhanced ESPI pipeline | DnCNN, learnable Fourier prior, phase unwrapping, physics features, MC dropout. | Υποδομή φυσικά ερμηνεύσιμων ESPI αναπαραστάσεων.
+## TABLE 3
+Αρχείο / αναφορά | Περιεχόμενο | Χρήση στο παράρτημα
+enhanced_espi_pipeline.py | Πλήρης φυσικά καθοδηγούμενος ESPI αγωγός με DnCNN, Fourier prior, phase unwrapping, physics features, MC dropout και constraints. | Τεκμηριώνει ότι υπάρχει λειτουργική βάση για physics-aligned αναπαραστάσεις.
+train_v6_1_head_only.py | v6.1 head-only training με ResNet-18, 1-channel input και class-balanced στρατηγική. | Reference baseline.
+train_v6_2.py | v6.2-A domain-mix training, noisy/domain augmentation και zero-recall guards. | Reportable v6.2 baseline.
+espi_v6_2_fixed.py | Advanced/hierarchical v6.2 με gatekeeper, expert branch και ArcFace. | Ερευνητική βάση για μελλοντικό encoder.
+EVAL_SUMMARY_epoch25.md | Official v6.2 validation metrics σε stratified validation split. | Τεκμηρίωση baseline επίδοσης.
+COMPARE_SUMMARY.md | Apples-to-apples v6.1 vs v6.2 στο ίδιο validation split. | Τεκμηρίωση βελτίωσης v6.2.
+SEED_SWEEP_SUMMARY.md | 3-seed replication summary. | Τεκμηρίωση σταθερότητας / reproducibility.
+LOBO_PILOT_SUMMARY.md | Πιλοτική held-out board αξιολόγηση σε C01 και W01. | Αρχική ένδειξη domain/OOD συμπεριφοράς, όχι πλήρες claim.
+## TABLE 4
+Metric | Τιμή
+Accuracy | 96.18%
+Macro Recall | 92.70%
+Macro F1 | 90.97%
+Validation samples | 2.589
+Split type | Stratified in-distribution, όχι LOBO
+Load audit | 0 missing / 0 unexpected keys
+## TABLE 6
+Metric | v6.1 | v6.2 | Δ (v6.2 - v6.1)
+Accuracy | 94.36% | 96.18% | +1.82 pp
+Macro Recall | 91.05% | 92.70% | +1.65 pp
+Macro F1 | 87.65% | 90.97% | +3.33 pp
+## TABLE 8
+Στοιχείο | Αποτέλεσμα | Ερμηνεία
+3-seed replication | Accuracy 95.92% ± 1.03%, Macro F1 90.36% ± 1.94% | Η επίδοση δεν φαίνεται να οφείλεται σε ένα μοναδικό lucky seed.
+LOBO pilot C01 | Accuracy 91.67%, Macro F1 51.30%, Macro Recall 59.64% | Αρχική ένδειξη held-out board συμπεριφοράς. Χρειάζεται supports/CM για πλήρη ερμηνεία.
+LOBO pilot W01 | Accuracy 83.92%, Macro F1 56.59%, Macro Recall 66.23% | Τα macro metrics δείχνουν ότι το class imbalance ή η απουσία κλάσεων επηρεάζουν έντονα την ερμηνεία.
+## TABLE 10
+Στοιχείο | Reportable v6.2-A | Hierarchical v6.2 research model
+Κύρια χρήση | Επίσημα metrics v6.1 vs v6.2. | Έρευνα για embeddings και encoder.
+Backbone / front-end | ResNet18-style baseline. | Physics/Fourier feature extraction.
+Λογική ταξινόμησης | Άμεση 5-class ταξινόμηση. | Gatekeeper signal/noise + expert 5-class branch.
+Metric learning | Δεν αποτελεί μέρος του reportable result. | ArcFace στο expert branch.
+Ρόλος στο PhD | Σημείο αναφοράς. | Τεχνική βάση για Physics-Aligned Encoder.
+## TABLE 11
+Claim boundary Δεν πρέπει να γραφτεί ότι το 96.18% του v6.2 προέκυψε από gatekeeper/ArcFace/πλήρες physics pipeline. Το σωστό claim είναι ότι το reportable v6.2-A πέτυχε 96.18% σε stratified validation, ενώ η hierarchical εκδοχή αποτελεί ερευνητική επέκταση για encoder/embeddings.
+## TABLE 12
+Βήμα | Τεχνική ενέργεια | Παραδοτέο
+1. Encoder extraction | Απομόνωση του feature/embedding τμήματος από το υπάρχον pipeline. | ESPI embedding z_ESPI ανά δείγμα.
+2. Encoder stabilization | Έλεγχος σταθερότητας σε clean, averaged και noisy domains. | QC και consistency report για embeddings.
+3. Image-only baseline | Πρόβλεψη acoustic targets μόνο από ESPI embeddings. | Έλεγχος αν η εικόνα έχει αυτόνομη προβλεπτική αξία.
+4. Multimodal fusion | Σύντηξη z_ESPI με geometry/material/condition metadata. | Hybrid model για μέτρηση πρόσθετης αξίας ESPI.
+5. Ablation | Geometry-only vs ESPI-only vs hybrid. | Κεντρικό τεστ της ερευνητικής υπόθεσης.
+## TABLE 13
+Φάση | Περιεχόμενο | Κριτήριο μετάβασης
+Α. Acoustic-response core | Manifest, scalar targets, frequency/metadata/geometry baselines. | Σταθερά baseline metrics.
+Β. ESPI encoder | Εξαγωγή ESPI embeddings από v6.2-derived encoder. | Σταθερό ESPI subset.
+Γ. Hybrid / multimodal | Geometry-only vs ESPI-only vs hybrid. | Πρόσθετη αξία ή καθαρό αρνητικό αποτέλεσμα.
+Δ. OOD / uncertainty | Leave-one-specimen/material/domain, MC dropout, ensembles, conformal prediction. | Αβεβαιότητα συνδεδεμένη με σφάλμα/domain shift.
+Ε. Operator extension | DeepONet/FNO/PNO proof-of-concept για TL(f) ή bandgap descriptors. | Μόνο μετά τη σταθεροποίηση των προηγούμενων σταδίων.
+## TABLE 14
+Επίπεδο δεδομένων | Περιεχόμενο | Ρόλος στη διατριβή
+Acoustic-response core | Specimen ID, υλικό, γεωμετρία, συνθήκες μέτρησης, scalar/segment/curve targets. | Ελάχιστος υλοποιήσιμος πυρήνας και γραμμές αναφοράς.
+ESPI subset | Συμβολομετρικές εικόνες ή embeddings με σαφή σύνδεση σε specimen και acoustic targets. | Έλεγχος της υπόθεσης H2 για προστιθέμενη αξία ESPI.
+Simulation / FEM-BEM data | Προσομοιωμένοι modal ή acoustic descriptors, όπου είναι διαθέσιμοι. | Πιθανή βάση για sim-to-real alignment και operator-level επέκταση.
+## TABLE 16
+Μπορεί να δηλωθεί ήδη | Δεν πρέπει ακόμη να δηλωθεί
+Υπάρχει λειτουργικό ESPI ecosystem με denoising, Fourier/phase, physics features και classification. | Ότι το πλήρες PNO/metamaterials framework έχει ήδη υλοποιηθεί.
+Το v6.2-A βελτιώνει το v6.1 στο ίδιο validation split. | Ότι η βελτίωση αυτή αποδεικνύει cross-material generalization.
+Υπάρχει 3-seed reproducibility και αρχικό LOBO pilot. | Ότι το LOBO/LOMO γενικό πρόβλημα έχει κλείσει πλήρως.
+Το physics pipeline μπορεί να αποτελέσει βάση για encoder. | Ότι τα ESPI embeddings έχουν ήδη αποδειχθεί προβλεπτικά για acoustic-response tasks.

@@ -1,0 +1,106 @@
+{
+  "source_files": {
+    "feature_summary": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\features_v62a_epoch25.FEATURE_DUMP_SUMMARY.md",
+    "audit_summary": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\embedding_audit_v001\\EMBEDDING_AUDIT_SUMMARY.md",
+    "knn_report": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\embedding_audit_v001\\knn_report.csv",
+    "linear_probe_report": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\embedding_audit_v001\\linear_probe_report.csv",
+    "prototype_report": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\embedding_audit_v001\\prototype_report.csv",
+    "leave_split_group_out_aggregate": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\embedding_audit_v001\\leave_split_group_out_aggregate.csv",
+    "embedding_quality_report": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\embedding_audit_v001\\embedding_quality_report.csv",
+    "features_npz_for_optional_plots": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\features_v62a_epoch25.npz"
+  },
+  "checkpoint": "C:\\ESPI\\FIXED_PACKAGE\\baseline_v62_5class\\checkpoints\\checkpoint_epoch25_20260211_035150.pt",
+  "total_samples": 12944,
+  "embedding_dimension": 1280,
+  "embedding_layer": "MCDropoutClassifier.global_pool",
+  "load_audit": {
+    "missing_keys": 0,
+    "unexpected_keys": 0
+  },
+  "quality_checks": {
+    "n_samples": "12944",
+    "embedding_dim": "1280",
+    "embedding_nan_count": "0",
+    "embedding_inf_count": "0",
+    "duplicate_path_count": "0"
+  },
+  "metadata_fields": [
+    "sample_id",
+    "label",
+    "label_name",
+    "board",
+    "source_group",
+    "material",
+    "frequency_hz",
+    "domain",
+    "path",
+    "split",
+    "split_group"
+  ],
+  "embedding_storage": "embeddings array in features_v62a_epoch25.npz; not duplicated by this report generator",
+  "knn_best": {
+    "method": "knn_cosine_k10",
+    "method_label": "kNN cosine k=10",
+    "accuracy": 0.973735032831209,
+    "macro_recall": 0.9196785227163742,
+    "macro_f1": 0.93441252019111,
+    "n_samples": 2589,
+    "k": "10"
+  },
+  "linear_probe": {
+    "method": "logistic_regression_balanced",
+    "method_label": "Linear probe — balanced logistic regression",
+    "accuracy": 0.9683275395905755,
+    "macro_recall": 0.938386449572271,
+    "macro_f1": 0.9284742775848847,
+    "n_samples": 2589,
+    "k": ""
+  },
+  "prototype": {
+    "method": "nearest_class_prototype_cosine",
+    "method_label": "Nearest class prototype — cosine",
+    "accuracy": 0.9347238315952106,
+    "macro_recall": 0.9197563977449233,
+    "macro_f1": 0.8641524644167206,
+    "n_samples": 2589,
+    "k": ""
+  },
+  "group_knn_best": {
+    "method": "knn_cosine_k10",
+    "method_label": "kNN cosine k=10",
+    "n_groups": 6,
+    "accuracy_mean": 0.9725505393172091,
+    "accuracy_min": 0.9557668458040512,
+    "accuracy_max": 0.9835345773874863,
+    "macro_recall_mean": 0.9235631223403481,
+    "macro_f1_mean": 0.9388574564096968,
+    "macro_f1_min": 0.9128077722931274,
+    "macro_f1_max": 0.9610604955103585
+  },
+  "minimum_grouped_macro_f1": 0.9128077722931274,
+  "pca_plots": {
+    "enabled": true,
+    "source_npz": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\features_v62a_epoch25.npz",
+    "created": {
+      "class": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\embedding_audit_v001\\pca_by_class.png",
+      "board": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\embedding_audit_v001\\pca_by_board.png",
+      "material": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\embedding_audit_v001\\pca_by_material.png"
+    },
+    "sampled": 3000,
+    "total": 12944,
+    "method": "PCA 2D via numpy.linalg.svd"
+  },
+  "warnings": [],
+  "wording_guardrails": {
+    "use": [
+      "post-hoc representation-geometry evidence",
+      "frozen ESPI encoder candidate",
+      "v6.2-A reportable baseline"
+    ],
+    "avoid": [
+      "true LOBO generalization proof",
+      "validated Physics-Aligned Encoder",
+      "hierarchical v6.2 for the 96.18% result"
+    ]
+  }
+}

@@ -1,0 +1,84 @@
+data:
+  root_dir: C:/ESPI/data
+  patch_size: 512
+  num_workers: 0
+  use_manifest: true
+  manifest_path: C:/ESPI/manifest/manifest_v1_5class.npz
+model:
+  num_classes: 5
+  feat_channels: 32
+  dropout: 0.2
+  mc_samples: 10
+  use_unwrapping: true
+  use_multiscale: true
+  on_axis_mode: false
+labels:
+  binary_mode: false
+  num_classes: 5
+  noise_class_id: 5
+  strict_required: true
+  class_names:
+  - mode_1_1H
+  - mode_1_1T
+  - mode_1_2
+  - mode_2_1
+  - mode_higher
+  by_frequency:
+    enabled: true
+    mode_higher_class_id: 4
+    other_class_id: 4
+    use_pseudonoisy_as_noise: false
+    windows_by_material:
+      wood:
+      - name: mode_1_1H
+        lo: 165.0
+        hi: 185.0
+        class_id: 0
+      - name: mode_1_1T
+        lo: 320.0
+        hi: 350.0
+        class_id: 1
+      - name: mode_1_2
+        lo: 500.0
+        hi: 530.0
+        class_id: 2
+      - name: mode_2_1
+        lo: 540.0
+        hi: 570.0
+        class_id: 3
+      - name: mode_higher
+        lo: 680.0
+        hi: 1500.0
+        class_id: 4
+      carbon:
+      - name: mode_1_1H
+        lo: 175.0
+        hi: 205.0
+        class_id: 0
+      - name: mode_1_1T
+        lo: 340.0
+        hi: 370.0
+        class_id: 1
+      - name: mode_1_2
+        lo: 530.0
+        hi: 560.0
+        class_id: 2
+      - name: mode_2_1
+        lo: 570.0
+        hi: 610.0
+        class_id: 3
+      - name: mode_higher
+        lo: 700.0
+        hi: 1500.0
+        class_id: 4
+training:
+  batch_size: 8
+  eval_batch_size: 8
+  learning_rate: 0.0001
+  weight_decay: 1.0e-05
+  num_epochs: 30
+  grad_clip_norm: 1.0
+  amp: true
+lofo:
+  test_idx: 0
+  val_idx: 1
