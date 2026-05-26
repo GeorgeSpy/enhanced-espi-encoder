@@ -91,7 +91,7 @@ Included evidence:
 
 - `reports/encoder/EMBEDDING_AUDIT_SUMMARY.md`
 - `reports/encoder/GROUPED_ENCODER_EVAL_SUMMARY.md`
-- `reports/encoder/ENCODER_TECHNICAL_REPORT_GR.md`
+- `reports/encoder/FROZEN_ENCODER_TECHNICAL_REPORT.md`
 - `reports/encoder/*key_numbers.json`
 
 ## Publication Boundary

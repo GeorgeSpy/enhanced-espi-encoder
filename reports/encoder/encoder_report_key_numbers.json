@@ -1,15 +1,15 @@
 {
   "source_files": {
-    "feature_summary": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\features_v62a_epoch25.FEATURE_DUMP_SUMMARY.md",
-    "audit_summary": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\embedding_audit_v001\\EMBEDDING_AUDIT_SUMMARY.md",
-    "knn_report": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\embedding_audit_v001\\knn_report.csv",
-    "linear_probe_report": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\embedding_audit_v001\\linear_probe_report.csv",
-    "prototype_report": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\embedding_audit_v001\\prototype_report.csv",
-    "leave_split_group_out_aggregate": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\embedding_audit_v001\\leave_split_group_out_aggregate.csv",
-    "embedding_quality_report": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\embedding_audit_v001\\embedding_quality_report.csv",
-    "features_npz_for_optional_plots": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\features_v62a_epoch25.npz"
+    "feature_summary": "outputs/features_v62a_epoch25.FEATURE_DUMP_SUMMARY.md",
+    "audit_summary": "outputs/embedding_audit_v001/EMBEDDING_AUDIT_SUMMARY.md",
+    "knn_report": "outputs/embedding_audit_v001/knn_report.csv",
+    "linear_probe_report": "outputs/embedding_audit_v001/linear_probe_report.csv",
+    "prototype_report": "outputs/embedding_audit_v001/prototype_report.csv",
+    "leave_split_group_out_aggregate": "outputs/embedding_audit_v001/leave_split_group_out_aggregate.csv",
+    "embedding_quality_report": "outputs/embedding_audit_v001/embedding_quality_report.csv",
+    "features_npz_for_optional_plots": "outputs/features_v62a_epoch25.npz"
   },
-  "checkpoint": "C:\\ESPI\\FIXED_PACKAGE\\baseline_v62_5class\\checkpoints\\checkpoint_epoch25_20260211_035150.pt",
+  "checkpoint": "artifacts\\checkpoints\\checkpoint_epoch25_20260211_035150.pt",
   "total_samples": 12944,
   "embedding_dimension": 1280,
   "embedding_layer": "MCDropoutClassifier.global_pool",
@@ -49,7 +49,7 @@
   },
   "linear_probe": {
     "method": "logistic_regression_balanced",
-    "method_label": "Linear probe — balanced logistic regression",
+    "method_label": "Linear probe - balanced logistic regression",
     "accuracy": 0.9683275395905755,
     "macro_recall": 0.938386449572271,
     "macro_f1": 0.9284742775848847,
@@ -58,7 +58,7 @@
   },
   "prototype": {
     "method": "nearest_class_prototype_cosine",
-    "method_label": "Nearest class prototype — cosine",
+    "method_label": "Nearest class prototype - cosine",
     "accuracy": 0.9347238315952106,
     "macro_recall": 0.9197563977449233,
     "macro_f1": 0.8641524644167206,
@@ -80,11 +80,11 @@
   "minimum_grouped_macro_f1": 0.9128077722931274,
   "pca_plots": {
     "enabled": true,
-    "source_npz": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\features_v62a_epoch25.npz",
+    "source_npz": "outputs/features_v62a_epoch25.npz",
     "created": {
-      "class": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\embedding_audit_v001\\pca_by_class.png",
-      "board": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\embedding_audit_v001\\pca_by_board.png",
-      "material": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\embedding_audit_v001\\pca_by_material.png"
+      "class": "outputs/embedding_audit_v001/pca_by_class.png",
+      "board": "outputs/embedding_audit_v001/pca_by_board.png",
+      "material": "outputs/embedding_audit_v001/pca_by_material.png"
     },
     "sampled": 3000,
     "total": 12944,
@@ -104,3 +104,4 @@
     ]
   }
 }
+

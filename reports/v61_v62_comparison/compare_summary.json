@@ -1,9 +1,9 @@
 {
-  "manifest": "C:\\ESPI\\manifest\\manifest_v1_5class.npz",
-  "config_v62": "C:\\ESPI\\FIXED_PACKAGE\\config.antigravity.5class.yaml",
+  "manifest": "artifacts\\manifests\\manifest_v1_5class.npz",
+  "config_v62": "configs\\v6_2\\config.antigravity.5class.yaml",
   "n_val_samples": 2589,
   "v61": {
-    "checkpoint": "C:\\ESPI\\checkpoints\\espi_modes_v6_1_head.pt",
+    "checkpoint": "artifacts\\checkpoints\\espi_modes_v6_1_head.pt",
     "load_audit": {
       "missing_keys": [],
       "unexpected_keys": []
@@ -50,7 +50,7 @@
     ]
   },
   "v62": {
-    "checkpoint": "C:\\ESPI\\FIXED_PACKAGE\\baseline_v62_5class\\checkpoints\\checkpoint_epoch25_20260211_035150.pt",
+    "checkpoint": "artifacts\\checkpoints\\checkpoint_epoch25_20260211_035150.pt",
     "load_audit": {
       "missing_keys": [],
       "unexpected_keys": []

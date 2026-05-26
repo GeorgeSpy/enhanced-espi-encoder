@@ -87,7 +87,7 @@ python scripts/encoder/make_encoder_technical_report.py `
   --features outputs/features_v62a_epoch25.npz `
   --metadata outputs/features_v62a_epoch25.metadata.csv `
   --audit-dir outputs/embedding_audit_v001 `
-  --out outputs/ENCODER_TECHNICAL_REPORT_GR.md `
+  --out outputs/FROZEN_ENCODER_TECHNICAL_REPORT.md `
   --key-numbers outputs/encoder_report_key_numbers.json
 ```
 

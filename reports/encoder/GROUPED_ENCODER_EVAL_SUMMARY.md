@@ -5,10 +5,10 @@
 This is a **frozen grouped embedding evaluation** for the **v6.2-A frozen ESPI encoder candidate**. It uses only the saved embeddings and metadata. It is **not a validated Physics-Aligned Encoder yet** and does not retrain any CNN.
 
 ## Source feature dump
-- Feature dump: `C:\Users\George mini-PC\Documents\Playground\v62_encoder_evidence\features_v62a_epoch25.npz`
+- Feature dump: `outputs/features_v62a_epoch25.npz`
 - Samples: `12944`
 - Embedding dimension: `1280`
-- Checkpoint: `C:\ESPI\FIXED_PACKAGE\baseline_v62_5class\checkpoints\checkpoint_epoch25_20260211_035150.pt`
+- Checkpoint: `artifacts/checkpoints/checkpoint_epoch25_20260211_035150.pt`
 - Embedding layer: `MCDropoutClassifier.global_pool.pre_fc`
 - Smoke test: `False`
 

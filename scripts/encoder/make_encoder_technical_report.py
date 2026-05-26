@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Create a lightweight Greek technical report for Encoder Evidence v001.
+Create a lightweight English technical report for Encoder Evidence v001.
 
 By default this script only reads existing Markdown/CSV/JSON audit artifacts.
 It does not load images, does not use GPU, and does not rerun feature
@@ -34,7 +34,7 @@ GROUP_AGG_CSV = AUDIT_DIR / "leave_split_group_out_aggregate.csv"
 GROUP_REPORT_CSV = AUDIT_DIR / "leave_split_group_out_report.csv"
 QUALITY_CSV = AUDIT_DIR / "embedding_quality_report.csv"
 
-REPORT_PATH = AUDIT_DIR / "ENCODER_TECHNICAL_REPORT_GR.md"
+REPORT_PATH = AUDIT_DIR / "FROZEN_ENCODER_TECHNICAL_REPORT.md"
 KEY_NUMBERS_PATH = AUDIT_DIR / "encoder_report_key_numbers.json"
 PCA_PLOT_PATHS = {
     "class": AUDIT_DIR / "pca_by_class.png",
@@ -158,9 +158,9 @@ def method_label(row: dict[str, str]) -> str:
     if method.startswith("knn_cosine_k"):
         return f"kNN cosine k={method.removeprefix('knn_cosine_k')}"
     if method == "logistic_regression_balanced":
-        return "Linear probe — balanced logistic regression"
+        return "Linear probe - balanced logistic regression"
     if method == "nearest_class_prototype_cosine":
-        return "Nearest class prototype — cosine"
+        return "Nearest class prototype - cosine"
     return method
 
 
@@ -365,36 +365,36 @@ def build_report(key: dict[str, Any]) -> str:
             for path in pca_plots["created"].values()
         )
         plot_lines = (
-            "\n\nΠροαιρετικά PCA diagnostics δημιουργήθηκαν με CPU-only SVD "
-            f"σε `{pca_plots.get('sampled')}` από `{pca_plots.get('total')}` embeddings:\n"
+            "\n\nOptional PCA diagnostics were generated with CPU-only SVD "
+            f"on `{pca_plots.get('sampled')}` of `{pca_plots.get('total')}` embeddings:\n"
             f"{plot_items}"
         )
 
     eval_rows = [
-        ["Έλεγχος", "Μέθοδος", "Accuracy", "Macro Recall", "Macro-F1", "Σχόλιο"],
+        ["Evaluation", "Method", "Accuracy", "Macro Recall", "Macro-F1", "Comment"],
         [
-            "Stratified train→val",
+            "Stratified train-to-val",
             key["knn_best"].get("method_label", "N/A"),
             pct(key["knn_best"].get("accuracy")),
             pct(key["knn_best"].get("macro_recall")),
             pct(key["knn_best"].get("macro_f1")),
-            "Καλύτερο kNN πάνω στα frozen embeddings.",
+            "Best kNN result over frozen embeddings.",
         ],
         [
-            "Stratified train→val",
+            "Stratified train-to-val",
             key["linear_probe"].get("method_label", "N/A"),
             pct(key["linear_probe"].get("accuracy")),
             pct(key["linear_probe"].get("macro_recall")),
             pct(key["linear_probe"].get("macro_f1")),
-            "Ελέγχει γραμμική διαθεσιμότητα πληροφορίας.",
+            "Tests linear availability of representation information.",
         ],
         [
-            "Stratified train→val",
+            "Stratified train-to-val",
             key["prototype"].get("method_label", "N/A"),
             pct(key["prototype"].get("accuracy")),
             pct(key["prototype"].get("macro_recall")),
             pct(key["prototype"].get("macro_f1")),
-            "Ελέγχει αν οι κλάσεις έχουν καθαρά κέντρα.",
+            "Tests whether classes form clean prototype centers.",
         ],
         [
             "Leave-split-group-out",
@@ -402,37 +402,39 @@ def build_report(key: dict[str, Any]) -> str:
             pct(key["group_knn_best"].get("accuracy_mean")),
             pct(key["group_knn_best"].get("macro_recall_mean")),
             pct(key["group_knn_best"].get("macro_f1_mean")),
-            f"Μέσος όρος σε {key['group_knn_best'].get('n_groups', 0)} groups.",
+            f"Mean over {key['group_knn_best'].get('n_groups', 0)} groups.",
         ],
         [
             "Leave-split-group-out",
             "Minimum grouped Macro-F1",
-            "—",
-            "—",
+            "-",
+            "-",
             pct(key["minimum_grouped_macro_f1"]),
-            "Χειρότερο group για το καλύτερο aggregate kNN.",
+            "Worst group for the best aggregate kNN method.",
         ],
     ]
 
-    return f"""# Encoder Evidence v001 — Frozen v6.2-A embeddings
+    return f"""# Encoder Evidence v001 - Frozen v6.2-A Embeddings
 
 ## 1. Source checkpoint and scope
 
-Η παρούσα αναφορά συνοψίζει **post-hoc representation-geometry evidence** από το παγωμένο embedding space του **v6.2-A reportable baseline**. Η πηγή είναι το epoch25 checkpoint `{key['checkpoint']}`, δηλαδή το checkpoint που συνδέεται με το reference αποτέλεσμα `96.18% Accuracy / 90.97% Macro-F1`. Δεν εκπαιδεύτηκε νέος classifier, δεν έγινε νέο feature extraction, και δεν πρόκειται για **true LOBO generalization proof** ή για πλήρως validated Physics-Aligned Encoder.
+This report summarizes **post-hoc representation-geometry evidence** from the frozen embedding space of the **v6.2-A reportable baseline**. The source is the epoch-25 checkpoint `{key['checkpoint']}`, which is associated with the internal reference result `96.18% Accuracy / 90.97% Macro-F1`.
 
-Ο στόχος του ελέγχου είναι στενός και τεχνικός: να εξεταστεί αν τα frozen pre-head embeddings του v6.2-A περιέχουν χρήσιμη modal δομή όταν αφαιρεθεί η τελική ταξινομητική κεφαλή.
+No new classifier was trained, no new feature extraction is implied by this report, and the result must not be presented as **true LOBO generalization proof** or as a fully validated Physics-Aligned Encoder.
+
+The technical objective is narrow: evaluate whether frozen pre-head embeddings from v6.2-A retain useful modal structure after removing the final classifier head.
 
 ## 2. Feature extraction audit
 
-- Δείγματα: `{key['total_samples']}`
-- Διάσταση embedding: `{key['embedding_dimension']}`
+- Samples: `{key['total_samples']}`
+- Embedding dimension: `{key['embedding_dimension']}`
 - Embedding layer: `MCDropoutClassifier.global_pool`
 - Load audit: missing keys `{load_audit.get('missing_keys')}`, unexpected keys `{load_audit.get('unexpected_keys')}`
 - Metadata fields: {metadata}
 - NaN embeddings: `{quality.get('embedding_nan_count', 'N/A')}`
 - Inf embeddings: `{quality.get('embedding_inf_count', 'N/A')}`
 - Duplicate paths: `{quality.get('duplicate_path_count', 'N/A')}`
-- Δεν έγινε reload raw images, δεν έγινε GPU inference, δεν έγινε retraining, και δεν δημιουργήθηκε αντίγραφο των embeddings.
+- The report generator does not reload raw images, run GPU inference, retrain the CNN, or duplicate the embedding array.
 
 ## 3. Frozen embedding evaluation
 
@@ -441,22 +443,26 @@ def build_report(key: dict[str, Any]) -> str:
 
 ## 4. Interpretation
 
-Ο frozen v6.2-A embedding χώρος δείχνει ισχυρή post-hoc modal geometry. Το καλύτερο kNN αποτέλεσμα και το linear probe είναι κοντά ή πάνω από το classifier reference Macro-F1 του v6.2-A reportable baseline, κάτι που υποστηρίζει τη χρήση του v6.2-A ως **frozen ESPI encoder candidate**. Το prototype αποτέλεσμα είναι χαμηλότερο αλλά παραμένει χρήσιμο, επειδή δείχνει ότι η πληροφορία υπάρχει στον χώρο, ενώ η καθαρή centroid geometry δεν είναι εξίσου ισχυρή για όλες τις κλάσεις.
+The frozen v6.2-A embedding space shows strong post-hoc modal geometry. The best kNN result and the linear probe are close to or above the classifier reference Macro-F1 of the v6.2-A reportable baseline. This supports using v6.2-A as a **frozen ESPI encoder candidate**.
+
+The prototype result is lower but still informative: it indicates that class information exists in the embedding space, while pure centroid geometry is not equally strong for all classes.
 
 ## 5. Caveat
 
-Αυτό **δεν είναι true LOBO/LOMO encoder proof**. Το frozen checkpoint εκπαιδεύτηκε στο αρχικό stratified split. Το leave-split-group audit αφαιρεί groups από το retrieval/probe reference set, αλλά ο ίδιος ο frozen encoder δεν έχει εκπαιδευτεί με το target board/material αποκλεισμένο. Επομένως το αποτέλεσμα πρέπει να διατυπώνεται ως **post-hoc representation-geometry evidence** και όχι ως οριστική απόδειξη γενίκευσης σε LOBO/LOMO.
+This is **not true LOBO/LOMO encoder proof**. The frozen checkpoint was trained on the original stratified split. The leave-split-group audit removes groups from the retrieval/probe reference set, but the frozen encoder itself was not trained with the target board or material excluded.
+
+The result should therefore be framed as **post-hoc representation-geometry evidence**, not as definitive LOBO/LOMO generalization proof.
 
 ## 6. Next step
 
-Το επόμενο αυστηρό βήμα είναι ένα από τα δύο:
+The next strict validation step is one of the following:
 
-- true LOBO/LOMO encoder training, όπου το target board ή material αποκλείεται ήδη κατά την εκπαίδευση,
-- supervised contrastive ή domain-aware fine-tuning, ώστε δείγματα ίδιας modal κλάσης από διαφορετικά boards/materials να έρχονται κοντά και hard negatives κοντινής συχνότητας να παραμένουν διαχωρίσιμα.
+- true LOBO/LOMO encoder training, where the target board or material is excluded during training,
+- supervised contrastive or domain-aware fine-tuning, so samples from the same modal class but different boards/materials are pulled together while frequency-adjacent hard negatives remain separable.
 
 ## 7. Appendix-ready claim
 
-Η εξαγωγή frozen pre-head embeddings από το v6.2-A reportable baseline έδειξε ότι ο χώρος αναπαραστάσεων διατηρεί ισχυρή ταξινομητική και modal πληροφορία χωρίς επανεκπαίδευση του CNN ή χρήση της τελικής ταξινομητικής κεφαλής. Τα αποτελέσματα kNN, prototype και linear probe παρέχουν post-hoc representation-geometry evidence ότι το v6.2-A μπορεί να χρησιμοποιηθεί ως **frozen ESPI encoder candidate**. Ωστόσο, επειδή το checkpoint εκπαιδεύτηκε στο αρχικό stratified split, τα grouped retrieval/probe αποτελέσματα δεν αποτελούν ακόμη true LOBO/LOMO generalization proof· η αυστηρή επικύρωση απαιτεί LOBO/LOMO encoder training ή supervised contrastive/domain-aware fine-tuning.
+Frozen pre-head embeddings extracted from the v6.2-A reportable baseline retain strong classification and modal information without retraining the CNN or using the final classifier head. kNN, prototype, and linear-probe results provide post-hoc representation-geometry evidence that v6.2-A can be used as a **frozen ESPI encoder candidate**. Because the checkpoint was trained on the original stratified split, the grouped retrieval/probe results are not yet true LOBO/LOMO generalization proof. Strict validation requires LOBO/LOMO encoder training or supervised contrastive/domain-aware fine-tuning.
 """
 
 
@@ -477,7 +483,7 @@ def main() -> None:
     global KEY_NUMBERS_PATH
     global PCA_PLOT_PATHS
 
-    parser = argparse.ArgumentParser(description="Generate Greek encoder technical report from existing audit artifacts.")
+    parser = argparse.ArgumentParser(description="Generate an English encoder technical report from existing audit artifacts.")
     parser.add_argument("--audit-dir", type=Path, default=AUDIT_DIR, help="Directory containing audit CSV/JSON/Markdown outputs.")
     parser.add_argument("--feature-summary", type=Path, default=FEATURE_SUMMARY)
     parser.add_argument("--features", type=Path, default=FEATURES_NPZ)

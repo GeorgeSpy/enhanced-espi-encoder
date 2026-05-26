@@ -116,7 +116,7 @@ def export_to_onnx(checkpoint_path, onnx_path, input_shape=(1, 1, 256, 256)):
         }
     )
 
-    print(f"✅ ONNX export successful!")
+    print("ONNX export successful.")
     print(f"   Model saved to: {onnx_path}")
 
     # Verify ONNX model
@@ -124,7 +124,7 @@ def export_to_onnx(checkpoint_path, onnx_path, input_shape=(1, 1, 256, 256)):
         import onnx
         onnx_model = onnx.load(onnx_path)
         onnx.checker.check_model(onnx_model)
-        print("✅ ONNX model verification passed")
+        print("ONNX model verification passed")
 
         # Print model info
         print(f"\nModel info:")
@@ -133,9 +133,9 @@ def export_to_onnx(checkpoint_path, onnx_path, input_shape=(1, 1, 256, 256)):
         print(f"  Opset version: 14")
 
     except ImportError:
-        print("⚠️  onnx package not installed - skipping verification")
+        print("WARNING: onnx package not installed - skipping verification")
     except Exception as e:
-        print(f"⚠️  ONNX verification failed: {e}")
+        print(f"WARNING: ONNX verification failed: {e}")
 
 def main():
     parser = argparse.ArgumentParser(description='Export v6.1 to ONNX')

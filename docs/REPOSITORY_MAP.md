@@ -17,7 +17,7 @@
 - `reports/v61_v62_comparison/COMPARE_SUMMARY.md`
 - `reports/encoder/EMBEDDING_AUDIT_SUMMARY.md`
 - `reports/encoder/GROUPED_ENCODER_EVAL_SUMMARY.md`
-- `reports/encoder/ENCODER_TECHNICAL_REPORT_GR.md`
+- `reports/encoder/FROZEN_ENCODER_TECHNICAL_REPORT.md`
 
 ## Configs
 

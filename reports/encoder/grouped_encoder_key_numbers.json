@@ -1,7 +1,7 @@
 {
   "created_utc": "2026-04-27T12:18:02.099550+00:00",
-  "source_feature_dump": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\features_v62a_epoch25.npz",
-  "output_dir": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\embedding_audit_v001\\grouped_generalization_v001",
+  "source_feature_dump": "outputs/features_v62a_epoch25.npz",
+  "output_dir": "outputs/embedding_audit_v001/grouped_generalization_v001",
   "smoke_test": false,
   "n_samples": 12944,
   "embedding_dim": 1280,
@@ -121,7 +121,7 @@
       "support_3_2_1": 117,
       "support_4_higher": 1238,
       "train_samples": 11307,
-      "confusion_matrix": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\embedding_audit_v001\\grouped_generalization_v001\\confusion_matrices\\lobo_board_C03_knn_cosine_k10.csv"
+      "confusion_matrix": "outputs/embedding_audit_v001/grouped_generalization_v001/confusion_matrices/lobo_board_C03_knn_cosine_k10.csv"
     },
     "worst": {
       "evaluation": "lobo_board",
@@ -138,7 +138,7 @@
       "support_3_2_1": 185,
       "support_4_higher": 1834,
       "train_samples": 10525,
-      "confusion_matrix": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\embedding_audit_v001\\grouped_generalization_v001\\confusion_matrices\\lobo_board_W01_knn_cosine_k10.csv"
+      "confusion_matrix": "outputs/embedding_audit_v001/grouped_generalization_v001/confusion_matrices/lobo_board_W01_knn_cosine_k10.csv"
     }
   },
   "best_worst_lomo_knn": {
@@ -157,7 +157,7 @@
       "support_3_2_1": 351,
       "support_4_higher": 5313,
       "train_samples": 6255,
-      "confusion_matrix": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\embedding_audit_v001\\grouped_generalization_v001\\confusion_matrices\\lomo_material_wood_to_carbon_knn_cosine_k10.csv"
+      "confusion_matrix": "outputs/embedding_audit_v001/grouped_generalization_v001/confusion_matrices/lomo_material_wood_to_carbon_knn_cosine_k10.csv"
     },
     "worst": {
       "evaluation": "lomo_material",
@@ -174,7 +174,7 @@
       "support_3_2_1": 418,
       "support_4_higher": 4802,
       "train_samples": 6689,
-      "confusion_matrix": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\embedding_audit_v001\\grouped_generalization_v001\\confusion_matrices\\lomo_material_carbon_to_wood_knn_cosine_k10.csv"
+      "confusion_matrix": "outputs/embedding_audit_v001/grouped_generalization_v001/confusion_matrices/lomo_material_carbon_to_wood_knn_cosine_k10.csv"
     }
   },
   "skipped": [],

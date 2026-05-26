@@ -48,6 +48,8 @@ The current publication boundary and manuscript traceability are documented in:
 - `docs/MANUSCRIPT_MAP.md`
 - `docs/REPRODUCE.md`
 
+Active documentation and reports are maintained in English for reviewer-facing use.
+
 Before submission:
 
 - add exact environment/dependency lock

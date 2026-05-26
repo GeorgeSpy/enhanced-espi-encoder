@@ -1,7 +1,7 @@
 # Apples-to-Apples: v6.1 vs v6.2 (same VAL split)
 
-- Manifest: `C:\ESPI\manifest\manifest_v1_5class.npz`
-- v6.2 config: `C:\ESPI\FIXED_PACKAGE\config.antigravity.5class.yaml`
+- Manifest: `artifacts/manifests/manifest_v1_5class.npz`
+- v6.2 config: `configs/v6_2/config.antigravity.5class.yaml`
 - VAL samples: **2589**
 
 ## Global Metrics

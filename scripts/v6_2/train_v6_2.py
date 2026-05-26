@@ -5,7 +5,7 @@ Based on v6.1 architecture (1-channel, frozen backbone)
 
 Key changes from v6.1:
 - DomainStratifiedBatchSampler: 20 clean + 10 avg + 10 pseudo per batch
-- Targeted augmentations: clean → noisy-like (p=0.7)
+- Targeted augmentations: clean to noisy-like (p=0.7)
 - Holdout evaluation with zero-recall gates
 """
 import torch
@@ -224,7 +224,7 @@ def evaluate_with_gates(model, loader, criterion, device, split_name="val"):
     print(f"  Loss: {avg_loss:.4f}, Acc: {acc:.2f}%")
     print(f"  Per-class Recall: {recalls}")
     if zero_recall_classes:
-        print(f"  ⚠️ ZERO RECALL in classes: {zero_recall_classes}")
+        print(f"  WARNING: ZERO RECALL in classes: {zero_recall_classes}")
 
     return {
         'loss': avg_loss,
@@ -377,9 +377,9 @@ def main():
         # Check gates
         if val_metrics['zero_recall_classes']:
             early_stop_counter += 1
-            print(f"  ⚠️ Early stop counter: {early_stop_counter}/{max_early_stop}")
+            print(f"  WARNING: Early stop counter: {early_stop_counter}/{max_early_stop}")
             if early_stop_counter >= max_early_stop:
-                print(f"  ⛔ EARLY STOP: Zero recall persisted for {max_early_stop} epochs")
+                print(f"  EARLY STOP: Zero recall persisted for {max_early_stop} epochs")
                 break
         else:
             early_stop_counter = 0
@@ -388,7 +388,7 @@ def main():
         if val_metrics['acc'] > best_acc:
             best_acc = val_metrics['acc']
             torch.save(model.state_dict(), args.save)
-            print(f'  ✅ New best model saved! Val Acc: {val_metrics["acc"]:.2f}%')
+            print(f'  New best model saved. Val Acc: {val_metrics["acc"]:.2f}%')
 
         if epoch >= warmup_epochs:
             scheduler.step()
