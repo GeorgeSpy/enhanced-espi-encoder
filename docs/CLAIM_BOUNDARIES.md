@@ -20,9 +20,9 @@ The repository is an internal, curated development package for the first ESPI en
 
 | Claim | Missing requirement | Status |
 |---|---|---|
-| Fully validated Physics-Aligned Encoder. | external baselines, ablations, frozen/unfrozen comparison, statistical repeats | not yet |
+| Fully validated Physics-Aligned Encoder. | external baseline reference models, ablations, frozen/unfrozen comparison, statistical repeats | not yet |
 | Acoustic-response predictive value. | acoustic-response manifest, acoustic-only baselines, ESPI-only/fusion models | not yet |
-| ESPI embeddings improve over geometry/frequency/material metadata baselines. | metadata-only and acoustic-only baseline experiments | not yet |
+| ESPI embeddings improve over geometry/frequency/material metadata baseline reference models. | metadata-only and acoustic-only baseline experiments | not yet |
 | True CNN LOBO/LOMO training generalization. | retrained CNN experiments under leave-one-board/material-out splits | not yet |
 | Hierarchical v6.2 is superior to flat v6.2 as an encoder. | matched hierarchical embedding extraction and grouped evaluation | not yet |
 | Neural-operator / PNO implementation. | operator architecture, training code, acoustic-response targets | not included |
@@ -32,10 +32,10 @@ The repository is an internal, curated development package for the first ESPI en
 Use this framing for the current paper draft:
 
 ```text
-The v6.2 ESPI classifier line is repurposed as a frozen encoder candidate.
-Post-hoc embedding audits and grouped evaluations show response-relevant
-representation structure under board/material grouping, motivating the next
-acoustic-response prediction stage.
+The v6.2-A ESPI classifier line is evaluated as a frozen ESPI encoder candidate.
+Post-hoc embedding audits and grouped OOD evaluations show that learned
+full-field interferometric representations preserve modal structure under
+board/material grouping, motivating the next acoustic-response prediction stage.
 ```
 
 Avoid this framing until additional experiments are complete:

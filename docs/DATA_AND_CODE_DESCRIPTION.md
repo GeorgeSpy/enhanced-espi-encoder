@@ -10,7 +10,7 @@ The historical v6.1/v6.2 line expects ESPI image-derived examples with:
 
 - image path or feature source
 - class label
-- material/domain metadata
+- material/source-group metadata
 - board/specimen identifier
 - frequency information where available
 
@@ -44,7 +44,7 @@ Expected fields include:
 - frequency
 - acoustic target reference
 - optional ESPI reference
-- split or domain group
+- split or grouped-OOD group
 
 ## Code Scope
 

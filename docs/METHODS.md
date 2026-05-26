@@ -22,14 +22,14 @@ v6.2 classifier backbone
 Currently supported:
 
 ```text
-v6.2 can be reused as an ESPI representation encoder and audited under grouped domain splits.
+v6.2-A can be evaluated as a frozen ESPI encoder candidate and audited under grouped OOD splits.
 ```
 
 Not yet supported:
 
 ```text
 ESPI embeddings improve acoustic-response prediction beyond metadata, frequency,
-geometry, and material baselines.
+geometry, and material baseline reference models.
 ```
 
-That future claim requires acoustic targets, baseline models, ablation studies, and uncertainty evaluation.
+That future claim requires acoustic targets, baseline reference models, ablation studies, and uncertainty evaluation.

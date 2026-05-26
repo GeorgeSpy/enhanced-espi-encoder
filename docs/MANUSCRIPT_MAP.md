@@ -5,8 +5,8 @@ This map links manuscript claims, tables, and figures to repository artifacts. I
 ## Working Title
 
 ```text
-Physics-Aligned ESPI Encoder Evidence from Full-Field Interferometric Measurements
-under Domain and Material Shift
+Toward a Physics-Aligned ESPI Encoder: Frozen Representation Evidence from
+Full-Field Interferometric Measurements under Grouped OOD Evaluation
 ```
 
 ## Tables
@@ -15,8 +15,8 @@ under Domain and Material Shift
 |---|---|---|---|---|---|
 | Table 1: v6.1 vs v6.2 classifier baseline | `scripts/v6_1/train_v6_1_head_only.py`, `scripts/v6_2/train_v6_2.py` | `configs/v6_2/config.antigravity.5class.yaml` | external manifest/checkpoints | `reports/v61_v62_comparison/COMPARE_SUMMARY.md` | done-summary |
 | Table 2: frozen v6.2-A embedding audit | `scripts/encoder/audit_v62_embeddings.py` | not required after feature extraction | external `features_v62a_epoch25.npz` | `reports/encoder/EMBEDDING_AUDIT_SUMMARY.md` | done-summary |
-| Table 3: grouped frozen-embedding evaluation | `scripts/encoder/evaluate_encoder_grouped_generalization.py` | not required after feature extraction | external `features_v62a_epoch25.npz` | `reports/encoder/GROUPED_ENCODER_EVAL_SUMMARY.md` | done-summary |
-| Table 4: encoder baseline comparison | pending script | pending config | random/ImageNet/v6.1/v6.2/hierarchical embeddings | pending report | pending |
+| Table 3: grouped OOD frozen-embedding evaluation | `scripts/encoder/evaluate_encoder_grouped_generalization.py` | not required after feature extraction | external `features_v62a_epoch25.npz` | `reports/encoder/GROUPED_ENCODER_EVAL_SUMMARY.md` | done-summary |
+| Table 4: encoder baseline reference comparison | pending script | pending config | random/ImageNet/v6.1/v6.2/hierarchical embeddings | pending report | pending |
 | Table 5: acoustic-response prediction | pending script | pending config | acoustic-response manifest | pending report | future |
 
 ## Figures
@@ -35,7 +35,7 @@ under Domain and Material Shift
 |---|---|---|---|
 | v6.2-A is a stronger reportable baseline than v6.1. | `reports/v61_v62_comparison/` | Results: classifier lineage | done-summary |
 | Frozen v6.2-A embeddings preserve class structure. | `reports/encoder/EMBEDDING_AUDIT_SUMMARY.md` | Results: embedding geometry | done-summary |
-| Frozen v6.2-A embeddings remain informative under board/material grouping. | `reports/encoder/GROUPED_ENCODER_EVAL_SUMMARY.md` | Results: grouped evaluation | done-summary |
+| Frozen v6.2-A embeddings remain informative under board/material grouped OOD evaluation. | `reports/encoder/GROUPED_ENCODER_EVAL_SUMMARY.md` | Results: grouped OOD evaluation | done-summary |
 | Hierarchical v6.2 is a candidate comparison branch. | `scripts/v6_2_hierarchical/train_v6_2_clean.py` | Methods: model variants | code-only |
 | ESPI encoder improves acoustic-response prediction. | pending acoustic-response experiments | Future/second paper unless completed | pending |
 

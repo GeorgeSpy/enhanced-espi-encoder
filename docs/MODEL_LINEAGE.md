@@ -76,7 +76,7 @@ Not included:
 
 Purpose:
 
-- reuse the v6.2 representation path as a Physics-Aligned Encoder
+- evaluate the v6.2-A representation path as a frozen ESPI encoder candidate
 - extract intermediate embeddings from ESPI measurements
 - audit embedding quality and grouped generalization
 
@@ -101,8 +101,8 @@ This repository currently documents the transition from ESPI classification to E
 It does not yet prove the final acoustic-response claim. That requires:
 
 - an acoustic-response manifest
-- acoustic-only baselines
-- geometry/material/frequency baselines
+- acoustic-only baseline reference models
+- geometry/material/frequency baseline reference models
 - ESPI-only prediction models
 - multimodal fusion models
 - ablation tables

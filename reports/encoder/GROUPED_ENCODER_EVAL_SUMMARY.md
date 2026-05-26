@@ -45,7 +45,7 @@ All folds standardize features using only the reference/train fold and then appl
 ## Automatic interpretation
 
 This evaluation tests whether the already extracted v6.2-A embedding space remains useful when the reference set excludes a board/material. It is stricter than a stratified retrieval/probe audit, but it is still not a new CNN training run.
-- Board-grouped Macro-F1 remains relatively high, strengthening the frozen ESPI encoder candidate claim.
+- Board-grouped Macro-F1 remains relatively high, supporting the frozen ESPI encoder candidate framing.
 - Material-grouped Macro-F1 remains relatively high, supporting cross-material embedding usefulness.
 
 ## Caveat

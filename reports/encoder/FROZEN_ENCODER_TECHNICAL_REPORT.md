@@ -34,7 +34,7 @@ Optional PCA diagnostics were generated externally with CPU-only SVD on `3000` o
 
 ## 4. Interpretation
 
-The frozen v6.2-A embedding space shows strong post-hoc modal geometry. The best kNN result and the linear probe are close to or above the classifier reference Macro-F1 of the v6.2-A reportable baseline. This supports using v6.2-A as a **frozen ESPI encoder candidate**.
+The frozen v6.2-A embedding space shows strong post-hoc modal geometry. The best kNN result and the linear probe are close to or above the classifier reference Macro-F1 of the v6.2-A reportable baseline. This supports evaluating v6.2-A as a **frozen ESPI encoder candidate**.
 
 The prototype result is lower but still informative: it indicates that class information exists in the embedding space, while pure centroid geometry is not equally strong for all classes.
 
@@ -49,8 +49,8 @@ The result should therefore be framed as **post-hoc representation-geometry evid
 The next strict validation step is one of the following:
 
 - true LOBO/LOMO encoder training, where the target board or material is excluded during training,
-- supervised contrastive or domain-aware fine-tuning, so samples from the same modal class but different boards/materials are pulled together while frequency-adjacent hard negatives remain separable.
+- supervised contrastive or group-aware fine-tuning, so samples from the same modal class but different boards/materials are pulled together while frequency-adjacent hard negatives remain separable.
 
 ## 7. Appendix-ready claim
 
-Frozen pre-head embeddings extracted from the v6.2-A reportable baseline retain strong classification and modal information without retraining the CNN or using the final classifier head. kNN, prototype, and linear-probe results provide post-hoc representation-geometry evidence that v6.2-A can be used as a **frozen ESPI encoder candidate**. Because the checkpoint was trained on the original stratified split, the grouped retrieval/probe results are not yet true LOBO/LOMO generalization proof. Strict validation requires LOBO/LOMO encoder training or supervised contrastive/domain-aware fine-tuning.
+Frozen pre-head embeddings extracted from the v6.2-A reportable baseline retain strong classification and modal information without retraining the CNN or using the final classifier head. kNN, prototype, and linear-probe results provide post-hoc representation-geometry evidence that v6.2-A can be evaluated as a **frozen ESPI encoder candidate**. Because the checkpoint was trained on the original stratified split, the grouped retrieval/probe results are not yet true LOBO/LOMO generalization proof. Strict validation requires LOBO/LOMO encoder training or supervised contrastive/group-aware fine-tuning.

@@ -35,13 +35,13 @@ Artifacts:
 
 - `scripts/v6_2_hierarchical/train_v6_2_clean.py`
 
-## Stage D: Physics-Aligned Encoder
+## Stage D: Frozen ESPI Encoder Candidate
 
 Goal:
 
-- repurpose the v6.2 representation path as an ESPI encoder
+- evaluate the v6.2-A representation path as a frozen ESPI encoder candidate
 - extract embeddings
-- audit embedding geometry and grouped generalization
+- audit embedding geometry and grouped OOD behavior
 
 Artifacts:
 
@@ -61,7 +61,7 @@ Still required:
 
 - acoustic-response manifest
 - target extraction utilities
-- metadata/frequency/geometry baselines
+- metadata/frequency/geometry baseline reference models
 - ESPI-only model
 - multimodal fusion model
 - ablation and uncertainty evaluation

@@ -474,16 +474,16 @@ def main() -> None:
         "",
         "Important caveat: the frozen v6.2-A checkpoint was trained on the original stratified split. The leave-`split_group`-out report removes groups from the retrieval/probe reference set only; it is post-hoc representation-geometry evidence, not a true LOBO-trained encoder result.",
         "",
-        "## 5. Domain structure diagnostics",
+        "## 5. Grouped structure diagnostics",
         "- PCA plots are diagnostic only, not proof of generalization.",
-        "- Use board/material/domain coloring to check whether embeddings encode domain signatures.",
+        "- Use board/material/source-group coloring to check whether embeddings encode grouped dataset signatures.",
         "",
         "## 6. Interpretation Gate",
         "- Strong encoder evidence requires LOBO retrieval/prototype macro-F1 to remain non-collapsed.",
-        "- If PCA/UMAP clusters primarily by board/material instead of label, the representation is domain-biased.",
+        "- If PCA/UMAP clusters primarily by board/material instead of label, the representation is group-biased.",
         "",
         "## 7. Next step",
-        "- If grouped retrieval collapses, run supervised contrastive/domain-aware fine-tuning before claiming a Physics-Aligned Encoder.",
+        "- If grouped retrieval collapses, run supervised contrastive or group-aware fine-tuning before claiming progress toward a Physics-Aligned Encoder.",
     ]
     if not linear_rows and not args.skip_linear:
         lines.append("- Linear probe skipped because scikit-learn is not available.")

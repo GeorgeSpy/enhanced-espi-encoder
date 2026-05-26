@@ -552,9 +552,9 @@ def write_summary(
     if lobo_agg:
         best_macro = max(float(row["macro_f1_mean"]) for row in lobo_agg)
         if best_macro < 0.75:
-            lines.append("- Board-grouped Macro-F1 drops substantially, indicating domain sensitivity and motivating contrastive/domain-aware fine-tuning.")
+            lines.append("- Board-grouped Macro-F1 drops substantially, indicating distribution-shift sensitivity and motivating contrastive/group-aware fine-tuning.")
         else:
-            lines.append("- Board-grouped Macro-F1 remains relatively high, strengthening the frozen ESPI encoder candidate claim.")
+            lines.append("- Board-grouped Macro-F1 remains relatively high, supporting the frozen ESPI encoder candidate framing.")
 
     if lomo_agg:
         best_macro = max(float(row["macro_f1_mean"]) for row in lomo_agg)

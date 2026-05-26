@@ -14,7 +14,7 @@ This file records the internal technical-appendix structure that informed the re
 6. Reproducibility and LOBO pilot evidence
 7. Full physics-guided ESPI pipeline
 8. Hierarchical v6.2 as a research extension
-9. Transition from baseline classifier to Physics-Aligned Encoder
+9. Transition from baseline classifier to frozen ESPI encoder candidate
 10. Proposed PhD implementation path
 11. Manifest-first dataset structure and data linkage
 12. Transition toward acoustic metamaterials and operator learning
@@ -30,7 +30,7 @@ The official reportable v6.2 metrics come from the ResNet18-style v6.2-A baselin
 | Level | Short description | Role |
 |---|---|---|
 | v6.1 | Frozen ResNet-18 backbone with a trainable 5-class head. | Simple and stable modal-classification baseline. |
-| v6.2-A reportable baseline | ResNet18-style baseline with domain/noise-aware training strategy. | Official baseline result and apples-to-apples comparison against v6.1. |
+| v6.2-A reportable baseline | ResNet18-style baseline with distribution/noise-aware training strategy. | Official baseline result and apples-to-apples comparison against v6.1. |
 | Hierarchical / physics v6.2 | Physics/Fourier front-end, gatekeeper, expert branch, and ArcFace-style metric component. | Research basis for the future Physics-Aligned Encoder. |
 | Enhanced ESPI pipeline | Denoising, Fourier prior, phase unwrapping, physics features, and uncertainty-aware classification. | Infrastructure for physically interpretable ESPI representations. |
 
