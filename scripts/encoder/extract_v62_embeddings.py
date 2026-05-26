@@ -3,10 +3,13 @@
 """
 Extract frozen v6.2-A pre-head embeddings.
 
-Default inputs match the reportable v6.2-A epoch-25 baseline:
-  - C:/ESPI/FIXED_PACKAGE/config.antigravity.5class.yaml
-  - C:/ESPI/manifest/manifest_v1_5class.npz
-  - C:/ESPI/FIXED_PACKAGE/baseline_v62_5class/checkpoints/checkpoint_epoch25_20260211_035150.pt
+Default inputs are repository-relative placeholders for reviewer-safe runs:
+  - configs/v6_2/config.antigravity.5class.yaml
+  - artifacts/manifests/manifest_v1_5class.npz
+  - artifacts/checkpoints/checkpoint_epoch25_20260211_035150.pt
+
+The v6.2 helper package can be supplied with --package-root or by setting
+ESPI_V62_PACKAGE_ROOT. It is intentionally not hard-coded to a local machine.
 
 The embedding is captured immediately before the fully connected classifier head:
 MCDropoutClassifier.global_pool -> flatten -> L2-normalize.
@@ -17,6 +20,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import os
 import re
 import sys
 from datetime import datetime, timezone
@@ -27,16 +31,12 @@ import numpy as np
 import torch
 
 
-FIXED_PACKAGE = Path(r"C:\ESPI\FIXED_PACKAGE")
-DEFAULT_CONFIG = FIXED_PACKAGE / "config.antigravity.5class.yaml"
-DEFAULT_MANIFEST = Path(r"C:\ESPI\manifest\manifest_v1_5class.npz")
-DEFAULT_CHECKPOINT = (
-    FIXED_PACKAGE
-    / "baseline_v62_5class"
-    / "checkpoints"
-    / "checkpoint_epoch25_20260211_035150.pt"
-)
-DEFAULT_OUT = Path("features_v62a_epoch25.npz")
+REPO_ROOT = Path(__file__).resolve().parents[2]
+DEFAULT_PACKAGE_ROOT = Path(os.environ.get("ESPI_V62_PACKAGE_ROOT", "external/v6_2_fixed_package"))
+DEFAULT_CONFIG = REPO_ROOT / "configs" / "v6_2" / "config.antigravity.5class.yaml"
+DEFAULT_MANIFEST = REPO_ROOT / "artifacts" / "manifests" / "manifest_v1_5class.npz"
+DEFAULT_CHECKPOINT = REPO_ROOT / "artifacts" / "checkpoints" / "checkpoint_epoch25_20260211_035150.pt"
+DEFAULT_OUT = REPO_ROOT / "outputs" / "features_v62a_epoch25.npz"
 
 
 LABEL_NAMES = {
@@ -48,8 +48,14 @@ LABEL_NAMES = {
 }
 
 
-def import_v62_helpers() -> tuple[Any, Any, Any, Any]:
-    sys.path.insert(0, str(FIXED_PACKAGE))
+def import_v62_helpers(package_root: Path) -> tuple[Any, Any, Any, Any]:
+    package_root = package_root.expanduser().resolve()
+    if not package_root.exists():
+        raise FileNotFoundError(
+            "v6.2 helper package not found. Pass --package-root or set "
+            f"ESPI_V62_PACKAGE_ROOT. Tried: {package_root}"
+        )
+    sys.path.insert(0, str(package_root))
     from generate_val_report import build_model_from_config, load_checkpoint_into_model, load_yaml
     from enhanced_espi_pipeline_clean_FIXED import FilteredDataset, make_windows_safe_loader
 
@@ -168,6 +174,7 @@ def write_summary(path: Path, args: argparse.Namespace, out_npz: Path, n_samples
         f"- Config: `{args.config}`",
         f"- Manifest: `{args.manifest}`",
         f"- Checkpoint: `{args.checkpoint}`",
+        f"- v6.2 package root: `{args.package_root}`",
         "",
         "## Output",
         f"- Features: `{out_npz}`",
@@ -192,6 +199,12 @@ def main() -> None:
     parser.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
     parser.add_argument("--checkpoint", type=Path, default=DEFAULT_CHECKPOINT)
     parser.add_argument("--out", type=Path, default=DEFAULT_OUT)
+    parser.add_argument(
+        "--package-root",
+        type=Path,
+        default=DEFAULT_PACKAGE_ROOT,
+        help="Directory containing generate_val_report.py and enhanced_espi_pipeline_clean_FIXED.py.",
+    )
     parser.add_argument("--split", choices=["all", "train", "val"], default="all")
     parser.add_argument("--device", default="cuda")
     parser.add_argument("--batch-size", type=int, default=None)
@@ -199,7 +212,7 @@ def main() -> None:
     parser.add_argument("--no-normalize", action="store_true")
     args = parser.parse_args()
 
-    build_model_from_config, load_checkpoint_into_model, load_yaml, dataset_helpers = import_v62_helpers()
+    build_model_from_config, load_checkpoint_into_model, load_yaml, dataset_helpers = import_v62_helpers(args.package_root)
     FilteredDataset, make_windows_safe_loader = dataset_helpers
 
     cfg = load_yaml(args.config)

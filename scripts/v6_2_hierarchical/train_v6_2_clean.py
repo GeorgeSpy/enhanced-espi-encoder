@@ -70,7 +70,7 @@ def _resolve_runtime_dependencies():
 
     # Model source (strict): require v6.2 architecture, no silent fallback.
     try:
-        # Allow importing from the parent ESPI project root when running from FIXED_PACKAGE.
+        # Allow importing from the parent ESPI project root when launched from a packaged experiment folder.
         project_root = Path(__file__).resolve().parent.parent
         if str(project_root) not in sys.path:
             sys.path.insert(0, str(project_root))

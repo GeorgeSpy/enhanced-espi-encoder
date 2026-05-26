@@ -20,8 +20,8 @@
 
 ## Archive
 
-The previous full import was moved to:
+The previous full import was moved outside this curated repository and is intentionally not part of the reviewer package.
 
 ```text
-C:\Users\George mini-PC\Documents\Playground\enhanced-espi-encoder_archive_20260525_full_import
+../enhanced-espi-encoder_archive_20260525_full_import
 ```

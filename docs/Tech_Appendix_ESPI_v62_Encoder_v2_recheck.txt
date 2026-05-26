@@ -1,4 +1,4 @@
-SOURCE: C:\Users\George mini-PC\Downloads\Tech_Appendix_ESPI_v62_Encoder_v2.docx
+SOURCE: private technical-appendix draft, not tracked in this repository
 PARAGRAPHS: 102
 TABLES: 17
 

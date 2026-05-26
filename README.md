@@ -42,12 +42,18 @@ The full acoustic-response claim will require future metadata/frequency/geometry
 
 This is a private development repo. It is not yet public/reviewer-ready.
 
+The current publication boundary and manuscript traceability are documented in:
+
+- `docs/CLAIM_BOUNDARIES.md`
+- `docs/MANUSCRIPT_MAP.md`
+- `docs/REPRODUCE.md`
+
 Before submission:
 
-- remove machine-specific paths from scripts and docs
 - add exact environment/dependency lock
-- map each manuscript table/figure to a script, config, and report
-- add data/model availability statements
+- add artifact hashes or DOI-backed artifact references
+- add baseline encoder comparisons against random, ImageNet, v6.1, v6.2-A, and hierarchical v6.2 embeddings
+- add publication-quality figures under `figures/`
 - tag a stable submission release
 
 ## Model Lineage

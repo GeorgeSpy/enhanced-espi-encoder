@@ -23,3 +23,11 @@
 
 - `configs/v6_2/config.antigravity.5class.yaml`
 - `configs/v6_2/config.antigravity.5class.quickcheck.yaml`
+
+## Publication Control
+
+- `docs/CLAIM_BOUNDARIES.md`
+- `docs/MANUSCRIPT_MAP.md`
+- `docs/REPRODUCE.md`
+- `docs/REPRODUCIBILITY.md`
+- `docs/DATA_AVAILABILITY.md`

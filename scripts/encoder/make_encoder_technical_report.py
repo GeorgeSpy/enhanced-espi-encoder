@@ -461,13 +461,55 @@ def build_report(key: dict[str, Any]) -> str:
 
 
 def main() -> None:
+    global AUDIT_DIR
+    global FEATURE_SUMMARY
+    global FEATURES_NPZ
+    global METADATA_CSV
+    global AUDIT_SUMMARY
+    global AUDIT_JSON
+    global KNN_CSV
+    global LINEAR_CSV
+    global PROTOTYPE_CSV
+    global GROUP_AGG_CSV
+    global GROUP_REPORT_CSV
+    global QUALITY_CSV
+    global REPORT_PATH
+    global KEY_NUMBERS_PATH
+    global PCA_PLOT_PATHS
+
     parser = argparse.ArgumentParser(description="Generate Greek encoder technical report from existing audit artifacts.")
+    parser.add_argument("--audit-dir", type=Path, default=AUDIT_DIR, help="Directory containing audit CSV/JSON/Markdown outputs.")
+    parser.add_argument("--feature-summary", type=Path, default=FEATURE_SUMMARY)
+    parser.add_argument("--features", type=Path, default=FEATURES_NPZ)
+    parser.add_argument("--metadata", type=Path, default=METADATA_CSV)
+    parser.add_argument("--out", type=Path, default=REPORT_PATH)
+    parser.add_argument("--key-numbers", type=Path, default=KEY_NUMBERS_PATH)
     parser.add_argument(
         "--make-plots",
         action="store_true",
         help="Optionally read the existing NPZ, sample <=3000 embeddings, and save PCA-only PNG diagnostics.",
     )
     args = parser.parse_args()
+
+    AUDIT_DIR = args.audit_dir
+    FEATURE_SUMMARY = args.feature_summary
+    FEATURES_NPZ = args.features
+    METADATA_CSV = args.metadata
+    AUDIT_SUMMARY = AUDIT_DIR / "EMBEDDING_AUDIT_SUMMARY.md"
+    AUDIT_JSON = AUDIT_DIR / "audit_summary.json"
+    KNN_CSV = AUDIT_DIR / "knn_report.csv"
+    LINEAR_CSV = AUDIT_DIR / "linear_probe_report.csv"
+    PROTOTYPE_CSV = AUDIT_DIR / "prototype_report.csv"
+    GROUP_AGG_CSV = AUDIT_DIR / "leave_split_group_out_aggregate.csv"
+    GROUP_REPORT_CSV = AUDIT_DIR / "leave_split_group_out_report.csv"
+    QUALITY_CSV = AUDIT_DIR / "embedding_quality_report.csv"
+    REPORT_PATH = args.out
+    KEY_NUMBERS_PATH = args.key_numbers
+    PCA_PLOT_PATHS = {
+        "class": AUDIT_DIR / "pca_by_class.png",
+        "board": AUDIT_DIR / "pca_by_board.png",
+        "material": AUDIT_DIR / "pca_by_material.png",
+    }
 
     warnings: list[str] = []
 
@@ -542,6 +584,8 @@ def main() -> None:
     }
 
     AUDIT_DIR.mkdir(parents=True, exist_ok=True)
+    REPORT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    KEY_NUMBERS_PATH.parent.mkdir(parents=True, exist_ok=True)
     KEY_NUMBERS_PATH.write_text(json.dumps(key_numbers, indent=2, ensure_ascii=False), encoding="utf-8")
     REPORT_PATH.write_text(build_report(key_numbers), encoding="utf-8")
 
