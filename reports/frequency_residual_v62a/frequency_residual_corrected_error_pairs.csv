@@ -1,0 +1,7 @@
+family,protocol,true_id,true_name,freq_pred_id,freq_pred_name,fusion_pred_id,fusion_pred_name,count
+lr,stratified,3,3,2,2,3,3,12
+lr,stratified,2,2,3,3,2,2,8
+lr,board_lobo,3,3,2,2,3,3,58
+lr,board_lobo,2,2,3,3,2,2,25
+lr,material_lomo,3,3,2,2,3,3,111
+lr,material_lomo,2,2,3,3,2,2,75
