@@ -1,0 +1,160 @@
+{
+  "features": "outputs\\encoder_features_normalized_v001\\features_v62a_epoch25.normalized.npz",
+  "input_shape": [
+    12944,
+    1280
+  ],
+  "families": [
+    "rf"
+  ],
+  "protocols": [
+    "stratified",
+    "board_lobo",
+    "material_lomo"
+  ],
+  "overall_metrics": [
+    {
+      "accuracy": 0.9961375048281189,
+      "balanced_accuracy": 0.9865182436611007,
+      "macro_f1": 0.9866861288039631,
+      "weighted_f1": 0.9961341733235254,
+      "family": "rf",
+      "protocol": "stratified",
+      "feature_kind": "freq",
+      "n": 2589
+    },
+    {
+      "accuracy": 0.9725762842796446,
+      "balanced_accuracy": 0.9129968600318097,
+      "macro_f1": 0.9356177306448826,
+      "weighted_f1": 0.9720746238246216,
+      "family": "rf",
+      "protocol": "stratified",
+      "feature_kind": "embed",
+      "n": 2589
+    },
+    {
+      "accuracy": 0.974121282348397,
+      "balanced_accuracy": 0.9157301458595098,
+      "macro_f1": 0.9405049294637153,
+      "weighted_f1": 0.9736392229599126,
+      "family": "rf",
+      "protocol": "stratified",
+      "feature_kind": "fusion",
+      "n": 2589
+    },
+    {
+      "accuracy": 0.9915018541409147,
+      "balanced_accuracy": 0.9705720659287216,
+      "macro_f1": 0.9707379673858167,
+      "weighted_f1": 0.9914912033690552,
+      "family": "rf",
+      "protocol": "board_lobo",
+      "feature_kind": "freq",
+      "n": 12944
+    },
+    {
+      "accuracy": 0.9755871446229913,
+      "balanced_accuracy": 0.9248568292547727,
+      "macro_f1": 0.9466382574456143,
+      "weighted_f1": 0.9752315162637246,
+      "family": "rf",
+      "protocol": "board_lobo",
+      "feature_kind": "embed",
+      "n": 12944
+    },
+    {
+      "accuracy": 0.9776730531520396,
+      "balanced_accuracy": 0.9283902282425199,
+      "macro_f1": 0.9507755046222766,
+      "weighted_f1": 0.9773311860676823,
+      "family": "rf",
+      "protocol": "board_lobo",
+      "feature_kind": "fusion",
+      "n": 12944
+    },
+    {
+      "accuracy": 0.9833127317676144,
+      "balanced_accuracy": 0.9428836238947564,
+      "macro_f1": 0.9426632847178187,
+      "weighted_f1": 0.9833085284995293,
+      "family": "rf",
+      "protocol": "material_lomo",
+      "feature_kind": "freq",
+      "n": 12944
+    },
+    {
+      "accuracy": 0.9727286773794809,
+      "balanced_accuracy": 0.9140963030396236,
+      "macro_f1": 0.9400692254351698,
+      "weighted_f1": 0.9722170388466733,
+      "family": "rf",
+      "protocol": "material_lomo",
+      "feature_kind": "embed",
+      "n": 12944
+    },
+    {
+      "accuracy": 0.9758961681087762,
+      "balanced_accuracy": 0.922694196288095,
+      "macro_f1": 0.9457763819033789,
+      "weighted_f1": 0.9754992580474775,
+      "family": "rf",
+      "protocol": "material_lomo",
+      "feature_kind": "fusion",
+      "n": 12944
+    }
+  ],
+  "correction_summary": [
+    {
+      "family": "rf",
+      "protocol": "stratified",
+      "n": 2589,
+      "freq_errors": 10,
+      "fusion_errors": 67,
+      "corrected_by_fusion": 9,
+      "degraded_by_fusion": 66,
+      "both_wrong": 1,
+      "both_correct": 2513,
+      "net_corrections": -57,
+      "correction_rate_of_freq_errors": 0.9,
+      "degradation_rate_of_freq_correct": 0.025591314462970142,
+      "freq_macro_f1": 0.9866861288039631,
+      "fusion_macro_f1": 0.9405049294637153,
+      "delta_macro_f1_pp": -4.618119934024778
+    },
+    {
+      "family": "rf",
+      "protocol": "board_lobo",
+      "n": 12944,
+      "freq_errors": 110,
+      "fusion_errors": 289,
+      "corrected_by_fusion": 89,
+      "degraded_by_fusion": 268,
+      "both_wrong": 21,
+      "both_correct": 12566,
+      "net_corrections": -179,
+      "correction_rate_of_freq_errors": 0.8090909090909091,
+      "degradation_rate_of_freq_correct": 0.020882032102228457,
+      "freq_macro_f1": 0.9707379673858167,
+      "fusion_macro_f1": 0.9507755046222766,
+      "delta_macro_f1_pp": -1.996246276354019
+    },
+    {
+      "family": "rf",
+      "protocol": "material_lomo",
+      "n": 12944,
+      "freq_errors": 216,
+      "fusion_errors": 312,
+      "corrected_by_fusion": 176,
+      "degraded_by_fusion": 272,
+      "both_wrong": 40,
+      "both_correct": 12456,
+      "net_corrections": -96,
+      "correction_rate_of_freq_errors": 0.8148148148148148,
+      "degradation_rate_of_freq_correct": 0.021370207416719043,
+      "freq_macro_f1": 0.9426632847178187,
+      "fusion_macro_f1": 0.9457763819033789,
+      "delta_macro_f1_pp": 0.31130971855601874
+    }
+  ]
+}
