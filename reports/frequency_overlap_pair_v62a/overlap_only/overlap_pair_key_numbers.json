@@ -1,0 +1,93 @@
+{
+  "features": "outputs\\encoder_features_normalized_v001\\features_v62a_epoch25.normalized.npz",
+  "labels": [
+    2,
+    3
+  ],
+  "label_names": [
+    "2",
+    "3"
+  ],
+  "overlap_only": true,
+  "freq_ranges": [
+    {
+      "label": 2,
+      "label_name": "2",
+      "freq_min": 500.0,
+      "freq_max": 556.0,
+      "n": 738
+    },
+    {
+      "label": 3,
+      "label_name": "3",
+      "freq_min": 550.0,
+      "freq_max": 605.0,
+      "n": 769
+    }
+  ],
+  "overlap_min": 550.0,
+  "overlap_max": 556.0,
+  "n_selected": 160,
+  "overall": [
+    {
+      "accuracy": 0.9767441860465116,
+      "balanced_accuracy": 0.975,
+      "macro_f1": 0.9765411893071467,
+      "weighted_f1": 0.9766934368616703,
+      "protocol": "stratified",
+      "family": "lr",
+      "feature_kind": "embed",
+      "n": 43
+    },
+    {
+      "accuracy": 0.5348837209302325,
+      "balanced_accuracy": 0.5456521739130434,
+      "macro_f1": 0.5285087719298246,
+      "weighted_f1": 0.5246838025295798,
+      "protocol": "stratified",
+      "family": "lr",
+      "feature_kind": "freq",
+      "n": 43
+    },
+    {
+      "accuracy": 0.9767441860465116,
+      "balanced_accuracy": 0.975,
+      "macro_f1": 0.9765411893071467,
+      "weighted_f1": 0.9766934368616703,
+      "protocol": "stratified",
+      "family": "lr",
+      "feature_kind": "fusion",
+      "n": 43
+    },
+    {
+      "accuracy": 0.9534883720930233,
+      "balanced_accuracy": 0.95,
+      "macro_f1": 0.9528508771929824,
+      "weighted_f1": 0.953233374133007,
+      "protocol": "stratified",
+      "family": "rf",
+      "feature_kind": "embed",
+      "n": 43
+    },
+    {
+      "accuracy": 0.7674418604651163,
+      "balanced_accuracy": 0.7760869565217392,
+      "macro_f1": 0.7663043478260869,
+      "weighted_f1": 0.7651668351870576,
+      "protocol": "stratified",
+      "family": "rf",
+      "feature_kind": "freq",
+      "n": 43
+    },
+    {
+      "accuracy": 0.9302325581395349,
+      "balanced_accuracy": 0.9282608695652175,
+      "macro_f1": 0.9296235679214403,
+      "weighted_f1": 0.9300803105850112,
+      "protocol": "stratified",
+      "family": "rf",
+      "feature_kind": "fusion",
+      "n": 43
+    }
+  ]
+}
