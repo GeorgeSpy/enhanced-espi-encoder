@@ -1,0 +1,8 @@
+Checkpoint: C:\ESPI\logs\train_v6.2_opt\ckpt_phase2_expert.pt
+Total keys: 237
+Spectral/Fourier-like keys: 4
+
+leftp.bandwidth | shape=()
+leftp.filter_sharpness | shape=()
+leftp.fx_carrier | shape=()
+leftp.fy_carrier | shape=()

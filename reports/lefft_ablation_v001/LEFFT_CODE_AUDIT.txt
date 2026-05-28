@@ -1,0 +1,1534 @@
+﻿
+docs\LEFFT_ABLATION_PLAN.md:1:# LeFFT Ablation Plan
+docs\LEFFT_ABLATION_PLAN.md:3:This document defines a controlled LeFFT ablation study. The purpose is to test whether e
+xplicit Fourier / phase descriptors add measurable grouped-generalization value beyond the current v6.2-A frozen embedd
+ing evidence.
+docs\LEFFT_ABLATION_PLAN.md:5:## 1. Why LeFFT Is an Ablation, Not a Main Claim
+docs\LEFFT_ABLATION_PLAN.md:7:LeFFT should be treated as an ablation because the current strongest evidence comes from 
+v6.2-A frozen embeddings, not from a LeFFT-enhanced architecture.
+docs\LEFFT_ABLATION_PLAN.md:11:- The presence of Fourier, phase, or physics-inspired modules does not prove representat
+ion-level physics alignment.
+docs\LEFFT_ABLATION_PLAN.md:12:- LeFFT superiority requires a matched comparison against v6.2-A under the same feature 
+dump, split, metric, and grouped-evaluation protocol.
+docs\LEFFT_ABLATION_PLAN.md:13:- Until such an ablation is completed, LeFFT is a candidate descriptor family or future 
+architectural direction, not a central manuscript claim.
+docs\LEFFT_ABLATION_PLAN.md:32:- Includes denoising, phase-related outputs, LeFTP / Fourier-prior components, gatekeepe
+r, expert classifier, and ArcFace head.
+docs\LEFFT_ABLATION_PLAN.md:36:### LeFFT Descriptor-Only Baseline
+docs\LEFFT_ABLATION_PLAN.md:38:The LeFFT descriptor-only baseline uses explicit hand-engineered Fourier / phase descrip
+tors without CNN embeddings.
+docs\LEFFT_ABLATION_PLAN.md:41:- Representation: compact descriptor vector built from Fourier, phase, amplitude, fringe
+, and local coherence statistics.
+docs\LEFFT_ABLATION_PLAN.md:43:- Claim boundary: if weak, it can serve as a controlled negative baseline; if strong, it
+ motivates deeper LeFFT integration.
+docs\LEFFT_ABLATION_PLAN.md:45:### v6.2-A Embedding + LeFFT Descriptor Fusion
+docs\LEFFT_ABLATION_PLAN.md:47:The fusion baseline concatenates frozen v6.2-A embeddings with LeFFT descriptors.
+docs\LEFFT_ABLATION_PLAN.md:49:- Source: v6.2-A frozen embedding plus matched LeFFT descriptor vector for the same samp
+le.
+docs\LEFFT_ABLATION_PLAN.md:50:- Representation: `[z_v62A ; d_LeFFT]`, optionally standardized per training fold.
+docs\LEFFT_ABLATION_PLAN.md:51:- Role: tests whether explicit LeFFT descriptors add information not already captured by
+ the v6.2-A embedding.
+docs\LEFFT_ABLATION_PLAN.md:54:## 3. Proposed LeFFT Descriptors
+docs\LEFFT_ABLATION_PLAN.md:61:- Spectral energy concentration: low-, mid-, and high-frequency energy ratios; radial sp
+ectral concentration; spectral entropy.
+docs\LEFFT_ABLATION_PLAN.md:62:- Dominant spectral radius / orientation: dominant radial frequency, dominant orientatio
+n, orientation concentration, anisotropy ratio.
+docs\LEFFT_ABLATION_PLAN.md:70:The LeFFT ablation must use the same frozen-representation audit protocol as the v6.2-A 
+encoder evidence.
+docs\LEFFT_ABLATION_PLAN.md:89:- LeFFT descriptor only.
+docs\LEFFT_ABLATION_PLAN.md:90:- v6.2-A embedding + LeFFT descriptor fusion.
+docs\LEFFT_ABLATION_PLAN.md:111:- LeFFT descriptor fusion improves v6.2-A grouped Macro-F1 under matched board-grouped 
+or material-grouped evaluation.
+docs\LEFFT_ABLATION_PLAN.md:115:Keep LeFFT as a controlled negative result or future work if:
+docs\LEFFT_ABLATION_PLAN.md:122:If LeFFT improves grouped Macro-F1, the next architectural candidate can be called v6.2
+-B. If it does not, v6.2-A remains the main frozen encoder candidate and LeFFT remains an ablation result.
+docs\LEFFT_ABLATION_PLAN.md:126:The LeFFT ablation must preserve conservative publication wording.
+docs\LEFFT_ABLATION_PLAN.md:130:- LeFFT superiority without a matched ablation against v6.2-A.
+docs\LEFFT_ABLATION_PLAN.md:133:- That Fourier / phase descriptors imply physics alignment by construction.
+docs\LEFFT_ABLATION_PLAN.md:138:- LeFFT descriptors add measurable grouped-representation value to v6.2-A under the tes
+ted protocol.
+docs\LEFFT_ABLATION_PLAN.md:139:- LeFFT fusion motivates a v6.2-B architecture.
+docs\LEFFT_ABLATION_PLAN.md:140:- Explicit Fourier / phase descriptors are useful as controlled representation features
+, subject to grouped validation.
+docs\LEFFT_ABLATION_PLAN.md:144:- LeFFT descriptors were tested under a matched protocol and did not improve grouped fr
+ozen-embedding performance.
+docs\LEFFT_ABLATION_PLAN.md:145:- LeFFT remains future work or a controlled negative baseline.
+docs\LEFFT_ABLATION_PLAN.md:152:- `LEFFT_DESCRIPTOR_AUDIT.md`: descriptor extraction summary, descriptor definitions, q
+uality checks, descriptor-only audit results, and caveats.
+docs\LEFFT_ABLATION_PLAN.md:153:- `LEFFT_FUSION_COMPARISON.md`: matched comparison of v6.2-A embedding only, LeFFT desc
+riptor only, and v6.2-A + LeFFT fusion.
+docs\LEFFT_ABLATION_PLAN.md:154:- `lefft_ablation_key_numbers.json`: machine-readable metrics, feature dimensions, spli
+t definitions, grouped Macro-F1 summaries, and decision flags.
+docs\LEFFT_ABLATION_PLAN.md:158:- `lefft_descriptor_quality_report.csv`
+docs\LEFFT_ABLATION_PLAN.md:159:- `lefft_descriptor_only_report.csv`
+docs\LEFFT_ABLATION_PLAN.md:160:- `lefft_fusion_knn_report.csv`
+docs\LEFFT_ABLATION_PLAN.md:161:- `lefft_fusion_linear_probe_report.csv`
+docs\LEFFT_ABLATION_PLAN.md:162:- `lefft_fusion_prototype_report.csv`
+docs\LEFFT_ABLATION_PLAN.md:163:- `lefft_fusion_lobo_board_summary.csv`
+docs\LEFFT_ABLATION_PLAN.md:164:- `lefft_fusion_lomo_material_summary.csv`
+docs\MANUSCRIPT_MAP.md:105:## Spectral Descriptor Ablation
+docs\MANUSCRIPT_MAP.md:109:| Spectral / LeFFT-inspired descriptor extraction | `scripts/encoder/extract_spectral_descri
+ptors.py` | manifest + image root | `reports/publication_assets/methodological_hardening_v001/lefft_descriptor_ablation
+/SPECTRAL_DESCRIPTOR_EXTRACTION_REPORT.md` | done-external |
+docs\MANUSCRIPT_MAP.md:111:## Spectral Descriptor Ablation Evaluation
+docs\MANUSCRIPT_MAP.md:115:| Spectral descriptor ablation evaluation | `scripts/encoder/evaluate_spectral_descriptor_ab
+lation.py` | normalized spectral/v6.2-A feature dumps | `reports/publication_assets/methodological_hardening_v001/lefft
+_descriptor_ablation/eval_v001/SPECTRAL_DESCRIPTOR_ABLATION_REPORT.md` | done-external |
+docs\MODEL_ARCHITECTURE.md:13:- Does not include an explicit Fourier, phase, or physics branch.
+docs\MODEL_ARCHITECTURE.md:30:v6.2-A should not be described as LeFFT-based or as the hierarchical physics-aware archit
+ecture. Its frozen-embedding evidence comes from the external `MCDropoutClassifier.global_pool` extractor, so MC Dropou
+t should only be mentioned when tied directly to that actual extractor and checkpoint evidence.
+docs\MODEL_ARCHITECTURE.md:37:- Includes a learnable Fourier prior / LeFTP path.
+docs\MODEL_ARCHITECTURE.md:55:- Architecture-level physics awareness does not guarantee representation-level physics al
+ignment. Denoising, phase, Fourier, or physics-feature modules can be present while the final embedding space remains s
+ensitive to board, material, or distribution signatures.
+docs\MODEL_ARCHITECTURE.md:74:- LeFFT / LeFTP superiority over the v6.2-A baseline.
+manuscript\ABSTRACT_INTRO_CONTRIBUTIONS.md:44:The current work supports frozen ESPI encoder evidence: v6.2-A is selecte
+d as the primary reportable frozen ESPI encoder baseline because it provides the strongest grouped board/material robus
+tness among the evaluated frozen representations. The work does not validate acoustic-response prediction, does not est
+ablish a full Physics-Aligned Encoder, and does not claim LeFFT superiority. LeFFT remains a future ablation direction,
+ and acoustic-response prediction remains a separate future validation task.
+manuscript\ABSTRACT_INTRO_CONTRIBUTIONS_REVISED.md:44:This work establishes frozen ESPI encoder evidence for grouped re
+presentation studies. It does not validate acoustic-response prediction, a full Physics-Aligned Encoder, LeFFT superior
+ity, metamaterials readiness, or full retrained CNN LOBO/LOMO generalization. LeFFT remains a future ablation direction
+, and acoustic-response prediction remains a separate future validation task.
+manuscript\DATA_CODE_AVAILABILITY.md:28:The reproducibility package supports the frozen encoder evidence reported in th
+e manuscript. It does not constitute acoustic-response prediction, a complete physics-aligned encoder validation, LeFFT
+ validation, metamaterials validation, or retrained CNN LOBO/LOMO evaluation.
+manuscript\DISCUSSION_LIMITATIONS_CONCLUSION_DRAFT.md:33:This result shows that physics-aware architectural components 
+alone do not guarantee robust frozen embedding geometry. A representation-aligned training objective, contrastive fine-
+tuning, or a different extraction point may be required before the hierarchical branch can serve as a stronger encoder 
+candidate. This result should not be interpreted as a LeFFT failure. LeFFT remains a controlled ablation direction that
+ must be evaluated through matched descriptor-only and fusion comparisons against the v6.2-A frozen baseline.
+manuscript\DISCUSSION_LIMITATIONS_CONCLUSION_DRAFT.md:45:LeFFT was not tested as a matched ablation in the current Resu
+lts. No claim is made about LeFFT superiority or failure. The current Results only compare the available frozen embeddi
+ng baselines and the hierarchical phase2 representation.
+manuscript\DISCUSSION_LIMITATIONS_CONCLUSION_DRAFT.md:51:Future work should include a controlled LeFFT descriptor ablat
+ion. This should compare v6.2-A embeddings alone, LeFFT descriptors alone, and v6.2-A plus LeFFT descriptor fusion unde
+r the same stratified, board-grouped, and material-grouped protocols. LeFFT should remain an ablation until it demonstr
+ates matched grouped robustness gains over the v6.2-A baseline.
+manuscript\DISCUSSION_LIMITATIONS_CONCLUSION_DRAFT.md:65:The work establishes an encoder-evidence stage between ESPI cl
+assification and future physically grounded representation learning. It supports frozen grouped representation evidence
+ while leaving acoustic-response prediction, LeFFT ablations, and full Physics-Aligned Encoder validation as future wor
+k.
+manuscript\FINAL_MANUSCRIPT_AUDIT.md:27:No experiments were rerun. No metrics were modified. No LeFFT, acoustic-respons
+e, retraining, or fine-tuning work was performed.
+manuscript\FINAL_MANUSCRIPT_AUDIT.md:71:- LeFFT superiority,
+manuscript\FINAL_MANUSCRIPT_AUDIT.md:86:- v6.2-A is explicitly not described as LeFFT-based.
+manuscript\FINAL_MANUSCRIPT_AUDIT.md:130:- LeFFT is framed as a future ablation direction.
+manuscript\FINAL_MANUSCRIPT_FIX_LOG.md:31:No experiments were rerun. No LeFFT implementation, acoustic-response predict
+ion, retraining, or fine-tuning was performed.
+manuscript\FINAL_SUBMISSION_AUDIT.md:20:No experiments were rerun. No metrics were changed. No LeFFT implementation, ac
+oustic-response prediction, retraining, or fine-tuning was performed. No new scientific claims were added.
+manuscript\FINAL_SUBMISSION_AUDIT.md:117:| `LeFFT superiority` | 0 | Pass |
+manuscript\FINAL_SUBMISSION_AUDIT.md:121:The manuscript continues to frame acoustic-response prediction, LeFFT analysis
+, physics-aligned encoder validation, and downstream acoustic/phononic use as future validation rather than current cla
+ims.
+manuscript\FINAL_SUBMISSION_AUDIT_CLEAN.md:16:No experiments were rerun. No metrics were changed. No LeFFT implementati
+on, acoustic-response prediction, retraining, or fine-tuning was performed. No new scientific claims were added.
+manuscript\FINAL_SUBMISSION_AUDIT_CLEAN.md:125:| `LeFFT superiority` | 0 | Pass |
+manuscript\FINAL_SUBMISSION_AUDIT_CLEAN.md:129:The submission draft continues to frame acoustic-response prediction, Le
+FFT analysis, physics-aligned encoder validation, and downstream acoustic/phononic use as future validation rather than
+ current claims.
+manuscript\FINAL_SUBMISSION_LANGUAGE_FIX_LOG.md:46:No experiments were rerun. No embeddings were modified. No LeFFT imp
+lementation, acoustic-response prediction, retraining, or fine-tuning was performed.
+manuscript\FRONT_MATTER_CLAIM_CHECK.md:28:- LeFFT superiority.
+manuscript\FRONT_MATTER_CLAIM_CHECK.md:48:v6.2-A is described as the official reportable baseline and main frozen encod
+er candidate. It is not described as LeFFT-based.
+manuscript\MANUSCRIPT_INTEGRITY_AUDIT.md:7:No experiments were rerun. No metrics were modified. No LeFFT, acoustic-resp
+onse, retraining, or fine-tuning work was performed.
+manuscript\MANUSCRIPT_INTEGRITY_AUDIT.md:81:- LeFFT superiority.
+manuscript\MANUSCRIPT_INTEGRITY_AUDIT.md:91:v6.2-A is not described as LeFFT-based. It is described as the official rep
+ortable baseline and frozen encoder candidate based on the v6.1 architecture with improved distribution-aware/domain-mi
+xed training logic and robustness safeguards. This is consistent with `docs/MODEL_ARCHITECTURE.md`.
+manuscript\MANUSCRIPT_INTEGRITY_AUDIT.md:176:The skeleton is scientifically coherent, metric-consistent, and aligned wi
+th the current claim boundaries. It does not overclaim acoustic-response value, validated Physics-Aligned Encoder statu
+s, LeFFT superiority, metamaterials readiness, or full retrained CNN LOBO/LOMO generalization. The central result is st
+ated in a publish-safe form:
+manuscript\MANUSCRIPT_INTEGRITY_FIX_LOG.md:7:No experiments were rerun. No metrics were changed. No LeFFT, acoustic-res
+ponse prediction, retraining, or fine-tuning was performed.
+manuscript\MANUSCRIPT_INTEGRITY_FIX_LOG.md:49:- LeFFT superiority is not claimed.
+manuscript\MANUSCRIPT_POLISHED_DRAFT.md:21:The claim boundary is explicit. The present work establishes frozen ESPI enc
+oder evidence under stratified and grouped evaluation. It does not validate acoustic-response prediction, a fully valid
+ated physics-aligned encoder, LeFFT as a superior method, readiness for metamaterials tasks, or retrained CNN LOBO/LOMO
+ performance. LeFFT analysis and acoustic-response prediction remain future validation directions.
+manuscript\MANUSCRIPT_POLISHED_DRAFT.md:48:v6.1 is the conservative ESPI reference baseline. It uses a one-channel ESPI
+ input, a frozen ResNet18-style backbone, and a lightweight classifier head. It does not include an explicit Fourier, p
+hase, or physics branch. In this manuscript, v6.1 is treated as the reference ESPI embedding baseline.
+manuscript\MANUSCRIPT_POLISHED_DRAFT.md:50:v6.2-A is the official reportable ESPI baseline and the main frozen encoder 
+candidate. It is based on the v6.1 architecture and remains a conservative ResNet18-style model rather than a LeFFT-bas
+ed or hierarchical physics-aware architecture. Its improvements are associated with distribution-aware/domain-mixed tra
+ining logic, clean/averaged/pseudo-noisy batch composition, targeted noisy-like augmentation, class-imbalance handling,
+ and zero-recall safeguards. In the frozen encoder evaluation, v6.2-A is represented by the `MCDropoutClassifier.global
+_pool` embedding.
+manuscript\MANUSCRIPT_POLISHED_DRAFT.md:52:The hierarchical v6.2 phase2 branch is included as a controlled physics-awar
+e architectural comparison. It includes denoising, a learnable Fourier-prior / LeFTP path, wrapped/unwrapped phase and 
+amplitude outputs, multiscale physics features, a gatekeeper head, an expert embedding, and an ArcFace head. The phase2
+ checkpoint is technically valid and auditable as a frozen embedding source, but it is not superior to v6.2-A in the cu
+rrent frozen representation evaluation. It is therefore treated as a controlled comparison branch rather than a final e
+ncoder.
+manuscript\MANUSCRIPT_POLISHED_DRAFT.md:54:LeFFT is not evaluated as a current result in this manuscript and remains a 
+future ablation direction.
+manuscript\MANUSCRIPT_POLISHED_DRAFT.md:190:This result shows that physics-aware architectural components alone do not 
+guarantee robust frozen embedding geometry. A representation-aligned training objective, contrastive fine-tuning, or a 
+different extraction point may be required before the hierarchical branch can serve as a stronger encoder candidate. Th
+is result should not be interpreted as a LeFFT failure. LeFFT remains a controlled ablation direction that must be eval
+uated through matched descriptor-only and fusion comparisons against the v6.2-A frozen baseline.
+manuscript\MANUSCRIPT_POLISHED_DRAFT.md:202:LeFFT was not tested as a matched ablation in the current Results. No claim
+ is made that LeFFT is superior or inferior. Future work should include a controlled LeFFT descriptor ablation comparin
+g v6.2-A embeddings alone, LeFFT descriptors alone, and v6.2-A plus LeFFT descriptor fusion under the same stratified, 
+board-grouped, and material-grouped protocols.
+manuscript\MANUSCRIPT_POLISHED_DRAFT.md:214:The work establishes an encoder-evidence stage between ESPI classification 
+and future physically grounded representation learning. It supports frozen grouped representation evidence while leavin
+g acoustic-response prediction, LeFFT ablations, and full encoder validation as future work.
+manuscript\MANUSCRIPT_POLISHED_DRAFT_MINORREV.md:21:The claim boundary is explicit. The present work establishes frozen
+ ESPI encoder evidence under stratified and grouped evaluation. It does not validate acoustic-response prediction, a fu
+lly validated physics-aligned encoder, LeFFT as a superior method, readiness for metamaterials tasks, or retrained CNN 
+LOBO/LOMO performance. LeFFT analysis and acoustic-response prediction remain future validation directions.
+manuscript\MANUSCRIPT_POLISHED_DRAFT_MINORREV.md:50:v6.1 is the conservative ESPI reference baseline. It uses a one-cha
+nnel ESPI input, a frozen ResNet18-style backbone, and a lightweight classifier head. It does not include an explicit F
+ourier, phase, or physics branch. In this manuscript, v6.1 is treated as the reference ESPI embedding baseline.
+manuscript\MANUSCRIPT_POLISHED_DRAFT_MINORREV.md:52:v6.2-A is the official reportable ESPI baseline and the main frozen
+ encoder candidate. It is based on the v6.1 architecture and remains a conservative ResNet18-style model rather than a 
+LeFFT-based or hierarchical physics-aware architecture. Its improvements are associated with distribution-aware/domain-
+mixed training logic, clean/averaged/pseudo-noisy batch composition, targeted noisy-like augmentation, class-imbalance 
+handling, and zero-recall safeguards. In the frozen encoder evaluation, v6.2-A is represented by its recorded 1280-dime
+nsional pre-head embedding; the exact extraction point is listed in Section 2.3.
+manuscript\MANUSCRIPT_POLISHED_DRAFT_MINORREV.md:54:The hierarchical v6.2 phase2 branch is included as a controlled phy
+sics-aware architectural comparison. It includes denoising, a learnable Fourier-prior / LeFTP path, wrapped/unwrapped p
+hase and amplitude outputs, multiscale physics features, a gatekeeper head, an expert embedding, and an ArcFace head. T
+he phase2 checkpoint is technically valid and auditable as a frozen embedding source, but it is not superior to v6.2-A 
+in the current frozen representation evaluation. It is therefore treated as a controlled comparison branch rather than 
+a final encoder.
+manuscript\MANUSCRIPT_POLISHED_DRAFT_MINORREV.md:56:LeFFT is not evaluated as a current result in this manuscript and r
+emains a future ablation direction.
+manuscript\MANUSCRIPT_POLISHED_DRAFT_MINORREV.md:194:This result shows that physics-aware architectural components alon
+e do not guarantee robust frozen embedding geometry. A representation-aligned training objective, contrastive fine-tuni
+ng, or a different extraction point may be required before the hierarchical branch can serve as a stronger encoder cand
+idate. This result should not be interpreted as a LeFFT failure. LeFFT remains a controlled ablation direction that mus
+t be evaluated through matched descriptor-only and fusion comparisons against the v6.2-A frozen baseline.
+manuscript\MANUSCRIPT_POLISHED_DRAFT_MINORREV.md:206:LeFFT was not tested as a matched ablation in the current Results.
+ No claim is made that LeFFT is superior or inferior. Future work should include a controlled LeFFT descriptor ablation
+ comparing v6.2-A embeddings alone, LeFFT descriptors alone, and v6.2-A plus LeFFT descriptor fusion under the same str
+atified, board-grouped, and material-grouped protocols.
+manuscript\MANUSCRIPT_POLISHED_DRAFT_MINORREV.md:218:The work establishes an encoder-evidence stage between ESPI classi
+fication and future physically grounded representation learning. It supports frozen grouped representation evidence whi
+le leaving acoustic-response prediction, LeFFT ablations, and full encoder validation as future work.
+manuscript\MANUSCRIPT_SUBMISSION_DRAFT.md:21:The claim boundary is explicit. The present work establishes frozen ESPI e
+ncoder evidence under stratified and grouped evaluation. It does not validate acoustic-response prediction, a fully val
+idated physics-aligned encoder, LeFFT as a superior method, readiness for metamaterials tasks, or retrained CNN LOBO/LO
+MO performance. LeFFT analysis and acoustic-response prediction remain future validation directions.
+manuscript\MANUSCRIPT_SUBMISSION_DRAFT.md:50:v6.1 is the conservative ESPI reference baseline. It uses a one-channel ES
+PI input, a frozen ResNet18-style backbone, and a lightweight classifier head. It does not include an explicit Fourier,
+ phase, or physics branch. In this manuscript, v6.1 is treated as the reference ESPI embedding baseline.
+manuscript\MANUSCRIPT_SUBMISSION_DRAFT.md:52:v6.2-A is the official reportable ESPI baseline and the main frozen encode
+r candidate. It is based on the v6.1 architecture and remains a conservative ResNet18-style model rather than a LeFFT-b
+ased or hierarchical physics-aware architecture. Its improvements are associated with distribution-aware/domain-mixed t
+raining logic, clean/averaged/pseudo-noisy batch composition, targeted noisy-like augmentation, class-imbalance handlin
+g, and zero-recall safeguards. In the frozen encoder evaluation, v6.2-A is represented by its recorded 1280-dimensional
+ pre-head embedding; the exact extraction point is listed in Section 2.3.
+manuscript\MANUSCRIPT_SUBMISSION_DRAFT.md:54:The hierarchical v6.2 phase2 branch is included as a controlled physics-aw
+are architectural comparison. It includes denoising, a learnable Fourier-prior / LeFTP path, wrapped/unwrapped phase an
+d amplitude outputs, multiscale physics features, a gatekeeper head, an expert embedding, and an ArcFace head. The phas
+e2 checkpoint is technically valid and auditable as a frozen embedding source, but it is not superior to v6.2-A in the 
+current frozen representation evaluation. It is therefore treated as a controlled comparison branch rather than a final
+ encoder.
+manuscript\MANUSCRIPT_SUBMISSION_DRAFT.md:56:LeFFT is not evaluated as a current result in this manuscript and remains 
+a future ablation direction.
+manuscript\MANUSCRIPT_SUBMISSION_DRAFT.md:194:This result shows that physics-aware architectural components alone do no
+t guarantee robust frozen embedding geometry. A representation-aligned training objective, contrastive fine-tuning, or 
+a different extraction point may be required before the hierarchical branch can serve as a stronger encoder candidate. 
+This result should not be interpreted as a LeFFT failure. LeFFT remains a controlled ablation direction that must be ev
+aluated through matched descriptor-only and fusion comparisons against the v6.2-A frozen baseline.
+manuscript\MANUSCRIPT_SUBMISSION_DRAFT.md:206:LeFFT was not tested as a matched ablation in the current Results. No cla
+im is made that LeFFT is superior or inferior. Future work should include a controlled LeFFT descriptor ablation compar
+ing v6.2-A embeddings alone, LeFFT descriptors alone, and v6.2-A plus LeFFT descriptor fusion under the same stratified
+, board-grouped, and material-grouped protocols.
+manuscript\MANUSCRIPT_SUBMISSION_DRAFT.md:218:The work establishes an encoder-evidence stage between ESPI classificatio
+n and future physically grounded representation learning. It supports frozen grouped representation evidence while leav
+ing acoustic-response prediction, LeFFT ablations, and full encoder validation as future work.
+manuscript\MANUSCRIPT_SUBMISSION_DRAFT.md:222:The analysis is based on frozen feature dumps, normalized metadata schema
+s, and lightweight evaluation scripts. No deep model retraining, acoustic-response prediction, or LeFFT ablation is par
+t of the reported Results. The reproducibility package should include the normalized frozen feature schema, encoder eva
+luation scripts, class-level diagnostic scripts, publication tables and figures, claim checklist, and audit reports. Da
+ta and code release details should be finalized according to institutional permissions and the target journal's reposit
+ory policy.
+manuscript\MANUSCRIPT_UNIFIED_DRAFT.md:57:This work establishes frozen ESPI encoder evidence for grouped representation
+ studies. It does not validate acoustic-response prediction, a full Physics-Aligned Encoder, LeFFT superiority, metamat
+erials readiness, or full retrained CNN LOBO/LOMO generalization. LeFFT remains a future ablation direction, and acoust
+ic-response prediction remains a separate future validation task.
+manuscript\MANUSCRIPT_UNIFIED_DRAFT.md:89:v6.1 is the conservative ESPI reference baseline. It uses a 1-channel ESPI in
+put, a frozen ResNet-18-style backbone, and a lightweight classifier head. It does not include an explicit Fourier, pha
+se, or physics branch. In this manuscript, v6.1 is treated as the historical/reference ESPI embedding baseline.
+manuscript\MANUSCRIPT_UNIFIED_DRAFT.md:93:v6.2-A is the official reportable ESPI baseline and the main frozen encoder c
+andidate. It is based on the v6.1 architecture and remains a conservative ResNet18-style model rather than a LeFFT-base
+d or hierarchical physics-aware architecture. Its improvements are associated with distribution-aware/domain-mixed trai
+ning logic, clean/averaged/pseudo-noisy batch composition, targeted noisy-like augmentation, class-imbalance handling, 
+and zero-recall safeguards. In the frozen encoder evaluation, v6.2-A is represented by the `MCDropoutClassifier.global_
+pool` embedding.
+manuscript\MANUSCRIPT_UNIFIED_DRAFT.md:97:The hierarchical v6.2 phase2 branch is included as a controlled physics-aware
+ architectural comparison. It includes denoising, a learnable Fourier-prior / LeFTP path, wrapped/unwrapped phase and a
+mplitude outputs, multiscale physics features, a gatekeeper head, an expert embedding, and an ArcFace head. The phase2 
+checkpoint is technically valid and auditable as a frozen embedding source, but it is not superior to v6.2-A in the cur
+rent frozen representation evaluation. It is therefore treated as a controlled comparison branch, not as a validated Ph
+ysics-Aligned Encoder.
+manuscript\MANUSCRIPT_UNIFIED_DRAFT.md:99:LeFFT is not evaluated as a current result in this manuscript. It remains a f
+uture ablation direction.
+manuscript\MANUSCRIPT_UNIFIED_DRAFT.md:238:This Methods section describes frozen encoder evidence. It does not describe
+ acoustic-response prediction, does not validate a full Physics-Aligned Encoder, does not claim LeFFT superiority, and 
+does not claim metamaterials readiness. The grouped board/material tests are frozen-embedding evaluations, not full ret
+rained CNN LOBO/LOMO generalization experiments.
+manuscript\MANUSCRIPT_UNIFIED_DRAFT.md:246:The evaluation compares five frozen representation spaces under a common pro
+tocol: a random ResNet-18 control, an ImageNet-pretrained ResNet-18 control, the v6.1 reference ESPI baseline, the v6.2
+-A reportable baseline, and the hierarchical v6.2 phase2 expert branch. All results are computed from frozen embeddings
+. No encoder fine-tuning, deep-model retraining, LeFFT descriptor modeling, or acoustic-response prediction is included
+ in this comparison.
+manuscript\MANUSCRIPT_UNIFIED_DRAFT.md:296:The results do not claim acoustic-response predictive value, a validated Phy
+sics-Aligned Encoder, LeFFT superiority, metamaterials readiness, or full retrained CNN LOBO/LOMO generalization. LeFFT
+ remains an ablation and future direction. The present results should be described as frozen grouped representation evi
+dence.
+manuscript\MANUSCRIPT_UNIFIED_DRAFT.md:330:This result shows that physics-aware architectural components alone do not g
+uarantee robust frozen embedding geometry. A representation-aligned training objective, contrastive fine-tuning, or a d
+ifferent extraction point may be required before the hierarchical branch can serve as a stronger encoder candidate. Thi
+s result should not be interpreted as a LeFFT failure. LeFFT remains a controlled ablation direction that must be evalu
+ated through matched descriptor-only and fusion comparisons against the v6.2-A frozen baseline.
+manuscript\MANUSCRIPT_UNIFIED_DRAFT.md:342:LeFFT was not tested as a matched ablation in the current Results. No claim 
+is made about LeFFT superiority or failure. The current Results only compare the available frozen embedding baselines a
+nd the hierarchical phase2 representation.
+manuscript\MANUSCRIPT_UNIFIED_DRAFT.md:348:Future work should include a controlled LeFFT descriptor ablation. This shou
+ld compare v6.2-A embeddings alone, LeFFT descriptors alone, and v6.2-A plus LeFFT descriptor fusion under the same str
+atified, board-grouped, and material-grouped protocols. LeFFT should remain an ablation until it demonstrates matched g
+rouped robustness gains over the v6.2-A baseline.
+manuscript\MANUSCRIPT_UNIFIED_DRAFT.md:362:The work establishes an encoder-evidence stage between ESPI classification a
+nd future physically grounded representation learning. It supports frozen grouped representation evidence while leaving
+ acoustic-response prediction, LeFFT ablations, and full Physics-Aligned Encoder validation as future work.
+manuscript\MANUSCRIPT_UNIFIED_DRAFT.md:399:These placements support a frozen grouped representation claim. They should 
+not be used to claim acoustic-response predictive value, a validated Physics-Aligned Encoder, LeFFT superiority, or fin
+al metamaterials readiness.
+manuscript\MANUSCRIPT_UNIFIED_DRAFT.md:405:The manuscript does not claim acoustic-response predictive value, a validate
+d Physics-Aligned Encoder, LeFFT superiority, metamaterials readiness, or full retrained CNN LOBO/LOMO generalization. 
+LeFFT descriptor analysis and acoustic-response prediction remain future validation steps.
+manuscript\METHODS_AUDIT.md:7:No experiments were rerun. No metrics were modified. No LeFFT, acoustic-response predicti
+on, retraining, or fine-tuning work was performed.
+manuscript\METHODS_AUDIT.md:57:- v6.2-A is explicitly not described as LeFFT-based or hierarchical.
+manuscript\METHODS_AUDIT.md:61:- LeFFT is kept as a future ablation direction, not a current result.
+manuscript\METHODS_AUDIT.md:125:- LeFFT superiority;
+manuscript\METHODS_AUDIT.md:129:The terms "LeFFT-based" and "validated Physics-Aligned Encoder" appear only in boundary
+ or negative-control contexts.
+manuscript\METHODS_AUDIT.md:182:The draft does not overclaim. It frames the study as frozen ESPI encoder evidence and e
+xplicitly avoids claims of acoustic-response predictive value, validated Physics-Aligned Encoder status, LeFFT superior
+ity, metamaterials readiness, or full retrained CNN LOBO/LOMO generalization.
+manuscript\METHODS_DRAFT.md:31:v6.1 is the conservative ESPI reference baseline. It uses a 1-channel ESPI input, a froz
+en ResNet-18-style backbone, and a lightweight classifier head. It does not include an explicit Fourier, phase, or phys
+ics branch. In this manuscript, v6.1 is treated as the historical/reference ESPI embedding baseline.
+manuscript\METHODS_DRAFT.md:35:v6.2-A is the official reportable ESPI baseline and the main frozen encoder candidate. I
+t is based on the v6.1 architecture and remains a conservative ResNet18-style model rather than a LeFFT-based or hierar
+chical physics-aware architecture. Its improvements are associated with distribution-aware/domain-mixed training logic,
+ clean/averaged/pseudo-noisy batch composition, targeted noisy-like augmentation, class-imbalance handling, and zero-re
+call safeguards. In the frozen encoder evaluation, v6.2-A is represented by the `MCDropoutClassifier.global_pool` embed
+ding.
+manuscript\METHODS_DRAFT.md:39:The hierarchical v6.2 phase2 branch is included as a controlled physics-aware architectu
+ral comparison. It includes denoising, a learnable Fourier-prior / LeFTP path, wrapped/unwrapped phase and amplitude ou
+tputs, multiscale physics features, a gatekeeper head, an expert embedding, and an ArcFace head. The phase2 checkpoint 
+is technically valid and auditable as a frozen embedding source, but it is not superior to v6.2-A in the current frozen
+ representation evaluation. It is therefore treated as a controlled comparison branch, not as a validated Physics-Align
+ed Encoder.
+manuscript\METHODS_DRAFT.md:41:LeFFT is not evaluated as a current result in this manuscript. It remains a future ablat
+ion direction.
+manuscript\METHODS_DRAFT.md:157:This Methods section describes frozen encoder evidence. It does not describe acoustic-r
+esponse prediction, does not validate a full Physics-Aligned Encoder, does not claim LeFFT superiority, and does not cl
+aim metamaterials readiness. The grouped board/material tests are frozen-embedding evaluations, not full retrained CNN 
+LOBO/LOMO generalization experiments.
+manuscript\METHODS_DRAFT_REVISED.md:31:v6.1 is the conservative ESPI reference baseline. It uses a 1-channel ESPI input
+, a frozen ResNet-18-style backbone, and a lightweight classifier head. It does not include an explicit Fourier, phase,
+ or physics branch. In this manuscript, v6.1 is treated as the historical/reference ESPI embedding baseline.
+manuscript\METHODS_DRAFT_REVISED.md:35:v6.2-A is the official reportable ESPI baseline and the main frozen encoder cand
+idate. It is based on the v6.1 architecture and remains a conservative ResNet18-style model rather than a LeFFT-based o
+r hierarchical physics-aware architecture. Its improvements are associated with distribution-aware/domain-mixed trainin
+g logic, clean/averaged/pseudo-noisy batch composition, targeted noisy-like augmentation, class-imbalance handling, and
+ zero-recall safeguards. In the frozen encoder evaluation, v6.2-A is represented by the `MCDropoutClassifier.global_poo
+l` embedding.
+manuscript\METHODS_DRAFT_REVISED.md:39:The hierarchical v6.2 phase2 branch is included as a controlled physics-aware ar
+chitectural comparison. It includes denoising, a learnable Fourier-prior / LeFTP path, wrapped/unwrapped phase and ampl
+itude outputs, multiscale physics features, a gatekeeper head, an expert embedding, and an ArcFace head. The phase2 che
+ckpoint is technically valid and auditable as a frozen embedding source, but it is not superior to v6.2-A in the curren
+t frozen representation evaluation. It is therefore treated as a controlled comparison branch, not as a validated Physi
+cs-Aligned Encoder.
+manuscript\METHODS_DRAFT_REVISED.md:41:LeFFT is not evaluated as a current result in this manuscript. It remains a futu
+re ablation direction.
+manuscript\METHODS_DRAFT_REVISED.md:180:This Methods section describes frozen encoder evidence. It does not describe ac
+oustic-response prediction, does not validate a full Physics-Aligned Encoder, does not claim LeFFT superiority, and doe
+s not claim metamaterials readiness. The grouped board/material tests are frozen-embedding evaluations, not full retrai
+ned CNN LOBO/LOMO generalization experiments.
+manuscript\METHODS_REVISION_LOG.md:7:No experiments were rerun. No metrics were modified. No LeFFT, acoustic-response p
+rediction, retraining, or fine-tuning work was performed.
+manuscript\METHODS_REVISION_LOG.md:68:- The revised Methods do not claim LeFFT superiority.
+manuscript\MINOR_REVISION_AUDIT.md:22:No experiments were rerun. No embeddings were modified. No locked metrics were ch
+anged. No LeFFT implementation, acoustic-response prediction, retraining, or fine-tuning was performed.
+manuscript\MINOR_REVISION_AUDIT.md:91:| `LeFFT superiority` | 0 | Pass |
+manuscript\MINOR_REVISION_AUDIT.md:100:- LeFFT remains a future ablation direction.
+manuscript\MINOR_REVISION_CHANGE_LOG.md:90:- no LeFFT superiority claim,
+manuscript\MINOR_REVISION_CHANGE_LOG.md:144:| `LeFFT superiority` | 0 | Pass |
+manuscript\MINOR_REVISION_CHANGE_LOG.md:150:No deep models were rerun. No embeddings were modified. No LeFFT implementa
+tion, acoustic-response prediction, retraining, or fine-tuning was performed.
+manuscript\MINOR_REVISION_PLAN.md:13:No deep models were rerun. No embeddings were modified. No locked metrics were cha
+nged. No LeFFT implementation, acoustic-response prediction, retraining, or fine-tuning was performed.
+manuscript\MINOR_REVISION_PLAN.md:123:### New LeFFT Ablation
+manuscript\MINOR_REVISION_PLAN.md:125:Not implemented. LeFFT remains a future ablation direction. Implementing it would
+ introduce new experiments and new claims.
+manuscript\MINOR_REVISION_PLAN.md:145:- LeFFT superiority,
+manuscript\PAPER_DRAFT_SKELETON.md:13:Electronic speckle pattern interferometry (ESPI) provides full-field optical meas
+urements that can encode modal structure, but using learned ESPI representations as reusable encoders requires evidence
+ beyond conventional classifier validation. This study evaluates frozen ESPI representation spaces under stratified and
+ grouped protocols. We compare random and ImageNet-pretrained ResNet-18 controls, a v6.1 reference ESPI baseline, the v
+6.2-A reportable baseline, and a hierarchical v6.2 phase2 expert branch. The evaluation separates within-split kNN sepa
+rability from grouped robustness under board-wise and material-wise exclusion. v6.1 achieves the strongest stratified k
+NN Macro-F1 (95.07%), while v6.2-A achieves the strongest grouped robustness, with 93.56% Board LOBO Macro-F1 and 93.49
+% Material LOMO Macro-F1. Class-level diagnostics show that v6.2-A improves grouped F1 over v6.1 across all five modal 
+classes, with the largest gains in the difficult minority classes 2_1 (+13.43 percentage points) and 1_2 (+12.21 percen
+tage points). Random and ImageNet controls show non-trivial stratified performance but collapse under grouped evaluatio
+n. The hierarchical v6.2 phase2 branch is technically valid but not superior in this frozen representation audit. These
+ results support v6.2-A as the primary reportable frozen ESPI encoder baseline, while acoustic-response prediction, LeF
+FT ablations, and validated physics-aligned encoder claims remain future work.
+manuscript\PAPER_DRAFT_SKELETON.md:22:- **Scope.** The paper reports frozen representation evidence. It does not claim 
+acoustic-response prediction, validated Physics-Aligned Encoder status, LeFFT superiority, or full retrained CNN LOBO/L
+OMO generalization.
+manuscript\PAPER_DRAFT_SKELETON.md:43:- **Physics-aware architectures and Fourier/phase descriptors.**
+manuscript\PAPER_DRAFT_SKELETON.md:45:  - Current paper treats hierarchical v6.2 as a controlled comparison and LeFFT a
+s a future ablation, not a main claim.
+manuscript\PAPER_DRAFT_SKELETON.md:61:- **v6.1.** Reference frozen ResNet-18-style baseline with 1-channel ESPI input, 
+frozen backbone, and lightweight 5-class classifier head. No explicit Fourier, phase, or physics branch.
+manuscript\PAPER_DRAFT_SKELETON.md:63:- **Hierarchical v6.2 phase2.** Controlled physics-aware branch with denoising, F
+ourier-prior / LeFTP path, wrapped/unwrapped phase and amplitude outputs, multiscale physics features, gatekeeper head,
+ expert embedding, and ArcFace head. The phase2 checkpoint is technically valid but underperforms v6.2-A in frozen repr
+esentation evaluation.
+manuscript\PAPER_DRAFT_SKELETON.md:114:The evaluation compares five frozen representation spaces under a common protoco
+l: a random ResNet-18 control, an ImageNet-pretrained ResNet-18 control, the v6.1 reference ESPI baseline, the v6.2-A r
+eportable baseline, and the hierarchical v6.2 phase2 expert branch. All results are computed from frozen embeddings. No
+ encoder fine-tuning, deep-model retraining, LeFFT descriptor modeling, or acoustic-response prediction is included in 
+this comparison.
+manuscript\PAPER_DRAFT_SKELETON.md:164:The results do not claim acoustic-response predictive value, a validated Physics
+-Aligned Encoder, LeFFT superiority, metamaterials readiness, or full retrained CNN LOBO/LOMO generalization. LeFFT rem
+ains an ablation and future direction. The present results should be described as frozen grouped representation evidenc
+e.
+manuscript\PAPER_DRAFT_SKELETON.md:181:- LeFFT and Fourier/phase descriptors are not current results. They remain a pla
+nned ablation to test whether explicit Fourier/phase descriptors add grouped robustness beyond v6.2-A.
+manuscript\PAPER_DRAFT_SKELETON.md:228:- LeFFT / LeFTP superiority.
+manuscript\POLISH_CHANGE_LOG.md:38:- Kept LeFFT as a future ablation direction.
+manuscript\POLISH_CHANGE_LOG.md:72:- LeFFT as superior,
+manuscript\POLISH_CHANGE_LOG.md:148:| `LeFFT superiority` | 0 | Pass |
+manuscript\RESULTS_CLAIM_CHECKLIST.md:69:| LeFFT superiority. | Not claimed; LeFFT remains ablation/future direction. |
+ `reports/publication_assets/encoder_baseline_v001/PUBLICATION_RESULT_SUMMARY.md`; `reports/publication_assets/class_le
+vel_v001/CLASS_LEVEL_PUBLICATION_SUMMARY.md` |
+manuscript\RESULTS_DRAFT.md:5:We evaluated five frozen encoder representations under a unified protocol: a random ResNe
+t-18 control, an ImageNet-pretrained ResNet-18 control, the v6.1 reference ESPI baseline, the v6.2-A reportable baselin
+e, and the hierarchical v6.2 phase2 expert branch. All comparisons were performed on already extracted frozen embedding
+s. No deep model retraining, encoder fine-tuning, LeFFT descriptor extraction, or acoustic-response prediction was perf
+ormed.
+manuscript\RESULTS_DRAFT.md:51:The results do not establish a validated Physics-Aligned Encoder. They also do not demon
+strate acoustic-response predictive value, metamaterials transfer, or LeFFT superiority. LeFFT remains an ablation and 
+future direction. The present evidence should therefore be described as frozen grouped representation evidence, not as 
+final proof of a fully validated physics-aligned encoder.
+manuscript\RESULTS_DRAFT_REVISED.md:5:The evaluation compares five frozen representation spaces under a common protocol
+: a random ResNet-18 control, an ImageNet-pretrained ResNet-18 control, the v6.1 reference ESPI baseline, the v6.2-A re
+portable baseline, and the hierarchical v6.2 phase2 expert branch. All results are computed from frozen embeddings. No 
+encoder fine-tuning, deep-model retraining, LeFFT descriptor modeling, or acoustic-response prediction is included in t
+his comparison.
+manuscript\RESULTS_DRAFT_REVISED.md:55:The results do not claim acoustic-response predictive value, a validated Physics
+-Aligned Encoder, LeFFT superiority, metamaterials readiness, or full retrained CNN LOBO/LOMO generalization. LeFFT rem
+ains an ablation and future direction. The present results should be described as frozen grouped representation evidenc
+e.
+manuscript\RESULTS_TABLE_PLACEMENT.md:36:These placements support a frozen grouped representation claim. They should no
+t be used to claim acoustic-response predictive value, a validated Physics-Aligned Encoder, LeFFT superiority, or final
+ metamaterials readiness.
+manuscript\SUBMISSION_POLISH_CHANGE_LOG.md:60:- no LeFFT superiority claim,
+manuscript\SUBMISSION_POLISH_CHANGE_LOG.md:66:No experiments were rerun. No embeddings were modified. No LeFFT implemen
+tation, acoustic-response prediction, retraining, or fine-tuning was performed.
+manuscript\SUBMISSION_POLISH_CHANGE_LOG.md:119:| `LeFFT superiority` | 0 | Pass |
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v002.md:23:The present study establishes frozen image-derived ESPI repre
+sentation evidence under fixed grouped evaluation protocols. It identifies v6.2-A as the strongest image-derived frozen
+ ESPI encoder baseline among the evaluated encoders. The current five-class modal-label task is strongly frequency-stru
+ctured, and frequency metadata is reported as a dominant control. Therefore, the results do not claim that image embedd
+ings are necessary for simple modal-label classification, nor do they establish acoustic-response prediction, LeFFT sup
+eriority, or a fully validated physics-aligned encoder.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v002.md:54:v6.1 is the conservative ESPI reference baseline. It uses a o
+ne-channel ESPI input, a frozen ResNet18-style backbone, and a lightweight classifier head. It does not include an expl
+icit Fourier, phase, or physics branch. In this manuscript, v6.1 is treated as the reference ESPI embedding baseline.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v002.md:56:v6.2-A is the official reportable ESPI baseline and the main 
+image-derived frozen encoder candidate. It is based on the v6.1 architecture and remains a conservative ResNet18-style 
+model rather than a LeFFT-based or hierarchical physics-aware architecture. Its improvements are associated with distri
+bution-aware/domain-mixed training logic, clean/averaged/pseudo-noisy batch composition, targeted noisy-like augmentati
+on, class-imbalance handling, and zero-recall safeguards. In the frozen encoder evaluation, v6.2-A is represented by it
+s recorded 1280-dimensional pre-head embedding; the exact extraction point is listed in Section 2.3.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v002.md:58:The hierarchical v6.2 phase2 branch is included as a controll
+ed physics-aware architectural comparison. It includes denoising, a learnable Fourier-prior / LeFTP path, wrapped/unwra
+pped phase and amplitude outputs, multiscale physics features, a gatekeeper head, an expert embedding, and an ArcFace h
+ead. The phase2 checkpoint is technically valid and auditable as a frozen embedding source, but it is not superior to v
+6.2-A in the current frozen representation evaluation. It is therefore treated as a controlled comparison branch rather
+ than a final encoder.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v002.md:60:LeFFT is not evaluated as a current result in this manuscript
+ and remains a future ablation direction.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v002.md:116:The frequency-control experiments do not load raw images, ru
+n deep-model inference, update encoder weights, implement LeFFT, or evaluate acoustic-response prediction. They are met
+adata and lightweight-head controls designed to determine whether image-derived ESPI embeddings add information beyond 
+frequency metadata for the current label protocol.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v002.md:222:This result shows that physics-aware architectural component
+s alone do not guarantee robust frozen embedding geometry. A representation-aligned training objective, contrastive fin
+e-tuning, or a different extraction point may be required before the hierarchical branch can serve as a stronger encode
+r candidate. This result should not be interpreted as a LeFFT failure. LeFFT remains a controlled ablation direction th
+at must be evaluated through matched descriptor-only and fusion comparisons against the v6.2-A frozen baseline.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v002.md:238:LeFFT was not tested as a matched ablation in the current Re
+sults. No claim is made that LeFFT is superior or inferior. Future work should include a controlled LeFFT descriptor ab
+lation comparing v6.2-A embeddings alone, LeFFT descriptors alone, and v6.2-A plus LeFFT descriptor fusion under the sa
+me stratified, board-grouped, and material-grouped protocols.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v002.md:250:The work establishes an encoder-evidence stage between ESPI 
+classification and future physically grounded representation learning. It supports frozen grouped image-derived represe
+ntation evidence while leaving acoustic-response prediction, frequency-controlled tasks, LeFFT ablations, and full enco
+der validation as future work.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v002.md:254:The analysis is based on frozen feature dumps, normalized me
+tadata schemas, lightweight evaluation scripts, metadata controls, and methodological hardening audits. No deep model r
+etraining, acoustic-response prediction, or LeFFT ablation is part of the reported Results. The reproducibility package
+ should include the normalized frozen feature schema, encoder evaluation scripts, class-level diagnostic scripts, frequ
+ency-control scripts, publication tables and figures, claim checklist, and audit reports. Data and code release details
+ should be finalized according to institutional permissions and the target journal's repository policy.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v002_spectral_control.md:23:The present study establishes frozen image-d
+erived ESPI representation evidence under fixed grouped evaluation protocols. It identifies v6.2-A as the strongest ima
+ge-derived frozen ESPI encoder baseline among the evaluated encoders. The current five-class modal-label task is strong
+ly frequency-structured, and frequency metadata is reported as a dominant control. Therefore, the results do not claim 
+that image embeddings are necessary for simple modal-label classification, nor do they establish acoustic-response pred
+iction, LeFFT superiority, or a fully validated physics-aligned encoder.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v002_spectral_control.md:54:v6.1 is the conservative ESPI reference base
+line. It uses a one-channel ESPI input, a frozen ResNet18-style backbone, and a lightweight classifier head. It does no
+t include an explicit Fourier, phase, or physics branch. In this manuscript, v6.1 is treated as the reference ESPI embe
+dding baseline.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v002_spectral_control.md:56:v6.2-A is the official reportable ESPI basel
+ine and the main image-derived frozen encoder candidate. It is based on the v6.1 architecture and remains a conservativ
+e ResNet18-style model rather than a LeFFT-based or hierarchical physics-aware architecture. Its improvements are assoc
+iated with distribution-aware/domain-mixed training logic, clean/averaged/pseudo-noisy batch composition, targeted nois
+y-like augmentation, class-imbalance handling, and zero-recall safeguards. In the frozen encoder evaluation, v6.2-A is 
+represented by its recorded 1280-dimensional pre-head embedding; the exact extraction point is listed in Section 2.3.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v002_spectral_control.md:58:The hierarchical v6.2 phase2 branch is inclu
+ded as a controlled physics-aware architectural comparison. It includes denoising, a learnable Fourier-prior / LeFTP pa
+th, wrapped/unwrapped phase and amplitude outputs, multiscale physics features, a gatekeeper head, an expert embedding,
+ and an ArcFace head. The phase2 checkpoint is technically valid and auditable as a frozen embedding source, but it is 
+not superior to v6.2-A in the current frozen representation evaluation. It is therefore treated as a controlled compari
+son branch rather than a final encoder.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v002_spectral_control.md:60:LeFFT is not evaluated as a current result i
+n this manuscript and remains a future ablation direction.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v002_spectral_control.md:116:The frequency-control experiments do not lo
+ad raw images, run deep-model inference, update encoder weights, implement LeFFT, or evaluate acoustic-response predict
+ion. They are metadata and lightweight-head controls designed to determine whether image-derived ESPI embeddings add in
+formation beyond frequency metadata for the current label protocol.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v002_spectral_control.md:222:This result shows that physics-aware archit
+ectural components alone do not guarantee robust frozen embedding geometry. A representation-aligned training objective
+, contrastive fine-tuning, or a different extraction point may be required before the hierarchical branch can serve as 
+a stronger encoder candidate. This result should not be interpreted as a LeFFT failure. LeFFT remains a controlled abla
+tion direction that must be evaluated through matched descriptor-only and fusion comparisons against the v6.2-A frozen 
+baseline.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v002_spectral_control.md:238:Deterministic spectral / LeFFT-inspired des
+criptors were evaluated as a lightweight supplementary control. Spectral-only descriptors were not competitive with eit
+her frequency-only metadata or v6.2-A embeddings, and adding spectral descriptors to frequency + v6.2-A yielded only ma
+rginal grouped gains (+0.19 pp Board LOBO and +0.14 pp Material LOMO) while reducing stratified Macro-F1 (-0.33 pp). Th
+erefore, no LeFFT superiority claim is supported. Learned spectral modules or LeFFT-style architectures remain future w
+ork rather than a current manuscript claim. [Supplementary Table S7]
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v002_spectral_control.md:250:The work establishes an encoder-evidence st
+age between ESPI classification and future physically grounded representation learning. It supports frozen grouped imag
+e-derived representation evidence while leaving acoustic-response prediction, frequency-controlled tasks, LeFFT ablatio
+ns, and full encoder validation as future work.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v002_spectral_control.md:254:The analysis is based on frozen feature dum
+ps, normalized metadata schemas, lightweight evaluation scripts, metadata controls, and methodological hardening audits
+. No deep model retraining, acoustic-response prediction, or LeFFT ablation is part of the reported Results. The reprod
+ucibility package should include the normalized frozen feature schema, encoder evaluation scripts, class-level diagnost
+ic scripts, frequency-control scripts, publication tables and figures, claim checklist, and audit reports. Data and cod
+e release details should be finalized according to institutional permissions and the target journal's repository policy
+.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v002_spectral_control.md:281:| Supplementary Table S7: Deterministic spe
+ctral descriptor control | Reports spectral-only and spectral-fusion control results as a supplementary negative/contro
+l ablation. |
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v003_OLE_style.md:23:The present study establishes frozen image-derived 
+ESPI representation evidence under fixed grouped evaluation protocols. It does not claim that image embeddings are nece
+ssary for simple modal-label classification, and it does not establish acoustic-response prediction, LeFFT superiority,
+ or a fully validated physics-aligned encoder.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v003_OLE_style.md:30:- **Per-class and fold-level stability analysis.** 
+We show that v6.2-A improves grouped F1 over v6.1 across all five modal classes and wins 5/6 board folds and 2/2 materi
+al folds, while documenting near-tie board folds, frequency-control effects, and a supplementary deterministic spectral
+ descriptor control.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v003_OLE_style.md:54:v6.1 is the reference ESPI-specific baseline. It us
+es a one-channel ESPI input, a frozen ResNet18-style backbone, and a lightweight classifier head. It does not include a
+n explicit Fourier, phase, or physics branch.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v003_OLE_style.md:56:v6.2-A is the official reportable ESPI baseline and
+ the main image-derived frozen encoder candidate. It is based on the v6.1 architecture and remains a conservative ResNe
+t18-style model rather than a LeFFT-based or hierarchical physics-aware architecture. Its training configuration includ
+es distribution-aware/domain-mixed sampling logic, clean/averaged/pseudo-noisy batch composition, targeted noisy-like a
+ugmentation, class-imbalance handling, and zero-recall safeguards. In this evaluation, v6.2-A is represented by its rec
+orded 1280-dimensional pre-head embedding.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v003_OLE_style.md:58:The hierarchical v6.2 phase2 branch is included as 
+a controlled physics-aware architectural comparison. It contains denoising, a learnable Fourier-prior / LeFTP path, wra
+pped/unwrapped phase and amplitude outputs, multiscale physics features, a gatekeeper head, an expert embedding, and an
+ ArcFace head. The phase2 checkpoint is technically valid and auditable as a frozen embedding source, but it is not sup
+erior to v6.2-A in the current representation evaluation.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v003_OLE_style.md:90:All feature scaling, standardization, or normalizat
+ion used by lightweight heads is fitted only on the training/reference fold and then applied to the held-out fold. Grou
+ped held-out samples are not used to fit preprocessing. This rule applies to stratified train/validation evaluation, bo
+ard-grouped evaluation, material-grouped evaluation, frequency-only controls, frequency-fusion controls, and determinis
+tic spectral descriptor controls.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v003_OLE_style.md:102:### 2.6 Frequency-only, Fusion, and Spectral Descr
+iptor Controls
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v003_OLE_style.md:108:We also evaluated deterministic spectral / LeFFT-i
+nspired descriptors as a lightweight supplementary control. These descriptors are computed from grayscale ESPI images u
+sing deterministic FFT-based statistics; they are not a trained LeFFT model. The control includes spectral-only descrip
+tors, frequency + spectral descriptors, v6.2-A + spectral descriptors, and frequency + v6.2-A + spectral descriptors. T
+hese controls are included only to test whether simple spatial-frequency descriptors provide complementary information 
+under the same lightweight-head protocols.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v003_OLE_style.md:110:No frequency-control or spectral-control experimen
+t updates encoder weights, trains a deep model, implements acoustic-response prediction, or supports a LeFFT superiorit
+y claim.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v003_OLE_style.md:200:### 4.4 Interpretation of Generic and Spectral Con
+trols
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v003_OLE_style.md:204:The deterministic spectral / LeFFT-inspired descri
+ptor control provides a complementary negative/control result. Spectral-only descriptors reach 52.92% stratified Macro-
+F1, 22.77% Board LOBO Macro-F1, and 19.72% Material LOMO Macro-F1, and are therefore not competitive with either freque
+ncy-only metadata or v6.2-A embeddings. Adding spectral descriptors to frequency + v6.2-A gives only marginal grouped g
+ains (+0.19 pp Board LOBO and +0.14 pp Material LOMO) while reducing stratified Macro-F1 (-0.33 pp). These deterministi
+c descriptors therefore remain supplementary controls, not evidence of LeFFT superiority [Supplementary Table S7].
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v003_OLE_style.md:210:This result shows that physics-aware architecture 
+alone does not guarantee robust frozen embedding geometry. A representation-aligned training objective, contrastive fin
+e-tuning, or a different extraction point may be required before the hierarchical branch can serve as a stronger encode
+r candidate. The result should not be interpreted as a LeFFT failure; learned spectral modules and LeFFT-style architec
+tures remain future work requiring matched ablation.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v003_OLE_style.md:226:Deterministic spectral / LeFFT-inspired descriptor
+s were evaluated as a lightweight supplementary control. Spectral-only descriptors were not competitive, and adding spe
+ctral descriptors to frequency + v6.2-A yielded only marginal grouped gains. No LeFFT superiority claim is supported. L
+earned spectral modules or LeFFT-style architectures remain future work.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v003_OLE_style.md:238:The work establishes an encoder-evidence stage bet
+ween ESPI classification and future physically grounded representation learning. It supports frozen grouped image-deriv
+ed representation evidence while leaving acoustic-response prediction, frequency-controlled tasks, learned spectral abl
+ations, and full encoder validation as future work.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v003_OLE_style.md:242:The analysis is based on frozen feature dumps, nor
+malized metadata schemas, lightweight evaluation scripts, metadata controls, deterministic spectral descriptor controls
+, and methodological hardening audits. No deep model retraining, acoustic-response prediction, trained LeFFT model, or 
+LeFFT superiority claim is part of the reported results. The reproducibility package should include the normalized froz
+en feature schema, encoder evaluation scripts, class-level diagnostic scripts, frequency-control scripts, spectral desc
+riptor control scripts, publication tables and figures, claim checklist, and audit reports. Data and code release detai
+ls should be finalized according to institutional permissions and the target journal's repository policy.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v003_OLE_style.md:269:| Supplementary Table S7: Deterministic spectral d
+escriptor control | Reports spectral-only and spectral-fusion control results as a supplementary negative/control ablat
+ion. |
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v004_related_work_refs.md:23:The present study establishes frozen image-
+derived ESPI representation evidence under fixed grouped evaluation protocols. It does not claim that image embeddings 
+are necessary for simple modal-label classification, and it does not establish acoustic-response prediction, LeFFT supe
+riority, or a fully validated physics-aligned encoder.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v004_related_work_refs.md:30:- **Per-class and fold-level stability anal
+ysis.** We show that v6.2-A improves grouped F1 over v6.1 across all five modal classes and wins 5/6 board folds and 2/
+2 material folds, while documenting near-tie board folds, frequency-control effects, and a supplementary deterministic 
+spectral descriptor control.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v004_related_work_refs.md:38:### 2.2 Fringe, Phase, and Spectral Analysi
+s
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v004_related_work_refs.md:40:Classical interferometric analysis relies h
+eavily on fringe, phase, and spectral structure. Fourier-transform fringe analysis provides a standard route from fring
+e patterns to phase-related quantities [3], while two-dimensional phase unwrapping methods address the recovery of cont
+inuous phase fields from wrapped measurements [4]. Speckle optics also motivates frequency-domain descriptions of spati
+al interference patterns [5]. These ideas motivate the deterministic spectral descriptors used here as supplementary co
+ntrols. The descriptors summarize FFT energy distributions and anisotropy, but they are not a trained LeFFT model and a
+re not used to claim LeFFT superiority.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v004_related_work_refs.md:76:v6.1 is the reference ESPI-specific baselin
+e. It uses a one-channel ESPI input, a frozen ResNet18-style backbone, and a lightweight classifier head. It does not i
+nclude an explicit Fourier, phase, or physics branch.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v004_related_work_refs.md:78:v6.2-A is the official reportable ESPI base
+line and the main image-derived frozen encoder candidate. It is based on the v6.1 architecture and remains a conservati
+ve ResNet18-style model rather than a LeFFT-based or hierarchical physics-aware architecture. Its training configuratio
+n includes distribution-aware/domain-mixed sampling logic, clean/averaged/pseudo-noisy batch composition, targeted nois
+y-like augmentation, class-imbalance handling, and zero-recall safeguards. In this evaluation, v6.2-A is represented by
+ its recorded 1280-dimensional pre-head embedding.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v004_related_work_refs.md:80:The hierarchical v6.2 phase2 branch is incl
+uded as a controlled physics-aware architectural comparison. It contains denoising, a learnable Fourier-prior / LeFTP p
+ath, wrapped/unwrapped phase and amplitude outputs, multiscale physics features, a gatekeeper head, an expert embedding
+, and an ArcFace head. The phase2 checkpoint is technically valid and auditable as a frozen embedding source, but it is
+ not superior to v6.2-A in the current representation evaluation.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v004_related_work_refs.md:112:All feature scaling, standardization, or n
+ormalization used by lightweight heads is fitted only on the training/reference fold and then applied to the held-out f
+old. Grouped held-out samples are not used to fit preprocessing. This rule applies to stratified train/validation evalu
+ation, board-grouped evaluation, material-grouped evaluation, frequency-only controls, frequency-fusion controls, and d
+eterministic spectral descriptor controls.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v004_related_work_refs.md:124:### 3.6 Frequency-only, Fusion, and Spectr
+al Descriptor Controls
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v004_related_work_refs.md:130:We also evaluated deterministic spectral /
+ LeFFT-inspired descriptors as a lightweight supplementary control. These descriptors are computed from grayscale ESPI 
+images using deterministic FFT-based statistics; they are not a trained LeFFT model. The control includes spectral-only
+ descriptors, frequency + spectral descriptors, v6.2-A + spectral descriptors, and frequency + v6.2-A + spectral descri
+ptors. These controls are included only to test whether simple spatial-frequency descriptors provide complementary info
+rmation under the same lightweight-head protocols.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v004_related_work_refs.md:132:No frequency-control or spectral-control e
+xperiment updates encoder weights, trains a deep model, implements acoustic-response prediction, or supports a LeFFT su
+periority claim.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v004_related_work_refs.md:222:### 5.4 Interpretation of Generic and Spec
+tral Controls
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v004_related_work_refs.md:226:The deterministic spectral / LeFFT-inspire
+d descriptor control provides a complementary negative/control result. Spectral-only descriptors reach 52.92% stratifie
+d Macro-F1, 22.77% Board LOBO Macro-F1, and 19.72% Material LOMO Macro-F1, and are therefore not competitive with eithe
+r frequency-only metadata or v6.2-A embeddings. Adding spectral descriptors to frequency + v6.2-A gives only marginal g
+rouped gains (+0.19 pp Board LOBO and +0.14 pp Material LOMO) while reducing stratified Macro-F1 (-0.33 pp). These dete
+rministic descriptors therefore remain supplementary controls, not evidence of LeFFT superiority [Supplementary Table S
+7].
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v004_related_work_refs.md:232:This result shows that physics-aware archi
+tecture alone does not guarantee robust frozen embedding geometry. A representation-aligned training objective, contras
+tive fine-tuning, or a different extraction point may be required before the hierarchical branch can serve as a stronge
+r encoder candidate. The result should not be interpreted as a LeFFT failure; learned spectral modules and LeFFT-style 
+architectures remain future work requiring matched ablation.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v004_related_work_refs.md:248:Deterministic spectral / LeFFT-inspired de
+scriptors were evaluated as a lightweight supplementary control. Spectral-only descriptors were not competitive, and ad
+ding spectral descriptors to frequency + v6.2-A yielded only marginal grouped gains. No LeFFT superiority claim is supp
+orted. Learned spectral modules or LeFFT-style architectures remain future work.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v004_related_work_refs.md:260:The work establishes an encoder-evidence s
+tage between ESPI classification and future physically grounded representation learning. It supports frozen grouped ima
+ge-derived representation evidence while leaving acoustic-response prediction, frequency-controlled tasks, learned spec
+tral ablations, and full encoder validation as future work.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v004_related_work_refs.md:264:The analysis is based on frozen feature du
+mps, normalized metadata schemas, lightweight evaluation scripts, metadata controls, deterministic spectral descriptor 
+controls, and methodological hardening audits. No deep model retraining, acoustic-response prediction, trained LeFFT mo
+del, or LeFFT superiority claim is part of the reported results. The reproducibility package should include the normali
+zed frozen feature schema, encoder evaluation scripts, class-level diagnostic scripts, frequency-control scripts, spect
+ral descriptor control scripts, publication tables and figures, claim checklist, and audit reports. Data and code relea
+se details should be finalized according to institutional permissions and the target journal's repository policy.
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v004_related_work_refs.md:291:| Supplementary Table S7: Deterministic sp
+ectral descriptor control | Reports spectral-only and spectral-fusion control results as a supplementary negative/contr
+ol ablation. |
+manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v004_related_work_refs.md:310:[3] M. Takeda, H. Ina, and S. Kobayashi, "
+Fourier-transform method of fringe-pattern analysis for computer-based topography and interferometry," *Journal of the 
+Optical Society of America*, vol. 72, no. 1, pp. 156-160, 1982.
+reports\encoder_baselines\eval_v001\qa\ENCODER_EVAL_QA_REPORT.md:5:This QA report checks consistency of the existing un
+ified encoder baseline evaluation. It does not rerun evaluation, train models, implement LeFFT, or run acoustic-respons
+e prediction.
+reports\encoder_baselines\eval_v001\qa\ENCODER_EVAL_QA_REPORT.md:60:- Do not rerun acoustic-response or LeFFT experimen
+ts as part of this QA step.
+reports\encoder_baselines\eval_v001\ENCODER_BASELINE_EVALUATION.md:5:This report evaluates normalized encoder feature d
+umps under a shared frozen-representation protocol. It does not run model inference, train or fine-tune CNNs, implement
+ LeFFT, or claim acoustic-response predictive value.
+reports\encoder_baselines\eval_v002\class_diagnostics\CLASS_LEVEL_DIAGNOSTICS_SUMMARY.md:5:- No deep model training, fi
+ne-tuning, LeFFT, or acoustic-response prediction was run.
+reports\encoder_baselines\eval_v002\ENCODER_BASELINE_EVALUATION.md:5:This report evaluates normalized encoder feature d
+umps under a shared frozen-representation protocol. It does not run model inference, train or fine-tune CNNs, implement
+ LeFFT, or claim acoustic-response predictive value.
+reports\encoder_baselines\resnet18_small_test_cpu_imagenet\RESNET18_BASELINE_EXTRACTION.md:5:This report documents dete
+rministic eval-mode embedding extraction for random and ImageNet-pretrained ResNet-18 baselines. No training, fine-tuni
+ng, evaluation, LeFFT, or acoustic-response prediction was performed.
+reports\encoder_baselines\resnet18_small_test_cpu_random\RESNET18_BASELINE_EXTRACTION.md:5:This report documents determ
+inistic eval-mode embedding extraction for random and ImageNet-pretrained ResNet-18 baselines. No training, fine-tuning
+, evaluation, LeFFT, or acoustic-response prediction was performed.
+reports\encoder_baselines\smoke_resnet18\RESNET18_BASELINE_EXTRACTION.md:5:This report documents deterministic eval-mod
+e embedding extraction for random and ImageNet-pretrained ResNet-18 baselines. No training, fine-tuning, evaluation, Le
+FFT, or acoustic-response prediction was performed.
+reports\encoder_baselines\v61_smoke\V61_EMBEDDING_EXTRACTION.md:5:This report documents deterministic eval-mode extract
+ion of v6.1 frozen embeddings. No training, fine-tuning, unified evaluation, LeFFT, or acoustic-response prediction was
+ performed.
+reports\encoder_baselines\ENCODER_BASELINE_INPUT_AUDIT.md:5:This report audits whether the inputs required for a unifie
+d encoder baseline comparison are available. It does not train models, extract embeddings, run evaluations, implement L
+eFFT scripts, or implement acoustic-response prediction.
+reports\encoder_baselines\RESNET18_BASELINE_EXTRACTION.md:5:This report documents deterministic eval-mode embedding ext
+raction for random and ImageNet-pretrained ResNet-18 baselines. No training, fine-tuning, evaluation, LeFFT, or acousti
+c-response prediction was performed.
+reports\encoder_baselines\V61_EMBEDDING_EXTRACTION.md:5:This report documents deterministic eval-mode extraction of v6.
+1 frozen embeddings. No training, fine-tuning, unified evaluation, LeFFT, or acoustic-response prediction was performed
+.
+reports\encoder_comparison\COMPARE_V62A_vs_HIERARCHICAL.md:5:This report compares the existing frozen v6.2-A encoder ev
+idence against the hierarchical v6.2 phase2 expert embedding audit. It is a report-only comparison over existing artifa
+cts. It does not implement retraining, fine-tuning, acoustic-response prediction, z_physics_fusion extraction, or LeFFT
+ scripts.
+reports\encoder_comparison\COMPARE_V62A_vs_HIERARCHICAL.md:26:- Physics-aware architecture alone does not guarantee rep
+resentation robustness. Denoising, phase, Fourier, and multiscale physics modules must still demonstrate grouped repres
+entation value under matched evaluation.
+reports\encoder_comparison\COMPARE_V62A_vs_HIERARCHICAL.md:39:- Not supported: LeFFT / LeFTP superiority.
+reports\hierarchical_encoder\DEPENDENCY_RESOLUTION_REPORT.md:106:| Still unavailable from forward dict | `physics_feats
+`, `spectral_filter` |
+reports\hierarchical_encoder\LOAD_AUDIT_V62_HIERARCHICAL.md:51:| `spectral_filter` | False |
+reports\hierarchical_encoder\LOAD_AUDIT_V62_HIERARCHICAL.md:53:`outputs["embeddings"]` is the first practical embedding
+ point for `z_expert_prelogit` / `z_arcface_input`. `physics_feats` and `spectral_filter` are expected to be unavailabl
+e in the current forward output unless the model is later extended or instrumented with hooks.
+reports\publication_assets\class_level_v001\CLASS_LEVEL_PUBLICATION_SUMMARY.md:18:- LeFFT is not part of this analysis.
+reports\publication_assets\encoder_baseline_v001\PUBLICATION_RESULT_SUMMARY.md:20:- LeFFT remains a future/ablation dir
+ection, not part of the current core claim.
+reports\publication_assets\final_tables_v001\SUPPLEMENTARY_TABLE_S7_SPECTRAL_DESCRIPTOR_CONTROL.md:4:| Spectral descrip
+tors only | 52.92% | 22.77% | 19.72% | Stratified -45.75 pp, Board -74.71 pp, Material -74.37 pp | Stratified -40.56 pp
+, Board -71.51 pp, Material -74.33 pp | Deterministic spectral / LeFFT-inspired descriptors |
+reports\publication_assets\final_tables_v001\SUPPLEMENTARY_TABLE_S7_SPECTRAL_DESCRIPTOR_CONTROL.md:6:| Frequency + spec
+tral descriptors | 98.53% | 93.46% | 73.33% | Stratified -0.13 pp, Board -4.03 pp, Material -20.76 pp | Stratified +5.0
+5 pp, Board -0.82 pp, Material -20.73 pp | Metadata plus deterministic spectral descriptors |
+reports\publication_assets\final_tables_v001\SUPPLEMENTARY_TABLE_S7_SPECTRAL_DESCRIPTOR_CONTROL.md:7:| v6.2-A + spectra
+l descriptors | 93.48% | 94.35% | 94.00% | Stratified -5.19 pp, Board -3.13 pp, Material -0.08 pp | Stratified -0.00 pp
+, Board +0.07 pp, Material -0.05 pp | Image embedding plus deterministic spectral descriptors |
+reports\publication_assets\final_tables_v001\SUPPLEMENTARY_TABLE_S7_SPECTRAL_DESCRIPTOR_CONTROL.md:9:| Frequency + v6.2
+-A + spectral descriptors | 96.41% | 94.97% | 94.64% | Stratified -2.26 pp, Board -2.51 pp, Material +0.55 pp | Stratif
+ied +2.93 pp, Board +0.69 pp, Material +0.58 pp | Full deterministic spectral control fusion |
+reports\publication_assets\final_tables_v001\TABLE_INDEX.md:21:| Supplementary Table S7 | reports\publication_assets\fi
+nal_tables_v001\SUPPLEMENTARY_TABLE_S7_SPECTRAL_DESCRIPTOR_CONTROL.md | reports\publication_assets\final_tables_v001\SU
+PPLEMENTARY_TABLE_S7_SPECTRAL_DESCRIPTOR_CONTROL.csv | reports/publication_assets/methodological_hardening_v001/lefft_d
+escriptor_ablation/eval_v001/spectral_descriptor_ablation_key_numbers.json | Generated from locked spectral descriptor 
+ablation artifacts; no experiments rerun. |
+reports\publication_assets\methodological_hardening_v001\frequency_embedding_fusion\FREQUENCY_EMBEDDING_FUSION_REPORT.m
+d:5:This report evaluates whether frozen ESPI embeddings add predictive information beyond `frequency_hz`. It uses only
+ normalized feature dumps and metadata. No raw images, deep-model inference, encoder fine-tuning, LeFFT evaluation, or 
+acoustic-response prediction is performed.
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:1:# Spectral Descriptor Ablation Evaluation
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:5:This report evaluates deterministic spectral / LeFFT-inspired descriptors under the same information-bud
+get protocols used for frequency and v6.2-A controls. It uses saved normalized feature dumps only. No raw images, deep-
+model training, encoder fine-tuning, trained LeFFT model, or acoustic-response prediction is used.
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:10:- `spectral_descriptors_only`: Spectral descriptors only.
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:12:- `frequency_spectral_fusion`: Frequency + spectral descriptors.
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:13:- `v6_2_a_spectral_fusion`: v6.2-A + spectral descriptors.
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:15:- `frequency_v6_2_a_spectral_fusion`: Frequency + v6.2-A + spectral descriptors.
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:30:| stratified_train_val | spectral_descriptors_only | Spectral descriptors only | balanced_logistic_regr
+ession | 0.37757487894297204 |  | 0.52954808806489 | 0.5393321414329508 |  |  |  |  |  |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:31:| stratified_train_val | spectral_descriptors_only | Spectral descriptors only | random_forest | 0.5292
+08462087193 |  | 0.8412514484356894 | 0.4481336537993009 |  |  |  |  |  |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:34:| stratified_train_val | frequency_spectral_fusion | Frequency + spectral descriptors | balanced_logist
+ic_regression | 0.9853435959740521 |  | 0.9945925067593665 | 0.9887698394865968 |  |  |  |  |  |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:35:| stratified_train_val | frequency_spectral_fusion | Frequency + spectral descriptors | random_forest |
+ 0.9729612583113866 |  | 0.9891850135187331 | 0.962568419498057 |  |  |  |  |  |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:36:| stratified_train_val | v6_2_a_spectral_fusion | v6.2-A + spectral descriptors | balanced_logistic_reg
+ression | 0.9328787705827952 |  | 0.9706450366937042 | 0.9389177851011349 |  |  |  |  |  |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:37:| stratified_train_val | v6_2_a_spectral_fusion | v6.2-A + spectral descriptors | random_forest | 0.934
+808068951973 |  | 0.9725762842796446 | 0.9182522454451497 |  |  |  |  |  |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:40:| stratified_train_val | frequency_v6_2_a_spectral_fusion | Frequency + v6.2-A + spectral descriptors |
+ balanced_logistic_regression | 0.9641356080871841 |  | 0.9872537659327926 | 0.9626517364922427 |  |  |  |  |  |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:41:| stratified_train_val | frequency_v6_2_a_spectral_fusion | Frequency + v6.2-A + spectral descriptors |
+ random_forest | 0.9381700367287722 |  | 0.9748937813827733 | 0.9188454238929994 |  |  |  |  |  |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:44:| board_grouped | spectral_descriptors_only | Spectral descriptors only | balanced_logistic_regression 
+|  | 0.2179926112879648 | 0.36883334983256316 | 0.3217510871880099 | C03 | 0.09712015823880564 | W01 | 0.31396767801434
+294 | 6 |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:45:| board_grouped | spectral_descriptors_only | Spectral descriptors only | random_forest |  | 0.22773641
+065070063 | 0.762053138577611 | 0.24399832316837025 | W02 | 0.1801384127390984 | W03 | 0.2834753354306149 | 6 |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:48:| board_grouped | frequency_spectral_fusion | Frequency + spectral descriptors | balanced_logistic_regr
+ession |  | 0.9346054422895418 | 0.9790081796632769 | 0.9389666782491517 | C03 | 0.9092640997065976 | C01 | 0.970711181
+4978099 | 6 |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:49:| board_grouped | frequency_spectral_fusion | Frequency + spectral descriptors | random_forest |  | 0.8
+620335122846564 | 0.9484004274081769 | 0.829078420001584 | W02 | 0.7551064756909031 | W01 | 0.9646738997442134 | 6 |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:50:| board_grouped | v6_2_a_spectral_fusion | v6.2-A + spectral descriptors | balanced_logistic_regression
+ |  | 0.8904279281676635 | 0.9474507557047981 | 0.9247726547563592 | W01 | 0.8766442739497927 | C03 | 0.909481880676545
+7 | 6 |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:51:| board_grouped | v6_2_a_spectral_fusion | v6.2-A + spectral descriptors | random_forest |  | 0.9435480
+245622432 | 0.9746276426551431 | 0.9258302665370745 | W01 | 0.9338681219250358 | C03 | 0.9592429329354175 | 6 |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:54:| board_grouped | frequency_v6_2_a_spectral_fusion | Frequency + v6.2-A + spectral descriptors | balanc
+ed_logistic_regression |  | 0.9307482579886867 | 0.9730281694167408 | 0.9466427550238338 | C02 | 0.919145351747348 | W0
+2 | 0.9428176168976012 | 6 |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:55:| board_grouped | frequency_v6_2_a_spectral_fusion | Frequency + v6.2-A + spectral descriptors | random
+_forest |  | 0.949738643728922 | 0.9784026938991301 | 0.9298888282222059 | C01 | 0.9378499810309217 | C03 | 0.963205487
+2969553 | 6 |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:58:| material_grouped | spectral_descriptors_only | Spectral descriptors only | balanced_logistic_regressi
+on |  | 0.08906281372113617 | 0.11866923265095503 | 0.18374612824022624 | wood | 0.08767471996615621 | carbon | 0.09045
+090747611614 | 2 |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:59:| material_grouped | spectral_descriptors_only | Spectral descriptors only | random_forest |  | 0.19720
+081570542955 | 0.7441575398673437 | 0.21444150112437135 | wood | 0.19515713707300453 | carbon | 0.19924449433785457 | 2
+ |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:62:| material_grouped | frequency_spectral_fusion | Frequency + spectral descriptors | balanced_logistic_r
+egression |  | 0.7116194739926678 | 0.8872981626658607 | 0.7404418983132395 | carbon | 0.6263682554748604 | wood | 0.79
+6870692510475 | 2 |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:63:| material_grouped | frequency_spectral_fusion | Frequency + spectral descriptors | random_forest |  | 
+0.7332843852810769 | 0.9166503723318251 | 0.7100073515889932 | carbon | 0.7095624614304572 | wood | 0.7570063091316964 
+| 2 |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:64:| material_grouped | v6_2_a_spectral_fusion | v6.2-A + spectral descriptors | balanced_logistic_regress
+ion |  | 0.8677392022773942 | 0.9330745360356953 | 0.9217909655101382 | wood | 0.8388886048778372 | carbon | 0.89658979
+96769512 | 2 |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:65:| material_grouped | v6_2_a_spectral_fusion | v6.2-A + spectral descriptors | random_forest |  | 0.9400
+464998332079 | 0.9731231429865825 | 0.9226657814092363 | wood | 0.9363964400144245 | carbon | 0.9436965596519912 | 2 |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:68:| material_grouped | frequency_v6_2_a_spectral_fusion | Frequency + v6.2-A + spectral descriptors | bal
+anced_logistic_regression |  | 0.9129855864952444 | 0.9615946531158986 | 0.9330691677476017 | wood | 0.8918544894827278
+ | carbon | 0.934116683507761 | 2 |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:69:| material_grouped | frequency_v6_2_a_spectral_fusion | Frequency + v6.2-A + spectral descriptors | ran
+dom_forest |  | 0.9463737481607151 | 0.9770088907196861 | 0.9276885405321466 | carbon | 0.9444966638869403 | wood | 0.9
+482508324344897 | 2 |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:74:- `spectral_descriptors_only`: stratified 52.92%, Board LOBO 22.77%, Material LOMO 19.72%.
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:76:- `frequency_spectral_fusion`: stratified 98.53%, Board LOBO 93.46%, Material LOMO 73.33%.
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:77:- `v6_2_a_spectral_fusion`: stratified 93.48%, Board LOBO 94.35%, Material LOMO 94.00%.
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:79:- `frequency_v6_2_a_spectral_fusion`: stratified 96.41%, Board LOBO 94.97%, Material LOMO 94.64%.
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:85:| stratified_train_val | spectral-only minus frequency-only | 0.529208462087193 | 0.9866861288039631 | 
+-45.74776667167701 |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:86:| stratified_train_val | frequency+spectral minus frequency-only | 0.9853435959740521 | 0.9866861288039
+631 | -0.13425328299110362 |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:87:| stratified_train_val | v6.2-A+spectral minus v6.2-A | 0.934808068951973 | 0.9348100151719869 | -0.000
+1946220013926414 |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:88:| stratified_train_val | frequency+v6.2-A+spectral minus frequency+v6.2-A | 0.9641356080871841 | 0.9674
+609129599487 | -0.3325304872764612 |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:89:| board_grouped | spectral-only minus frequency-only | 0.22773641065070063 | 0.9748609579888732 | -74.7
+1245473381725 |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:90:| board_grouped | frequency+spectral minus frequency-only | 0.9346054422895418 | 0.9748609579888732 | -
+4.025551569933139 |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:91:| board_grouped | v6.2-A+spectral minus v6.2-A | 0.9435480245622432 | 0.9428118238555557 | 0.0736200706
+687451 |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:92:| board_grouped | frequency+v6.2-A+spectral minus frequency+v6.2-A | 0.949738643728922 | 0.947855085951
+1922 | 0.18835577777298607 |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:93:| material_grouped | spectral-only minus frequency-only | 0.19720081570542955 | 0.9408561364311898 | -7
+4.36553207257603 |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:94:| material_grouped | frequency+spectral minus frequency-only | 0.7332843852810769 | 0.9408561364311898 
+| -20.757175115011293 |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:95:| material_grouped | v6.2-A+spectral minus v6.2-A | 0.9400464998332079 | 0.9405498432710986 | -0.050334
+34378907131 |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:96:| material_grouped | frequency+v6.2-A+spectral minus frequency+v6.2-A | 0.9463737481607151 | 0.94500172
+47513617 | 0.13720234093533845 |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:114:| board_grouped | spectral_descriptors_only | balanced_logistic_regression | C01 | 0.48920600073179654
+ | 0.274415971149927 | 0.20844126880028346 | 2733 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:115:| board_grouped | spectral_descriptors_only | balanced_logistic_regression | C02 | 0.24536438119879259
+ | 0.3012008350739763 | 0.19788368407203524 | 2319 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:116:| board_grouped | spectral_descriptors_only | balanced_logistic_regression | C03 | 0.10384850335980451
+ | 0.2978822538757918 | 0.09712015823880564 | 1637 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:117:| board_grouped | spectral_descriptors_only | balanced_logistic_regression | W01 | 0.48160396858205873
+ | 0.44113807452776366 | 0.31396767801434294 | 2419 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:118:| board_grouped | spectral_descriptors_only | balanced_logistic_regression | W02 | 0.5751054852320675 
+| 0.31017642685000474 | 0.2822724521874248 | 2370 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:119:| board_grouped | spectral_descriptors_only | balanced_logistic_regression | W03 | 0.3178717598908595 
+| 0.305692961650596 | 0.20827042641489685 | 1466 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:120:| board_grouped | spectral_descriptors_only | random_forest | C01 | 0.8349798755945848 | 0.20098772775
+035192 | 0.18757087169434497 | 2733 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:121:| board_grouped | spectral_descriptors_only | random_forest | C02 | 0.723156532988357 | 0.256864125048
+8003 | 0.224177005789909 | 2319 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:122:| board_grouped | spectral_descriptors_only | random_forest | C03 | 0.7519853390348198 | 0.24967741423
+314926 | 0.25203732303732307 | 1637 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:123:| board_grouped | spectral_descriptors_only | random_forest | W01 | 0.7565109549400578 | 0.24182623422
+438132 | 0.23901951521291337 | 2419 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:124:| board_grouped | spectral_descriptors_only | random_forest | W02 | 0.7894514767932489 | 0.20155623629
+074956 | 0.1801384127390984 | 2370 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:125:| board_grouped | spectral_descriptors_only | random_forest | W03 | 0.7162346521145976 | 0.31307820146
+27893 | 0.2834753354306149 | 1466 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:138:| board_grouped | frequency_spectral_fusion | balanced_logistic_regression | C01 | 0.995609220636663 |
+ 0.9788729531338227 | 0.9707111814978099 | 2733 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:139:| board_grouped | frequency_spectral_fusion | balanced_logistic_regression | C02 | 0.9793014230271668 
+| 0.9387140403972374 | 0.9388058660500065 | 2319 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:140:| board_grouped | frequency_spectral_fusion | balanced_logistic_regression | C03 | 0.9718998167379352 
+| 0.9163052483846391 | 0.9092640997065976 | 1637 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:141:| board_grouped | frequency_spectral_fusion | balanced_logistic_regression | W01 | 0.9706490285241836 
+| 0.9366039414549998 | 0.929731559112063 | 2419 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:142:| board_grouped | frequency_spectral_fusion | balanced_logistic_regression | W02 | 0.9763713080168777 
+| 0.9278598448018816 | 0.9247053537826471 | 2370 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:143:| board_grouped | frequency_spectral_fusion | balanced_logistic_regression | W03 | 0.980218281036835 |
+ 0.9354440413223299 | 0.9344145935881268 | 1466 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:144:| board_grouped | frequency_spectral_fusion | random_forest | C01 | 0.9754848152213684 | 0.84822859287
+25558 | 0.867970868310751 | 2733 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:145:| board_grouped | frequency_spectral_fusion | random_forest | C02 | 0.9150495903406641 | 0.73331557586
+77813 | 0.7901726591659781 | 2319 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:146:| board_grouped | frequency_spectral_fusion | random_forest | C03 | 0.9297495418448382 | 0.78949938949
+93895 | 0.8391493276036055 | 1637 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:147:| board_grouped | frequency_spectral_fusion | random_forest | W01 | 0.9830508474576272 | 0.95404909134
+13237 | 0.9646738997442134 | 2419 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:148:| board_grouped | frequency_spectral_fusion | random_forest | W02 | 0.9054852320675105 | 0.71726404929
+02431 | 0.7551064756909031 | 2370 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:149:| board_grouped | frequency_spectral_fusion | random_forest | W03 | 0.9815825375170532 | 0.93211382113
+82113 | 0.955127843192488 | 1466 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:150:| board_grouped | v6_2_a_spectral_fusion | balanced_logistic_regression | C01 | 0.9721917306988657 | 0
+.9198023809733857 | 0.8993160419668849 | 2733 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:151:| board_grouped | v6_2_a_spectral_fusion | balanced_logistic_regression | C02 | 0.9322984044846917 | 0
+.9341524881116776 | 0.8776581617857986 | 2319 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:152:| board_grouped | v6_2_a_spectral_fusion | balanced_logistic_regression | C03 | 0.9511301160659743 | 0
+.9310362818555756 | 0.9094818806765457 | 1637 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:153:| board_grouped | v6_2_a_spectral_fusion | balanced_logistic_regression | W01 | 0.9334435717238528 | 0
+.9161651901257872 | 0.8766442739497927 | 2419 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:154:| board_grouped | v6_2_a_spectral_fusion | balanced_logistic_regression | W02 | 0.950210970464135 | 0.
+9321915214656276 | 0.878013301098598 | 2370 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:155:| board_grouped | v6_2_a_spectral_fusion | balanced_logistic_regression | W03 | 0.9454297407912687 | 0
+.9152880660061016 | 0.9014539095283609 | 1466 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:156:| board_grouped | v6_2_a_spectral_fusion | random_forest | C01 | 0.9849981705085986 | 0.91232753225043
+66 | 0.9378499810309217 | 2733 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:157:| board_grouped | v6_2_a_spectral_fusion | random_forest | C02 | 0.9659335920655455 | 0.92029302351363
+64 | 0.9357630197795693 | 2319 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:158:| board_grouped | v6_2_a_spectral_fusion | random_forest | C03 | 0.9773976786805131 | 0.93246235742427
+75 | 0.9592429329354175 | 1637 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:159:| board_grouped | v6_2_a_spectral_fusion | random_forest | W01 | 0.9677552707730467 | 0.92533690353010
+43 | 0.9338681219250358 | 2419 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:160:| board_grouped | v6_2_a_spectral_fusion | random_forest | W02 | 0.9810126582278481 | 0.93519332067568
+4 | 0.9566629448555355 | 2370 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:161:| board_grouped | v6_2_a_spectral_fusion | random_forest | W03 | 0.970668485675307 | 0.929368461828307
+9 | 0.9379011468469788 | 1466 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:174:| board_grouped | frequency_v6_2_a_spectral_fusion | balanced_logistic_regression | C01 | 0.9871935601
+902672 | 0.9389844501978033 | 0.9270713108299233 | 2733 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:175:| board_grouped | frequency_v6_2_a_spectral_fusion | balanced_logistic_regression | C02 | 0.9577404053
+471323 | 0.9487167640611285 | 0.919145351747348 | 2319 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:176:| board_grouped | frequency_v6_2_a_spectral_fusion | balanced_logistic_regression | C03 | 0.9731215638
+362859 | 0.9571926190435306 | 0.9373249311528629 | 1637 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:177:| board_grouped | frequency_v6_2_a_spectral_fusion | balanced_logistic_regression | W01 | 0.9710624224
+886316 | 0.9334987551224831 | 0.9273891783043415 | 2419 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:178:| board_grouped | frequency_v6_2_a_spectral_fusion | balanced_logistic_regression | W02 | 0.9797468354
+43038 | 0.9599679821917093 | 0.9428176168976012 | 2370 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:179:| board_grouped | frequency_v6_2_a_spectral_fusion | balanced_logistic_regression | W03 | 0.9693042291
+950886 | 0.9414959595263482 | 0.9307411590000427 | 1466 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:180:| board_grouped | frequency_v6_2_a_spectral_fusion | random_forest | C01 | 0.9849981705085986 | 0.9123
+275322504366 | 0.9378499810309217 | 2733 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:181:| board_grouped | frequency_v6_2_a_spectral_fusion | random_forest | C02 | 0.9724018973695558 | 0.9282
+228739265899 | 0.946493123421512 | 2319 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:182:| board_grouped | frequency_v6_2_a_spectral_fusion | random_forest | C03 | 0.9798411728772144 | 0.9346
+564117992688 | 0.9632054872969553 | 1637 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:183:| board_grouped | frequency_v6_2_a_spectral_fusion | random_forest | W01 | 0.972302604381976 | 0.93344
+98986149244 | 0.9443141260531611 | 2419 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:184:| board_grouped | frequency_v6_2_a_spectral_fusion | random_forest | W02 | 0.9827004219409282 | 0.9393
+004916436348 | 0.9590973353805726 | 2370 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:185:| board_grouped | frequency_v6_2_a_spectral_fusion | random_forest | W03 | 0.9781718963165075 | 0.9313
+75761098381 | 0.9474718091904089 | 1466 | none |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:195:| material_grouped | spectral_descriptors_only | balanced_logistic_regression | carbon | 0.13006428464
+643444 | 0.1567002052484633 | 0.09045090747611614 | 6689 | descriptive stress-test only; two material groups available 
+|
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:196:| material_grouped | spectral_descriptors_only | balanced_logistic_regression | wood | 0.1072741806554
+7561 | 0.21079205123198919 | 0.08767471996615621 | 6255 | descriptive stress-test only; two material groups available |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:197:| material_grouped | spectral_descriptors_only | random_forest | carbon | 0.7271640005979967 | 0.21698
+885369450155 | 0.19924449433785457 | 6689 | descriptive stress-test only; two material groups available |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:198:| material_grouped | spectral_descriptors_only | random_forest | wood | 0.7611510791366907 | 0.2118941
+4855424116 | 0.19515713707300453 | 6255 | descriptive stress-test only; two material groups available |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:203:| material_grouped | frequency_spectral_fusion | balanced_logistic_regression | carbon | 0.84078337569
+14337 | 0.6743337187309338 | 0.6263682554748604 | 6689 | descriptive stress-test only; two material groups available |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:204:| material_grouped | frequency_spectral_fusion | balanced_logistic_regression | wood | 0.9338129496402
+877 | 0.8065500778955451 | 0.796870692510475 | 6255 | descriptive stress-test only; two material groups available |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:205:| material_grouped | frequency_spectral_fusion | random_forest | carbon | 0.9186724473015399 | 0.67373
+48627798065 | 0.7095624614304572 | 6689 | descriptive stress-test only; two material groups available |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:206:| material_grouped | frequency_spectral_fusion | random_forest | wood | 0.9146282973621103 | 0.7462798
+403981799 | 0.7570063091316964 | 6255 | descriptive stress-test only; two material groups available |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:207:| material_grouped | v6_2_a_spectral_fusion | balanced_logistic_regression | carbon | 0.95216026311855
+28 | 0.9228753142087374 | 0.8965897996769512 | 6689 | descriptive stress-test only; two material groups available |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:208:| material_grouped | v6_2_a_spectral_fusion | balanced_logistic_regression | wood | 0.9139888089528377
+ | 0.920706616811539 | 0.8388886048778372 | 6255 | descriptive stress-test only; two material groups available |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:209:| material_grouped | v6_2_a_spectral_fusion | random_forest | carbon | 0.9751831364927492 | 0.91885277
+75402113 | 0.9436965596519912 | 6689 | descriptive stress-test only; two material groups available |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:210:| material_grouped | v6_2_a_spectral_fusion | random_forest | wood | 0.9710631494804157 | 0.9264787852
+782611 | 0.9363964400144245 | 6255 | descriptive stress-test only; two material groups available |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:215:| material_grouped | frequency_v6_2_a_spectral_fusion | balanced_logistic_regression | carbon | 0.9733
+89146359695 | 0.9282206934671601 | 0.934116683507761 | 6689 | descriptive stress-test only; two material groups availab
+le |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:216:| material_grouped | frequency_v6_2_a_spectral_fusion | balanced_logistic_regression | wood | 0.949800
+1598721023 | 0.9379176420280434 | 0.8918544894827278 | 6255 | descriptive stress-test only; two material groups availab
+le |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:217:| material_grouped | frequency_v6_2_a_spectral_fusion | random_forest | carbon | 0.9760801315592764 | 
+0.9192181212818227 | 0.9444966638869403 | 6689 | descriptive stress-test only; two material groups available |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:218:| material_grouped | frequency_v6_2_a_spectral_fusion | random_forest | wood | 0.9779376498800959 | 0.
+9361589597824704 | 0.9482508324344897 | 6255 | descriptive stress-test only; two material groups available |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:222:| protocol | label_name | frequency_only_f1 | spectral_only_f1 | v6_2_a_embedding_only_f1 | frequency_
+v6_2_a_f1 | frequency_v6_2_a_spectral_f1 | spectral_minus_frequency_pp | spectral_added_to_frequency_v6_2_a_pp | minori
+ty_focus |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:242:| protocol | label_name | frequency_only_f1 | spectral_only_f1 | v6_2_a_embedding_only_f1 | frequency_
+v6_2_a_f1 | frequency_v6_2_a_spectral_f1 | spectral_minus_frequency_pp | spectral_added_to_frequency_v6_2_a_pp | minori
+ty_focus |
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:258:- Include in the main paper only if the table is framed as a deterministic spectral descriptor control
+.
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:259:- Do not claim LeFFT superiority unless future matched experiments show clear, robust gains.
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:264:- Not a trained LeFFT model.
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\SPECTRAL_DESCRIPTOR_ABLATI
+ON_REPORT.md:265:- No LeFFT superiority claim from this evaluation.
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\SPECTRAL_DESCRIPTOR_EXTRACTION_REPOR
+T.md:1:# Spectral Descriptor Extraction Report
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\SPECTRAL_DESCRIPTOR_EXTRACTION_REPOR
+T.md:5:This report documents deterministic spatial-frequency descriptor extraction for ESPI images. The descriptors are
+ spectral / LeFFT-inspired descriptors, not a trained LeFFT model. No deep model training, encoder fine-tuning, evaluat
+ion, LeFFT superiority claim, or acoustic-response prediction was performed.
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\SPECTRAL_DESCRIPTOR_EXTRACTION_REPOR
+T.md:18:- Output NPZ: `outputs\encoder_features_normalized_v001\features_spectral_descriptors.normalized.npz`
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\SPECTRAL_DESCRIPTOR_EXTRACTION_REPOR
+T.md:19:- Model name: `spectral_descriptors_lefft_inspired`
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\SPECTRAL_DESCRIPTOR_EXTRACTION_REPOR
+T.md:20:- Embedding point: `deterministic_fft_spectral_descriptors`
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\SPECTRAL_DESCRIPTOR_EXTRACTION_REPOR
+T.md:25:Each ESPI image is loaded as grayscale, resized to `256 x 256`, robustly normalized per image using percentile 
+clipping, optionally masked with the supplied ROI mask, Hann-windowed, transformed with a 2D FFT, converted to log-magn
+itude spectrum, and processed after suppressing the DC component.
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\SPECTRAL_DESCRIPTOR_EXTRACTION_REPOR
+T.md:29:- 8 normalized radial FFT energy bands
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\SPECTRAL_DESCRIPTOR_EXTRACTION_REPOR
+T.md:30:- 12 normalized angular FFT energy bins
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\SPECTRAL_DESCRIPTOR_EXTRACTION_REPOR
+T.md:32:- spectral centroid radius, bandwidth, and entropy
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\SPECTRAL_DESCRIPTOR_EXTRACTION_REPOR
+T.md:54:`radial_energy_bin_00, radial_energy_bin_01, radial_energy_bin_02, radial_energy_bin_03, radial_energy_bin_04, 
+radial_energy_bin_05, radial_energy_bin_06, radial_energy_bin_07, angular_energy_bin_00, angular_energy_bin_01, angular
+_energy_bin_02, angular_energy_bin_03, angular_energy_bin_04, angular_energy_bin_05, angular_energy_bin_06, angular_ene
+rgy_bin_07, angular_energy_bin_08, angular_energy_bin_09, angular_energy_bin_10, angular_energy_bin_11, low_frequency_e
+nergy_ratio, mid_frequency_energy_ratio, high_frequency_energy_ratio, spectral_centroid_radius, spectral_bandwidth, spe
+ctral_entropy, peak_concentration_top1, peak_concentration_top5, peak_concentration_top10, orientation_anisotropy_max_o
+ver_mean, horizontal_energy_ratio, vertical_energy_ratio, diagonal_energy_ratio, patch_low_energy_mean, patch_mid_energ
+y_mean, patch_high_energy_mean, patch_low_energy_std, patch_mid_energy_std, patch_high_energy_std`
+reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\SPECTRAL_DESCRIPTOR_EXTRACTION_REPOR
+T.md:58:These outputs are deterministic spectral descriptors and may be used as a lightweight spectral / LeFFT-inspired
+ baseline. They are not a trained LeFFT model and do not support any claim of LeFFT superiority.
+reports\publication_assets\methodological_hardening_v001\manuscript_v002_audit\MANUSCRIPT_V002_CONSISTENCY_AUDIT.md:49:
+| Claim boundary | No positive LeFFT superiority claim | pass | absent or explicitly negated: LeFFT superiority |  |
+reports\publication_assets\methodological_hardening_v001\DATASET_COMPOSITION_REPORT.md:5:This report documents dataset 
+composition and grouped-fold support for the frozen ESPI encoder evaluation. It is generated from existing manifest/fea
+ture metadata and does not rerun encoder evaluation, feature extraction, image loading, LeFFT analysis, or acoustic-res
+ponse prediction.
+reports\publication_assets\methodological_hardening_v001\MANUSCRIPT_HARDENING_PATCH_PLAN.md:103:- No raw images, deep-m
+odel inference, fine-tuning, LeFFT, or acoustic-response prediction were used in these controls.
+reports\publication_assets\methodological_hardening_v001\MANUSCRIPT_HARDENING_PATCH_PLAN.md:229:> The present study est
+ablishes frozen, image-derived ESPI encoder evidence rather than a complete physical surrogate model. The current five-
+class modal-label protocol is strongly frequency-structured, and frequency metadata is a stronger overall predictor tha
+n the image-derived embeddings for this label task. Therefore, v6.2-A is interpreted as the strongest image-derived fro
+zen ESPI encoder baseline under grouped board/material evaluation, not as the strongest possible classifier when metada
+ta is available. The study does not claim acoustic-response predictive value, a validated Physics-Aligned Encoder, LeFF
+T superiority, metamaterials readiness, or full retrained CNN LOBO/LOMO generalization.
+reports\publication_assets\methodological_hardening_v001\MANUSCRIPT_HARDENING_PATCH_PLAN.md:236:- Do not introduce acou
+stic-response, LeFFT, or metamaterials claims.
+reports\publication_assets\methodological_hardening_v001\MANUSCRIPT_PATCH_APPLICATION_REPORT.md:54:  - preserve no acou
+stic-response, no LeFFT superiority, and no validated Physics-Aligned Encoder boundaries.
+reports\publication_assets\methodological_hardening_v001\MANUSCRIPT_PATCH_APPLICATION_REPORT.md:102:  - no LeFFT superi
+ority claim;
+reports\publication_assets\methodological_hardening_v001\PAIRED_V61_V62A_GROUPED_DIFFERENCES.md:5:This report compares 
+v6.1 and v6.2-A under the same frozen-embedding protocols using existing evaluation outputs only. It does not rerun enc
+oder evaluation, retrain models, implement LeFFT, or evaluate acoustic-response prediction.
+reports\publication_assets\methodological_hardening_v001\SPECTRAL_DESCRIPTOR_MANUSCRIPT_PATCH_REPORT.md:1:# Spectral De
+scriptor Manuscript Patch Report
+reports\publication_assets\methodological_hardening_v001\SPECTRAL_DESCRIPTOR_MANUSCRIPT_PATCH_REPORT.md:6:- Spectral ab
+lation report: `reports/publication_assets/methodological_hardening_v001/lefft_descriptor_ablation/eval_v001/SPECTRAL_D
+ESCRIPTOR_ABLATION_REPORT.md`
+reports\publication_assets\methodological_hardening_v001\SPECTRAL_DESCRIPTOR_MANUSCRIPT_PATCH_REPORT.md:7:- Spectral ab
+lation key numbers: `reports\publication_assets\methodological_hardening_v001\lefft_descriptor_ablation\eval_v001\spect
+ral_descriptor_ablation_key_numbers.json`
+reports\publication_assets\methodological_hardening_v001\SPECTRAL_DESCRIPTOR_MANUSCRIPT_PATCH_REPORT.md:11:- Updated ma
+nuscript: `manuscripts\FROZEN_REPRESENTATION_AUDITS_DRAFT_v002_spectral_control.md`
+reports\publication_assets\methodological_hardening_v001\SPECTRAL_DESCRIPTOR_MANUSCRIPT_PATCH_REPORT.md:12:- Supplement
+ary Table S7 Markdown: `reports\publication_assets\final_tables_v001\SUPPLEMENTARY_TABLE_S7_SPECTRAL_DESCRIPTOR_CONTROL
+.md`
+reports\publication_assets\methodological_hardening_v001\SPECTRAL_DESCRIPTOR_MANUSCRIPT_PATCH_REPORT.md:13:- Supplement
+ary Table S7 CSV: `reports\publication_assets\final_tables_v001\SUPPLEMENTARY_TABLE_S7_SPECTRAL_DESCRIPTOR_CONTROL.csv`
+reports\publication_assets\methodological_hardening_v001\SPECTRAL_DESCRIPTOR_MANUSCRIPT_PATCH_REPORT.md:18:- Added a sh
+ort Limitations/Future Work paragraph stating that deterministic spectral / LeFFT-inspired descriptors were evaluated a
+s a lightweight supplementary control.
+reports\publication_assets\methodological_hardening_v001\SPECTRAL_DESCRIPTOR_MANUSCRIPT_PATCH_REPORT.md:19:- Stated tha
+t spectral-only descriptors were not competitive.
+reports\publication_assets\methodological_hardening_v001\SPECTRAL_DESCRIPTOR_MANUSCRIPT_PATCH_REPORT.md:20:- Stated tha
+t adding spectral descriptors to frequency + v6.2-A produced only marginal grouped gains: `+0.19 pp` Board LOBO and `+0
+.14 pp` Material LOMO, while reducing stratified Macro-F1 by `-0.33 pp`.
+reports\publication_assets\methodological_hardening_v001\SPECTRAL_DESCRIPTOR_MANUSCRIPT_PATCH_REPORT.md:30:- No trained
+ LeFFT model is claimed.
+reports\publication_assets\methodological_hardening_v001\SPECTRAL_DESCRIPTOR_MANUSCRIPT_PATCH_REPORT.md:31:- No LeFFT s
+uperiority is claimed.
+reports\publication_assets\methodological_hardening_v001\V003_LANGUAGE_EDIT_REPORT.md:5:- Source manuscript: `manuscrip
+ts/FROZEN_REPRESENTATION_AUDITS_DRAFT_v002_spectral_control.md`
+reports\publication_assets\methodological_hardening_v001\V003_LANGUAGE_EDIT_REPORT.md:29:- Kept deterministic spectral 
+/ LeFFT-inspired descriptors as supplementary/control-only evidence.
+reports\publication_assets\methodological_hardening_v001\V003_LANGUAGE_EDIT_REPORT.md:53:- Spectral-only Macro-F1: `52.
+92%`, `22.77%`, `19.72%`
+reports\publication_assets\methodological_hardening_v001\V003_LANGUAGE_EDIT_REPORT.md:54:- Frequency + v6.2-A + spectra
+l deltas: `+0.19 pp`, `+0.14 pp`, `-0.33 pp`
+reports\publication_assets\methodological_hardening_v001\V003_LANGUAGE_EDIT_REPORT.md:63:- No LeFFT superiority is clai
+med.
+reports\publication_assets\methodological_hardening_v001\V003_LANGUAGE_EDIT_REPORT.md:64:- The spectral descriptor abla
+tion is deterministic, supplementary/control-only, and not a trained LeFFT model.
+reports\publication_assets\submission_readiness_v001\V003_SUBMISSION_READINESS_AUDIT.md:49:| Claim boundary | positive 
+LeFFT superiority claim | pass | absent or explicitly negated/scope-limited |  |
+reports\publication_assets\submission_readiness_v001\V003_SUBMISSION_READINESS_AUDIT.md:50:| Claim boundary | positive 
+trained LeFFT model claim | pass | absent or explicitly negated/scope-limited |  |
+reports\publication_assets\submission_readiness_v001\V003_SUBMISSION_READINESS_AUDIT.md:51:| Claim boundary | spectral 
+descriptors supplementary/control-only | pass | supplementary/control wording present |  |
+reports\publication_assets\submission_readiness_v001\V003_SUBMISSION_READINESS_AUDIT.md:66:| Tables | Supplementary Tab
+le S7 reference and file | pass | reference=True; file_exists=True; path=reports\publication_assets\final_tables_v001\S
+UPPLEMENTARY_TABLE_S7_SPECTRAL_DESCRIPTOR_CONTROL.md |  |
+reports\publication_assets\submission_readiness_v001\V003_SUBMISSION_READINESS_AUDIT.md:80:| Terminology | deterministi
+c spectral | pass | present |  |
+reports\publication_assets\submission_readiness_v001\V003_SUBMISSION_READINESS_AUDIT.md:81:| Terminology | LeFFT-inspir
+ed | pass | present |  |
+reports\publication_assets\submission_readiness_v001\V003_SUBMISSION_READINESS_AUDIT.md:82:| Terminology | LeFFT-inspir
+ed, not trained LeFFT | pass | trained LeFFT wording absent or negated |  |
+reports\publication_assets\submission_readiness_v001\V004_RELATED_WORK_REFERENCES_PATCH_REPORT.md:12:- `### 2.2 Fringe,
+ Phase, and Spectral Analysis`
+reports\publication_assets\submission_readiness_v001\V004_RELATED_WORK_REFERENCES_PATCH_REPORT.md:22:3. Takeda, Ina, an
+d Kobayashi, Fourier-transform fringe-pattern analysis, 1982.
+reports\publication_assets\submission_readiness_v002\V004_SUBMISSION_READINESS_AUDIT.md:47:| Claim boundary | positive 
+LeFFT superiority claim | pass | absent or explicitly negated/scope-limited |  |
+reports\publication_assets\submission_readiness_v002\V004_SUBMISSION_READINESS_AUDIT.md:48:| Claim boundary | positive 
+trained LeFFT model claim | pass | absent or explicitly negated/scope-limited |  |
+reports\publication_assets\submission_readiness_v002\V004_SUBMISSION_READINESS_AUDIT.md:50:| Claim boundary | spectral 
+descriptors supplementary/control-only | pass | supplementary/control wording present |  |
+reports\publication_assets\submission_readiness_v002\V004_SUBMISSION_READINESS_AUDIT.md:64:| Metrics | spectral descrip
+tor control remains supplementary | pass | supplementary spectral reference present |  |
+reports\publication_assets\submission_readiness_v002\V004_SUBMISSION_READINESS_AUDIT.md:79:| Tables | Supplementary Tab
+le S7 reference and file | pass | reference=True; file_exists=True; path=reports\publication_assets\final_tables_v001\S
+UPPLEMENTARY_TABLE_S7_SPECTRAL_DESCRIPTOR_CONTROL.md |  |
+reports\publication_assets\submission_readiness_v002\V004_SUBMISSION_READINESS_AUDIT.md:96:| Terminology | deterministi
+c spectral | pass | present |  |
+reports\publication_assets\submission_readiness_v002\V004_SUBMISSION_READINESS_AUDIT.md:97:| Terminology | LeFFT-inspir
+ed | pass | present |  |
+reports\publication_assets\submission_readiness_v002\V004_SUBMISSION_READINESS_AUDIT.md:99:| Terminology | LeFFT-inspir
+ed, not trained LeFFT | pass | trained LeFFT wording absent or negated |  |
+scripts\encoder\audit_encoder_baseline_inputs.py:425:This report audits whether the inputs required for a unified encod
+er baseline comparison are available. It does not train models, extract embeddings, run evaluations, implement LeFFT sc
+ripts, or implement acoustic-response prediction.
+scripts\encoder\audit_manuscript_v002_consistency.py:5:manuscript, run experiments, implement LeFFT, or run acoustic-re
+sponse
+scripts\encoder\audit_manuscript_v002_consistency.py:202:            "LeFFT superiority claim",
+scripts\encoder\audit_manuscript_v002_consistency.py:203:            "LeFFT superiority",
+scripts\encoder\audit_v003_submission_readiness.py:38:    7: "SUPPLEMENTARY_TABLE_S7_SPECTRAL_DESCRIPTOR_CONTROL.md",
+scripts\encoder\audit_v003_submission_readiness.py:196:        ("positive LeFFT superiority claim", "LeFFT superiority"
+),
+scripts\encoder\audit_v003_submission_readiness.py:197:        ("positive trained LeFFT model claim", "trained LeFFT mo
+del"),
+scripts\encoder\audit_v003_submission_readiness.py:212:            "spectral descriptors supplementary/control-only",
+scripts\encoder\audit_v003_submission_readiness.py:249:            "spectral descriptor control remains supplementary",
+scripts\encoder\audit_v003_submission_readiness.py:251:            "supplementary spectral reference present" if contai
+ns_any(text, ["Supplementary Table S7", "supplementary controls"]) else "missing",
+scripts\encoder\audit_v003_submission_readiness.py:380:        "deterministic spectral",
+scripts\encoder\audit_v003_submission_readiness.py:381:        "LeFFT-inspired",
+scripts\encoder\audit_v003_submission_readiness.py:388:    positive_trained = line_contains_positive_claim(text, "train
+ed LeFFT")
+scripts\encoder\audit_v003_submission_readiness.py:392:            "LeFFT-inspired, not trained LeFFT",
+scripts\encoder\audit_v003_submission_readiness.py:394:            "positive trained LeFFT wording detected" if positiv
+e_trained else "trained LeFFT wording absent or negated",
+scripts\encoder\check_encoder_eval_consistency.py:7:It does not rerun evaluation, LeFFT, inference, training, or acoust
+ic-response
+scripts\encoder\check_encoder_eval_consistency.py:404:    output.append("Do not rerun acoustic-response or LeFFT experi
+ments as part of this QA step.")
+scripts\encoder\check_encoder_eval_consistency.py:433:This QA report checks consistency of the existing unified encoder
+ baseline evaluation. It does not rerun evaluation, train models, implement LeFFT, or run acoustic-response prediction.
+scripts\encoder\compare_v62a_vs_hierarchical.py:7:extract embeddings, run acoustic-response prediction, or compute LeFF
+T features.
+scripts\encoder\compare_v62a_vs_hierarchical.py:247:This report compares the existing frozen v6.2-A encoder evidence ag
+ainst the hierarchical v6.2 phase2 expert embedding audit. It is a report-only comparison over existing artifacts. It d
+oes not implement retraining, fine-tuning, acoustic-response prediction, z_physics_fusion extraction, or LeFFT scripts.
+scripts\encoder\compare_v62a_vs_hierarchical.py:265:- Physics-aware architecture alone does not guarantee representatio
+n robustness. Denoising, phase, Fourier, and multiscale physics modules must still demonstrate grouped representation v
+alue under matched evaluation.
+scripts\encoder\compare_v62a_vs_hierarchical.py:278:- Not supported: LeFFT / LeFTP superiority.
+scripts\encoder\evaluate_encoder_baselines.py:7:does not train/fine-tune CNNs, does not implement LeFFT, and does not r
+un
+scripts\encoder\evaluate_encoder_baselines.py:704:This report evaluates normalized encoder feature dumps under a shared
+ frozen-representation protocol. It does not run model inference, train or fine-tune CNNs, implement LeFFT, or claim ac
+oustic-response predictive value.
+scripts\encoder\evaluate_frequency_embedding_fusion.py:5:load raw images, run deep inference, train/fine-tune encoders,
+ implement LeFFT,
+scripts\encoder\evaluate_frequency_embedding_fusion.py:687:            "This report evaluates whether frozen ESPI embed
+dings add predictive information beyond `frequency_hz`. It uses only normalized feature dumps and metadata. No raw imag
+es, deep-model inference, encoder fine-tuning, LeFFT evaluation, or acoustic-response prediction is performed.",
+scripts\encoder\evaluate_frequency_only_baseline.py:5:does not use ESPI embeddings, load images, train deep models, imp
+lement LeFFT,
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:2:"""Evaluate deterministic spectral descriptor ablations.
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:6:prediction, or treat the descriptors as a trained LeFFT mode
+l.
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:100:    spectral_path = features_dir / "features_spectral_desc
+riptors.normalized.npz"
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:102:    spectral = load_npz(spectral_path)
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:104:    for name, bundle in [("spectral", spectral), ("v6.2-A"
+, v62a)]:
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:122:        if key in spectral and not np.array_equal(np.asarr
+ay(spectral[key]).astype(str), metadata[key].astype(str)):
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:123:            raise ValueError(f"Metadata mismatch between s
+pectral and v6.2-A feature dumps: {key}")
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:125:        "spectral_descriptors": np.asarray(spectral["embed
+ding"]).astype(np.float64),
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:129:        "spectral_descriptors": str(spectral_path),
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:147:        raise RuntimeError(f"scikit-learn is required for 
+spectral descriptor ablation: {exc}") from exc
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:196:            "condition": "spectral_descriptors_only",
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:197:            "display_name": "Spectral descriptors only",
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:198:            "condition_type": "spectral_only",
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:206:            "condition": "frequency_spectral_fusion",
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:207:            "display_name": "Frequency + spectral descript
+ors",
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:208:            "condition_type": "frequency_spectral",
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:211:            "condition": "v6_2_a_spectral_fusion",
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:212:            "display_name": "v6.2-A + spectral descriptors
+",
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:213:            "condition_type": "v62a_spectral",
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:221:            "condition": "frequency_v6_2_a_spectral_fusion
+",
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:222:            "display_name": "Frequency + v6.2-A + spectral
+ descriptors",
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:223:            "condition_type": "frequency_v62a_spectral",
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:230:    spectral = embeddings["spectral_descriptors"]
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:235:    if condition_type == "spectral_only":
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:236:        return spectral
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:239:    if condition_type == "frequency_spectral":
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:240:        return np.hstack([spectral, frequency])
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:241:    if condition_type == "v62a_spectral":
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:242:        return np.hstack([v62a, spectral])
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:245:    if condition_type == "frequency_v62a_spectral":
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:246:        return np.hstack([v62a, spectral, frequency])
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:468:        ("spectral_descriptors_only", "frequency_only", "s
+pectral-only minus frequency-only"),
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:469:        ("frequency_spectral_fusion", "frequency_only", "f
+requency+spectral minus frequency-only"),
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:470:        ("v6_2_a_spectral_fusion", "v6_2_a_embedding_only"
+, "v6.2-A+spectral minus v6.2-A"),
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:472:            "frequency_v6_2_a_spectral_fusion",
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:474:            "frequency+v6.2-A+spectral minus frequency+v6.
+2-A",
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:516:            spectral = mean_f1(protocol, "spectral_descrip
+tors_only", class_id)
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:519:            freq_v62a_spectral = mean_f1(protocol, "freque
+ncy_v6_2_a_spectral_fusion", class_id)
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:526:                    "spectral_only_f1": spectral,
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:529:                    "frequency_v6_2_a_spectral_f1": freq_v
+62a_spectral,
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:530:                    "spectral_minus_frequency_pp": (spectr
+al - freq) * 100.0,
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:531:                    "spectral_added_to_frequency_v6_2_a_pp
+": (freq_v62a_spectral - freq_v62a) * 100.0,
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:550:        if row["comparison"] == "frequency+v6.2-A+spectral
+ minus frequency+v6.2-A"
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:556:        return "include in appendix/supplementary only; ga
+ins are protocol-specific and not sufficient for a main LeFFT claim"
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:571:        "spectral_descriptors_only",
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:573:        "frequency_spectral_fusion",
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:574:        "v6_2_a_spectral_fusion",
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:576:        "frequency_v6_2_a_spectral_fusion",
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:601:        "claim_boundary": "Deterministic spectral / LeFFT-
+inspired descriptors only; not a trained LeFFT model; no LeFFT superiority claim; no acoustic-response claim.",
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:654:        "spectral_only_f1",
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:657:        "frequency_v6_2_a_spectral_f1",
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:658:        "spectral_minus_frequency_pp",
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:659:        "spectral_added_to_frequency_v6_2_a_pp",
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:674:        score_line_from_scores(key_numbers["condition_scor
+es"], "spectral_descriptors_only"),
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:676:        score_line_from_scores(key_numbers["condition_scor
+es"], "frequency_spectral_fusion"),
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:677:        score_line_from_scores(key_numbers["condition_scor
+es"], "v6_2_a_spectral_fusion"),
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:679:        score_line_from_scores(key_numbers["condition_scor
+es"], "frequency_v6_2_a_spectral_fusion"),
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:684:            "# Spectral Descriptor Ablation Evaluation",
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:688:            "This report evaluates deterministic spectral 
+/ LeFFT-inspired descriptors under the same information-budget protocols used for frequency and v6.2-A controls. It use
+s saved normalized feature dumps only. No raw images, deep-model training, encoder fine-tuning, trained LeFFT model, or
+ acoustic-response prediction is used.",
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:735:            "- Include in the main paper only if the table
+ is framed as a deterministic spectral descriptor control.",
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:736:            "- Do not claim LeFFT superiority unless futur
+e matched experiments show clear, robust gains.",
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:741:            "- Not a trained LeFFT model.",
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:742:            "- No LeFFT superiority claim from this evalua
+tion.",
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:760:    marker = "Spectral descriptor ablation evaluation"
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:765:        f"| {marker} | `scripts/encoder/evaluate_spectral_
+descriptor_ablation.py` | normalized spectral/v6.2-A feature dumps | "
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:769:        "\n## Spectral Descriptor Ablation Evaluation\n\n"
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:821:    write_csv(args.out_dir / "spectral_descriptor_ablation
+_summary.csv", compact_summary_rows(summary_rows))
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:822:    write_csv(args.out_dir / "spectral_descriptor_board_lo
+bo.csv", board_rows)
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:823:    write_csv(args.out_dir / "spectral_descriptor_material
+_lomo.csv", material_rows)
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:824:    write_csv(args.out_dir / "spectral_descriptor_per_clas
+s.csv", per_class_rows)
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:825:    write_csv(args.out_dir / "spectral_descriptor_ablation
+_deltas.csv", delta_rows)
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:826:    write_csv(args.out_dir / "spectral_descriptor_per_clas
+s_deltas.csv", per_class_delta)
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:827:    write_csv(args.out_dir / "spectral_descriptor_zero_rec
+all_rows.csv", zero_rows)
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:828:    (args.out_dir / "spectral_descriptor_ablation_key_numb
+ers.json").write_text(
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:832:    report_path = args.out_dir / "SPECTRAL_DESCRIPTOR_ABLA
+TION_REPORT.md"
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:839:    print(f"[done] wrote spectral descriptor ablation repo
+rt to {args.out_dir}")
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:841:        "[done] spectral_only stratified={:.6f} board={:.6
+f} material={:.6f}".format(
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:842:            key_numbers["condition_scores"]["spectral_desc
+riptors_only"]["stratified_train_val"]["macro_f1"],
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:843:            key_numbers["condition_scores"]["spectral_desc
+riptors_only"]["board_grouped"]["macro_f1"],
+scripts\encoder\evaluate_spectral_descriptor_ablation.py:844:            key_numbers["condition_scores"]["spectral_desc
+riptors_only"]["material_grouped"]["macro_f1"],
+scripts\encoder\export_class_level_diagnostics.py:785:        "- No deep model training, fine-tuning, LeFFT, or acousti
+c-response prediction was run.",
+scripts\encoder\extract_resnet18_baseline_embeddings.py:7:not train, fine-tune, evaluate, implement LeFFT, or run acous
+tic-response tasks.
+scripts\encoder\extract_resnet18_baseline_embeddings.py:367:This report documents deterministic eval-mode embedding ext
+raction for random and ImageNet-pretrained ResNet-18 baselines. No training, fine-tuning, evaluation, LeFFT, or acousti
+c-response prediction was performed.
+scripts\encoder\extract_spectral_descriptors.py:3:"""Extract deterministic spectral descriptors for ESPI images.
+scripts\encoder\extract_spectral_descriptors.py:5:The output is a lightweight spectral / LeFFT-inspired descriptor base
+line. It
+scripts\encoder\extract_spectral_descriptors.py:6:is not a trained LeFFT model and does not train, fine-tune, evaluate 
+encoders,
+scripts\encoder\extract_spectral_descriptors.py:25:DEFAULT_REPORT_DIR = Path("reports/publication_assets/methodological
+_hardening_v001/lefft_descriptor_ablation")
+scripts\encoder\extract_spectral_descriptors.py:26:DEFAULT_OUTPUT_NAME = "features_spectral_descriptors.normalized.npz"
+scripts\encoder\extract_spectral_descriptors.py:141:def spectral_geometry(size: int = 256) -> dict[str, np.ndarray]:
+scripts\encoder\extract_spectral_descriptors.py:157:    names.extend(["spectral_centroid_radius", "spectral_bandwidth",
+ "spectral_entropy"])
+scripts\encoder\extract_spectral_descriptors.py:192:    fft = np.fft.fftshift(np.fft.fft2(windowed))
+scripts\encoder\extract_spectral_descriptors.py:193:    magnitude = np.log1p(np.abs(fft)).astype(np.float64)
+scripts\encoder\extract_spectral_descriptors.py:266:    patch_geometry = spectral_geometry(patch_size)
+scripts\encoder\extract_spectral_descriptors.py:373:            checkpoint_path=np.array("not_applicable:deterministic_
+spectral_descriptors", dtype=object),
+scripts\encoder\extract_spectral_descriptors.py:375:            embedding_point=np.array("deterministic_fft_spectral_de
+scriptors", dtype=object),
+scripts\encoder\extract_spectral_descriptors.py:376:            model_name=np.array("spectral_descriptors_lefft_inspire
+d", dtype=object),
+scripts\encoder\extract_spectral_descriptors.py:386:        "8 normalized radial FFT energy bands",
+scripts\encoder\extract_spectral_descriptors.py:387:        "12 normalized angular FFT energy bins",
+scripts\encoder\extract_spectral_descriptors.py:389:        "spectral centroid radius, bandwidth, and entropy",
+scripts\encoder\extract_spectral_descriptors.py:396:    text = f"""# Spectral Descriptor Extraction Report
+scripts\encoder\extract_spectral_descriptors.py:400:This report documents deterministic spatial-frequency descriptor ex
+traction for ESPI images. The descriptors are spectral / LeFFT-inspired descriptors, not a trained LeFFT model. No deep
+ model training, encoder fine-tuning, evaluation, LeFFT superiority claim, or acoustic-response prediction was performe
+d.
+scripts\encoder\extract_spectral_descriptors.py:414:- Model name: `spectral_descriptors_lefft_inspired`
+scripts\encoder\extract_spectral_descriptors.py:415:- Embedding point: `deterministic_fft_spectral_descriptors`
+scripts\encoder\extract_spectral_descriptors.py:420:Each ESPI image is loaded as grayscale, resized to `256 x 256`, rob
+ustly normalized per image using percentile clipping, optionally masked with the supplied ROI mask, Hann-windowed, tran
+sformed with a 2D FFT, converted to log-magnitude spectrum, and processed after suppressing the DC component.
+scripts\encoder\extract_spectral_descriptors.py:438:These outputs are deterministic spectral descriptors and may be use
+d as a lightweight spectral / LeFFT-inspired baseline. They are not a trained LeFFT model and do not support any claim 
+of LeFFT superiority.
+scripts\encoder\extract_spectral_descriptors.py:452:    marker = "Spectral / LeFFT-inspired descriptor extraction"
+scripts\encoder\extract_spectral_descriptors.py:457:        f"| {marker} | `scripts/encoder/extract_spectral_descriptor
+s.py` | manifest + image root | "
+scripts\encoder\extract_spectral_descriptors.py:461:        "\n## Spectral Descriptor Ablation\n\n"
+scripts\encoder\extract_spectral_descriptors.py:478:    geometry = spectral_geometry(256)
+scripts\encoder\extract_spectral_descriptors.py:504:    report_path = DEFAULT_REPORT_DIR / "SPECTRAL_DESCRIPTOR_EXTRACT
+ION_REPORT.md"
+scripts\encoder\extract_spectral_descriptors.py:505:    json_path = DEFAULT_REPORT_DIR / "spectral_descriptor_extractio
+n.json"
+scripts\encoder\extract_spectral_descriptors.py:516:        "model_name": "spectral_descriptors_lefft_inspired",
+scripts\encoder\extract_spectral_descriptors.py:517:        "embedding_point": "deterministic_fft_spectral_descriptors"
+,
+scripts\encoder\extract_spectral_descriptors.py:519:            "radial_fft_energy_bands",
+scripts\encoder\extract_spectral_descriptors.py:520:            "angular_fft_energy_bins",
+scripts\encoder\extract_spectral_descriptors.py:522:            "spectral_centroid_bandwidth_entropy",
+scripts\encoder\extract_spectral_descriptors.py:525:            "local_patch_spectral_statistics",
+scripts\encoder\extract_spectral_descriptors.py:530:        "claim_boundary": "Deterministic spectral / LeFFT-inspired 
+descriptors only; not a trained LeFFT model; no LeFFT superiority claim.",
+scripts\encoder\extract_spectral_descriptors.py:539:    parser = argparse.ArgumentParser(description="Extract determini
+stic spectral / LeFFT-inspired descriptors.")
+scripts\encoder\extract_spectral_descriptors.py:557:    print(f"[done] report={DEFAULT_REPORT_DIR / 'SPECTRAL_DESCRIPTO
+R_EXTRACTION_REPORT.md'}")
+scripts\encoder\extract_spectral_descriptors.py:558:    print(f"[done] key_numbers={DEFAULT_REPORT_DIR / 'spectral_desc
+riptor_extraction.json'}")
+scripts\encoder\extract_v61_embeddings.py:7:not train, fine-tune, evaluate, implement LeFFT, or run acoustic-response t
+asks.
+scripts\encoder\extract_v61_embeddings.py:376:This report documents deterministic eval-mode extraction of v6.1 frozen e
+mbeddings. No training, fine-tuning, unified evaluation, LeFFT, or acoustic-response prediction was performed.
+scripts\encoder\load_audit_v62_hierarchical.py:213:            "spectral_filter": False,
+scripts\encoder\load_audit_v62_hierarchical.py:320:| `spectral_filter` | {availability.get("spectral_filter", False)} |
+scripts\encoder\load_audit_v62_hierarchical.py:322:`outputs["embeddings"]` is the first practical embedding point for `
+z_expert_prelogit` / `z_arcface_input`. `physics_feats` and `spectral_filter` are expected to be unavailable in the cur
+rent forward output unless the model is later extended or instrumented with hooks.
+scripts\encoder\load_audit_v62_hierarchical.py:405:                "spectral_filter": False,
+scripts\encoder\make_class_level_publication_assets.py:5:feature extraction, training, fine-tuning, LeFFT, or acoustic-
+response tasks.
+scripts\encoder\make_class_level_publication_assets.py:306:            "- LeFFT is not part of this analysis.",
+scripts\encoder\make_class_level_publication_assets.py:416:            "no_lefft": True,
+scripts\encoder\make_dataset_composition_report.py:359:        "This report documents dataset composition and grouped-f
+old support for the frozen ESPI encoder evaluation. It is generated from existing manifest/feature metadata and does no
+t rerun encoder evaluation, feature extraction, image loading, LeFFT analysis, or acoustic-response prediction.",
+scripts\encoder\make_knn_protocol_hardening_report.py:5:evaluation, modify feature dumps, train/fine-tune models, imple
+ment LeFFT, or
+scripts\encoder\make_paired_v61_v62a_grouped_difference_tables.py:267:            "This report compares v6.1 and v6.2-A
+ under the same frozen-embedding protocols using existing evaluation outputs only. It does not rerun encoder evaluation
+, retrain models, implement LeFFT, or evaluate acoustic-response prediction.",
+scripts\encoder\make_publication_tables_figures.py:418:        "- LeFFT remains a future/ablation direction, not part o
+f the current core claim.",
+scripts\encoder\make_publication_tables_figures.py:562:            "lefft_status": "future_ablation_direction",
+scripts\v6_2\espi_v6_2_fixed.py:27:        EnhancedLearnableFourierTransformPrior,
+scripts\v6_2\espi_v6_2_fixed.py:39:    class EnhancedLearnableFourierTransformPrior(nn.Module):
+scripts\v6_2\espi_v6_2_fixed.py:174:        self.leftp = EnhancedLearnableFourierTransformPrior(on_axis_mode=on_axis_mo
+de).to(dtype)
+scripts\v6_2\espi_v6_2_fixed.py:199:        wrapped_phase, amplitude, spectral_filter = self.leftp(denoised)
+
+
