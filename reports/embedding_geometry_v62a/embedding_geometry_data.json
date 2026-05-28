@@ -1,0 +1,98 @@
+{
+  "v61_path": "outputs\\encoder_features_normalized_v001\\features_v61.normalized.npz",
+  "v62a_path": "outputs\\encoder_features_normalized_v001\\features_v62a_epoch25.normalized.npz",
+  "global_metrics": {
+    "v61": {
+      "silhouette": 0.5788940787315369,
+      "davies_bouldin": 1.0540168361490678,
+      "intra_inter_ratio_macro": 0.32299160824159007,
+      "same_class_nn_rate": 0.9789091470951793,
+      "cross_board_nn_rate": 0.9537237330037083,
+      "cross_material_nn_rate": 0.9420580964153276
+    },
+    "v62a": {
+      "silhouette": 0.72478848695755,
+      "davies_bouldin": 0.6452925193683848,
+      "intra_inter_ratio_macro": 0.1697637482163259,
+      "same_class_nn_rate": 0.9730377008652658,
+      "cross_board_nn_rate": 0.9637669962917181,
+      "cross_material_nn_rate": 0.9652348578491965
+    }
+  },
+  "per_class_metrics": {
+    "v61": {
+      "0": {
+        "class_id": 0,
+        "support": 653,
+        "intra_mean": 0.1006472185254097,
+        "inter_mean": 0.43883904814720154,
+        "ratio": 0.2293488215106355
+      },
+      "1": {
+        "class_id": 1,
+        "support": 669,
+        "intra_mean": 0.16082096099853516,
+        "inter_mean": 0.582176148891449,
+        "ratio": 0.2762410677674832
+      },
+      "2": {
+        "class_id": 2,
+        "support": 738,
+        "intra_mean": 0.21835871040821075,
+        "inter_mean": 0.5047116875648499,
+        "ratio": 0.4326404872091536
+      },
+      "3": {
+        "class_id": 3,
+        "support": 769,
+        "intra_mean": 0.1935836672782898,
+        "inter_mean": 0.49522027373313904,
+        "ratio": 0.39090416436102304
+      },
+      "4": {
+        "class_id": 4,
+        "support": 10115,
+        "intra_mean": 0.1423075795173645,
+        "inter_mean": 0.49788621068000793,
+        "ratio": 0.285823500359655
+      }
+    },
+    "v62a": {
+      "0": {
+        "class_id": 0,
+        "support": 653,
+        "intra_mean": 0.13358530402183533,
+        "inter_mean": 0.8710062503814697,
+        "ratio": 0.15336893847010824
+      },
+      "1": {
+        "class_id": 1,
+        "support": 669,
+        "intra_mean": 0.1327585130929947,
+        "inter_mean": 0.8544084429740906,
+        "ratio": 0.1553806194036176
+      },
+      "2": {
+        "class_id": 2,
+        "support": 738,
+        "intra_mean": 0.1398855745792389,
+        "inter_mean": 0.7170946002006531,
+        "ratio": 0.19507269269646843
+      },
+      "3": {
+        "class_id": 3,
+        "support": 769,
+        "intra_mean": 0.11419234424829483,
+        "inter_mean": 0.7334146499633789,
+        "ratio": 0.1556995681147039
+      },
+      "4": {
+        "class_id": 4,
+        "support": 10115,
+        "intra_mean": 0.14975076913833618,
+        "inter_mean": 0.7910892963409424,
+        "ratio": 0.18929692239673135
+      }
+    }
+  }
+}

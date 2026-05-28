@@ -1,0 +1,7 @@
+Metric,v6.1 Reference,v6.2-A Encoder,Delta
+"Silhouette Score (Cosine, higher is better)",0.5788940787315369,0.72478848695755,0.14589440822601318
+"Davies-Bouldin Index (L2-norm, lower is better)",1.0540168361490678,0.6452925193683848,-0.408724316780683
+"Intra/Inter Distance Ratio (Cosine, lower is better)",0.32299160824159007,0.1697637482163259,-0.15322786002526417
+Same-Class 1-NN Consistency Rate (higher is better),0.9789091470951793,0.9730377008652658,-0.005871446229913535
+Cross-Board Same-Class NN Rate (higher is better),0.9537237330037083,0.9637669962917181,0.010043263288009863
+Cross-Material Same-Class NN Rate (higher is better),0.9420580964153276,0.9652348578491965,0.02317676143386893
