@@ -1,7 +1,5 @@
-"""Enhanced ESPI Encoder research package.
+"""Enhanced ESPI Encoder research package."""
 
-Reusable package code will be extracted here from the current scripts once the
-private development repo stabilizes.
-"""
+from .v62_hierarchical_encoder import ESPIv62HierarchicalEncoder
 
-__all__ = []
+__all__ = ["ESPIv62HierarchicalEncoder"]

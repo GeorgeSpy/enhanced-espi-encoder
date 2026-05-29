@@ -11,6 +11,8 @@ data/
 datasets/
 checkpoints/
 artifacts/
+artifacts/checkpoints/
+artifacts/manifests/
 outputs/
 logs/
 *.pt
