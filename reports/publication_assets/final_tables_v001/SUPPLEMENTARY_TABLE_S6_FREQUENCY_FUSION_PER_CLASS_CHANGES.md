@@ -1,0 +1,17 @@
+| Protocol | Class ID | Class name | Frequency only | v6.2-A embedding-only | Frequency + v6.2-A | Fusion minus frequency-only | Fusion minus embedding-only |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| stratified_train_val | 0 | 1_1H | 100.00% | 94.16% | 98.86% | -1.14 pp | +4.70 pp |
+| stratified_train_val | 1 | 1_1T | 100.00% | 95.79% | 98.14% | -1.86 pp | +2.36 pp |
+| stratified_train_val | 2 | 1_2 | 96.53% | 89.20% | 93.15% | -3.38 pp | +3.95 pp |
+| stratified_train_val | 3 | 2_1 | 96.82% | 89.63% | 93.85% | -2.96 pp | +4.22 pp |
+| stratified_train_val | 4 | higher | 100.00% | 98.63% | 99.73% | -0.27 pp | +1.10 pp |
+| board_grouped | 0 | 1_1H | 100.00% | 94.22% | 95.13% | -4.87 pp | +0.91 pp |
+| board_grouped | 1 | 1_1T | 100.00% | 95.26% | 95.53% | -4.47 pp | +0.27 pp |
+| board_grouped | 2 | 1_2 | 94.17% | 91.23% | 92.26% | -1.91 pp | +1.04 pp |
+| board_grouped | 3 | 2_1 | 93.26% | 92.12% | 92.29% | -0.97 pp | +0.17 pp |
+| board_grouped | 4 | higher | 100.00% | 98.58% | 98.72% | -1.28 pp | +0.14 pp |
+| material_grouped | 0 | 1_1H | 100.00% | 94.10% | 94.56% | -5.44 pp | +0.47 pp |
+| material_grouped | 1 | 1_1T | 100.00% | 95.14% | 95.61% | -4.39 pp | +0.47 pp |
+| material_grouped | 2 | 1_2 | 85.09% | 91.09% | 91.52% | +6.43 pp | +0.43 pp |
+| material_grouped | 3 | 2_1 | 85.34% | 91.42% | 92.07% | +6.73 pp | +0.65 pp |
+| material_grouped | 4 | higher | 100.00% | 98.53% | 98.73% | -1.27 pp | +0.21 pp |

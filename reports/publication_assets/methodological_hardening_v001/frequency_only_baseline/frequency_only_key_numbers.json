@@ -1,0 +1,22 @@
+{
+  "n_samples": 12944,
+  "frequency_min_hz": 150.0,
+  "frequency_max_hz": 1550.0,
+  "methods": [
+    "frequency_logistic_regression",
+    "frequency_random_forest",
+    "frequency_bin_majority_diagnostic"
+  ],
+  "best_stratified_frequency_method": "frequency_random_forest",
+  "best_stratified_frequency_macro_f1": 0.9866861288039631,
+  "best_board_frequency_method": "frequency_logistic_regression",
+  "best_board_frequency_macro_f1": 0.9748609579888732,
+  "best_material_frequency_method": "frequency_logistic_regression",
+  "best_material_frequency_macro_f1": 0.9408561364311898,
+  "v61_stratified_macro_f1": 0.9506911900286517,
+  "v62a_stratified_macro_f1": 0.927755752028969,
+  "v62a_board_lobo_macro_f1": 0.9356408210770706,
+  "v62a_material_lomo_macro_f1": 0.9348717330088938,
+  "best_overall_frequency_macro_f1": 0.9866861288039631,
+  "material_lomo_caution": "descriptive stress-test only; two material groups available"
+}

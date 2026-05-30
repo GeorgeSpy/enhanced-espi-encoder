@@ -1,0 +1,11 @@
+encoder_id,encoder_name,evaluation_mode,group_field,held_out_group,method,is_published_best_grouped_method,n_train,n_test,class_id,label_name,precision,recall,f1,support
+random_resnet18,Random ResNet-18,material_grouped,material,carbon,knn_cosine_k10,false,6255,6689,3,2_1,0.0,0.0,0.0,351
+random_resnet18,Random ResNet-18,material_grouped,material,wood,knn_cosine_k10,false,6689,6255,3,2_1,0.0,0.0,0.0,418
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,carbon,knn_cosine_k10,false,6255,6689,2,1_2,0.0,0.0,0.0,296
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,wood,knn_cosine_k10,false,6689,6255,2,1_2,0.0,0.0,0.0,442
+v6_1,v6.1,material_grouped,material,carbon,balanced_logistic_regression,false,6255,6689,3,2_1,0.11764705882352941,0.07407407407407407,0.0909090909090909,351
+v6_1,v6.1,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,3,2_1,0.28448275862068967,0.9473684210526315,0.43756906077348073,418
+v6_2_a,v6.2-A,material_grouped,material,carbon,nearest_class_prototype,false,6255,6689,0,1_1H,0.4461722488038278,1.0,0.6170388751033913,373
+v6_2_a,v6.2-A,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,2,1_2,0.3547008547008547,0.9389140271493213,0.5148883374689827,442
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,carbon,knn_cosine_k10,true,6255,6689,2,1_2,0.05063291139240506,0.013513513513513514,0.021333333333333336,296
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,2,1_2,0.0,0.0,0.0,442

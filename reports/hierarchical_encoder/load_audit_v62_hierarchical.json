@@ -1,0 +1,56 @@
+{
+  "created_utc": "2026-05-26T07:25:08.735233+00:00",
+  "model_file": "C:\\Users\\George mini-PC\\Documents\\Playground\\enhanced-espi-encoder\\scripts\\v6_2\\espi_v6_2_fixed.py",
+  "checkpoint_path": "C:\\ESPI\\logs\\train_v6.2_opt\\ckpt_phase2_expert.pt",
+  "checkpoint_sha256": "ebb0a1ed05fc480b9e7f575800db1df8e7dffa027b75cc6bd59debdd81e39e00",
+  "device": "cpu",
+  "model_class": "v62_hierarchical_model_audit.EnhancedHybridPhysicsESPI_V6_2",
+  "base_imported": true,
+  "placeholder_refused": false,
+  "total_parameters": 2653944,
+  "load_audit": {
+    "state_source": "checkpoint root",
+    "state_dict_variant": "raw",
+    "matched_key_count": 237,
+    "missing_key_count": 0,
+    "unexpected_key_count": 0,
+    "shape_mismatch_count": 0,
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "shape_mismatches": []
+  },
+  "dummy_forward": {
+    "attempted": true,
+    "ok": true,
+    "dummy_shape": [
+      1,
+      1,
+      64,
+      64
+    ],
+    "output_keys": [
+      "amplitude",
+      "denoised",
+      "embeddings",
+      "expert_logits",
+      "gate_logits",
+      "unwrapped_phase",
+      "wrapped_phase"
+    ],
+    "error": null,
+    "availability": {
+      "embeddings": true,
+      "denoised": true,
+      "wrapped_phase": true,
+      "unwrapped_phase": true,
+      "amplitude": true,
+      "physics_feats": false,
+      "spectral_filter": false
+    }
+  },
+  "warnings": [],
+  "errors": [],
+  "import_log": "2026-05-26 10:25:12,707 - Enhanced-ESPI - WARNING - [sampler] v2 import failed -> fallback to standard DataLoader | err=No module named 'scripts.samplers'",
+  "load_mismatch_status": "clean",
+  "load_mismatch_explanation": "Checkpoint keys match the hierarchical model state_dict cleanly."
+}

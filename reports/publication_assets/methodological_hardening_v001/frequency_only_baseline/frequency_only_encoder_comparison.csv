@@ -1,0 +1,13 @@
+protocol,frequency_method,frequency_macro_f1,comparison_encoder,comparison_macro_f1,delta_frequency_minus_encoder_pp
+stratified_train_val,frequency_random_forest,0.9866861288039631,Random ResNet-18,0.8439863653774754,14.269976342648771
+stratified_train_val,frequency_random_forest,0.9866861288039631,ImageNet ResNet-18,0.8715130509203878,11.517307788357535
+stratified_train_val,frequency_random_forest,0.9866861288039631,v6.1,0.9506911900286517,3.599493877531146
+stratified_train_val,frequency_random_forest,0.9866861288039631,v6.2-A,0.927755752028969,5.893037677499413
+board_grouped,frequency_logistic_regression,0.9748609579888732,Random ResNet-18,0.319913304491168,65.49476534977052
+board_grouped,frequency_logistic_regression,0.9748609579888732,ImageNet ResNet-18,0.3930272194094586,58.183373857941454
+board_grouped,frequency_logistic_regression,0.9748609579888732,v6.1,0.8709697195504678,10.389123843840542
+board_grouped,frequency_logistic_regression,0.9748609579888732,v6.2-A,0.9356408210770706,3.9220136911802594
+material_grouped,frequency_logistic_regression,0.9408561364311898,Random ResNet-18,0.2543697950088857,68.6486341422304
+material_grouped,frequency_logistic_regression,0.9408561364311898,ImageNet ResNet-18,0.229527070800846,71.13290656303438
+material_grouped,frequency_logistic_regression,0.9408561364311898,v6.1,0.8632932432336362,7.756289319755361
+material_grouped,frequency_logistic_regression,0.9408561364311898,v6.2-A,0.9348717330088938,0.5984403422296003

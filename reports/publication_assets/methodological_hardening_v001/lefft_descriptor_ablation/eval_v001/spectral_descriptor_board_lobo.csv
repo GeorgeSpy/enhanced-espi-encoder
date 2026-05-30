@@ -1,0 +1,85 @@
+protocol,condition,display_name,condition_type,method,held_out_group,n_train,n_test,stress_test_note,accuracy,macro_recall,macro_f1
+board_grouped,frequency_only,Frequency only,metadata_only,balanced_logistic_regression,C01,10211,2733,none,1.0,1.0,1.0
+board_grouped,frequency_only,Frequency only,metadata_only,balanced_logistic_regression,C02,10625,2319,none,0.9918068132815869,0.973049645390071,0.9741399193870677
+board_grouped,frequency_only,Frequency only,metadata_only,balanced_logistic_regression,C03,11307,1637,none,0.9932803909590715,0.9775510204081632,0.9791285162713734
+board_grouped,frequency_only,Frequency only,metadata_only,balanced_logistic_regression,W01,10525,2419,none,0.9921455146754857,0.9794594594594596,0.9789861216134674
+board_grouped,frequency_only,Frequency only,metadata_only,balanced_logistic_regression,W02,10574,2370,none,0.9852320675105485,0.9585798816568047,0.9549541161012653
+board_grouped,frequency_only,Frequency only,metadata_only,balanced_logistic_regression,W03,11478,1466,none,0.9897680763983628,0.953125,0.9619570745600651
+board_grouped,frequency_only,Frequency only,metadata_only,random_forest,C01,10211,2733,none,0.9915843395536041,0.9192982456140351,0.9234618488855777
+board_grouped,frequency_only,Frequency only,metadata_only,random_forest,C02,10625,2319,none,0.9831824062095731,0.9446808510638298,0.945804917287448
+board_grouped,frequency_only,Frequency only,metadata_only,random_forest,C03,11307,1637,none,0.9920586438607208,0.9734693877551021,0.9752660339373023
+board_grouped,frequency_only,Frequency only,metadata_only,random_forest,W01,10525,2419,none,0.9925589086399339,0.9805405405405405,0.9800953079178886
+board_grouped,frequency_only,Frequency only,metadata_only,random_forest,W02,10574,2370,none,0.9928270042194093,0.9798816568047337,0.9781124186253507
+board_grouped,frequency_only,Frequency only,metadata_only,random_forest,W03,11478,1466,none,1.0,1.0,1.0
+board_grouped,spectral_descriptors_only,Spectral descriptors only,spectral_only,balanced_logistic_regression,C01,10211,2733,none,0.48920600073179654,0.274415971149927,0.20844126880028346
+board_grouped,spectral_descriptors_only,Spectral descriptors only,spectral_only,balanced_logistic_regression,C02,10625,2319,none,0.24536438119879259,0.3012008350739763,0.19788368407203524
+board_grouped,spectral_descriptors_only,Spectral descriptors only,spectral_only,balanced_logistic_regression,C03,11307,1637,none,0.10384850335980451,0.2978822538757918,0.09712015823880564
+board_grouped,spectral_descriptors_only,Spectral descriptors only,spectral_only,balanced_logistic_regression,W01,10525,2419,none,0.48160396858205873,0.44113807452776366,0.31396767801434294
+board_grouped,spectral_descriptors_only,Spectral descriptors only,spectral_only,balanced_logistic_regression,W02,10574,2370,none,0.5751054852320675,0.31017642685000474,0.2822724521874248
+board_grouped,spectral_descriptors_only,Spectral descriptors only,spectral_only,balanced_logistic_regression,W03,11478,1466,none,0.3178717598908595,0.305692961650596,0.20827042641489685
+board_grouped,spectral_descriptors_only,Spectral descriptors only,spectral_only,random_forest,C01,10211,2733,none,0.8349798755945848,0.20098772775035192,0.18757087169434497
+board_grouped,spectral_descriptors_only,Spectral descriptors only,spectral_only,random_forest,C02,10625,2319,none,0.723156532988357,0.2568641250488003,0.224177005789909
+board_grouped,spectral_descriptors_only,Spectral descriptors only,spectral_only,random_forest,C03,11307,1637,none,0.7519853390348198,0.24967741423314926,0.25203732303732307
+board_grouped,spectral_descriptors_only,Spectral descriptors only,spectral_only,random_forest,W01,10525,2419,none,0.7565109549400578,0.24182623422438132,0.23901951521291337
+board_grouped,spectral_descriptors_only,Spectral descriptors only,spectral_only,random_forest,W02,10574,2370,none,0.7894514767932489,0.20155623629074956,0.1801384127390984
+board_grouped,spectral_descriptors_only,Spectral descriptors only,spectral_only,random_forest,W03,11478,1466,none,0.7162346521145976,0.3130782014627893,0.2834753354306149
+board_grouped,v6_2_a_embedding_only,v6.2-A embedding only,v62a_only,balanced_logistic_regression,C01,10211,2733,none,0.977680204903037,0.9220966353150033,0.9179971537482736
+board_grouped,v6_2_a_embedding_only,v6.2-A embedding only,v62a_only,balanced_logistic_regression,C02,10625,2319,none,0.9340232858990944,0.9405644369439783,0.8837789055610414
+board_grouped,v6_2_a_embedding_only,v6.2-A embedding only,v62a_only,balanced_logistic_regression,C03,11307,1637,none,0.9725106902871106,0.9340430174494333,0.9476322666655153
+board_grouped,v6_2_a_embedding_only,v6.2-A embedding only,v62a_only,balanced_logistic_regression,W01,10525,2419,none,0.9396444811905746,0.9247875534378774,0.8916116827894383
+board_grouped,v6_2_a_embedding_only,v6.2-A embedding only,v62a_only,balanced_logistic_regression,W02,10574,2370,none,0.9729957805907173,0.9552685383942154,0.9304520813737189
+board_grouped,v6_2_a_embedding_only,v6.2-A embedding only,v62a_only,balanced_logistic_regression,W03,11478,1466,none,0.9570259208731241,0.9144541440219559,0.9186534204252983
+board_grouped,v6_2_a_embedding_only,v6.2-A embedding only,v62a_only,random_forest,C01,10211,2733,none,0.9842663739480424,0.9087318037988729,0.9335778806382031
+board_grouped,v6_2_a_embedding_only,v6.2-A embedding only,v62a_only,random_forest,C02,10625,2319,none,0.9646399310047434,0.9187196884535209,0.9325992413312496
+board_grouped,v6_2_a_embedding_only,v6.2-A embedding only,v62a_only,random_forest,C03,11307,1637,none,0.9780085522296884,0.9341717591336792,0.9602754585994809
+board_grouped,v6_2_a_embedding_only,v6.2-A embedding only,v62a_only,random_forest,W01,10525,2419,none,0.9669284828441504,0.9249024419924978,0.9339337890802281
+board_grouped,v6_2_a_embedding_only,v6.2-A embedding only,v62a_only,random_forest,W02,10574,2370,none,0.9814345991561182,0.9355251770340841,0.9574260950029168
+board_grouped,v6_2_a_embedding_only,v6.2-A embedding only,v62a_only,random_forest,W03,11478,1466,none,0.9720327421555253,0.9277653694493738,0.9390584784812568
+board_grouped,frequency_spectral_fusion,Frequency + spectral descriptors,frequency_spectral,balanced_logistic_regression,C01,10211,2733,none,0.995609220636663,0.9788729531338227,0.9707111814978099
+board_grouped,frequency_spectral_fusion,Frequency + spectral descriptors,frequency_spectral,balanced_logistic_regression,C02,10625,2319,none,0.9793014230271668,0.9387140403972374,0.9388058660500065
+board_grouped,frequency_spectral_fusion,Frequency + spectral descriptors,frequency_spectral,balanced_logistic_regression,C03,11307,1637,none,0.9718998167379352,0.9163052483846391,0.9092640997065976
+board_grouped,frequency_spectral_fusion,Frequency + spectral descriptors,frequency_spectral,balanced_logistic_regression,W01,10525,2419,none,0.9706490285241836,0.9366039414549998,0.929731559112063
+board_grouped,frequency_spectral_fusion,Frequency + spectral descriptors,frequency_spectral,balanced_logistic_regression,W02,10574,2370,none,0.9763713080168777,0.9278598448018816,0.9247053537826471
+board_grouped,frequency_spectral_fusion,Frequency + spectral descriptors,frequency_spectral,balanced_logistic_regression,W03,11478,1466,none,0.980218281036835,0.9354440413223299,0.9344145935881268
+board_grouped,frequency_spectral_fusion,Frequency + spectral descriptors,frequency_spectral,random_forest,C01,10211,2733,none,0.9754848152213684,0.8482285928725558,0.867970868310751
+board_grouped,frequency_spectral_fusion,Frequency + spectral descriptors,frequency_spectral,random_forest,C02,10625,2319,none,0.9150495903406641,0.7333155758677813,0.7901726591659781
+board_grouped,frequency_spectral_fusion,Frequency + spectral descriptors,frequency_spectral,random_forest,C03,11307,1637,none,0.9297495418448382,0.7894993894993895,0.8391493276036055
+board_grouped,frequency_spectral_fusion,Frequency + spectral descriptors,frequency_spectral,random_forest,W01,10525,2419,none,0.9830508474576272,0.9540490913413237,0.9646738997442134
+board_grouped,frequency_spectral_fusion,Frequency + spectral descriptors,frequency_spectral,random_forest,W02,10574,2370,none,0.9054852320675105,0.7172640492902431,0.7551064756909031
+board_grouped,frequency_spectral_fusion,Frequency + spectral descriptors,frequency_spectral,random_forest,W03,11478,1466,none,0.9815825375170532,0.9321138211382113,0.955127843192488
+board_grouped,v6_2_a_spectral_fusion,v6.2-A + spectral descriptors,v62a_spectral,balanced_logistic_regression,C01,10211,2733,none,0.9721917306988657,0.9198023809733857,0.8993160419668849
+board_grouped,v6_2_a_spectral_fusion,v6.2-A + spectral descriptors,v62a_spectral,balanced_logistic_regression,C02,10625,2319,none,0.9322984044846917,0.9341524881116776,0.8776581617857986
+board_grouped,v6_2_a_spectral_fusion,v6.2-A + spectral descriptors,v62a_spectral,balanced_logistic_regression,C03,11307,1637,none,0.9511301160659743,0.9310362818555756,0.9094818806765457
+board_grouped,v6_2_a_spectral_fusion,v6.2-A + spectral descriptors,v62a_spectral,balanced_logistic_regression,W01,10525,2419,none,0.9334435717238528,0.9161651901257872,0.8766442739497927
+board_grouped,v6_2_a_spectral_fusion,v6.2-A + spectral descriptors,v62a_spectral,balanced_logistic_regression,W02,10574,2370,none,0.950210970464135,0.9321915214656276,0.878013301098598
+board_grouped,v6_2_a_spectral_fusion,v6.2-A + spectral descriptors,v62a_spectral,balanced_logistic_regression,W03,11478,1466,none,0.9454297407912687,0.9152880660061016,0.9014539095283609
+board_grouped,v6_2_a_spectral_fusion,v6.2-A + spectral descriptors,v62a_spectral,random_forest,C01,10211,2733,none,0.9849981705085986,0.9123275322504366,0.9378499810309217
+board_grouped,v6_2_a_spectral_fusion,v6.2-A + spectral descriptors,v62a_spectral,random_forest,C02,10625,2319,none,0.9659335920655455,0.9202930235136364,0.9357630197795693
+board_grouped,v6_2_a_spectral_fusion,v6.2-A + spectral descriptors,v62a_spectral,random_forest,C03,11307,1637,none,0.9773976786805131,0.9324623574242775,0.9592429329354175
+board_grouped,v6_2_a_spectral_fusion,v6.2-A + spectral descriptors,v62a_spectral,random_forest,W01,10525,2419,none,0.9677552707730467,0.9253369035301043,0.9338681219250358
+board_grouped,v6_2_a_spectral_fusion,v6.2-A + spectral descriptors,v62a_spectral,random_forest,W02,10574,2370,none,0.9810126582278481,0.935193320675684,0.9566629448555355
+board_grouped,v6_2_a_spectral_fusion,v6.2-A + spectral descriptors,v62a_spectral,random_forest,W03,11478,1466,none,0.970668485675307,0.9293684618283079,0.9379011468469788
+board_grouped,v6_2_a_frequency_fusion,Frequency + v6.2-A,frequency_v62a,balanced_logistic_regression,C01,10211,2733,none,0.9886571533113795,0.9591578337819373,0.9420947968001997
+board_grouped,v6_2_a_frequency_fusion,Frequency + v6.2-A,frequency_v62a,balanced_logistic_regression,C02,10625,2319,none,0.9586028460543338,0.9491607681369189,0.9201529293819523
+board_grouped,v6_2_a_frequency_fusion,Frequency + v6.2-A,frequency_v62a,balanced_logistic_regression,C03,11307,1637,none,0.9816737935247404,0.946299473416944,0.9611342041589858
+board_grouped,v6_2_a_frequency_fusion,Frequency + v6.2-A,frequency_v62a,balanced_logistic_regression,W01,10525,2419,none,0.9677552707730467,0.9358907505724723,0.9254139106972843
+board_grouped,v6_2_a_frequency_fusion,Frequency + v6.2-A,frequency_v62a,balanced_logistic_regression,W02,10574,2370,none,0.9890295358649789,0.9634729476955911,0.9635238020709849
+board_grouped,v6_2_a_frequency_fusion,Frequency + v6.2-A,frequency_v62a,balanced_logistic_regression,W03,11478,1466,none,0.9774897680763983,0.9399838136979204,0.9419772202362197
+board_grouped,v6_2_a_frequency_fusion,Frequency + v6.2-A,frequency_v62a,random_forest,C01,10211,2733,none,0.9849981705085986,0.9123275322504366,0.9378499810309217
+board_grouped,v6_2_a_frequency_fusion,Frequency + v6.2-A,frequency_v62a,random_forest,C02,10625,2319,none,0.9702457956015524,0.9294062020593504,0.9431757060599042
+board_grouped,v6_2_a_frequency_fusion,Frequency + v6.2-A,frequency_v62a,random_forest,C03,11307,1637,none,0.9780085522296884,0.9341717591336792,0.9602754585994809
+board_grouped,v6_2_a_frequency_fusion,Frequency + v6.2-A,frequency_v62a,random_forest,W01,10525,2419,none,0.9706490285241836,0.9281535444636082,0.9424284913338485
+board_grouped,v6_2_a_frequency_fusion,Frequency + v6.2-A,frequency_v62a,random_forest,W02,10574,2370,none,0.9822784810126582,0.9368154465935845,0.9576969134911228
+board_grouped,v6_2_a_frequency_fusion,Frequency + v6.2-A,frequency_v62a,random_forest,W03,11478,1466,none,0.9761255115961801,0.9337708340910817,0.9457039651918748
+board_grouped,frequency_v6_2_a_spectral_fusion,Frequency + v6.2-A + spectral descriptors,frequency_v62a_spectral,balanced_logistic_regression,C01,10211,2733,none,0.9871935601902672,0.9389844501978033,0.9270713108299233
+board_grouped,frequency_v6_2_a_spectral_fusion,Frequency + v6.2-A + spectral descriptors,frequency_v62a_spectral,balanced_logistic_regression,C02,10625,2319,none,0.9577404053471323,0.9487167640611285,0.919145351747348
+board_grouped,frequency_v6_2_a_spectral_fusion,Frequency + v6.2-A + spectral descriptors,frequency_v62a_spectral,balanced_logistic_regression,C03,11307,1637,none,0.9731215638362859,0.9571926190435306,0.9373249311528629
+board_grouped,frequency_v6_2_a_spectral_fusion,Frequency + v6.2-A + spectral descriptors,frequency_v62a_spectral,balanced_logistic_regression,W01,10525,2419,none,0.9710624224886316,0.9334987551224831,0.9273891783043415
+board_grouped,frequency_v6_2_a_spectral_fusion,Frequency + v6.2-A + spectral descriptors,frequency_v62a_spectral,balanced_logistic_regression,W02,10574,2370,none,0.979746835443038,0.9599679821917093,0.9428176168976012
+board_grouped,frequency_v6_2_a_spectral_fusion,Frequency + v6.2-A + spectral descriptors,frequency_v62a_spectral,balanced_logistic_regression,W03,11478,1466,none,0.9693042291950886,0.9414959595263482,0.9307411590000427
+board_grouped,frequency_v6_2_a_spectral_fusion,Frequency + v6.2-A + spectral descriptors,frequency_v62a_spectral,random_forest,C01,10211,2733,none,0.9849981705085986,0.9123275322504366,0.9378499810309217
+board_grouped,frequency_v6_2_a_spectral_fusion,Frequency + v6.2-A + spectral descriptors,frequency_v62a_spectral,random_forest,C02,10625,2319,none,0.9724018973695558,0.9282228739265899,0.946493123421512
+board_grouped,frequency_v6_2_a_spectral_fusion,Frequency + v6.2-A + spectral descriptors,frequency_v62a_spectral,random_forest,C03,11307,1637,none,0.9798411728772144,0.9346564117992688,0.9632054872969553
+board_grouped,frequency_v6_2_a_spectral_fusion,Frequency + v6.2-A + spectral descriptors,frequency_v62a_spectral,random_forest,W01,10525,2419,none,0.972302604381976,0.9334498986149244,0.9443141260531611
+board_grouped,frequency_v6_2_a_spectral_fusion,Frequency + v6.2-A + spectral descriptors,frequency_v62a_spectral,random_forest,W02,10574,2370,none,0.9827004219409282,0.9393004916436348,0.9590973353805726
+board_grouped,frequency_v6_2_a_spectral_fusion,Frequency + v6.2-A + spectral descriptors,frequency_v62a_spectral,random_forest,W03,11478,1466,none,0.9781718963165075,0.931375761098381,0.9474718091904089

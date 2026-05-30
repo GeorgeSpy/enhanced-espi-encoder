@@ -1,0 +1,6 @@
+Encoder,Board LOBO Macro-F1,Board LOBO 95% CI,Material LOMO Macro-F1,Material LOMO 95% CI,Worst board group,Worst board Macro-F1,Worst material group,Worst material Macro-F1
+Random ResNet-18,31.99%,"[27.29%, 37.32%]",25.44%,"[23.86%, 27.01%]",W03,22.73%,carbon,23.86%
+ImageNet ResNet-18,39.30%,"[33.16%, 46.36%]",22.95%,"[16.83%, 29.08%]",C01,27.60%,carbon,16.83%
+v6.1,87.10%,"[82.73%, 91.23%]",86.33%,"[85.32%, 87.34%]",C01,78.61%,wood,85.32%
+v6.2-A,93.56%,"[92.36%, 94.67%]",93.49%,"[93.01%, 93.97%]",W01,90.82%,wood,93.01%
+hierarchical v6.2 phase2,26.41%,"[22.88%, 29.29%]",24.47%,"[23.23%, 25.71%]",C03,18.20%,wood,23.23%

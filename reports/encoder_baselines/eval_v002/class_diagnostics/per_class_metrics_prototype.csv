@@ -1,0 +1,36 @@
+encoder_id,encoder_name,evaluation_mode,method,held_out_group,n_train,n_test,class_id,label_name,precision,recall,f1,support
+random_resnet18,Random ResNet-18,stratified_train_to_val,nearest_class_prototype,val,10355,2589,0,1_1H,0.09972677595628415,0.5572519083969466,0.16917728852838934,131
+random_resnet18,Random ResNet-18,stratified_train_to_val,nearest_class_prototype,val,10355,2589,1,1_1T,0.16941176470588235,0.5373134328358209,0.257602862254025,134
+random_resnet18,Random ResNet-18,stratified_train_to_val,nearest_class_prototype,val,10355,2589,2,1_2,0.2222222222222222,0.23129251700680273,0.22666666666666663,147
+random_resnet18,Random ResNet-18,stratified_train_to_val,nearest_class_prototype,val,10355,2589,3,2_1,0.18012422360248448,0.18831168831168832,0.1841269841269841,154
+random_resnet18,Random ResNet-18,stratified_train_to_val,nearest_class_prototype,val,10355,2589,4,higher,0.907871198568873,0.5017301038062284,0.6462909901305317,2023
+random_resnet18,Random ResNet-18,stratified_train_to_val,nearest_class_prototype,val,10355,2589,macro_avg,macro_avg,0.3158712370111492,0.40317993007149744,0.29677295834131934,2589
+random_resnet18,Random ResNet-18,stratified_train_to_val,nearest_class_prototype,val,10355,2589,weighted_avg,weighted_avg,0.7465409872256241,0.4723831595210506,0.550715811869015,2589
+imagenet_resnet18,ImageNet ResNet-18,stratified_train_to_val,nearest_class_prototype,val,10355,2589,0,1_1H,0.1956521739130435,0.7557251908396947,0.31083202511773944,131
+imagenet_resnet18,ImageNet ResNet-18,stratified_train_to_val,nearest_class_prototype,val,10355,2589,1,1_1T,0.23237597911227154,0.664179104477612,0.344294003868472,134
+imagenet_resnet18,ImageNet ResNet-18,stratified_train_to_val,nearest_class_prototype,val,10355,2589,2,1_2,0.11617312072892938,0.3469387755102041,0.17406143344709898,147
+imagenet_resnet18,ImageNet ResNet-18,stratified_train_to_val,nearest_class_prototype,val,10355,2589,3,2_1,0.14560439560439561,0.34415584415584416,0.20463320463320467,154
+imagenet_resnet18,ImageNet ResNet-18,stratified_train_to_val,nearest_class_prototype,val,10355,2589,4,higher,0.9085841694537347,0.40286702916460704,0.5582191780821918,2023
+imagenet_resnet18,ImageNet ResNet-18,stratified_train_to_val,nearest_class_prototype,val,10355,2589,macro_avg,macro_avg,0.3196779677624749,0.5027731888295923,0.31840796902974133,2589
+imagenet_resnet18,ImageNet ResNet-18,stratified_train_to_val,nearest_class_prototype,val,10355,2589,weighted_avg,weighted_avg,0.7471360048122008,0.4275782155272306,0.4917853740051411,2589
+v6_1,v6.1,stratified_train_to_val,nearest_class_prototype,val,10355,2589,0,1_1H,0.3931888544891641,0.9694656488549618,0.5594713656387664,131
+v6_1,v6.1,stratified_train_to_val,nearest_class_prototype,val,10355,2589,1,1_1T,0.8012820512820513,0.9328358208955224,0.8620689655172415,134
+v6_1,v6.1,stratified_train_to_val,nearest_class_prototype,val,10355,2589,2,1_2,0.4496124031007752,0.7891156462585034,0.5728395061728395,147
+v6_1,v6.1,stratified_train_to_val,nearest_class_prototype,val,10355,2589,3,2_1,0.3252747252747253,0.961038961038961,0.4860426929392446,154
+v6_1,v6.1,stratified_train_to_val,nearest_class_prototype,val,10355,2589,4,higher,1.0,0.6905585763717251,0.8169590643274853,2023
+v6_1,v6.1,stratified_train_to_val,nearest_class_prototype,val,10355,2589,macro_avg,macro_avg,0.593871606829343,0.8686029306839348,0.6594763189191155,2589
+v6_1,v6.1,stratified_train_to_val,nearest_class_prototype,val,10355,2589,weighted_avg,weighted_avg,0.8876264448659702,0.738895326380842,0.7727208032184406,2589
+v6_2_a,v6.2-A,stratified_train_to_val,nearest_class_prototype,val,10355,2589,0,1_1H,0.4456140350877193,0.9694656488549618,0.610576923076923,131
+v6_2_a,v6.2-A,stratified_train_to_val,nearest_class_prototype,val,10355,2589,1,1_1T,0.6381909547738693,0.9477611940298507,0.7627627627627628,134
+v6_2_a,v6.2-A,stratified_train_to_val,nearest_class_prototype,val,10355,2589,2,1_2,0.43322475570032576,0.9047619047619048,0.5859030837004405,147
+v6_2_a,v6.2-A,stratified_train_to_val,nearest_class_prototype,val,10355,2589,3,2_1,0.5298507462686567,0.922077922077922,0.6729857819905213,154
+v6_2_a,v6.2-A,stratified_train_to_val,nearest_class_prototype,val,10355,2589,4,higher,1.0,0.7563025210084033,0.8612440191387559,2023
+v6_2_a,v6.2-A,stratified_train_to_val,nearest_class_prototype,val,10355,2589,macro_avg,macro_avg,0.6093760983661143,0.9000738381466086,0.6986945141338807,2589
+v6_2_a,v6.2-A,stratified_train_to_val,nearest_class_prototype,val,10355,2589,weighted_avg,weighted_avg,0.8930761222670957,0.7952877558903051,0.8166319048209716,2589
+hierarchical_v6_2,hierarchical v6.2 phase2,stratified_train_to_val,nearest_class_prototype,val,10355,2589,0,1_1H,0.125,0.2595419847328244,0.1687344913151365,131
+hierarchical_v6_2,hierarchical v6.2 phase2,stratified_train_to_val,nearest_class_prototype,val,10355,2589,1,1_1T,0.1387434554973822,0.7910447761194029,0.23608017817371937,134
+hierarchical_v6_2,hierarchical v6.2 phase2,stratified_train_to_val,nearest_class_prototype,val,10355,2589,2,1_2,0.18518518518518517,0.034013605442176874,0.05747126436781609,147
+hierarchical_v6_2,hierarchical v6.2 phase2,stratified_train_to_val,nearest_class_prototype,val,10355,2589,3,2_1,0.189873417721519,0.09740259740259741,0.12875536480686697,154
+hierarchical_v6_2,hierarchical v6.2 phase2,stratified_train_to_val,nearest_class_prototype,val,10355,2589,4,higher,0.8832066344160332,0.6317350469599604,0.7365994236311239,2023
+hierarchical_v6_2,hierarchical v6.2 phase2,stratified_train_to_val,nearest_class_prototype,val,10355,2589,macro_avg,macro_avg,0.3044017385640239,0.36274760213139245,0.2655281444589326,2589
+hierarchical_v6_2,hierarchical v6.2 phase2,stratified_train_to_val,nearest_class_prototype,val,10355,2589,weighted_avg,weighted_avg,0.725436992279498,0.5554268057164928,0.6072445725321172,2589

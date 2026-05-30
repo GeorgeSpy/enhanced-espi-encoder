@@ -1,0 +1,60 @@
+{
+  "created_utc": "2026-05-26T08:01:32.826527+00:00",
+  "status": "pass",
+  "checkpoint": "C:\\ESPI\\logs\\train_v6.2_opt\\ckpt_phase2_expert.pt",
+  "checkpoint_sha256": "ebb0a1ed05fc480b9e7f575800db1df8e7dffa027b75cc6bd59debdd81e39e00",
+  "manifest": "C:\\Users\\George mini-PC\\Documents\\Playground\\ESPI_v62_v62A_Encoder_package_20260430_224510\\core_v62_files\\manifest\\manifest_v1_5class.npz",
+  "output_npz": "C:\\Users\\George mini-PC\\Documents\\Playground\\enhanced-espi-encoder\\outputs\\hierarchical_embeddings_v001\\features_hier_z_expert_prelogit.npz",
+  "device": "cpu",
+  "full": false,
+  "max_samples_arg": 200,
+  "n_samples": 200,
+  "embedding_dim": 512,
+  "embedding_point": "z_expert_prelogit / z_arcface_input from outputs['embeddings']",
+  "model_name": "EnhancedHybridPhysicsESPI_V6_2",
+  "quality_checks": {
+    "embedding_shape": [
+      200,
+      512
+    ],
+    "nan_count": 0,
+    "inf_count": 0,
+    "no_nan": true,
+    "no_inf": true,
+    "nonzero_variance": true,
+    "consistent_embedding_shape": true,
+    "duplicate_path_count": 0,
+    "no_duplicate_paths": true,
+    "metadata_lengths": {
+      "label": 200,
+      "label_name": 200,
+      "board": 200,
+      "material": 200,
+      "distribution_group": 200,
+      "frequency_hz": 200,
+      "path": 200,
+      "split": 200,
+      "split_group": 200
+    },
+    "metadata_length_equals_embedding_length": true,
+    "mean_feature_variance": 2.902632236480713,
+    "max_feature_variance": 6.035498142242432
+  },
+  "metadata_fields": [
+    "label",
+    "label_name",
+    "board",
+    "material",
+    "distribution_group",
+    "frequency_hz",
+    "path",
+    "split",
+    "split_group"
+  ],
+  "notes": [
+    "No training was run.",
+    "No gradients were computed.",
+    "Full extraction is disabled by default and requires --full.",
+    "z_physics_fusion is intentionally not exposed yet."
+  ]
+}

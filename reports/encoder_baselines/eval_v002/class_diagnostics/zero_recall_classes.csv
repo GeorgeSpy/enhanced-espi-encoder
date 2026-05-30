@@ -1,0 +1,48 @@
+encoder_id,encoder_name,evaluation_mode,group_field,held_out_group,method,is_published_best_grouped_method,n_train,n_test,class_id,label_name,precision,recall,f1,support
+random_resnet18,Random ResNet-18,board_grouped,board,C01,knn_cosine_k10,false,10211,2733,2,1_2,0.0,0.0,0.0,57
+random_resnet18,Random ResNet-18,board_grouped,board,C02,knn_cosine_k10,false,10625,2319,2,1_2,0.0,0.0,0.0,141
+random_resnet18,Random ResNet-18,board_grouped,board,C02,knn_cosine_k10,false,10625,2319,3,2_1,0.0,0.0,0.0,157
+random_resnet18,Random ResNet-18,board_grouped,board,C03,knn_cosine_k10,false,11307,1637,2,1_2,0.0,0.0,0.0,98
+random_resnet18,Random ResNet-18,board_grouped,board,C03,knn_cosine_k10,false,11307,1637,3,2_1,0.0,0.0,0.0,117
+random_resnet18,Random ResNet-18,board_grouped,board,W01,knn_cosine_k10,false,10525,2419,2,1_2,0.0,0.0,0.0,177
+random_resnet18,Random ResNet-18,board_grouped,board,W01,knn_cosine_k10,false,10525,2419,3,2_1,0.0,0.0,0.0,185
+random_resnet18,Random ResNet-18,board_grouped,board,W02,knn_cosine_k10,false,10574,2370,2,1_2,0.0,0.0,0.0,142
+random_resnet18,Random ResNet-18,board_grouped,board,W02,knn_cosine_k10,false,10574,2370,3,2_1,0.0,0.0,0.0,169
+random_resnet18,Random ResNet-18,board_grouped,board,W01,balanced_logistic_regression,true,10525,2419,3,2_1,0.0,0.0,0.0,185
+random_resnet18,Random ResNet-18,board_grouped,board,W02,balanced_logistic_regression,true,10574,2370,0,1_1H,0.0,0.0,0.0,74
+random_resnet18,Random ResNet-18,board_grouped,board,C03,nearest_class_prototype,false,11307,1637,2,1_2,0.0,0.0,0.0,98
+random_resnet18,Random ResNet-18,board_grouped,board,C03,nearest_class_prototype,false,11307,1637,3,2_1,0.0,0.0,0.0,117
+random_resnet18,Random ResNet-18,board_grouped,board,W01,nearest_class_prototype,false,10525,2419,3,2_1,0.0,0.0,0.0,185
+imagenet_resnet18,ImageNet ResNet-18,board_grouped,board,C01,knn_cosine_k10,true,10211,2733,2,1_2,0.0,0.0,0.0,57
+imagenet_resnet18,ImageNet ResNet-18,board_grouped,board,C01,knn_cosine_k10,true,10211,2733,3,2_1,0.0,0.0,0.0,77
+imagenet_resnet18,ImageNet ResNet-18,board_grouped,board,W02,knn_cosine_k10,true,10574,2370,2,1_2,0.0,0.0,0.0,142
+imagenet_resnet18,ImageNet ResNet-18,board_grouped,board,C01,balanced_logistic_regression,false,10211,2733,2,1_2,0.0,0.0,0.0,57
+imagenet_resnet18,ImageNet ResNet-18,board_grouped,board,C01,nearest_class_prototype,false,10211,2733,2,1_2,0.0,0.0,0.0,57
+imagenet_resnet18,ImageNet ResNet-18,board_grouped,board,C01,nearest_class_prototype,false,10211,2733,3,2_1,0.0,0.0,0.0,77
+imagenet_resnet18,ImageNet ResNet-18,board_grouped,board,C02,nearest_class_prototype,false,10625,2319,2,1_2,0.0,0.0,0.0,141
+imagenet_resnet18,ImageNet ResNet-18,board_grouped,board,C02,nearest_class_prototype,false,10625,2319,3,2_1,0.0,0.0,0.0,157
+imagenet_resnet18,ImageNet ResNet-18,board_grouped,board,C03,nearest_class_prototype,false,11307,1637,2,1_2,0.0,0.0,0.0,98
+imagenet_resnet18,ImageNet ResNet-18,board_grouped,board,C03,nearest_class_prototype,false,11307,1637,3,2_1,0.0,0.0,0.0,117
+imagenet_resnet18,ImageNet ResNet-18,board_grouped,board,W01,nearest_class_prototype,false,10525,2419,3,2_1,0.0,0.0,0.0,185
+imagenet_resnet18,ImageNet ResNet-18,board_grouped,board,W02,nearest_class_prototype,false,10574,2370,4,higher,0.0,0.0,0.0,1872
+hierarchical_v6_2,hierarchical v6.2 phase2,board_grouped,board,C01,knn_cosine_k10,false,10211,2733,3,2_1,0.0,0.0,0.0,77
+hierarchical_v6_2,hierarchical v6.2 phase2,board_grouped,board,W01,knn_cosine_k10,false,10525,2419,2,1_2,0.0,0.0,0.0,177
+hierarchical_v6_2,hierarchical v6.2 phase2,board_grouped,board,C03,balanced_logistic_regression,true,11307,1637,2,1_2,0.0,0.0,0.0,98
+hierarchical_v6_2,hierarchical v6.2 phase2,board_grouped,board,C01,nearest_class_prototype,false,10211,2733,2,1_2,0.0,0.0,0.0,57
+hierarchical_v6_2,hierarchical v6.2 phase2,board_grouped,board,C01,nearest_class_prototype,false,10211,2733,3,2_1,0.0,0.0,0.0,77
+hierarchical_v6_2,hierarchical v6.2 phase2,board_grouped,board,C02,nearest_class_prototype,false,10625,2319,0,1_1H,0.0,0.0,0.0,134
+hierarchical_v6_2,hierarchical v6.2 phase2,board_grouped,board,C03,nearest_class_prototype,false,11307,1637,0,1_1H,0.0,0.0,0.0,110
+hierarchical_v6_2,hierarchical v6.2 phase2,board_grouped,board,C03,nearest_class_prototype,false,11307,1637,3,2_1,0.0,0.0,0.0,117
+random_resnet18,Random ResNet-18,material_grouped,material,carbon,knn_cosine_k10,false,6255,6689,3,2_1,0.0,0.0,0.0,351
+random_resnet18,Random ResNet-18,material_grouped,material,wood,knn_cosine_k10,false,6689,6255,3,2_1,0.0,0.0,0.0,418
+random_resnet18,Random ResNet-18,material_grouped_aggregate,material,ALL,knn_cosine_k10,false,varies_by_group,12944,3,2_1,0.0,0.0,0.0,769
+random_resnet18,Random ResNet-18,material_grouped,material,wood,balanced_logistic_regression,true,6689,6255,1,1_1T,0.0,0.0,0.0,313
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,carbon,knn_cosine_k10,false,6255,6689,2,1_2,0.0,0.0,0.0,296
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,carbon,knn_cosine_k10,false,6255,6689,3,2_1,0.0,0.0,0.0,351
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,wood,knn_cosine_k10,false,6689,6255,2,1_2,0.0,0.0,0.0,442
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,wood,knn_cosine_k10,false,6689,6255,3,2_1,0.0,0.0,0.0,418
+imagenet_resnet18,ImageNet ResNet-18,material_grouped_aggregate,material,ALL,knn_cosine_k10,false,varies_by_group,12944,2,1_2,0.0,0.0,0.0,738
+imagenet_resnet18,ImageNet ResNet-18,material_grouped_aggregate,material,ALL,knn_cosine_k10,false,varies_by_group,12944,3,2_1,0.0,0.0,0.0,769
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,wood,balanced_logistic_regression,true,6689,6255,3,2_1,0.0,0.0,0.0,418
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,carbon,nearest_class_prototype,false,6255,6689,3,2_1,0.0,0.0,0.0,351
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,2,1_2,0.0,0.0,0.0,442

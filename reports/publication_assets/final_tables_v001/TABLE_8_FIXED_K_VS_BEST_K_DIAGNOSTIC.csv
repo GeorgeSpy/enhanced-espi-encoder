@@ -1,0 +1,6 @@
+Encoder,Fixed k,Fixed-k stratified Macro-F1,Best k,Best-k stratified Macro-F1,Best-k minus fixed-k delta,Manuscript use
+Random ResNet-18,10,81.14%,5,84.40%,+3.26 pp,Fixed k=10 is primary; best-k is diagnostic only.
+ImageNet ResNet-18,10,84.34%,5,87.15%,+2.81 pp,Fixed k=10 is primary; best-k is diagnostic only.
+v6.1,10,93.65%,5,95.07%,+1.42 pp,Fixed k=10 is primary; best-k is diagnostic only.
+v6.2-A,10,92.78%,10,92.78%,0.00 pp,Fixed k=10 is primary; best-k is diagnostic only.
+hierarchical v6.2 phase2,10,37.80%,1,40.17%,+2.37 pp,Fixed k=10 is primary; best-k is diagnostic only.

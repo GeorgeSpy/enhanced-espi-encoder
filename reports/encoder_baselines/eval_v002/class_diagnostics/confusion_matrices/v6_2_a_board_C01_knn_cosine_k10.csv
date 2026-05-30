@@ -1,0 +1,6 @@
+true_class_id,true_label_name,pred_0_1_1H,pred_1_1_1T,pred_2_1_2,pred_3_2_1,pred_4_higher
+0,1_1H,123,0,0,0,6
+1,1_1T,2,160,0,0,8
+2,1_2,0,0,45,5,7
+3,2_1,0,0,1,71,5
+4,higher,9,1,1,1,2288

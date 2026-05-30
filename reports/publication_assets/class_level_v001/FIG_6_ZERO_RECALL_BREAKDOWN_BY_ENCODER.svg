@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="560" viewBox="0 0 1060 560">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="530.0" y="34.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">Zero-Recall Cases by Encoder and Evaluation Mode</text>
+<text x="530.0" y="56.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="middle">Counts are per class/group/method rows with recall equal to zero.</text>
+<line x1="110" y1="410.0" x2="970" y2="410.0" stroke="#dddddd"/>
+<text x="100.0" y="414.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="end">0</text>
+<line x1="110" y1="339.3" x2="970" y2="339.3" stroke="#dddddd"/>
+<text x="100.0" y="343.3" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="end">3</text>
+<line x1="110" y1="268.6" x2="970" y2="268.6" stroke="#dddddd"/>
+<text x="100.0" y="272.6" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="end">6</text>
+<line x1="110" y1="197.9" x2="970" y2="197.9" stroke="#dddddd"/>
+<text x="100.0" y="201.9" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="end">9</text>
+<line x1="110" y1="127.1" x2="970" y2="127.1" stroke="#dddddd"/>
+<text x="100.0" y="131.1" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="end">12</text>
+<line x1="110" y1="80.0" x2="970" y2="80.0" stroke="#dddddd"/>
+<text x="100.0" y="84.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="end">15</text>
+<rect x="131.5" y="80.0" width="33.5" height="330.0" fill="#4C78A8"/>
+<text x="148.3" y="75.0" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="normal" text-anchor="middle">14</text>
+<rect x="174.5" y="339.3" width="33.5" height="70.7" fill="#F28E2B"/>
+<text x="191.3" y="334.3" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="normal" text-anchor="middle">3</text>
+<rect x="217.5" y="386.4" width="33.5" height="23.6" fill="#B07AA1"/>
+<text x="234.3" y="381.4" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="normal" text-anchor="middle">1</text>
+<text x="196.0" y="436.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="middle">Random</text>
+<rect x="303.5" y="127.1" width="33.5" height="282.9" fill="#4C78A8"/>
+<text x="320.3" y="122.1" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="normal" text-anchor="middle">12</text>
+<rect x="346.5" y="268.6" width="33.5" height="141.4" fill="#F28E2B"/>
+<text x="363.3" y="263.6" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="normal" text-anchor="middle">6</text>
+<rect x="389.5" y="362.9" width="33.5" height="47.1" fill="#B07AA1"/>
+<text x="406.3" y="357.9" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="normal" text-anchor="middle">2</text>
+<text x="368.0" y="436.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="middle">ImageNet</text>
+<rect x="475.5" y="410.0" width="33.5" height="0.0" fill="#4C78A8"/>
+<rect x="518.5" y="410.0" width="33.5" height="0.0" fill="#F28E2B"/>
+<rect x="561.5" y="410.0" width="33.5" height="0.0" fill="#B07AA1"/>
+<text x="540.0" y="436.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="middle">v6.1</text>
+<rect x="647.5" y="410.0" width="33.5" height="0.0" fill="#4C78A8"/>
+<rect x="690.5" y="410.0" width="33.5" height="0.0" fill="#F28E2B"/>
+<rect x="733.5" y="410.0" width="33.5" height="0.0" fill="#B07AA1"/>
+<text x="712.0" y="436.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="middle">v6.2-A</text>
+<rect x="819.5" y="221.4" width="33.5" height="188.6" fill="#4C78A8"/>
+<text x="836.3" y="216.4" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="normal" text-anchor="middle">8</text>
+<rect x="862.5" y="386.4" width="33.5" height="23.6" fill="#F28E2B"/>
+<text x="879.3" y="381.4" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="normal" text-anchor="middle">1</text>
+<rect x="905.5" y="410.0" width="33.5" height="0.0" fill="#B07AA1"/>
+<text x="884.0" y="436.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="middle">hierarchical v6.2 phase2</text>
+<rect x="110" y="476" width="16" height="16" fill="#4C78A8"/>
+<text x="134.0" y="489.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="start">board_grouped</text>
+<rect x="330" y="476" width="16" height="16" fill="#F28E2B"/>
+<text x="354.0" y="489.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="start">material_grouped</text>
+<rect x="550" y="476" width="16" height="16" fill="#B07AA1"/>
+<text x="574.0" y="489.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="start">material_grouped_aggregate</text>
+</svg>

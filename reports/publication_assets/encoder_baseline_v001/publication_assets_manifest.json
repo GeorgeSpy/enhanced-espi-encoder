@@ -1,0 +1,26 @@
+{
+  "created_utc": "2026-05-26T14:45:50.473804+00:00",
+  "eval_dir": "reports\\encoder_baselines\\eval_v002",
+  "out_dir": "reports\\publication_assets\\encoder_baseline_v001",
+  "generated_files": [
+    "reports\\publication_assets\\encoder_baseline_v001\\TABLE_1_ENCODER_BASELINE_SUMMARY.md",
+    "reports\\publication_assets\\encoder_baseline_v001\\TABLE_1_ENCODER_BASELINE_SUMMARY.csv",
+    "reports\\publication_assets\\encoder_baseline_v001\\TABLE_2_GROUPED_ROBUSTNESS_WITH_CI.md",
+    "reports\\publication_assets\\encoder_baseline_v001\\TABLE_2_GROUPED_ROBUSTNESS_WITH_CI.csv",
+    "reports\\publication_assets\\encoder_baseline_v001\\TABLE_3_CONTROLLED_ARCHITECTURE_COMPARISON.md",
+    "reports\\publication_assets\\encoder_baseline_v001\\TABLE_3_CONTROLLED_ARCHITECTURE_COMPARISON.csv",
+    "reports\\publication_assets\\encoder_baseline_v001\\FIG_1_STRATIFIED_VS_GROUPED_MACRO_F1.svg",
+    "reports\\publication_assets\\encoder_baseline_v001\\FIG_2_GROUPED_ROBUSTNESS_GAIN.svg",
+    "reports\\publication_assets\\encoder_baseline_v001\\FIG_3_ENCODER_DECISION_FLOW.svg",
+    "reports\\publication_assets\\encoder_baseline_v001\\PUBLICATION_RESULT_SUMMARY.md"
+  ],
+  "source_summary_csv": "reports\\encoder_baselines\\eval_v002\\encoder_baseline_summary.csv",
+  "source_key_numbers_json": "reports\\encoder_baselines\\eval_v002\\encoder_baseline_key_numbers.json",
+  "claim_boundary": {
+    "primary_reportable_frozen_encoder_baseline": "v6.2-A",
+    "stratified_knn_leader": "v6.1",
+    "no_acoustic_response_claim": true,
+    "no_validated_physics_aligned_encoder_claim": true,
+    "lefft_status": "future_ablation_direction"
+  }
+}

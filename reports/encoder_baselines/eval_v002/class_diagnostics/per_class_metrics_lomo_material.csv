@@ -1,0 +1,316 @@
+encoder_id,encoder_name,evaluation_mode,group_field,held_out_group,method,is_published_best_grouped_method,n_train,n_test,class_id,label_name,precision,recall,f1,support
+random_resnet18,Random ResNet-18,material_grouped,material,carbon,knn_cosine_k10,false,6255,6689,0,1_1H,0.1702127659574468,0.08579088471849866,0.11408199643493762,373
+random_resnet18,Random ResNet-18,material_grouped,material,carbon,knn_cosine_k10,false,6255,6689,1,1_1T,0.1358994501178319,0.4859550561797753,0.2124002455494168,356
+random_resnet18,Random ResNet-18,material_grouped,material,carbon,knn_cosine_k10,false,6255,6689,2,1_2,0.02857142857142857,0.006756756756756757,0.010928961748633882,296
+random_resnet18,Random ResNet-18,material_grouped,material,carbon,knn_cosine_k10,false,6255,6689,3,2_1,0.0,0.0,0.0,351
+random_resnet18,Random ResNet-18,material_grouped,material,carbon,knn_cosine_k10,false,6255,6689,4,higher,0.848825926644673,0.8232636928289102,0.8358494171603287,5313
+random_resnet18,Random ResNet-18,material_grouped,material,carbon,knn_cosine_k10,false,6255,6689,macro_avg,macro_avg,0.23670191425827608,0.2803532780967882,0.23465212417866338,6689
+random_resnet18,Random ResNet-18,material_grouped,material,carbon,knn_cosine_k10,false,6255,6689,weighted_avg,weighted_avg,0.6922019520203867,0.6848557332934669,0.6820556134154949,6689
+random_resnet18,Random ResNet-18,material_grouped,material,wood,knn_cosine_k10,false,6689,6255,0,1_1H,0.2264957264957265,0.18928571428571428,0.20622568093385216,280
+random_resnet18,Random ResNet-18,material_grouped,material,wood,knn_cosine_k10,false,6689,6255,1,1_1T,0.24025974025974026,0.1182108626198083,0.158458244111349,313
+random_resnet18,Random ResNet-18,material_grouped,material,wood,knn_cosine_k10,false,6689,6255,2,1_2,0.1043956043956044,0.042986425339366516,0.0608974358974359,442
+random_resnet18,Random ResNet-18,material_grouped,material,wood,knn_cosine_k10,false,6689,6255,3,2_1,0.0,0.0,0.0,418
+random_resnet18,Random ResNet-18,material_grouped,material,wood,knn_cosine_k10,false,6689,6255,4,higher,0.8005376344086022,0.9302374010828821,0.860527836640339,4802
+random_resnet18,Random ResNet-18,material_grouped,material,wood,knn_cosine_k10,false,6689,6255,macro_avg,macro_avg,0.27433774111193465,0.2561440806655543,0.2572218395165952,6255
+random_resnet18,Random ResNet-18,material_grouped,material,wood,knn_cosine_k10,false,6689,6255,weighted_avg,weighted_avg,0.6441158560660378,0.7315747402078338,0.6820962364959081,6255
+random_resnet18,Random ResNet-18,material_grouped_aggregate,material,ALL,knn_cosine_k10,false,varies_by_group,12944,0,1_1H,0.2014218009478673,0.13016845329249618,0.15813953488372093,653
+random_resnet18,Random ResNet-18,material_grouped_aggregate,material,ALL,knn_cosine_k10,false,varies_by_group,12944,1,1_1T,0.14716187806587247,0.31390134529147984,0.200381679389313,669
+random_resnet18,Random ResNet-18,material_grouped_aggregate,material,ALL,knn_cosine_k10,false,varies_by_group,12944,2,1_2,0.08333333333333333,0.028455284552845527,0.04242424242424242,738
+random_resnet18,Random ResNet-18,material_grouped_aggregate,material,ALL,knn_cosine_k10,false,varies_by_group,12944,3,2_1,0.0,0.0,0.0,769
+random_resnet18,Random ResNet-18,material_grouped_aggregate,material,ALL,knn_cosine_k10,false,varies_by_group,12944,4,higher,0.8237212335786825,0.8740484429065744,0.8481389102072141,10115
+random_resnet18,Random ResNet-18,material_grouped_aggregate,material,ALL,knn_cosine_k10,false,varies_by_group,12944,macro_avg,macro_avg,0.2511276491851511,0.2693147052086792,0.24981687338089809,12944
+random_resnet18,Random ResNet-18,material_grouped_aggregate,material,ALL,knn_cosine_k10,false,varies_by_group,12944,weighted_avg,weighted_avg,0.6662098277266225,0.7074320148331273,0.6835255429114324,12944
+random_resnet18,Random ResNet-18,material_grouped,material,carbon,balanced_logistic_regression,true,6255,6689,0,1_1H,0.1615720524017467,0.09919571045576407,0.1229235880398671,373
+random_resnet18,Random ResNet-18,material_grouped,material,carbon,balanced_logistic_regression,true,6255,6689,1,1_1T,0.14795918367346939,0.08146067415730338,0.10507246376811594,356
+random_resnet18,Random ResNet-18,material_grouped,material,carbon,balanced_logistic_regression,true,6255,6689,2,1_2,0.03787878787878788,0.016891891891891893,0.023364485981308414,296
+random_resnet18,Random ResNet-18,material_grouped,material,carbon,balanced_logistic_regression,true,6255,6689,3,2_1,0.08461538461538462,0.06267806267806268,0.07201309328968904,351
+random_resnet18,Random ResNet-18,material_grouped,material,carbon,balanced_logistic_regression,true,6255,6689,4,higher,0.8283378746594006,0.9154903067946546,0.8697362539114886,5313
+random_resnet18,Random ResNet-18,material_grouped,material,carbon,balanced_logistic_regression,true,6255,6689,macro_avg,macro_avg,0.25207265664575784,0.23514332919553532,0.23862197699809382,6689
+random_resnet18,Random ResNet-18,material_grouped,material,carbon,balanced_logistic_regression,true,6255,6689,weighted_avg,weighted_avg,0.680940513411739,0.7410674241291673,0.7080815512135157,6689
+random_resnet18,Random ResNet-18,material_grouped,material,wood,balanced_logistic_regression,true,6689,6255,0,1_1H,0.135678391959799,0.19285714285714287,0.1592920353982301,280
+random_resnet18,Random ResNet-18,material_grouped,material,wood,balanced_logistic_regression,true,6689,6255,1,1_1T,0.0,0.0,0.0,313
+random_resnet18,Random ResNet-18,material_grouped,material,wood,balanced_logistic_regression,true,6689,6255,2,1_2,0.1694610778443114,0.6402714932126696,0.26799242424242425,442
+random_resnet18,Random ResNet-18,material_grouped,material,wood,balanced_logistic_regression,true,6689,6255,3,2_1,0.18681318681318682,0.08133971291866028,0.11333333333333334,418
+random_resnet18,Random ResNet-18,material_grouped,material,wood,balanced_logistic_regression,true,6689,6255,4,higher,0.8980730223123732,0.7376093294460642,0.8099702721243998,4802
+random_resnet18,Random ResNet-18,material_grouped,material,wood,balanced_logistic_regression,true,6689,6255,macro_avg,macro_avg,0.27800513578593405,0.33041553568690735,0.2701176130196775,6255
+random_resnet18,Random ResNet-18,material_grouped,material,wood,balanced_logistic_regression,true,6689,6255,weighted_avg,weighted_avg,0.7199882192466598,0.6255795363709032,0.6554604318947014,6255
+random_resnet18,Random ResNet-18,material_grouped_aggregate,material,ALL,balanced_logistic_regression,true,varies_by_group,12944,0,1_1H,0.14513556618819776,0.13935681470137826,0.1421875,653
+random_resnet18,Random ResNet-18,material_grouped_aggregate,material,ALL,balanced_logistic_regression,true,varies_by_group,12944,1,1_1T,0.11284046692607004,0.043348281016442454,0.06263498920086392,669
+random_resnet18,Random ResNet-18,material_grouped_aggregate,material,ALL,balanced_logistic_regression,true,varies_by_group,12944,2,1_2,0.1598224195338513,0.3902439024390244,0.22677165354330714,738
+random_resnet18,Random ResNet-18,material_grouped_aggregate,material,ALL,balanced_logistic_regression,true,varies_by_group,12944,3,2_1,0.12669683257918551,0.07282184655396619,0.09248554913294797,769
+random_resnet18,Random ResNet-18,material_grouped_aggregate,material,ALL,balanced_logistic_regression,true,varies_by_group,12944,4,higher,0.8563569682151589,0.8310430054374691,0.8435101098790828,10115
+random_resnet18,Random ResNet-18,material_grouped_aggregate,material,ALL,balanced_logistic_regression,true,varies_by_group,12944,macro_avg,macro_avg,0.28017045068849267,0.29536277002965605,0.2735179603512404,12944
+random_resnet18,Random ResNet-18,material_grouped_aggregate,material,ALL,balanced_logistic_regression,true,varies_by_group,12944,weighted_avg,weighted_avg,0.6989874335954992,0.6852595797280593,0.6879894062345874,12944
+random_resnet18,Random ResNet-18,material_grouped,material,carbon,nearest_class_prototype,false,6255,6689,0,1_1H,0.11448763250883393,0.4343163538873995,0.18120805369127518,373
+random_resnet18,Random ResNet-18,material_grouped,material,carbon,nearest_class_prototype,false,6255,6689,1,1_1T,0.09281875915974597,0.5337078651685393,0.1581356637536413,356
+random_resnet18,Random ResNet-18,material_grouped,material,carbon,nearest_class_prototype,false,6255,6689,2,1_2,0.3076923076923077,0.02702702702702703,0.049689440993788817,296
+random_resnet18,Random ResNet-18,material_grouped,material,carbon,nearest_class_prototype,false,6255,6689,3,2_1,0.057435090479937057,0.20797720797720798,0.09001233045622688,351
+random_resnet18,Random ResNet-18,material_grouped,material,carbon,nearest_class_prototype,false,6255,6689,4,higher,0.9512953367875647,0.3455674760022586,0.5069722490680657,5313
+random_resnet18,Random ResNet-18,material_grouped,material,carbon,nearest_class_prototype,false,6255,6689,macro_avg,macro_avg,0.3047458253256779,0.3097191860124865,0.19720354759259956,6689
+random_resnet18,Random ResNet-18,material_grouped,material,carbon,nearest_class_prototype,false,6255,6689,weighted_avg,weighted_avg,0.7835575017752096,0.3392136343250112,0.42812570819944273,6689
+random_resnet18,Random ResNet-18,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,0,1_1H,0.08420208500400962,0.375,0.137524557956778,280
+random_resnet18,Random ResNet-18,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,1,1_1T,0.10112359550561797,0.25878594249201275,0.14542190305206465,313
+random_resnet18,Random ResNet-18,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,2,1_2,0.12521150592216582,0.167420814479638,0.14327202323330107,442
+random_resnet18,Random ResNet-18,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,3,2_1,0.07142857142857142,0.0023923444976076554,0.004629629629629629,418
+random_resnet18,Random ResNet-18,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,4,higher,0.8250971682398668,0.6189087880049979,0.7072822465492623,4802
+random_resnet18,Random ResNet-18,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,macro_avg,macro_avg,0.24141258522004633,0.28450157789485125,0.22762607208420715,6255
+random_resnet18,Random ResNet-18,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,weighted_avg,weighted_avg,0.6558825738700178,0.5168665067945644,0.5668512708660361,6255
+random_resnet18,Random ResNet-18,material_grouped_aggregate,material,ALL,nearest_class_prototype,false,varies_by_group,12944,0,1_1H,0.10030052592036064,0.40888208269525267,0.16108597285067877,653
+random_resnet18,Random ResNet-18,material_grouped_aggregate,material,ALL,nearest_class_prototype,false,varies_by_group,12944,1,1_1T,0.09515449438202248,0.40508221225710017,0.15410861529712822,669
+random_resnet18,Random ResNet-18,material_grouped_aggregate,material,ALL,nearest_class_prototype,false,varies_by_group,12944,2,1_2,0.13290113452188007,0.1111111111111111,0.12103321033210332,738
+random_resnet18,Random ResNet-18,material_grouped_aggregate,material,ALL,nearest_class_prototype,false,varies_by_group,12944,3,2_1,0.05758754863813229,0.09622886866059818,0.07205452775073029,769
+random_resnet18,Random ResNet-18,material_grouped_aggregate,material,ALL,nearest_class_prototype,false,varies_by_group,12944,4,higher,0.8691250903832248,0.4753336628769155,0.6145587013485012,10115
+random_resnet18,Random ResNet-18,material_grouped_aggregate,material,ALL,nearest_class_prototype,false,varies_by_group,12944,macro_avg,macro_avg,0.2510137587691241,0.2993275875201955,0.22456820551582837,12944
+random_resnet18,Random ResNet-18,material_grouped_aggregate,material,ALL,nearest_class_prototype,false,varies_by_group,12944,weighted_avg,weighted_avg,0.7001483893366625,0.425061804697157,0.5075155677619566,12944
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,carbon,knn_cosine_k10,false,6255,6689,0,1_1H,0.05429200293470286,0.3967828418230563,0.09551468215553405,373
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,carbon,knn_cosine_k10,false,6255,6689,1,1_1T,0.1440677966101695,0.6207865168539326,0.23386243386243386,356
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,carbon,knn_cosine_k10,false,6255,6689,2,1_2,0.0,0.0,0.0,296
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,carbon,knn_cosine_k10,false,6255,6689,3,2_1,0.0,0.0,0.0,351
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,carbon,knn_cosine_k10,false,6255,6689,4,higher,0.8505984316962443,0.3879164313946923,0.5328335056876938,5313
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,carbon,knn_cosine_k10,false,6255,6689,macro_avg,macro_avg,0.20979164624822336,0.28109715801433627,0.17244212434113235,6689
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,carbon,knn_cosine_k10,false,6255,6689,weighted_avg,weighted_avg,0.6863161190447018,0.36328300194348934,0.44099662410192225,6689
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,wood,knn_cosine_k10,false,6689,6255,0,1_1H,0.3700440528634361,0.3,0.3313609467455621,280
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,wood,knn_cosine_k10,false,6689,6255,1,1_1T,0.31092436974789917,0.1182108626198083,0.17129629629629628,313
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,wood,knn_cosine_k10,false,6689,6255,2,1_2,0.0,0.0,0.0,442
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,wood,knn_cosine_k10,false,6689,6255,3,2_1,0.0,0.0,0.0,418
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,wood,knn_cosine_k10,false,6689,6255,4,higher,0.8036560595802302,0.9887546855476884,0.8866479925303454,4802
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,wood,knn_cosine_k10,false,6689,6255,macro_avg,macro_avg,0.2969248964383131,0.28139310963349934,0.27786104711444076,6255
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,wood,knn_cosine_k10,false,6689,6255,weighted_avg,weighted_avg,0.6490948138508585,0.7784172661870503,0.7040896028713376,6255
+imagenet_resnet18,ImageNet ResNet-18,material_grouped_aggregate,material,ALL,knn_cosine_k10,false,varies_by_group,12944,0,1_1H,0.07856417202844565,0.3552833078101072,0.12867443150305047,653
+imagenet_resnet18,ImageNet ResNet-18,material_grouped_aggregate,material,ALL,knn_cosine_k10,false,varies_by_group,12944,1,1_1T,0.1560798548094374,0.38565022421524664,0.2222222222222222,669
+imagenet_resnet18,ImageNet ResNet-18,material_grouped_aggregate,material,ALL,knn_cosine_k10,false,varies_by_group,12944,2,1_2,0.0,0.0,0.0,738
+imagenet_resnet18,ImageNet ResNet-18,material_grouped_aggregate,material,ALL,knn_cosine_k10,false,varies_by_group,12944,3,2_1,0.0,0.0,0.0,769
+imagenet_resnet18,ImageNet ResNet-18,material_grouped_aggregate,material,ALL,knn_cosine_k10,false,varies_by_group,12944,4,higher,0.8173088464770135,0.6731586752347998,0.7382630380570313,10115
+imagenet_resnet18,ImageNet ResNet-18,material_grouped_aggregate,material,ALL,knn_cosine_k10,false,varies_by_group,12944,macro_avg,macro_avg,0.21039057466297933,0.2828184414520307,0.21783193835646078,12944
+imagenet_resnet18,ImageNet ResNet-18,material_grouped_aggregate,material,ALL,knn_cosine_k10,false,varies_by_group,12944,weighted_avg,weighted_avg,0.6507106620300588,0.5638906056860321,0.5948873377924159,12944
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,carbon,balanced_logistic_regression,true,6255,6689,0,1_1H,0.07514450867052024,0.45308310991957107,0.12890922959572845,373
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,carbon,balanced_logistic_regression,true,6255,6689,1,1_1T,0.08679004467134652,0.38202247191011235,0.14144565782631305,356
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,carbon,balanced_logistic_regression,true,6255,6689,2,1_2,0.04817518248175182,0.11148648648648649,0.0672782874617737,296
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,carbon,balanced_logistic_regression,true,6255,6689,3,2_1,0.043478260869565216,0.002849002849002849,0.005347593582887701,351
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,carbon,balanced_logistic_regression,true,6255,6689,4,higher,0.8609699769053117,0.3508375682288726,0.4985290184541321,5313
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,carbon,balanced_logistic_regression,true,6255,6689,macro_avg,macro_avg,0.22291159471969912,0.26005572787880904,0.168301957384167,6689
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,carbon,balanced_logistic_regression,true,6255,6689,weighted_avg,weighted_avg,0.6970818311428973,0.32934668859321276,0.41395034389422286,6689
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,wood,balanced_logistic_regression,true,6689,6255,0,1_1H,0.21621621621621623,0.37142857142857144,0.2733245729303548,280
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,wood,balanced_logistic_regression,true,6689,6255,1,1_1T,0.26956521739130435,0.2971246006389776,0.2826747720364742,313
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,wood,balanced_logistic_regression,true,6689,6255,2,1_2,0.2127659574468085,0.02262443438914027,0.04089979550102249,442
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,wood,balanced_logistic_regression,true,6689,6255,3,2_1,0.0,0.0,0.0,418
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,wood,balanced_logistic_regression,true,6689,6255,4,higher,0.8120454969233638,0.9069137859225322,0.8568617806197737,4802
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,wood,balanced_logistic_regression,true,6689,6255,macro_avg,macro_avg,0.30211857759553856,0.31961827847584434,0.290752184217525,6255
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,wood,balanced_logistic_regression,true,6689,6255,weighted_avg,weighted_avg,0.6616146255797763,0.7293365307753797,0.6870880997946476,6255
+imagenet_resnet18,ImageNet ResNet-18,material_grouped_aggregate,material,ALL,balanced_logistic_regression,true,varies_by_group,12944,0,1_1H,0.1,0.41807044410413474,0.161395211350872,653
+imagenet_resnet18,ImageNet ResNet-18,material_grouped_aggregate,material,ALL,balanced_logistic_regression,true,varies_by_group,12944,1,1_1T,0.11976987447698745,0.3423019431988042,0.17745060054242542,669
+imagenet_resnet18,ImageNet ResNet-18,material_grouped_aggregate,material,ALL,balanced_logistic_regression,true,varies_by_group,12944,2,1_2,0.05874316939890711,0.058265582655826556,0.05850340136054422,738
+imagenet_resnet18,ImageNet ResNet-18,material_grouped_aggregate,material,ALL,balanced_logistic_regression,true,varies_by_group,12944,3,2_1,0.023809523809523808,0.0013003901170351106,0.0024660912453760794,769
+imagenet_resnet18,ImageNet ResNet-18,material_grouped_aggregate,material,ALL,balanced_logistic_regression,true,varies_by_group,12944,4,higher,0.8261158342189161,0.6148294611962432,0.7049821458935556,10115
+imagenet_resnet18,ImageNet ResNet-18,material_grouped_aggregate,material,ALL,balanced_logistic_regression,true,varies_by_group,12944,macro_avg,macro_avg,0.22568768038086687,0.2869535642544087,0.22095949007855467,12944
+imagenet_resnet18,ImageNet ResNet-18,material_grouped_aggregate,material,ALL,balanced_logistic_regression,true,varies_by_group,12944,weighted_avg,weighted_avg,0.6615613173652162,0.5226359703337453,0.5716990006844942,12944
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,carbon,nearest_class_prototype,false,6255,6689,0,1_1H,0.05195328231977447,0.34584450402144773,0.09033613445378151,373
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,carbon,nearest_class_prototype,false,6255,6689,1,1_1T,0.06442853616391014,0.7331460674157303,0.11844792375765825,356
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,carbon,nearest_class_prototype,false,6255,6689,2,1_2,0.10526315789473684,0.006756756756756757,0.0126984126984127,296
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,carbon,nearest_class_prototype,false,6255,6689,3,2_1,0.0,0.0,0.0,351
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,carbon,nearest_class_prototype,false,6255,6689,4,higher,0.9485294117647058,0.024280067758328628,0.04734813727289411,5313
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,carbon,nearest_class_prototype,false,6255,6689,macro_avg,macro_avg,0.23403487762862546,0.22200547919045271,0.05376612163654931,6689
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,carbon,nearest_class_prototype,false,6255,6689,weighted_avg,weighted_avg,0.7643907598478624,0.07788907161010615,0.04951146995045648,6689
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,0,1_1H,0.1039136302294197,0.55,0.17480136208853575,280
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,1,1_1T,0.03962575674188222,0.46006389776357826,0.07296681023562199,313
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,2,1_2,0.014084507042253521,0.02262443438914027,0.017361111111111112,442
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,3,2_1,0.02735562310030395,0.0215311004784689,0.024096385542168676,418
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,4,higher,1.0,0.02082465639316951,0.04079967360261118,4802
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,macro_avg,macro_avg,0.2369959034227719,0.21500881780487138,0.06600506851600975,6255
+imagenet_resnet18,ImageNet ResNet-18,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,weighted_avg,weighted_avg,0.7771636580164748,0.06666666666666667,0.045635319887452626,6255
+imagenet_resnet18,ImageNet ResNet-18,material_grouped_aggregate,material,ALL,nearest_class_prototype,false,varies_by_group,12944,0,1_1H,0.07137452711223204,0.4333843797856049,0.12256388046773495,653
+imagenet_resnet18,ImageNet ResNet-18,material_grouped_aggregate,material,ALL,nearest_class_prototype,false,varies_by_group,12944,1,1_1T,0.052700065061808715,0.6053811659192825,0.09695954033995689,669
+imagenet_resnet18,ImageNet ResNet-18,material_grouped_aggregate,material,ALL,nearest_class_prototype,false,varies_by_group,12944,2,1_2,0.01646090534979424,0.016260162601626018,0.016359918200409,738
+imagenet_resnet18,ImageNet ResNet-18,material_grouped_aggregate,material,ALL,nearest_class_prototype,false,varies_by_group,12944,3,2_1,0.02735562310030395,0.011703511053315995,0.01639344262295082,769
+imagenet_resnet18,ImageNet ResNet-18,material_grouped_aggregate,material,ALL,nearest_class_prototype,false,varies_by_group,12944,4,higher,0.9703389830508474,0.02263964409293129,0.04424693266351077,10115
+imagenet_resnet18,ImageNet ResNet-18,material_grouped_aggregate,material,ALL,nearest_class_prototype,false,varies_by_group,12944,macro_avg,macro_avg,0.2276460207349973,0.21787377269055214,0.05930474285891248,12944
+imagenet_resnet18,ImageNet ResNet-18,material_grouped_aggregate,material,ALL,nearest_class_prototype,false,varies_by_group,12944,weighted_avg,weighted_avg,0.7671529160693945,0.07246600741656366,0.047677537649352945,12944
+v6_1,v6.1,material_grouped,material,carbon,knn_cosine_k10,true,6255,6689,0,1_1H,0.9081081081081082,0.900804289544236,0.9044414535666218,373
+v6_1,v6.1,material_grouped,material,carbon,knn_cosine_k10,true,6255,6689,1,1_1T,0.9297752808988764,0.9297752808988764,0.9297752808988764,356
+v6_1,v6.1,material_grouped,material,carbon,knn_cosine_k10,true,6255,6689,2,1_2,0.7801857585139319,0.8513513513513513,0.8142164781906299,296
+v6_1,v6.1,material_grouped,material,carbon,knn_cosine_k10,true,6255,6689,3,2_1,0.833922261484099,0.6723646723646723,0.7444794952681388,351
+v6_1,v6.1,material_grouped,material,carbon,knn_cosine_k10,true,6255,6689,4,higher,0.9701325368676498,0.9781667607754564,0.9741330834114339,5313
+v6_1,v6.1,material_grouped,material,carbon,knn_cosine_k10,true,6255,6689,macro_avg,macro_avg,0.8844247891745332,0.8664924709869185,0.87340915826714,6689
+v6_1,v6.1,material_grouped,material,carbon,knn_cosine_k10,true,6255,6689,weighted_avg,weighted_avg,0.9489729692036463,0.9496187770967259,0.9487585759797939,6689
+v6_1,v6.1,material_grouped,material,wood,knn_cosine_k10,true,6689,6255,0,1_1H,0.8278145695364238,0.8928571428571429,0.8591065292096222,280
+v6_1,v6.1,material_grouped,material,wood,knn_cosine_k10,true,6689,6255,1,1_1T,0.9478827361563518,0.9297124600638977,0.9387096774193548,313
+v6_1,v6.1,material_grouped,material,wood,knn_cosine_k10,true,6689,6255,2,1_2,0.7675,0.6945701357466063,0.7292161520190024,442
+v6_1,v6.1,material_grouped,material,wood,knn_cosine_k10,true,6689,6255,3,2_1,0.7056451612903226,0.8373205741626795,0.7658643326039387,418
+v6_1,v6.1,material_grouped,material,wood,knn_cosine_k10,true,6689,6255,4,higher,0.9783157894736842,0.9677217825905873,0.9729899497487438,4802
+v6_1,v6.1,material_grouped,material,wood,knn_cosine_k10,true,6689,6255,macro_avg,macro_avg,0.8454316512913564,0.8644364190841827,0.8531773282001325,6255
+v6_1,v6.1,material_grouped,material,wood,knn_cosine_k10,true,6689,6255,weighted_avg,weighted_avg,0.9369372461005792,0.9344524380495604,0.9351092767586354,6255
+v6_1,v6.1,material_grouped_aggregate,material,ALL,knn_cosine_k10,true,varies_by_group,12944,0,1_1H,0.8720238095238095,0.8973966309341501,0.8845283018867924,653
+v6_1,v6.1,material_grouped_aggregate,material,ALL,knn_cosine_k10,true,varies_by_group,12944,1,1_1T,0.9381598793363499,0.929745889387145,0.9339339339339339,669
+v6_1,v6.1,material_grouped_aggregate,material,ALL,knn_cosine_k10,true,varies_by_group,12944,2,1_2,0.7731673582295989,0.7574525745257452,0.7652292950034222,738
+v6_1,v6.1,material_grouped_aggregate,material,ALL,knn_cosine_k10,true,varies_by_group,12944,3,2_1,0.7522464698331194,0.7620286085825748,0.7571059431524548,769
+v6_1,v6.1,material_grouped_aggregate,material,ALL,knn_cosine_k10,true,varies_by_group,12944,4,higher,0.9739784307905412,0.9732081067721207,0.9735931164078727,10115
+v6_1,v6.1,material_grouped_aggregate,material,ALL,knn_cosine_k10,true,varies_by_group,12944,macro_avg,macro_avg,0.8619151895426839,0.8639663620403473,0.8628781180768952,12944
+v6_1,v6.1,material_grouped_aggregate,material,ALL,knn_cosine_k10,true,varies_by_group,12944,weighted_avg,weighted_avg,0.942361509581003,0.9422898640296663,0.9423089342858679,12944
+v6_1,v6.1,material_grouped,material,carbon,balanced_logistic_regression,false,6255,6689,0,1_1H,0.7130044843049327,0.8525469168900804,0.7765567765567766,373
+v6_1,v6.1,material_grouped,material,carbon,balanced_logistic_regression,false,6255,6689,1,1_1T,0.9828178694158075,0.8033707865168539,0.884080370942813,356
+v6_1,v6.1,material_grouped,material,carbon,balanced_logistic_regression,false,6255,6689,2,1_2,0.36254980079681276,0.9222972972972973,0.5204957102001907,296
+v6_1,v6.1,material_grouped,material,carbon,balanced_logistic_regression,false,6255,6689,3,2_1,0.11764705882352941,0.07407407407407407,0.0909090909090909,351
+v6_1,v6.1,material_grouped,material,carbon,balanced_logistic_regression,false,6255,6689,4,higher,0.993370831659301,0.9307359307359307,0.961033913127976,5313
+v6_1,v6.1,material_grouped,material,carbon,balanced_logistic_regression,false,6255,6689,macro_avg,macro_avg,0.6338780090000766,0.7166050011028473,0.6466151723473694,6689
+v6_1,v6.1,material_grouped,material,carbon,balanced_logistic_regression,false,6255,6689,weighted_avg,weighted_avg,0.9033072090666091,0.8742711915084467,0.8814975768109737,6689
+v6_1,v6.1,material_grouped,material,wood,balanced_logistic_regression,false,6689,6255,0,1_1H,0.5028901734104047,0.9321428571428572,0.653316645807259,280
+v6_1,v6.1,material_grouped,material,wood,balanced_logistic_regression,false,6689,6255,1,1_1T,0.6322314049586777,0.9776357827476039,0.767879548306148,313
+v6_1,v6.1,material_grouped,material,wood,balanced_logistic_regression,false,6689,6255,2,1_2,0.40767045454545453,0.6493212669683258,0.5008726003490402,442
+v6_1,v6.1,material_grouped,material,wood,balanced_logistic_regression,false,6689,6255,3,2_1,0.7108433734939759,0.84688995215311,0.7729257641921397,418
+v6_1,v6.1,material_grouped,material,wood,balanced_logistic_regression,false,6689,6255,4,higher,0.9938271604938271,0.8381924198250729,0.9093990058743787,4802
+v6_1,v6.1,material_grouped,material,wood,balanced_logistic_regression,false,6689,6255,macro_avg,macro_avg,0.649492513380468,0.848836455767394,0.7208787129057932,6255
+v6_1,v6.1,material_grouped,material,wood,balanced_logistic_regression,false,6689,6255,weighted_avg,weighted_avg,0.893425831179522,0.8366107114308553,0.852866130206429,6255
+v6_1,v6.1,material_grouped_aggregate,material,ALL,balanced_logistic_regression,false,varies_by_group,12944,0,1_1H,0.6,0.886676875957121,0.7156983930778739,653
+v6_1,v6.1,material_grouped_aggregate,material,ALL,balanced_logistic_regression,false,varies_by_group,12944,1,1_1T,0.7638709677419355,0.8849028400597907,0.8199445983379501,669
+v6_1,v6.1,material_grouped_aggregate,material,ALL,balanced_logistic_regression,false,varies_by_group,12944,2,1_2,0.3843514070006863,0.7588075880758808,0.510250569476082,738
+v6_1,v6.1,material_grouped_aggregate,material,ALL,balanced_logistic_regression,false,varies_by_group,12944,3,2_1,0.5285118219749653,0.494148244473342,0.510752688172043,769
+v6_1,v6.1,material_grouped_aggregate,material,ALL,balanced_logistic_regression,false,varies_by_group,12944,4,higher,0.9935755427558707,0.8868017795353436,0.9371571853941388,10115
+v6_1,v6.1,material_grouped_aggregate,material,ALL,balanced_logistic_regression,false,varies_by_group,12944,macro_avg,macro_avg,0.6540619478946915,0.7822674656202956,0.6987606868916175,12944
+v6_1,v6.1,material_grouped_aggregate,material,ALL,balanced_logistic_regression,false,varies_by_group,12944,weighted_avg,weighted_avg,0.8994841796863597,0.8560723114956736,0.8702543769087842,12944
+v6_1,v6.1,material_grouped,material,carbon,nearest_class_prototype,false,6255,6689,0,1_1H,0.42531356898517675,1.0,0.5968,373
+v6_1,v6.1,material_grouped,material,carbon,nearest_class_prototype,false,6255,6689,1,1_1T,0.6832298136645962,0.9269662921348315,0.7866507747318237,356
+v6_1,v6.1,material_grouped,material,carbon,nearest_class_prototype,false,6255,6689,2,1_2,0.49080882352941174,0.902027027027027,0.6357142857142857,296
+v6_1,v6.1,material_grouped,material,carbon,nearest_class_prototype,false,6255,6689,3,2_1,0.3633440514469453,0.9658119658119658,0.5280373831775701,351
+v6_1,v6.1,material_grouped,material,carbon,nearest_class_prototype,false,6255,6689,4,higher,0.9997403946002077,0.7248258987389422,0.8403709765411893,5313
+v6_1,v6.1,material_grouped,material,carbon,nearest_class_prototype,false,6255,6689,macro_avg,macro_avg,0.5924873304452676,0.9039262367425532,0.6775146840329738,6689
+v6_1,v6.1,material_grouped,material,carbon,nearest_class_prototype,false,6255,6689,weighted_avg,weighted_avg,0.8949477747390573,0.7714157572133353,0.7984837231625987,6689
+v6_1,v6.1,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,0,1_1H,0.32418952618453867,0.9285714285714286,0.4805914972273567,280
+v6_1,v6.1,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,1,1_1T,0.9496644295302014,0.9041533546325878,0.9263502454991818,313
+v6_1,v6.1,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,2,1_2,0.4206471494607088,0.6176470588235294,0.5004582951420715,442
+v6_1,v6.1,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,3,2_1,0.28448275862068967,0.9473684210526315,0.43756906077348073,418
+v6_1,v6.1,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,4,higher,1.0,0.6484798000832986,0.7867609903991915,4802
+v6_1,v6.1,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,macro_avg,macro_avg,0.5957967727592278,0.8092440126326952,0.6263460178082564,6255
+v6_1,v6.1,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,weighted_avg,weighted_avg,0.8784744791270512,0.6916067146282974,0.7364741735919955,6255
+v6_1,v6.1,material_grouped_aggregate,material,ALL,nearest_class_prototype,false,varies_by_group,12944,0,1_1H,0.3770101250744491,0.9693721286370597,0.5428816466552315,653
+v6_1,v6.1,material_grouped_aggregate,material,ALL,nearest_class_prototype,false,varies_by_group,12944,1,1_1T,0.7848911651728553,0.9162929745889388,0.8455172413793103,669
+v6_1,v6.1,material_grouped_aggregate,material,ALL,nearest_class_prototype,false,varies_by_group,12944,2,1_2,0.4526404023470243,0.7317073170731707,0.559295701708959,738
+v6_1,v6.1,material_grouped_aggregate,material,ALL,nearest_class_prototype,false,varies_by_group,12944,3,2_1,0.3161290322580645,0.9557867360208062,0.4751131221719457,769
+v6_1,v6.1,material_grouped_aggregate,material,ALL,nearest_class_prototype,false,varies_by_group,12944,4,higher,0.9998564455928797,0.6885813148788927,0.8155260230665651,10115
+v6_1,v6.1,material_grouped_aggregate,material,ALL,nearest_class_prototype,false,varies_by_group,12944,macro_avg,macro_avg,0.5861054340890546,0.8523480942397736,0.6476667469964024,12944
+v6_1,v6.1,material_grouped_aggregate,material,ALL,nearest_class_prototype,false,varies_by_group,12944,weighted_avg,weighted_avg,0.8855052218081573,0.732849196538937,0.7684889286061781,12944
+v6_2_a,v6.2-A,material_grouped,material,carbon,knn_cosine_k10,true,6255,6689,0,1_1H,0.8704156479217604,0.9544235924932976,0.9104859335038363,373
+v6_2_a,v6.2-A,material_grouped,material,carbon,knn_cosine_k10,true,6255,6689,1,1_1T,0.9680232558139535,0.9353932584269663,0.9514285714285714,356
+v6_2_a,v6.2-A,material_grouped,material,carbon,knn_cosine_k10,true,6255,6689,2,1_2,0.9775280898876404,0.8817567567567568,0.9271758436944938,296
+v6_2_a,v6.2-A,material_grouped,material,carbon,knn_cosine_k10,true,6255,6689,3,2_1,0.9688473520249221,0.886039886039886,0.9255952380952381,351
+v6_2_a,v6.2-A,material_grouped,material,carbon,knn_cosine_k10,true,6255,6689,4,higher,0.9803664921465969,0.9868247694334651,0.9835850295469468,5313
+v6_2_a,v6.2-A,material_grouped,material,carbon,knn_cosine_k10,true,6255,6689,macro_avg,macro_avg,0.9530361675589745,0.9288876526300743,0.9396541232538173,6689
+v6_2_a,v6.2-A,material_grouped,material,carbon,knn_cosine_k10,true,6255,6689,weighted_avg,weighted_avg,0.9728482917755932,0.9723426521154134,0.9722581947844864,6689
+v6_2_a,v6.2-A,material_grouped,material,wood,knn_cosine_k10,true,6689,6255,0,1_1H,0.9660377358490566,0.9142857142857143,0.9394495412844036,280
+v6_2_a,v6.2-A,material_grouped,material,wood,knn_cosine_k10,true,6689,6255,1,1_1T,0.9451612903225807,0.9361022364217252,0.9406099518459069,313
+v6_2_a,v6.2-A,material_grouped,material,wood,knn_cosine_k10,true,6689,6255,2,1_2,0.8535564853556485,0.9230769230769231,0.8869565217391305,442
+v6_2_a,v6.2-A,material_grouped,material,wood,knn_cosine_k10,true,6689,6255,3,2_1,0.9246231155778895,0.8803827751196173,0.9019607843137255,418
+v6_2_a,v6.2-A,material_grouped,material,wood,knn_cosine_k10,true,6689,6255,4,higher,0.9812656119900083,0.9816743023740109,0.9814699146366854,4802
+v6_2_a,v6.2-A,material_grouped,material,wood,knn_cosine_k10,true,6689,6255,macro_avg,macro_avg,0.9341288478190366,0.9271043902555982,0.9300893427639704,6255
+v6_2_a,v6.2-A,material_grouped,material,wood,knn_cosine_k10,true,6689,6255,weighted_avg,weighted_avg,0.9659676974457998,0.9654676258992806,0.9655523112749159,6255
+v6_2_a,v6.2-A,material_grouped_aggregate,material,ALL,knn_cosine_k10,true,varies_by_group,12944,0,1_1H,0.9080118694362018,0.9372128637059725,0.9223813112283346,653
+v6_2_a,v6.2-A,material_grouped_aggregate,material,ALL,knn_cosine_k10,true,varies_by_group,12944,1,1_1T,0.9571865443425076,0.9357249626307922,0.9463340891912321,669
+v6_2_a,v6.2-A,material_grouped_aggregate,material,ALL,knn_cosine_k10,true,varies_by_group,12944,2,1_2,0.897986577181208,0.9065040650406504,0.9022252191503709,738
+v6_2_a,v6.2-A,material_grouped_aggregate,material,ALL,knn_cosine_k10,true,varies_by_group,12944,3,2_1,0.9443671766342142,0.88296488946684,0.9126344086021505,769
+v6_2_a,v6.2-A,material_grouped_aggregate,material,ALL,knn_cosine_k10,true,varies_by_group,12944,4,higher,0.9807919621749409,0.9843796342066238,0.9825825233137612,10115
+v6_2_a,v6.2-A,material_grouped_aggregate,material,ALL,knn_cosine_k10,true,varies_by_group,12944,macro_avg,macro_avg,0.9376688259538145,0.9293572830101757,0.9332315102971698,12944
+v6_2_a,v6.2-A,material_grouped_aggregate,material,ALL,knn_cosine_k10,true,varies_by_group,12944,weighted_avg,weighted_avg,0.9690151961602245,0.9690203955500618,0.9689348576303891,12944
+v6_2_a,v6.2-A,material_grouped,material,carbon,balanced_logistic_regression,false,6255,6689,0,1_1H,0.8439716312056738,0.9571045576407506,0.8969849246231155,373
+v6_2_a,v6.2-A,material_grouped,material,carbon,balanced_logistic_regression,false,6255,6689,1,1_1T,0.9762611275964391,0.9241573033707865,0.9494949494949494,356
+v6_2_a,v6.2-A,material_grouped,material,carbon,balanced_logistic_regression,false,6255,6689,2,1_2,0.9228070175438596,0.8885135135135135,0.9053356282271945,296
+v6_2_a,v6.2-A,material_grouped,material,carbon,balanced_logistic_regression,false,6255,6689,3,2_1,0.948948948948949,0.9002849002849003,0.9239766081871345,351
+v6_2_a,v6.2-A,material_grouped,material,carbon,balanced_logistic_regression,false,6255,6689,4,higher,0.9821125964978347,0.981742894786373,0.9819277108433735,5313
+v6_2_a,v6.2-A,material_grouped,material,carbon,balanced_logistic_regression,false,6255,6689,macro_avg,macro_avg,0.9348202643585513,0.9303606339192647,0.9315439642751535,6689
+v6_2_a,v6.2-A,material_grouped,material,carbon,balanced_logistic_regression,false,6255,6689,weighted_avg,weighted_avg,0.9697333776844234,0.9689041710270594,0.9690346302951715,6689
+v6_2_a,v6.2-A,material_grouped,material,wood,balanced_logistic_regression,false,6689,6255,0,1_1H,0.8754208754208754,0.9285714285714286,0.901213171577123,280
+v6_2_a,v6.2-A,material_grouped,material,wood,balanced_logistic_regression,false,6689,6255,1,1_1T,0.908256880733945,0.9488817891373802,0.9281250000000001,313
+v6_2_a,v6.2-A,material_grouped,material,wood,balanced_logistic_regression,false,6689,6255,2,1_2,0.7091222030981067,0.9321266968325792,0.8054740957966764,442
+v6_2_a,v6.2-A,material_grouped,material,wood,balanced_logistic_regression,false,6689,6255,3,2_1,0.821826280623608,0.8827751196172249,0.8512110726643599,418
+v6_2_a,v6.2-A,material_grouped,material,wood,balanced_logistic_regression,false,6689,6255,4,higher,0.9945663986089981,0.9529362765514369,0.9733063915771563,4802
+v6_2_a,v6.2-A,material_grouped,material,wood,balanced_logistic_regression,false,6689,6255,macro_avg,macro_avg,0.8618385276971067,0.92905826214201,0.8918659463230633,6255
+v6_2_a,v6.2-A,material_grouped,material,wood,balanced_logistic_regression,false,6689,6255,weighted_avg,weighted_avg,0.9531999191012007,0.9454836131095123,0.947799501856264,6255
+v6_2_a,v6.2-A,material_grouped_aggregate,material,ALL,balanced_logistic_regression,false,varies_by_group,12944,0,1_1H,0.8569444444444444,0.9448698315467075,0.8987618353969409,653
+v6_2_a,v6.2-A,material_grouped_aggregate,material,ALL,balanced_logistic_regression,false,varies_by_group,12944,1,1_1T,0.9427710843373494,0.9357249626307922,0.9392348087021755,669
+v6_2_a,v6.2-A,material_grouped_aggregate,material,ALL,balanced_logistic_regression,false,varies_by_group,12944,2,1_2,0.7794457274826789,0.9146341463414634,0.8416458852867831,738
+v6_2_a,v6.2-A,material_grouped_aggregate,material,ALL,balanced_logistic_regression,false,varies_by_group,12944,3,2_1,0.8759590792838875,0.8907672301690507,0.8833010960670534,769
+v6_2_a,v6.2-A,material_grouped_aggregate,material,ALL,balanced_logistic_regression,false,varies_by_group,12944,4,higher,0.9878934624697336,0.9680672268907563,0.9778798621860488,10115
+v6_2_a,v6.2-A,material_grouped_aggregate,material,ALL,balanced_logistic_regression,false,varies_by_group,12944,macro_avg,macro_avg,0.8886027596036188,0.930812679515754,0.9081646975278004,12944
+v6_2_a,v6.2-A,material_grouped_aggregate,material,ALL,balanced_logistic_regression,false,varies_by_group,12944,weighted_avg,weighted_avg,0.9604206141360315,0.9575865265760197,0.9585049117556437,12944
+v6_2_a,v6.2-A,material_grouped,material,carbon,nearest_class_prototype,false,6255,6689,0,1_1H,0.4461722488038278,1.0,0.6170388751033913,373
+v6_2_a,v6.2-A,material_grouped,material,carbon,nearest_class_prototype,false,6255,6689,1,1_1T,0.5993150684931506,0.9831460674157303,0.7446808510638298,356
+v6_2_a,v6.2-A,material_grouped,material,carbon,nearest_class_prototype,false,6255,6689,2,1_2,0.5541666666666667,0.8986486486486487,0.6855670103092784,296
+v6_2_a,v6.2-A,material_grouped,material,carbon,nearest_class_prototype,false,6255,6689,3,2_1,0.6271844660194175,0.9202279202279202,0.745958429561201,351
+v6_2_a,v6.2-A,material_grouped,material,carbon,nearest_class_prototype,false,6255,6689,4,higher,1.0,0.8044419348767174,0.8916240742672368,5313
+v6_2_a,v6.2-A,material_grouped,material,carbon,nearest_class_prototype,false,6255,6689,macro_avg,macro_avg,0.6453676899966125,0.9212929142338033,0.7369738480609873,6689
+v6_2_a,v6.2-A,material_grouped,material,carbon,nearest_class_prototype,false,6255,6689,weighted_avg,weighted_avg,0.9084995506194555,0.8351024069367619,0.8517296806401026,6689
+v6_2_a,v6.2-A,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,0,1_1H,0.5163776493256262,0.9571428571428572,0.6708385481852316,280
+v6_2_a,v6.2-A,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,1,1_1T,0.6591928251121076,0.939297124600639,0.774703557312253,313
+v6_2_a,v6.2-A,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,2,1_2,0.3547008547008547,0.9389140271493213,0.5148883374689827,442
+v6_2_a,v6.2-A,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,3,2_1,0.518918918918919,0.9186602870813397,0.6632124352331608,418
+v6_2_a,v6.2-A,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,4,higher,1.0,0.7038733860891295,0.826203862136397,4802
+v6_2_a,v6.2-A,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,macro_avg,macro_avg,0.6098380496115016,0.8915775364126575,0.689969348067205,6255
+v6_2_a,v6.2-A,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,weighted_avg,weighted_avg,0.8835489979148122,0.7579536370903277,0.783781198401012,6255
+v6_2_a,v6.2-A,material_grouped_aggregate,material,ALL,nearest_class_prototype,false,varies_by_group,12944,0,1_1H,0.47306273062730625,0.9816232771822359,0.6384462151394422,653
+v6_2_a,v6.2-A,material_grouped_aggregate,material,ALL,nearest_class_prototype,false,varies_by_group,12944,1,1_1T,0.625242718446602,0.9626307922272048,0.7580929958799293,669
+v6_2_a,v6.2-A,material_grouped_aggregate,material,ALL,nearest_class_prototype,false,varies_by_group,12944,2,1_2,0.4127272727272727,0.9227642276422764,0.5703517587939698,738
+v6_2_a,v6.2-A,material_grouped_aggregate,material,ALL,nearest_class_prototype,false,varies_by_group,12944,3,2_1,0.5633466135458167,0.9193758127438232,0.6986166007905139,769
+v6_2_a,v6.2-A,material_grouped_aggregate,material,ALL,nearest_class_prototype,false,varies_by_group,12944,4,higher,1.0,0.7566979733069699,0.8615003658056165,10115
+v6_2_a,v6.2-A,material_grouped_aggregate,material,ALL,nearest_class_prototype,false,varies_by_group,12944,macro_avg,macro_avg,0.6148758670693996,0.908618416620502,0.7054015872818944,12944
+v6_2_a,v6.2-A,material_grouped_aggregate,material,ALL,nearest_class_prototype,false,varies_by_group,12944,weighted_avg,weighted_avg,0.8946232706141739,0.7978213844252163,0.8186265108815972,12944
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,carbon,knn_cosine_k10,true,6255,6689,0,1_1H,0.18487394957983194,0.058981233243967826,0.08943089430894309,373
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,carbon,knn_cosine_k10,true,6255,6689,1,1_1T,0.20863309352517986,0.40730337078651685,0.2759276879162702,356
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,carbon,knn_cosine_k10,true,6255,6689,2,1_2,0.05063291139240506,0.013513513513513514,0.021333333333333336,296
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,carbon,knn_cosine_k10,true,6255,6689,3,2_1,0.1016949152542373,0.017094017094017096,0.029268292682926834,351
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,carbon,knn_cosine_k10,true,6255,6689,4,higher,0.8373714484922433,0.904197252023339,0.8695022624434389,5313
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,carbon,knn_cosine_k10,true,6255,6689,macro_avg,macro_avg,0.2766412636487795,0.2802178773322709,0.25709249413698243,6689
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,carbon,knn_cosine_k10,true,6255,6689,weighted_avg,weighted_avg,0.6941049674620899,0.7446554043952758,0.7127883597302724,6689
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,wood,knn_cosine_k10,true,6689,6255,0,1_1H,0.15625,0.017857142857142856,0.03205128205128205,280
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,wood,knn_cosine_k10,true,6689,6255,1,1_1T,0.40559440559440557,0.1853035143769968,0.25438596491228066,313
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,wood,knn_cosine_k10,true,6689,6255,2,1_2,0.1111111111111111,0.0022624434389140274,0.00443458980044346,442
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,wood,knn_cosine_k10,true,6689,6255,3,2_1,0.037037037037037035,0.0023923444976076554,0.0044943820224719105,418
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,wood,knn_cosine_k10,true,6689,6255,4,higher,0.7771343481138319,0.978134110787172,0.8661257606490873,4802
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,wood,knn_cosine_k10,true,6689,6255,macro_avg,macro_avg,0.2974253803712771,0.23718991119156668,0.23229839588711307,6255
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,wood,knn_cosine_k10,true,6689,6255,weighted_avg,weighted_avg,0.6342274630193864,0.7613109512390088,0.6797077232623515,6255
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped_aggregate,material,ALL,knn_cosine_k10,true,varies_by_group,12944,0,1_1H,0.17880794701986755,0.04134762633996937,0.0671641791044776,653
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped_aggregate,material,ALL,knn_cosine_k10,true,varies_by_group,12944,1,1_1T,0.24224343675417662,0.3034379671150972,0.26940942269409424,669
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped_aggregate,material,ALL,knn_cosine_k10,true,varies_by_group,12944,2,1_2,0.056818181818181816,0.006775067750677507,0.012106537530266344,738
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped_aggregate,material,ALL,knn_cosine_k10,true,varies_by_group,12944,3,2_1,0.08139534883720931,0.009102730819245773,0.016374269005847954,769
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped_aggregate,material,ALL,knn_cosine_k10,true,varies_by_group,12944,4,higher,0.8064680417621594,0.9392980721700445,0.8678297405918889,10115
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped_aggregate,material,ALL,knn_cosine_k10,true,varies_by_group,12944,macro_avg,macro_avg,0.27314659123831897,0.2599922928390069,0.24657682978531498,12944
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped_aggregate,material,ALL,knn_cosine_k10,true,varies_by_group,12944,weighted_avg,weighted_avg,0.6598247475629165,0.7527039555006181,0.6971351495972932,12944
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,carbon,balanced_logistic_regression,false,6255,6689,0,1_1H,0.07539267015706806,0.38605898123324395,0.12614980289093297,373
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,carbon,balanced_logistic_regression,false,6255,6689,1,1_1T,0.18181818181818182,0.6573033707865169,0.2848447961046866,356
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,carbon,balanced_logistic_regression,false,6255,6689,2,1_2,0.16417910447761194,0.037162162162162164,0.06060606060606061,296
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,carbon,balanced_logistic_regression,false,6255,6689,3,2_1,0.07597535934291581,0.21082621082621084,0.11169811320754718,351
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,carbon,balanced_logistic_regression,false,6255,6689,4,higher,0.9404324765401877,0.43384152079804256,0.5937660999484802,5313
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,carbon,balanced_logistic_regression,false,6255,6689,macro_avg,macro_avg,0.28755955846719305,0.34503844916123527,0.2354129745515415,6689
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,carbon,balanced_logistic_regression,false,6255,6689,weighted_avg,weighted_avg,0.7721080658706254,0.4138137240245179,0.5023595970388854,6689
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,wood,balanced_logistic_regression,false,6689,6255,0,1_1H,0.14953271028037382,0.05714285714285714,0.08268733850129198,280
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,wood,balanced_logistic_regression,false,6689,6255,1,1_1T,0.13564668769716087,0.41214057507987223,0.20411392405063292,313
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,wood,balanced_logistic_regression,false,6689,6255,2,1_2,0.08850129198966408,0.30995475113122173,0.13768844221105528,442
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,wood,balanced_logistic_regression,false,6689,6255,3,2_1,0.06666666666666667,0.011961722488038277,0.020283975659229212,418
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,wood,balanced_logistic_regression,false,6689,6255,4,higher,0.8500279798545047,0.6326530612244898,0.7254059216809934,4802
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,wood,balanced_logistic_regression,false,6689,6255,macro_avg,macro_avg,0.25807506729767404,0.28477059341329586,0.2340359204206406,6255
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,wood,balanced_logistic_regression,false,6689,6255,weighted_avg,weighted_avg,0.6767618176043398,0.5315747402078337,0.5818986957958728,6255
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped_aggregate,material,ALL,balanced_logistic_regression,false,varies_by_group,12944,0,1_1H,0.07932573128408528,0.2450229709035222,0.1198501872659176,653
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped_aggregate,material,ALL,balanced_logistic_regression,false,varies_by_group,12944,1,1_1T,0.16219839142091153,0.5426008968609866,0.2497420020639835,669
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped_aggregate,material,ALL,balanced_logistic_regression,false,varies_by_group,12944,2,1_2,0.09164086687306501,0.2005420054200542,0.12579685507862304,738
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped_aggregate,material,ALL,balanced_logistic_regression,false,varies_by_group,12944,3,2_1,0.07530981887511916,0.10273081924577374,0.08690869086908692,769
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped_aggregate,material,ALL,balanced_logistic_regression,false,varies_by_group,12944,4,higher,0.8868049792531121,0.5282254078101829,0.6620817843866171,10115
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped_aggregate,material,ALL,balanced_logistic_regression,false,varies_by_group,12944,macro_avg,macro_avg,0.2590559575412586,0.3238244200481039,0.24887590393284564,12944
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped_aggregate,material,ALL,balanced_logistic_regression,false,varies_by_group,12944,weighted_avg,weighted_avg,0.7150716163474672,0.47072002472187885,0.5486687023379506,12944
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,carbon,nearest_class_prototype,false,6255,6689,0,1_1H,0.06473214285714286,0.0777479892761394,0.07064555420219246,373
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,carbon,nearest_class_prototype,false,6255,6689,1,1_1T,0.11764705882352941,0.9269662921348315,0.20879468522619424,356
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,carbon,nearest_class_prototype,false,6255,6689,2,1_2,0.2727272727272727,0.02027027027027027,0.03773584905660377,296
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,carbon,nearest_class_prototype,false,6255,6689,3,2_1,0.16326530612244897,0.045584045584045586,0.07126948775055679,351
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,carbon,nearest_class_prototype,false,6255,6689,4,higher,0.9420989143546441,0.587991718426501,0.7240699965233515,5313
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,carbon,nearest_class_prototype,false,6255,6689,macro_avg,macro_avg,0.3120941389770076,0.3317120631383575,0.22250311455177973,6689
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,carbon,nearest_class_prototype,false,6255,6689,weighted_avg,weighted_avg,0.7788058557885135,0.5239946180296008,0.5955824477063402,6689
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,0,1_1H,0.1189710610932476,0.5285714285714286,0.1942257217847769,280
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,1,1_1T,0.08176100628930817,0.12460063897763578,0.09873417721518987,313
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,2,1_2,0.0,0.0,0.0,442
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,3,2_1,0.05309734513274336,0.014354066985645933,0.02259887005649717,418
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,4,higher,0.8213073965166252,0.756143273635985,0.7873793776428495,4802
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,macro_avg,macro_avg,0.21502736180638485,0.28473388163413904,0.2205876293398627,6255
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped,material,wood,nearest_class_prototype,false,6689,6255,weighted_avg,weighted_avg,0.643487753862987,0.6113509192645883,0.6196209590236085,6255
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped_aggregate,material,ALL,nearest_class_prototype,false,varies_by_group,12944,0,1_1H,0.10460992907801418,0.27105666156202146,0.1509594882729211,653
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped_aggregate,material,ALL,nearest_class_prototype,false,varies_by_group,12944,1,1_1T,0.11243144424131626,0.5515695067264574,0.1867881548974943,669
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped_aggregate,material,ALL,nearest_class_prototype,false,varies_by_group,12944,2,1_2,0.2727272727272727,0.008130081300813009,0.015789473684210527,738
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped_aggregate,material,ALL,nearest_class_prototype,false,varies_by_group,12944,3,2_1,0.10426540284360189,0.02860858257477243,0.04489795918367347,769
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped_aggregate,material,ALL,nearest_class_prototype,false,varies_by_group,12944,4,higher,0.8730774201887036,0.6678200692041523,0.7567779520501905,10115
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped_aggregate,material,ALL,nearest_class_prototype,false,varies_by_group,12944,macro_avg,macro_avg,0.2934222938157817,0.3054369802736433,0.23104260561769796,12944
+hierarchical_v6_2,hierarchical v6.2 phase2,material_grouped_aggregate,material,ALL,nearest_class_prototype,false,varies_by_group,12944,weighted_avg,weighted_avg,0.715092540725709,0.5662082818294191,0.6122161595061426,12944

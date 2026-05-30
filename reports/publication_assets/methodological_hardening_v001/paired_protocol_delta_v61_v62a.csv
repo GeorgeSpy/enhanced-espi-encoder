@@ -1,0 +1,4 @@
+Protocol,v6.1 Macro-F1,v6.2-A Macro-F1,Delta v6.2-A minus v6.1 (pp),Interpretation
+Stratified kNN,95.07%,92.78%,-2.29,v6.1 remains the stronger stratified embedding reference.
+Board LOBO mean,87.10%,93.56%,+6.47,v6.2-A has stronger board-grouped robustness.
+Material LOMO mean,86.33%,93.49%,+7.16,v6.2-A has stronger material-held-out robustness; interpret descriptively because only two materials are available.

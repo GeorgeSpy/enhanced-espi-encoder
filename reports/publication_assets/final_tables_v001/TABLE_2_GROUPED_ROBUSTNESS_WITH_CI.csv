@@ -1,0 +1,6 @@
+Encoder,Board LOBO Macro-F1,Board LOBO 95% CI if available,Material LOMO Macro-F1,Material LOMO 95% CI if available,Worst board,Worst board Macro-F1,Worst material,Worst material Macro-F1,Caution note
+Random ResNet-18,26.17%,not available for fixed k=10,24.59%,not available for fixed k=10,W02,19.85%,carbon,23.47%,Material LOMO is descriptive because only two material groups are available.
+ImageNet ResNet-18,39.30%,"[33.16%, 46.36%]",22.52%,not available for fixed k=10,C01,27.60%,carbon,17.24%,Material LOMO is descriptive because only two material groups are available.
+v6.1,87.10%,"[82.73%, 91.23%]",86.33%,"[85.32%, 87.34%]",C01,78.61%,wood,85.32%,Material LOMO is descriptive because only two material groups are available.
+v6.2-A,93.56%,"[92.36%, 94.67%]",93.49%,"[93.01%, 93.97%]",W01,90.82%,wood,93.01%,Material LOMO is descriptive because only two material groups are available.
+hierarchical v6.2 phase2,24.99%,not available for fixed k=10,24.47%,"[23.23%, 25.71%]",C02,20.42%,wood,23.23%,Material LOMO is descriptive because only two material groups are available. Hierarchical row is internal-only pending source metadata regeneration.

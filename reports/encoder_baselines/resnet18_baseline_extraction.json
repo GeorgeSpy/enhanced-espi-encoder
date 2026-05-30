@@ -1,0 +1,61 @@
+{
+  "created_utc": "2026-05-26T11:37:56.043888+00:00",
+  "schema_version": "encoder_feature_schema_v001",
+  "manifest": "C:\\Users\\George mini-PC\\Documents\\Playground\\ESPI_v62_v62A_Encoder_package_20260430_224510\\core_v62_files\\manifest\\manifest_v1_5class.npz",
+  "image_root": "C:\\ESPI\\data",
+  "out_dir": "outputs\\encoder_features_normalized_v001",
+  "full": true,
+  "max_samples": 200,
+  "variants": [
+    {
+      "variant": "random",
+      "model_name": "torchvision_resnet18_random",
+      "checkpoint_path": "torchvision:none",
+      "checkpoint_sha256": "not_applicable",
+      "embedding_point": "avgpool_pre_fc",
+      "preprocessing_strategy": "grayscale 1-channel input, resized to 256x256, normalized with mean=0.5/std=0.5; conv1 adapted to 1 input channel",
+      "output_npz": "outputs\\encoder_features_normalized_v001\\features_resnet18_random.normalized.npz",
+      "full": true,
+      "max_samples": 200,
+      "quality_checks": {
+        "sample_count": 12944,
+        "embedding_shape": [
+          12944,
+          512
+        ],
+        "nan_count": 0,
+        "inf_count": 0,
+        "duplicate_paths": 0,
+        "nonzero_variance": true,
+        "metadata_lengths_match": true
+      },
+      "acceptable_for_internal_comparison": true,
+      "acceptable_for_final_publication_tables": true
+    },
+    {
+      "variant": "imagenet",
+      "model_name": "torchvision_resnet18_imagenet",
+      "checkpoint_path": "torchvision:ResNet18_Weights.IMAGENET1K_V1",
+      "checkpoint_sha256": "not_applicable",
+      "embedding_point": "avgpool_pre_fc",
+      "preprocessing_strategy": "grayscale ESPI image repeated to RGB, resized to 256x256, ImageNet mean/std normalization",
+      "output_npz": "outputs\\encoder_features_normalized_v001\\features_resnet18_imagenet.normalized.npz",
+      "full": true,
+      "max_samples": 200,
+      "quality_checks": {
+        "sample_count": 12944,
+        "embedding_shape": [
+          12944,
+          512
+        ],
+        "nan_count": 0,
+        "inf_count": 0,
+        "duplicate_paths": 0,
+        "nonzero_variance": true,
+        "metadata_lengths_match": true
+      },
+      "acceptable_for_internal_comparison": true,
+      "acceptable_for_final_publication_tables": true
+    }
+  ]
+}

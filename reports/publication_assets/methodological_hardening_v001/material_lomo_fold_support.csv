@@ -1,0 +1,3 @@
+held_out_material,held_out_total,held_out_class_0,held_out_class_1,held_out_class_2,held_out_class_3,held_out_class_4,reference_total,reference_class_0,reference_class_1,reference_class_2,reference_class_3,reference_class_4,missing_classes_in_heldout,missing_classes_in_reference,macro_f1_caution_flag
+carbon,6689,373,356,296,351,5313,6255,280,313,442,418,4802,none,none,small_number_of_material_groups
+wood,6255,280,313,442,418,4802,6689,373,356,296,351,5313,none,none,small_number_of_material_groups

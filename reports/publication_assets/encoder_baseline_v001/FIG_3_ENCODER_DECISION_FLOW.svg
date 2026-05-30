@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360">
+<rect x="0.0" y="0.0" width="1200.0" height="360.0" fill="#ffffff" stroke="none" />
+<text x="600.0" y="38.0" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="bold" text-anchor="middle">Encoder Baseline Decision Flow</text>
+<text x="600.0" y="62.0" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="middle">Decision boundary: frozen representation evidence only; no acoustic-response or validated Physics-Aligned Encoder claim.</text>
+<rect x="70" y="130" width="230" height="110" rx="12" ry="12" fill="#EAF2F8" stroke="#4C78A8" stroke-width="2" />
+<text x="185.0" y="158.0" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Random/ImageNet controls</text>
+<text x="185.0" y="188.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="middle">Stratified texture signal</text>
+<text x="185.0" y="205.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="middle">fails grouped robustness</text>
+<line x1="312" y1="185.0" x2="333" y2="185.0" stroke="#666666" stroke-width="2" />
+<polygon points="333,185.0 323,179.0 323,191.0" fill="#666666" />
+<rect x="345" y="130" width="230" height="110" rx="12" ry="12" fill="#EAF2F8" stroke="#4C78A8" stroke-width="2" />
+<text x="460.0" y="158.0" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">v6.1 lineage baseline</text>
+<text x="460.0" y="188.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="middle">Best stratified kNN</text>
+<text x="460.0" y="205.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="middle">not grouped-robust leader</text>
+<line x1="587" y1="185.0" x2="608" y2="185.0" stroke="#666666" stroke-width="2" />
+<polygon points="608,185.0 598,179.0 598,191.0" fill="#666666" />
+<rect x="620" y="130" width="230" height="110" rx="12" ry="12" fill="#EAF6EA" stroke="#59A14F" stroke-width="2" />
+<text x="735.0" y="158.0" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">v6.2-A grouped robust encoder</text>
+<text x="735.0" y="188.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="middle">Primary reportable frozen</text>
+<text x="735.0" y="205.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="middle">ESPI encoder baseline</text>
+<line x1="862" y1="185.0" x2="883" y2="185.0" stroke="#666666" stroke-width="2" />
+<polygon points="883,185.0 873,179.0 873,191.0" fill="#666666" />
+<rect x="895" y="130" width="230" height="110" rx="12" ry="12" fill="#EAF2F8" stroke="#4C78A8" stroke-width="2" />
+<text x="1010.0" y="158.0" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Hierarchical controlled alternative</text>
+<text x="1010.0" y="188.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="middle">Technically valid</text>
+<text x="1010.0" y="205.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="middle">not superior in phase2</text>
+<text x="600.0" y="300.0" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="middle">Publication decision: report v6.2-A as the primary frozen ESPI encoder baseline; keep hierarchical phase2 as controlled internal alternative.</text>
+</svg>

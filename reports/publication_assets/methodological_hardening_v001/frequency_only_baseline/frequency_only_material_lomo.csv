@@ -1,0 +1,7 @@
+protocol,method,held_out_group,stress_test_note,accuracy,macro_recall,macro_f1,n_test
+material_grouped,frequency_logistic_regression,carbon,descriptive stress-test only; two material groups available,0.987143070713111,0.9418918918918919,0.9441804939708274,6689
+material_grouped,frequency_random_forest,carbon,descriptive stress-test only; two material groups available,0.987143070713111,0.9418918918918919,0.9441804939708274,6689
+material_grouped,frequency_bin_majority_diagnostic,carbon,descriptive stress-test only; two material groups available,0.9611302137838242,0.8606921574312878,0.8404971398264827,6689
+material_grouped,frequency_logistic_regression,wood,descriptive stress-test only; two material groups available,0.9792166266986411,0.937799043062201,0.9375317788915524,6255
+material_grouped,frequency_random_forest,wood,descriptive stress-test only; two material groups available,0.9792166266986411,0.937799043062201,0.9375317788915524,6255
+material_grouped,frequency_bin_majority_diagnostic,wood,descriptive stress-test only; two material groups available,0.988968824940048,0.9669856459330143,0.9675272350677405,6255

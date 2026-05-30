@@ -1,0 +1,514 @@
+{
+  "manuscript": "manuscripts\\FROZEN_REPRESENTATION_AUDITS_DRAFT_v004_related_work_refs.md",
+  "tables_dir": "reports\\publication_assets\\final_tables_v001",
+  "hardening_dir": "reports\\publication_assets\\methodological_hardening_v001",
+  "summary": {
+    "n_checks": 71,
+    "n_fail": 0,
+    "n_warn": 2,
+    "n_pass": 69,
+    "ready_for_journal_formatting": true,
+    "ready_for_reference_cleanup": true,
+    "ready_for_reference_completion": true,
+    "ready_for_figure_generation": true
+  },
+  "checks": [
+    {
+      "section": "Manuscript structure",
+      "check": "Title",
+      "status": "pass",
+      "evidence": "present",
+      "recommendation": ""
+    },
+    {
+      "section": "Manuscript structure",
+      "check": "Abstract",
+      "status": "pass",
+      "evidence": "present",
+      "recommendation": ""
+    },
+    {
+      "section": "Manuscript structure",
+      "check": "Introduction",
+      "status": "pass",
+      "evidence": "present",
+      "recommendation": ""
+    },
+    {
+      "section": "Manuscript structure",
+      "check": "Related Work",
+      "status": "pass",
+      "evidence": "present",
+      "recommendation": ""
+    },
+    {
+      "section": "Manuscript structure",
+      "check": "Methods",
+      "status": "pass",
+      "evidence": "present",
+      "recommendation": ""
+    },
+    {
+      "section": "Manuscript structure",
+      "check": "Results",
+      "status": "pass",
+      "evidence": "present",
+      "recommendation": ""
+    },
+    {
+      "section": "Manuscript structure",
+      "check": "Discussion",
+      "status": "pass",
+      "evidence": "present",
+      "recommendation": ""
+    },
+    {
+      "section": "Manuscript structure",
+      "check": "Limitations/Future Work",
+      "status": "pass",
+      "evidence": "present",
+      "recommendation": ""
+    },
+    {
+      "section": "Manuscript structure",
+      "check": "Conclusion",
+      "status": "pass",
+      "evidence": "present",
+      "recommendation": ""
+    },
+    {
+      "section": "Manuscript structure",
+      "check": "Data/Code/Reproducibility Availability",
+      "status": "pass",
+      "evidence": "present",
+      "recommendation": ""
+    },
+    {
+      "section": "Manuscript structure",
+      "check": "References",
+      "status": "pass",
+      "evidence": "present",
+      "recommendation": ""
+    },
+    {
+      "section": "Manuscript structure",
+      "check": "Tables/Figures list",
+      "status": "pass",
+      "evidence": "present",
+      "recommendation": ""
+    },
+    {
+      "section": "Claim boundary",
+      "check": "v6.2-A as strongest image-derived frozen ESPI encoder baseline",
+      "status": "pass",
+      "evidence": "phrase present",
+      "recommendation": ""
+    },
+    {
+      "section": "Claim boundary",
+      "check": "frequency_hz as dominant metadata-only predictor",
+      "status": "pass",
+      "evidence": "frequency dominance stated",
+      "recommendation": ""
+    },
+    {
+      "section": "Claim boundary",
+      "check": "positive acoustic-response prediction claim",
+      "status": "pass",
+      "evidence": "absent or explicitly negated/scope-limited",
+      "recommendation": ""
+    },
+    {
+      "section": "Claim boundary",
+      "check": "positive validated Physics-Aligned Encoder claim",
+      "status": "pass",
+      "evidence": "absent or explicitly negated/scope-limited",
+      "recommendation": ""
+    },
+    {
+      "section": "Claim boundary",
+      "check": "positive LeFFT superiority claim",
+      "status": "pass",
+      "evidence": "absent or explicitly negated/scope-limited",
+      "recommendation": ""
+    },
+    {
+      "section": "Claim boundary",
+      "check": "positive trained LeFFT model claim",
+      "status": "pass",
+      "evidence": "absent or explicitly negated/scope-limited",
+      "recommendation": ""
+    },
+    {
+      "section": "Claim boundary",
+      "check": "positive retrained CNN LOBO/LOMO generalization claim",
+      "status": "pass",
+      "evidence": "absent or explicitly negated/scope-limited",
+      "recommendation": ""
+    },
+    {
+      "section": "Claim boundary",
+      "check": "spectral descriptors supplementary/control-only",
+      "status": "pass",
+      "evidence": "supplementary/control wording present",
+      "recommendation": ""
+    },
+    {
+      "section": "Claim boundary",
+      "check": "Material LOMO descriptive/stress-test caution",
+      "status": "pass",
+      "evidence": "material-held-out stress-test wording present",
+      "recommendation": ""
+    },
+    {
+      "section": "Metrics",
+      "check": "v6.1 fixed k=10 stratified Macro-F1",
+      "status": "pass",
+      "evidence": "93.65% present",
+      "recommendation": ""
+    },
+    {
+      "section": "Metrics",
+      "check": "v6.2-A fixed k=10 stratified Macro-F1",
+      "status": "pass",
+      "evidence": "92.78% present",
+      "recommendation": ""
+    },
+    {
+      "section": "Metrics",
+      "check": "v6.1 diagnostic best-k Macro-F1",
+      "status": "pass",
+      "evidence": "95.07% present",
+      "recommendation": ""
+    },
+    {
+      "section": "Metrics",
+      "check": "v6.2-A Board LOBO Macro-F1",
+      "status": "pass",
+      "evidence": "93.56% present",
+      "recommendation": ""
+    },
+    {
+      "section": "Metrics",
+      "check": "v6.2-A Material LOMO Macro-F1",
+      "status": "pass",
+      "evidence": "93.49% present",
+      "recommendation": ""
+    },
+    {
+      "section": "Metrics",
+      "check": "frequency-only stratified Macro-F1",
+      "status": "pass",
+      "evidence": "98.67% present",
+      "recommendation": ""
+    },
+    {
+      "section": "Metrics",
+      "check": "frequency-only Board LOBO Macro-F1",
+      "status": "pass",
+      "evidence": "97.49% present",
+      "recommendation": ""
+    },
+    {
+      "section": "Metrics",
+      "check": "frequency-only Material LOMO Macro-F1",
+      "status": "pass",
+      "evidence": "94.09% present",
+      "recommendation": ""
+    },
+    {
+      "section": "Metrics",
+      "check": "frequency + v6.2-A stratified Macro-F1",
+      "status": "pass",
+      "evidence": "96.75% present",
+      "recommendation": ""
+    },
+    {
+      "section": "Metrics",
+      "check": "frequency + v6.2-A Board LOBO Macro-F1",
+      "status": "pass",
+      "evidence": "94.79% present",
+      "recommendation": ""
+    },
+    {
+      "section": "Metrics",
+      "check": "frequency + v6.2-A Material LOMO Macro-F1",
+      "status": "pass",
+      "evidence": "94.50% present",
+      "recommendation": ""
+    },
+    {
+      "section": "Metrics",
+      "check": "v6.1 95.07% appears only as diagnostic/best-k",
+      "status": "pass",
+      "evidence": "The best-k diagnostic does not change the qualitative interpretation. v6.1 reaches 95.07% at `k=5`, whereas v6.2-A reaches 92.78% at `k=10`. Best-k values are reported as sensitivity analysis only; fixed `k=10` is the primary kNN protocol [Table 8].",
+      "recommendation": ""
+    },
+    {
+      "section": "Metrics",
+      "check": "spectral descriptor control remains supplementary",
+      "status": "pass",
+      "evidence": "supplementary spectral reference present",
+      "recommendation": ""
+    },
+    {
+      "section": "Tables",
+      "check": "Table 1 reference and file",
+      "status": "pass",
+      "evidence": "reference=True; file_exists=True; path=reports\\publication_assets\\final_tables_v001\\TABLE_1_ENCODER_BASELINE_SUMMARY_FIXED_K10.md",
+      "recommendation": ""
+    },
+    {
+      "section": "Tables",
+      "check": "Table 2 reference and file",
+      "status": "pass",
+      "evidence": "reference=True; file_exists=True; path=reports\\publication_assets\\final_tables_v001\\TABLE_2_GROUPED_ROBUSTNESS_WITH_CI.md",
+      "recommendation": ""
+    },
+    {
+      "section": "Tables",
+      "check": "Table 3 reference and file",
+      "status": "pass",
+      "evidence": "reference=True; file_exists=True; path=reports\\publication_assets\\final_tables_v001\\TABLE_3_CONTROLLED_ARCHITECTURE_COMPARISON.md",
+      "recommendation": ""
+    },
+    {
+      "section": "Tables",
+      "check": "Table 4 reference and file",
+      "status": "pass",
+      "evidence": "reference=True; file_exists=True; path=reports\\publication_assets\\final_tables_v001\\TABLE_4_CLASS_SUPPORT_AND_IMBALANCE.md",
+      "recommendation": ""
+    },
+    {
+      "section": "Tables",
+      "check": "Table 5 reference and file",
+      "status": "pass",
+      "evidence": "reference=True; file_exists=True; path=reports\\publication_assets\\final_tables_v001\\TABLE_5_V62A_VS_V61_PER_CLASS_GROUPED_F1.md",
+      "recommendation": ""
+    },
+    {
+      "section": "Tables",
+      "check": "Table 6 reference and file",
+      "status": "pass",
+      "evidence": "reference=True; file_exists=True; path=reports\\publication_assets\\final_tables_v001\\TABLE_6_ZERO_RECALL_BREAKDOWN.md",
+      "recommendation": ""
+    },
+    {
+      "section": "Tables",
+      "check": "Table 7 reference and file",
+      "status": "pass",
+      "evidence": "reference=True; file_exists=True; path=reports\\publication_assets\\final_tables_v001\\TABLE_7_FREQUENCY_INFORMATION_BUDGET.md",
+      "recommendation": ""
+    },
+    {
+      "section": "Tables",
+      "check": "Table 8 reference and file",
+      "status": "pass",
+      "evidence": "reference=True; file_exists=True; path=reports\\publication_assets\\final_tables_v001\\TABLE_8_FIXED_K_VS_BEST_K_DIAGNOSTIC.md",
+      "recommendation": ""
+    },
+    {
+      "section": "Tables",
+      "check": "Supplementary Table S1 reference and file",
+      "status": "pass",
+      "evidence": "reference=True; file_exists=True; path=reports\\publication_assets\\final_tables_v001\\SUPPLEMENTARY_TABLE_S1_BOARD_LEVEL_SUPPORT.md",
+      "recommendation": ""
+    },
+    {
+      "section": "Tables",
+      "check": "Supplementary Table S2 reference and file",
+      "status": "pass",
+      "evidence": "reference=True; file_exists=True; path=reports\\publication_assets\\final_tables_v001\\SUPPLEMENTARY_TABLE_S2_MATERIAL_LEVEL_SUPPORT.md",
+      "recommendation": ""
+    },
+    {
+      "section": "Tables",
+      "check": "Supplementary Table S3 reference and file",
+      "status": "pass",
+      "evidence": "reference=True; file_exists=True; path=reports\\publication_assets\\final_tables_v001\\SUPPLEMENTARY_TABLE_S3_CLASS_BY_BOARD_SUPPORT.md",
+      "recommendation": ""
+    },
+    {
+      "section": "Tables",
+      "check": "Supplementary Table S4 reference and file",
+      "status": "pass",
+      "evidence": "reference=True; file_exists=True; path=reports\\publication_assets\\final_tables_v001\\SUPPLEMENTARY_TABLE_S4_CLASS_BY_MATERIAL_SUPPORT.md",
+      "recommendation": ""
+    },
+    {
+      "section": "Tables",
+      "check": "Supplementary Table S5 reference and file",
+      "status": "pass",
+      "evidence": "reference=True; file_exists=True; path=reports\\publication_assets\\final_tables_v001\\SUPPLEMENTARY_TABLE_S5_PAIRED_BOARD_AND_MATERIAL_DELTAS_V61_V62A.md",
+      "recommendation": ""
+    },
+    {
+      "section": "Tables",
+      "check": "Supplementary Table S6 reference and file",
+      "status": "pass",
+      "evidence": "reference=True; file_exists=True; path=reports\\publication_assets\\final_tables_v001\\SUPPLEMENTARY_TABLE_S6_FREQUENCY_FUSION_PER_CLASS_CHANGES.md",
+      "recommendation": ""
+    },
+    {
+      "section": "Tables",
+      "check": "Supplementary Table S7 reference and file",
+      "status": "pass",
+      "evidence": "reference=True; file_exists=True; path=reports\\publication_assets\\final_tables_v001\\SUPPLEMENTARY_TABLE_S7_SPECTRAL_DESCRIPTOR_CONTROL.md",
+      "recommendation": ""
+    },
+    {
+      "section": "Tables",
+      "check": "Unresolved [Table X]/[Figure X] placeholders",
+      "status": "pass",
+      "evidence": "none",
+      "recommendation": ""
+    },
+    {
+      "section": "Figures",
+      "check": "Figure 1 reference and file",
+      "status": "pass",
+      "evidence": "reference=True; existing_files=['reports/publication_assets/encoder_baseline_v001/FIG_1_STRATIFIED_VS_GROUPED_MACRO_F1.svg']",
+      "recommendation": ""
+    },
+    {
+      "section": "Figures",
+      "check": "Figure 2 reference and file",
+      "status": "pass",
+      "evidence": "reference=True; existing_files=['reports/publication_assets/encoder_baseline_v001/FIG_2_GROUPED_ROBUSTNESS_GAIN.svg']",
+      "recommendation": ""
+    },
+    {
+      "section": "Figures",
+      "check": "Figure 3 reference and file",
+      "status": "pass",
+      "evidence": "reference=True; existing_files=['reports/publication_assets/encoder_baseline_v001/FIG_3_ENCODER_DECISION_FLOW.svg']",
+      "recommendation": ""
+    },
+    {
+      "section": "Figures",
+      "check": "Figure 4 reference and file",
+      "status": "pass",
+      "evidence": "reference=True; existing_files=['reports/publication_assets/class_level_v001/FIG_4_CLASS_SUPPORT_IMBALANCE.svg']",
+      "recommendation": ""
+    },
+    {
+      "section": "Figures",
+      "check": "Figure 5 reference and file",
+      "status": "pass",
+      "evidence": "reference=True; existing_files=['reports/publication_assets/class_level_v001/FIG_5_V62A_VS_V61_PER_CLASS_GROUPED_F1.svg']",
+      "recommendation": ""
+    },
+    {
+      "section": "Figures",
+      "check": "Figure 6 reference and file",
+      "status": "pass",
+      "evidence": "reference=True; existing_files=['reports/publication_assets/class_level_v001/FIG_6_ZERO_RECALL_BREAKDOWN_BY_ENCODER.svg']",
+      "recommendation": ""
+    },
+    {
+      "section": "Citations and bibliography",
+      "check": "Related Work exists",
+      "status": "pass",
+      "evidence": "present",
+      "recommendation": ""
+    },
+    {
+      "section": "Citations and bibliography",
+      "check": "Reference list exists",
+      "status": "pass",
+      "evidence": "present",
+      "recommendation": ""
+    },
+    {
+      "section": "Citations and bibliography",
+      "check": "Every in-text numbered citation has matching reference",
+      "status": "pass",
+      "evidence": "missing references=none",
+      "recommendation": ""
+    },
+    {
+      "section": "Citations and bibliography",
+      "check": "Every reference item is cited at least once",
+      "status": "pass",
+      "evidence": "uncited references=none",
+      "recommendation": ""
+    },
+    {
+      "section": "Citations and bibliography",
+      "check": "Unresolved citation placeholders",
+      "status": "pass",
+      "evidence": "none",
+      "recommendation": ""
+    },
+    {
+      "section": "Citations and bibliography",
+      "check": "References needing DOI/page/venue cleanup",
+      "status": "warn",
+      "evidence": "[3], [6], [7], [8]",
+      "recommendation": "Add DOI fields during venue-specific reference cleanup where available."
+    },
+    {
+      "section": "Terminology",
+      "check": "image-derived frozen ESPI encoder",
+      "status": "pass",
+      "evidence": "present",
+      "recommendation": ""
+    },
+    {
+      "section": "Terminology",
+      "check": "grouped board/material",
+      "status": "pass",
+      "evidence": "present",
+      "recommendation": ""
+    },
+    {
+      "section": "Terminology",
+      "check": "material-held-out stress test",
+      "status": "pass",
+      "evidence": "present",
+      "recommendation": ""
+    },
+    {
+      "section": "Terminology",
+      "check": "deterministic spectral",
+      "status": "pass",
+      "evidence": "present",
+      "recommendation": ""
+    },
+    {
+      "section": "Terminology",
+      "check": "LeFFT-inspired",
+      "status": "pass",
+      "evidence": "present",
+      "recommendation": ""
+    },
+    {
+      "section": "Terminology",
+      "check": "frequency metadata",
+      "status": "pass",
+      "evidence": "present",
+      "recommendation": ""
+    },
+    {
+      "section": "Terminology",
+      "check": "LeFFT-inspired, not trained LeFFT",
+      "status": "pass",
+      "evidence": "trained LeFFT wording absent or negated",
+      "recommendation": ""
+    },
+    {
+      "section": "Abstract readiness",
+      "check": "Word count",
+      "status": "pass",
+      "evidence": "198 words",
+      "recommendation": ""
+    },
+    {
+      "section": "Abstract readiness",
+      "check": "Metric density",
+      "status": "warn",
+      "evidence": "7 metric tokens",
+      "recommendation": "Consider compressing the abstract by retaining only fixed-k stratified, grouped v6.2-A, and frequency-only summary values."
+    }
+  ]
+}

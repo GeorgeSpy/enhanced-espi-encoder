@@ -1,0 +1,11 @@
+split,class_id,label_name,support
+train,0,1_1H,522
+val,0,1_1H,131
+train,1,1_1T,535
+val,1,1_1T,134
+train,2,1_2,591
+val,2,1_2,147
+train,3,2_1,615
+val,3,2_1,154
+train,4,higher,8092
+val,4,higher,2023

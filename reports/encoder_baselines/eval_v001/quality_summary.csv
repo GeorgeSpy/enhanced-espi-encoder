@@ -1,0 +1,121 @@
+encoder_id,encoder_name,model_name,embedding_point,section,name,value,status
+random_resnet18,Random ResNet-18,torchvision_resnet18_random,avgpool_pre_fc,quality,sample_count,12944,info
+random_resnet18,Random ResNet-18,torchvision_resnet18_random,avgpool_pre_fc,quality,embedding_dim,512,info
+random_resnet18,Random ResNet-18,torchvision_resnet18_random,avgpool_pre_fc,quality,nan_count,0,pass
+random_resnet18,Random ResNet-18,torchvision_resnet18_random,avgpool_pre_fc,quality,inf_count,0,pass
+random_resnet18,Random ResNet-18,torchvision_resnet18_random,avgpool_pre_fc,quality,duplicate_paths,0,pass
+random_resnet18,Random ResNet-18,torchvision_resnet18_random,avgpool_pre_fc,class_count,0,653,info
+random_resnet18,Random ResNet-18,torchvision_resnet18_random,avgpool_pre_fc,class_count,1,669,info
+random_resnet18,Random ResNet-18,torchvision_resnet18_random,avgpool_pre_fc,class_count,2,738,info
+random_resnet18,Random ResNet-18,torchvision_resnet18_random,avgpool_pre_fc,class_count,3,769,info
+random_resnet18,Random ResNet-18,torchvision_resnet18_random,avgpool_pre_fc,class_count,4,10115,info
+random_resnet18,Random ResNet-18,torchvision_resnet18_random,avgpool_pre_fc,board_count,C01,2733,info
+random_resnet18,Random ResNet-18,torchvision_resnet18_random,avgpool_pre_fc,board_count,C02,2319,info
+random_resnet18,Random ResNet-18,torchvision_resnet18_random,avgpool_pre_fc,board_count,C03,1637,info
+random_resnet18,Random ResNet-18,torchvision_resnet18_random,avgpool_pre_fc,board_count,W01,2419,info
+random_resnet18,Random ResNet-18,torchvision_resnet18_random,avgpool_pre_fc,board_count,W02,2370,info
+random_resnet18,Random ResNet-18,torchvision_resnet18_random,avgpool_pre_fc,board_count,W03,1466,info
+random_resnet18,Random ResNet-18,torchvision_resnet18_random,avgpool_pre_fc,material_count,carbon,6689,info
+random_resnet18,Random ResNet-18,torchvision_resnet18_random,avgpool_pre_fc,material_count,wood,6255,info
+random_resnet18,Random ResNet-18,torchvision_resnet18_random,avgpool_pre_fc,split_group_count,C01,2733,info
+random_resnet18,Random ResNet-18,torchvision_resnet18_random,avgpool_pre_fc,split_group_count,C02,2319,info
+random_resnet18,Random ResNet-18,torchvision_resnet18_random,avgpool_pre_fc,split_group_count,C03,1637,info
+random_resnet18,Random ResNet-18,torchvision_resnet18_random,avgpool_pre_fc,split_group_count,W01,2419,info
+random_resnet18,Random ResNet-18,torchvision_resnet18_random,avgpool_pre_fc,split_group_count,W02,2370,info
+random_resnet18,Random ResNet-18,torchvision_resnet18_random,avgpool_pre_fc,split_group_count,W03,1466,info
+imagenet_resnet18,ImageNet ResNet-18,torchvision_resnet18_imagenet,avgpool_pre_fc,quality,sample_count,12944,info
+imagenet_resnet18,ImageNet ResNet-18,torchvision_resnet18_imagenet,avgpool_pre_fc,quality,embedding_dim,512,info
+imagenet_resnet18,ImageNet ResNet-18,torchvision_resnet18_imagenet,avgpool_pre_fc,quality,nan_count,0,pass
+imagenet_resnet18,ImageNet ResNet-18,torchvision_resnet18_imagenet,avgpool_pre_fc,quality,inf_count,0,pass
+imagenet_resnet18,ImageNet ResNet-18,torchvision_resnet18_imagenet,avgpool_pre_fc,quality,duplicate_paths,0,pass
+imagenet_resnet18,ImageNet ResNet-18,torchvision_resnet18_imagenet,avgpool_pre_fc,class_count,0,653,info
+imagenet_resnet18,ImageNet ResNet-18,torchvision_resnet18_imagenet,avgpool_pre_fc,class_count,1,669,info
+imagenet_resnet18,ImageNet ResNet-18,torchvision_resnet18_imagenet,avgpool_pre_fc,class_count,2,738,info
+imagenet_resnet18,ImageNet ResNet-18,torchvision_resnet18_imagenet,avgpool_pre_fc,class_count,3,769,info
+imagenet_resnet18,ImageNet ResNet-18,torchvision_resnet18_imagenet,avgpool_pre_fc,class_count,4,10115,info
+imagenet_resnet18,ImageNet ResNet-18,torchvision_resnet18_imagenet,avgpool_pre_fc,board_count,C01,2733,info
+imagenet_resnet18,ImageNet ResNet-18,torchvision_resnet18_imagenet,avgpool_pre_fc,board_count,C02,2319,info
+imagenet_resnet18,ImageNet ResNet-18,torchvision_resnet18_imagenet,avgpool_pre_fc,board_count,C03,1637,info
+imagenet_resnet18,ImageNet ResNet-18,torchvision_resnet18_imagenet,avgpool_pre_fc,board_count,W01,2419,info
+imagenet_resnet18,ImageNet ResNet-18,torchvision_resnet18_imagenet,avgpool_pre_fc,board_count,W02,2370,info
+imagenet_resnet18,ImageNet ResNet-18,torchvision_resnet18_imagenet,avgpool_pre_fc,board_count,W03,1466,info
+imagenet_resnet18,ImageNet ResNet-18,torchvision_resnet18_imagenet,avgpool_pre_fc,material_count,carbon,6689,info
+imagenet_resnet18,ImageNet ResNet-18,torchvision_resnet18_imagenet,avgpool_pre_fc,material_count,wood,6255,info
+imagenet_resnet18,ImageNet ResNet-18,torchvision_resnet18_imagenet,avgpool_pre_fc,split_group_count,C01,2733,info
+imagenet_resnet18,ImageNet ResNet-18,torchvision_resnet18_imagenet,avgpool_pre_fc,split_group_count,C02,2319,info
+imagenet_resnet18,ImageNet ResNet-18,torchvision_resnet18_imagenet,avgpool_pre_fc,split_group_count,C03,1637,info
+imagenet_resnet18,ImageNet ResNet-18,torchvision_resnet18_imagenet,avgpool_pre_fc,split_group_count,W01,2419,info
+imagenet_resnet18,ImageNet ResNet-18,torchvision_resnet18_imagenet,avgpool_pre_fc,split_group_count,W02,2370,info
+imagenet_resnet18,ImageNet ResNet-18,torchvision_resnet18_imagenet,avgpool_pre_fc,split_group_count,W03,1466,info
+v6_1,v6.1,v6.1 ResNet18_HeadOnly,avgpool_pre_classifier,quality,sample_count,12944,info
+v6_1,v6.1,v6.1 ResNet18_HeadOnly,avgpool_pre_classifier,quality,embedding_dim,512,info
+v6_1,v6.1,v6.1 ResNet18_HeadOnly,avgpool_pre_classifier,quality,nan_count,0,pass
+v6_1,v6.1,v6.1 ResNet18_HeadOnly,avgpool_pre_classifier,quality,inf_count,0,pass
+v6_1,v6.1,v6.1 ResNet18_HeadOnly,avgpool_pre_classifier,quality,duplicate_paths,0,pass
+v6_1,v6.1,v6.1 ResNet18_HeadOnly,avgpool_pre_classifier,class_count,0,653,info
+v6_1,v6.1,v6.1 ResNet18_HeadOnly,avgpool_pre_classifier,class_count,1,669,info
+v6_1,v6.1,v6.1 ResNet18_HeadOnly,avgpool_pre_classifier,class_count,2,738,info
+v6_1,v6.1,v6.1 ResNet18_HeadOnly,avgpool_pre_classifier,class_count,3,769,info
+v6_1,v6.1,v6.1 ResNet18_HeadOnly,avgpool_pre_classifier,class_count,4,10115,info
+v6_1,v6.1,v6.1 ResNet18_HeadOnly,avgpool_pre_classifier,board_count,C01,2733,info
+v6_1,v6.1,v6.1 ResNet18_HeadOnly,avgpool_pre_classifier,board_count,C02,2319,info
+v6_1,v6.1,v6.1 ResNet18_HeadOnly,avgpool_pre_classifier,board_count,C03,1637,info
+v6_1,v6.1,v6.1 ResNet18_HeadOnly,avgpool_pre_classifier,board_count,W01,2419,info
+v6_1,v6.1,v6.1 ResNet18_HeadOnly,avgpool_pre_classifier,board_count,W02,2370,info
+v6_1,v6.1,v6.1 ResNet18_HeadOnly,avgpool_pre_classifier,board_count,W03,1466,info
+v6_1,v6.1,v6.1 ResNet18_HeadOnly,avgpool_pre_classifier,material_count,carbon,6689,info
+v6_1,v6.1,v6.1 ResNet18_HeadOnly,avgpool_pre_classifier,material_count,wood,6255,info
+v6_1,v6.1,v6.1 ResNet18_HeadOnly,avgpool_pre_classifier,split_group_count,C01,2733,info
+v6_1,v6.1,v6.1 ResNet18_HeadOnly,avgpool_pre_classifier,split_group_count,C02,2319,info
+v6_1,v6.1,v6.1 ResNet18_HeadOnly,avgpool_pre_classifier,split_group_count,C03,1637,info
+v6_1,v6.1,v6.1 ResNet18_HeadOnly,avgpool_pre_classifier,split_group_count,W01,2419,info
+v6_1,v6.1,v6.1 ResNet18_HeadOnly,avgpool_pre_classifier,split_group_count,W02,2370,info
+v6_1,v6.1,v6.1 ResNet18_HeadOnly,avgpool_pre_classifier,split_group_count,W03,1466,info
+v6_2_a,v6.2-A,v6.2-A MCDropoutClassifier,MCDropoutClassifier.global_pool.pre_fc,quality,sample_count,12944,info
+v6_2_a,v6.2-A,v6.2-A MCDropoutClassifier,MCDropoutClassifier.global_pool.pre_fc,quality,embedding_dim,1280,info
+v6_2_a,v6.2-A,v6.2-A MCDropoutClassifier,MCDropoutClassifier.global_pool.pre_fc,quality,nan_count,0,pass
+v6_2_a,v6.2-A,v6.2-A MCDropoutClassifier,MCDropoutClassifier.global_pool.pre_fc,quality,inf_count,0,pass
+v6_2_a,v6.2-A,v6.2-A MCDropoutClassifier,MCDropoutClassifier.global_pool.pre_fc,quality,duplicate_paths,0,pass
+v6_2_a,v6.2-A,v6.2-A MCDropoutClassifier,MCDropoutClassifier.global_pool.pre_fc,class_count,0,653,info
+v6_2_a,v6.2-A,v6.2-A MCDropoutClassifier,MCDropoutClassifier.global_pool.pre_fc,class_count,1,669,info
+v6_2_a,v6.2-A,v6.2-A MCDropoutClassifier,MCDropoutClassifier.global_pool.pre_fc,class_count,2,738,info
+v6_2_a,v6.2-A,v6.2-A MCDropoutClassifier,MCDropoutClassifier.global_pool.pre_fc,class_count,3,769,info
+v6_2_a,v6.2-A,v6.2-A MCDropoutClassifier,MCDropoutClassifier.global_pool.pre_fc,class_count,4,10115,info
+v6_2_a,v6.2-A,v6.2-A MCDropoutClassifier,MCDropoutClassifier.global_pool.pre_fc,board_count,C01,2733,info
+v6_2_a,v6.2-A,v6.2-A MCDropoutClassifier,MCDropoutClassifier.global_pool.pre_fc,board_count,C02,2319,info
+v6_2_a,v6.2-A,v6.2-A MCDropoutClassifier,MCDropoutClassifier.global_pool.pre_fc,board_count,C03,1637,info
+v6_2_a,v6.2-A,v6.2-A MCDropoutClassifier,MCDropoutClassifier.global_pool.pre_fc,board_count,W01,2419,info
+v6_2_a,v6.2-A,v6.2-A MCDropoutClassifier,MCDropoutClassifier.global_pool.pre_fc,board_count,W02,2370,info
+v6_2_a,v6.2-A,v6.2-A MCDropoutClassifier,MCDropoutClassifier.global_pool.pre_fc,board_count,W03,1466,info
+v6_2_a,v6.2-A,v6.2-A MCDropoutClassifier,MCDropoutClassifier.global_pool.pre_fc,material_count,carbon,6689,info
+v6_2_a,v6.2-A,v6.2-A MCDropoutClassifier,MCDropoutClassifier.global_pool.pre_fc,material_count,wood,6255,info
+v6_2_a,v6.2-A,v6.2-A MCDropoutClassifier,MCDropoutClassifier.global_pool.pre_fc,split_group_count,C01,2733,info
+v6_2_a,v6.2-A,v6.2-A MCDropoutClassifier,MCDropoutClassifier.global_pool.pre_fc,split_group_count,C02,2319,info
+v6_2_a,v6.2-A,v6.2-A MCDropoutClassifier,MCDropoutClassifier.global_pool.pre_fc,split_group_count,C03,1637,info
+v6_2_a,v6.2-A,v6.2-A MCDropoutClassifier,MCDropoutClassifier.global_pool.pre_fc,split_group_count,W01,2419,info
+v6_2_a,v6.2-A,v6.2-A MCDropoutClassifier,MCDropoutClassifier.global_pool.pre_fc,split_group_count,W02,2370,info
+v6_2_a,v6.2-A,v6.2-A MCDropoutClassifier,MCDropoutClassifier.global_pool.pre_fc,split_group_count,W03,1466,info
+hierarchical_v6_2,hierarchical v6.2 phase2,EnhancedHybridPhysicsESPI_V6_2,z_expert_prelogit / z_arcface_input from outputs['embeddings'],quality,sample_count,12944,info
+hierarchical_v6_2,hierarchical v6.2 phase2,EnhancedHybridPhysicsESPI_V6_2,z_expert_prelogit / z_arcface_input from outputs['embeddings'],quality,embedding_dim,512,info
+hierarchical_v6_2,hierarchical v6.2 phase2,EnhancedHybridPhysicsESPI_V6_2,z_expert_prelogit / z_arcface_input from outputs['embeddings'],quality,nan_count,0,pass
+hierarchical_v6_2,hierarchical v6.2 phase2,EnhancedHybridPhysicsESPI_V6_2,z_expert_prelogit / z_arcface_input from outputs['embeddings'],quality,inf_count,0,pass
+hierarchical_v6_2,hierarchical v6.2 phase2,EnhancedHybridPhysicsESPI_V6_2,z_expert_prelogit / z_arcface_input from outputs['embeddings'],quality,duplicate_paths,0,pass
+hierarchical_v6_2,hierarchical v6.2 phase2,EnhancedHybridPhysicsESPI_V6_2,z_expert_prelogit / z_arcface_input from outputs['embeddings'],class_count,0,653,info
+hierarchical_v6_2,hierarchical v6.2 phase2,EnhancedHybridPhysicsESPI_V6_2,z_expert_prelogit / z_arcface_input from outputs['embeddings'],class_count,1,669,info
+hierarchical_v6_2,hierarchical v6.2 phase2,EnhancedHybridPhysicsESPI_V6_2,z_expert_prelogit / z_arcface_input from outputs['embeddings'],class_count,2,738,info
+hierarchical_v6_2,hierarchical v6.2 phase2,EnhancedHybridPhysicsESPI_V6_2,z_expert_prelogit / z_arcface_input from outputs['embeddings'],class_count,3,769,info
+hierarchical_v6_2,hierarchical v6.2 phase2,EnhancedHybridPhysicsESPI_V6_2,z_expert_prelogit / z_arcface_input from outputs['embeddings'],class_count,4,10115,info
+hierarchical_v6_2,hierarchical v6.2 phase2,EnhancedHybridPhysicsESPI_V6_2,z_expert_prelogit / z_arcface_input from outputs['embeddings'],board_count,C01,2733,info
+hierarchical_v6_2,hierarchical v6.2 phase2,EnhancedHybridPhysicsESPI_V6_2,z_expert_prelogit / z_arcface_input from outputs['embeddings'],board_count,C02,2319,info
+hierarchical_v6_2,hierarchical v6.2 phase2,EnhancedHybridPhysicsESPI_V6_2,z_expert_prelogit / z_arcface_input from outputs['embeddings'],board_count,C03,1637,info
+hierarchical_v6_2,hierarchical v6.2 phase2,EnhancedHybridPhysicsESPI_V6_2,z_expert_prelogit / z_arcface_input from outputs['embeddings'],board_count,W01,2419,info
+hierarchical_v6_2,hierarchical v6.2 phase2,EnhancedHybridPhysicsESPI_V6_2,z_expert_prelogit / z_arcface_input from outputs['embeddings'],board_count,W02,2370,info
+hierarchical_v6_2,hierarchical v6.2 phase2,EnhancedHybridPhysicsESPI_V6_2,z_expert_prelogit / z_arcface_input from outputs['embeddings'],board_count,W03,1466,info
+hierarchical_v6_2,hierarchical v6.2 phase2,EnhancedHybridPhysicsESPI_V6_2,z_expert_prelogit / z_arcface_input from outputs['embeddings'],material_count,carbon,6689,info
+hierarchical_v6_2,hierarchical v6.2 phase2,EnhancedHybridPhysicsESPI_V6_2,z_expert_prelogit / z_arcface_input from outputs['embeddings'],material_count,wood,6255,info
+hierarchical_v6_2,hierarchical v6.2 phase2,EnhancedHybridPhysicsESPI_V6_2,z_expert_prelogit / z_arcface_input from outputs['embeddings'],split_group_count,C01,2733,info
+hierarchical_v6_2,hierarchical v6.2 phase2,EnhancedHybridPhysicsESPI_V6_2,z_expert_prelogit / z_arcface_input from outputs['embeddings'],split_group_count,C02,2319,info
+hierarchical_v6_2,hierarchical v6.2 phase2,EnhancedHybridPhysicsESPI_V6_2,z_expert_prelogit / z_arcface_input from outputs['embeddings'],split_group_count,C03,1637,info
+hierarchical_v6_2,hierarchical v6.2 phase2,EnhancedHybridPhysicsESPI_V6_2,z_expert_prelogit / z_arcface_input from outputs['embeddings'],split_group_count,W01,2419,info
+hierarchical_v6_2,hierarchical v6.2 phase2,EnhancedHybridPhysicsESPI_V6_2,z_expert_prelogit / z_arcface_input from outputs['embeddings'],split_group_count,W02,2370,info
+hierarchical_v6_2,hierarchical v6.2 phase2,EnhancedHybridPhysicsESPI_V6_2,z_expert_prelogit / z_arcface_input from outputs['embeddings'],split_group_count,W03,1466,info

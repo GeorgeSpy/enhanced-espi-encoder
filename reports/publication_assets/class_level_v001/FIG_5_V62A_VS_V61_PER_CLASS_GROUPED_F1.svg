@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="560" viewBox="0 0 980 560">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="490.0" y="34.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">v6.2-A vs v6.1 Per-Class Grouped F1</text>
+<text x="490.0" y="56.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="middle">Grouped F1 is averaged over board LOBO and material LOMO published-best methods.</text>
+<line x1="120" y1="410.0" x2="910" y2="410.0" stroke="#dddddd"/>
+<text x="110.0" y="414.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="end">0%</text>
+<line x1="120" y1="344.0" x2="910" y2="344.0" stroke="#dddddd"/>
+<text x="110.0" y="348.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="end">20%</text>
+<line x1="120" y1="278.0" x2="910" y2="278.0" stroke="#dddddd"/>
+<text x="110.0" y="282.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="end">40%</text>
+<line x1="120" y1="212.0" x2="910" y2="212.0" stroke="#dddddd"/>
+<text x="110.0" y="216.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="end">60%</text>
+<line x1="120" y1="146.0" x2="910" y2="146.0" stroke="#dddddd"/>
+<text x="110.0" y="150.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="end">80%</text>
+<line x1="120" y1="80.0" x2="910" y2="80.0" stroke="#dddddd"/>
+<text x="110.0" y="84.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="end">100%</text>
+<rect x="153.8" y="87.8" width="41.1" height="322.2" fill="#4C78A8"/>
+<text x="174.4" y="82.8" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="normal" text-anchor="middle">97.6</text>
+<rect x="203.1" y="85.7" width="41.1" height="324.3" fill="#59A14F"/>
+<text x="223.6" y="80.7" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="normal" text-anchor="middle">98.3</text>
+<text x="199.0" y="434.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="middle">higher</text>
+<rect x="311.8" y="103.2" width="41.1" height="306.8" fill="#4C78A8"/>
+<text x="332.4" y="98.2" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="normal" text-anchor="middle">93.0</text>
+<rect x="361.1" y="98.3" width="41.1" height="311.7" fill="#59A14F"/>
+<text x="381.6" y="93.3" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="normal" text-anchor="middle">94.5</text>
+<text x="357.0" y="434.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="middle">1_1T</text>
+<rect x="469.8" y="115.9" width="41.1" height="294.1" fill="#4C78A8"/>
+<text x="490.4" y="110.9" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="normal" text-anchor="middle">89.1</text>
+<rect x="519.1" y="104.3" width="41.1" height="305.7" fill="#59A14F"/>
+<text x="539.6" y="99.3" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="normal" text-anchor="middle">92.7</text>
+<text x="515.0" y="434.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="middle">1_1H</text>
+<rect x="627.8" y="151.4" width="41.1" height="258.6" fill="#4C78A8"/>
+<text x="648.4" y="146.4" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="normal" text-anchor="middle">78.3</text>
+<rect x="677.1" y="111.1" width="41.1" height="298.9" fill="#59A14F"/>
+<text x="697.6" y="106.1" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="normal" text-anchor="middle">90.6</text>
+<text x="673.0" y="434.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="middle">1_2</text>
+<rect x="785.8" y="153.0" width="41.1" height="257.0" fill="#4C78A8"/>
+<text x="806.4" y="148.0" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="normal" text-anchor="middle">77.9</text>
+<rect x="835.1" y="108.6" width="41.1" height="301.4" fill="#59A14F"/>
+<text x="855.6" y="103.6" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="normal" text-anchor="middle">91.3</text>
+<text x="831.0" y="434.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="middle">2_1</text>
+<rect x="120" y="490" width="16" height="16" fill="#4C78A8"/>
+<text x="144.0" y="503.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="start">v6.1</text>
+<rect x="230" y="490" width="16" height="16" fill="#59A14F"/>
+<text x="254.0" y="503.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="start">v6.2-A</text>
+</svg>

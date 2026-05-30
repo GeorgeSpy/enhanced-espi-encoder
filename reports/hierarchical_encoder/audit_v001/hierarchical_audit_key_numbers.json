@@ -1,0 +1,225 @@
+{
+  "created_utc": "2026-05-26T08:34:07.978791+00:00",
+  "features_path": "outputs\\hierarchical_embeddings_v001\\features_hier_z_expert_prelogit.npz",
+  "out_dir": "reports\\hierarchical_encoder\\audit_v001",
+  "model_name": "EnhancedHybridPhysicsESPI_V6_2",
+  "embedding_point": "z_expert_prelogit / z_arcface_input from outputs['embeddings']",
+  "checkpoint_sha256": "ebb0a1ed05fc480b9e7f575800db1df8e7dffa027b75cc6bd59debdd81e39e00",
+  "npz_keys": [
+    "embedding",
+    "label",
+    "label_name",
+    "board",
+    "material",
+    "distribution_group",
+    "frequency_hz",
+    "path",
+    "split",
+    "split_group",
+    "checkpoint_sha256",
+    "embedding_point",
+    "model_name"
+  ],
+  "metadata_sources": {
+    "board": "derived_from_distribution_group_or_path",
+    "material": "saved_with_board_path_fallback",
+    "domain": "derived_from_distribution_group_or_path",
+    "split_group": "fallback_distribution_group"
+  },
+  "quality": {
+    "n_samples": 12944,
+    "embedding_dim": 512,
+    "nan_count": 0,
+    "inf_count": 0,
+    "duplicate_paths": 0,
+    "nonzero_variance": true,
+    "consistent_embedding_shape": true,
+    "metadata_lengths_match": true,
+    "train_val_path_overlap_count": 0,
+    "train_val_split_group_overlap_count": 13
+  },
+  "stratified": {
+    "stratified_best_knn": {
+      "split": "train_to_val",
+      "n_train": 10355,
+      "n_test": 2589,
+      "method": "knn_cosine_k1",
+      "k": 1,
+      "accuracy": 0.7242178447276941,
+      "macro_recall": 0.39992942047924307,
+      "macro_f1": 0.4017060761922714,
+      "class_0_support": 131,
+      "class_0_recall": 0.366412213740458,
+      "class_0_f1": 0.37944664031620556,
+      "class_1_support": 134,
+      "class_1_recall": 0.4253731343283582,
+      "class_1_f1": 0.42379182156133827,
+      "class_2_support": 147,
+      "class_2_recall": 0.19727891156462585,
+      "class_2_f1": 0.18471337579617833,
+      "class_3_support": 154,
+      "class_3_recall": 0.16233766233766234,
+      "class_3_f1": 0.17421602787456444,
+      "class_4_support": 2023,
+      "class_4_recall": 0.8482451804251112,
+      "class_4_f1": 0.8463625154130704
+    },
+    "stratified_prototype": {
+      "split": "train_to_val",
+      "n_train": 10355,
+      "n_test": 2589,
+      "method": "nearest_class_prototype",
+      "accuracy": 0.5554268057164928,
+      "macro_recall": 0.36274760213139245,
+      "macro_f1": 0.2655281444589326,
+      "class_0_support": 131,
+      "class_0_recall": 0.2595419847328244,
+      "class_0_f1": 0.1687344913151365,
+      "class_1_support": 134,
+      "class_1_recall": 0.7910447761194029,
+      "class_1_f1": 0.23608017817371937,
+      "class_2_support": 147,
+      "class_2_recall": 0.034013605442176874,
+      "class_2_f1": 0.05747126436781609,
+      "class_3_support": 154,
+      "class_3_recall": 0.09740259740259741,
+      "class_3_f1": 0.12875536480686697,
+      "class_4_support": 2023,
+      "class_4_recall": 0.6317350469599604,
+      "class_4_f1": 0.7365994236311239
+    },
+    "stratified_linear_probe": {
+      "split": "train_to_val",
+      "n_train": 10355,
+      "n_test": 2589,
+      "method": "balanced_logistic_regression",
+      "accuracy": 0.507531865585168,
+      "macro_recall": 0.3782794766893322,
+      "macro_f1": 0.29282189300229006,
+      "class_0_support": 131,
+      "class_0_recall": 0.3282442748091603,
+      "class_0_f1": 0.17695473251028807,
+      "class_1_support": 134,
+      "class_1_recall": 0.47761194029850745,
+      "class_1_f1": 0.25147347740667975,
+      "class_2_support": 147,
+      "class_2_recall": 0.19727891156462585,
+      "class_2_f1": 0.15466666666666667,
+      "class_3_support": 154,
+      "class_3_recall": 0.33116883116883117,
+      "class_3_f1": 0.19465648854961834,
+      "class_4_support": 2023,
+      "class_4_recall": 0.5570934256055363,
+      "class_4_f1": 0.6863580998781973
+    }
+  },
+  "grouped": {
+    "leave_split_group": {
+      "knn_cosine_k10": {
+        "n_groups": 13,
+        "mean_accuracy": 0.7691472976728095,
+        "mean_macro_recall": 0.22261283902716195,
+        "mean_macro_f1": 0.2127651086094447,
+        "min_macro_f1": 0.17309941520467836,
+        "max_macro_f1": 0.3330216302184502,
+        "worst_group": "W03_ESPI_90db-Averaged",
+        "best_group": "W03_ESPI_90db"
+      },
+      "nearest_class_prototype": {
+        "n_groups": 13,
+        "mean_accuracy": 0.2904636443800369,
+        "mean_macro_recall": 0.25930501815848755,
+        "mean_macro_f1": 0.12252423251352061,
+        "min_macro_f1": 0.013157894736842108,
+        "max_macro_f1": 0.3049232496282186,
+        "worst_group": "W02_ESPI_90db-Averaged",
+        "best_group": "W01_ESPI_90db"
+      },
+      "balanced_logistic_regression": {
+        "n_groups": 13,
+        "mean_accuracy": 0.25914090085236396,
+        "mean_macro_recall": 0.26877526423969494,
+        "mean_macro_f1": 0.1441508146609066,
+        "min_macro_f1": 0.012987012987012986,
+        "max_macro_f1": 0.3420489231130684,
+        "worst_group": "W02_ESPI_90db-Averaged",
+        "best_group": "C01_ESPI_90db"
+      }
+    },
+    "board_lobo": {
+      "knn_cosine_k10": {
+        "n_groups": 6,
+        "mean_accuracy": 0.741851374642042,
+        "mean_macro_recall": 0.24468712000473083,
+        "mean_macro_f1": 0.24987349086129806,
+        "min_macro_f1": 0.2042277499082381,
+        "max_macro_f1": 0.3189077692411215,
+        "worst_group": "C02",
+        "best_group": "W03"
+      },
+      "nearest_class_prototype": {
+        "n_groups": 6,
+        "mean_accuracy": 0.5423960597756431,
+        "mean_macro_recall": 0.337095358800974,
+        "mean_macro_f1": 0.2387251949215358,
+        "min_macro_f1": 0.15987783885834864,
+        "max_macro_f1": 0.3634318104682124,
+        "worst_group": "C03",
+        "best_group": "C01"
+      },
+      "balanced_logistic_regression": {
+        "n_groups": 6,
+        "mean_accuracy": 0.4778784515070597,
+        "mean_macro_recall": 0.3343343753137849,
+        "mean_macro_f1": 0.26406063562183807,
+        "min_macro_f1": 0.18203291368402794,
+        "max_macro_f1": 0.3242436137028758,
+        "worst_group": "C03",
+        "best_group": "C01"
+      }
+    },
+    "material_lomo": {
+      "knn_cosine_k10": {
+        "n_groups": 2,
+        "mean_accuracy": 0.7529831778171423,
+        "mean_macro_recall": 0.25870389426191875,
+        "mean_macro_f1": 0.24469544501204776,
+        "min_macro_f1": 0.23229839588711307,
+        "max_macro_f1": 0.25709249413698243,
+        "worst_group": "wood",
+        "best_group": "carbon"
+      },
+      "nearest_class_prototype": {
+        "n_groups": 2,
+        "mean_accuracy": 0.5676727686470946,
+        "mean_macro_recall": 0.3082229723862483,
+        "mean_macro_f1": 0.22154537194582122,
+        "min_macro_f1": 0.2205876293398627,
+        "max_macro_f1": 0.22250311455177973,
+        "worst_group": "wood",
+        "best_group": "carbon"
+      },
+      "balanced_logistic_regression": {
+        "n_groups": 2,
+        "mean_accuracy": 0.4726942321161758,
+        "mean_macro_recall": 0.31490452128726554,
+        "mean_macro_f1": 0.23472444748609106,
+        "min_macro_f1": 0.2340359204206406,
+        "max_macro_f1": 0.2354129745515415,
+        "worst_group": "wood",
+        "best_group": "carbon"
+      }
+    }
+  },
+  "pca_outputs": {
+    "pca_by_class": "reports\\hierarchical_encoder\\audit_v001\\pca_by_class_z_expert_prelogit.png",
+    "pca_by_board": "reports\\hierarchical_encoder\\audit_v001\\pca_by_board_z_expert_prelogit.png",
+    "pca_by_material": "reports\\hierarchical_encoder\\audit_v001\\pca_by_material_z_expert_prelogit.png"
+  },
+  "warnings": [
+    "Board metadata was recovered using derived_from_distribution_group_or_path.",
+    "Material metadata was recovered using saved_with_board_path_fallback.",
+    "Domain metadata was recovered using derived_from_distribution_group_or_path.",
+    "Split-group metadata uses fallback_distribution_group."
+  ]
+}

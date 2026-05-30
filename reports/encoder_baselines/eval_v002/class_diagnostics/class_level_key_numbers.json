@@ -1,0 +1,173 @@
+{
+  "created_utc": "2026-05-26T18:05:57.667927+00:00",
+  "features_dir": "outputs\\encoder_features_normalized_v001",
+  "eval_dir": "reports\\encoder_baselines\\eval_v002",
+  "out_dir": "reports\\encoder_baselines\\eval_v002\\class_diagnostics",
+  "metadata_consistency": {
+    "label": true,
+    "sample_path": true,
+    "board": true,
+    "material": true,
+    "split_group": true,
+    "all_pass": true
+  },
+  "n_encoders": 5,
+  "n_samples": 12944,
+  "class_ids": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "label_lookup": {
+    "0": "1_1H",
+    "1": "1_1T",
+    "2": "1_2",
+    "3": "2_1",
+    "4": "higher"
+  },
+  "linear_warning_count": 0,
+  "zero_recall_grouped_rows": 47,
+  "hardest_classes_overall": [
+    {
+      "class_id": 3,
+      "class": "2_1",
+      "mean_grouped_best_f1": 0.3995020291719461
+    },
+    {
+      "class_id": 2,
+      "class": "1_2",
+      "mean_grouped_best_f1": 0.41118284045687653
+    },
+    {
+      "class_id": 0,
+      "class": "1_1H",
+      "mean_grouped_best_f1": 0.4945989373879132
+    },
+    {
+      "class_id": 1,
+      "class": "1_1T",
+      "mean_grouped_best_f1": 0.5248173523332123
+    },
+    {
+      "class_id": 4,
+      "class": "higher",
+      "mean_grouped_best_f1": 0.8759667076148911
+    }
+  ],
+  "v61_vs_v62a_grouped_class_delta": {
+    "1_1H": {
+      "v6_1_grouped_f1": 0.891136331394524,
+      "v6_2_a_grouped_f1": 0.9264843245691634,
+      "delta": 0.035347993174639436
+    },
+    "1_1T": {
+      "v6_1_grouped_f1": 0.92969759427324,
+      "v6_2_a_grouped_f1": 0.9445525867642907,
+      "delta": 0.014854992491050711
+    },
+    "1_2": {
+      "v6_1_grouped_f1": 0.7835363064878862,
+      "v6_2_a_grouped_f1": 0.90565806412064,
+      "delta": 0.12212175763275379
+    },
+    "2_1": {
+      "v6_1_grouped_f1": 0.7788112026930769,
+      "v6_2_a_grouped_f1": 0.9131565137300262,
+      "delta": 0.13434531103694924
+    },
+    "higher": {
+      "v6_1_grouped_f1": 0.9763421256238519,
+      "v6_2_a_grouped_f1": 0.9826127606706873,
+      "delta": 0.006270635046835338
+    }
+  },
+  "generic_resnet_low_grouped_class_cases": [
+    {
+      "encoder_id": "imagenet_resnet18",
+      "evaluation_mode": "board_grouped_aggregate",
+      "class": "1_2",
+      "recall": 0.05013550135501355,
+      "f1": 0.0751269035532995
+    },
+    {
+      "encoder_id": "random_resnet18",
+      "evaluation_mode": "material_grouped_aggregate",
+      "class": "1_1H",
+      "recall": 0.13935681470137826,
+      "f1": 0.1421875
+    },
+    {
+      "encoder_id": "random_resnet18",
+      "evaluation_mode": "material_grouped_aggregate",
+      "class": "1_1T",
+      "recall": 0.043348281016442454,
+      "f1": 0.06263498920086392
+    },
+    {
+      "encoder_id": "random_resnet18",
+      "evaluation_mode": "material_grouped_aggregate",
+      "class": "2_1",
+      "recall": 0.07282184655396619,
+      "f1": 0.09248554913294797
+    },
+    {
+      "encoder_id": "imagenet_resnet18",
+      "evaluation_mode": "material_grouped_aggregate",
+      "class": "1_2",
+      "recall": 0.058265582655826556,
+      "f1": 0.05850340136054422
+    },
+    {
+      "encoder_id": "imagenet_resnet18",
+      "evaluation_mode": "material_grouped_aggregate",
+      "class": "2_1",
+      "recall": 0.0013003901170351106,
+      "f1": 0.0024660912453760794
+    }
+  ],
+  "hierarchical_low_grouped_classes": [
+    {
+      "evaluation_mode": "board_grouped_aggregate",
+      "class": "1_1H",
+      "f1": 0.14859926918392205
+    },
+    {
+      "evaluation_mode": "board_grouped_aggregate",
+      "class": "1_1T",
+      "f1": 0.24812656119900084
+    },
+    {
+      "evaluation_mode": "board_grouped_aggregate",
+      "class": "1_2",
+      "f1": 0.14224137931034483
+    },
+    {
+      "evaluation_mode": "board_grouped_aggregate",
+      "class": "2_1",
+      "f1": 0.1655480984340045
+    },
+    {
+      "evaluation_mode": "material_grouped_aggregate",
+      "class": "1_1H",
+      "f1": 0.0671641791044776
+    },
+    {
+      "evaluation_mode": "material_grouped_aggregate",
+      "class": "1_1T",
+      "f1": 0.26940942269409424
+    },
+    {
+      "evaluation_mode": "material_grouped_aggregate",
+      "class": "1_2",
+      "f1": 0.012106537530266344
+    },
+    {
+      "evaluation_mode": "material_grouped_aggregate",
+      "class": "2_1",
+      "f1": 0.016374269005847954
+    }
+  ],
+  "hierarchical_failure_scope": "broad"
+}

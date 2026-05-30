@@ -1,0 +1,533 @@
+{
+  "manuscript": "manuscripts\\FROZEN_REPRESENTATION_AUDITS_DRAFT_v002.md",
+  "hardening_dir": "reports\\publication_assets\\methodological_hardening_v001",
+  "overall_status": "pass",
+  "ready_for_scientific_language_editing": true,
+  "ready_for_journal_formatting": true,
+  "source_artifacts": {
+    "patch_plan": true,
+    "patch_key_numbers": true,
+    "dataset_composition": true,
+    "paired_differences": true,
+    "frequency_only": true,
+    "frequency_fusion": true,
+    "knn_protocol": true
+  },
+  "section_statuses": [
+    {
+      "section": "Claim boundary",
+      "status": "pass",
+      "n_pass": 9,
+      "n_warn": 0,
+      "n_fail": 0
+    },
+    {
+      "section": "Dataset composition",
+      "status": "pass",
+      "n_pass": 6,
+      "n_warn": 0,
+      "n_fail": 0
+    },
+    {
+      "section": "Frequency controls",
+      "status": "pass",
+      "n_pass": 9,
+      "n_warn": 0,
+      "n_fail": 0
+    },
+    {
+      "section": "Hierarchical caveat",
+      "status": "pass",
+      "n_pass": 4,
+      "n_warn": 0,
+      "n_fail": 0
+    },
+    {
+      "section": "Material LOMO caution",
+      "status": "pass",
+      "n_pass": 2,
+      "n_warn": 0,
+      "n_fail": 0
+    },
+    {
+      "section": "Paired v6.1 vs v6.2-A",
+      "status": "pass",
+      "n_pass": 6,
+      "n_warn": 0,
+      "n_fail": 0
+    },
+    {
+      "section": "Source artifacts",
+      "status": "pass",
+      "n_pass": 7,
+      "n_warn": 0,
+      "n_fail": 0
+    },
+    {
+      "section": "Tables and figures",
+      "status": "pass",
+      "n_pass": 15,
+      "n_warn": 0,
+      "n_fail": 0
+    },
+    {
+      "section": "kNN protocol",
+      "status": "pass",
+      "n_pass": 6,
+      "n_warn": 0,
+      "n_fail": 0
+    }
+  ],
+  "checks": [
+    {
+      "section": "Source artifacts",
+      "check": "Source artifact `patch_plan` present",
+      "status": "pass",
+      "evidence": "found",
+      "recommendation": ""
+    },
+    {
+      "section": "Source artifacts",
+      "check": "Source artifact `patch_key_numbers` present",
+      "status": "pass",
+      "evidence": "found",
+      "recommendation": ""
+    },
+    {
+      "section": "Source artifacts",
+      "check": "Source artifact `dataset_composition` present",
+      "status": "pass",
+      "evidence": "found",
+      "recommendation": ""
+    },
+    {
+      "section": "Source artifacts",
+      "check": "Source artifact `paired_differences` present",
+      "status": "pass",
+      "evidence": "found",
+      "recommendation": ""
+    },
+    {
+      "section": "Source artifacts",
+      "check": "Source artifact `frequency_only` present",
+      "status": "pass",
+      "evidence": "found",
+      "recommendation": ""
+    },
+    {
+      "section": "Source artifacts",
+      "check": "Source artifact `frequency_fusion` present",
+      "status": "pass",
+      "evidence": "found",
+      "recommendation": ""
+    },
+    {
+      "section": "Source artifacts",
+      "check": "Source artifact `knn_protocol` present",
+      "status": "pass",
+      "evidence": "found",
+      "recommendation": ""
+    },
+    {
+      "section": "Claim boundary",
+      "check": "v6.2-A described as strongest image-derived frozen ESPI encoder baseline",
+      "status": "pass",
+      "evidence": "phrase present",
+      "recommendation": "Use the exact phrase `strongest image-derived frozen ESPI encoder baseline` near the abstract/introduction claim."
+    },
+    {
+      "section": "Claim boundary",
+      "check": "No positive strongest overall predictor",
+      "status": "pass",
+      "evidence": "absent or explicitly negated: v6.2-A is the strongest overall predictor",
+      "recommendation": ""
+    },
+    {
+      "section": "Claim boundary",
+      "check": "No positive acoustic-response prediction claim",
+      "status": "pass",
+      "evidence": "absent or explicitly negated: acoustic-response predictive value",
+      "recommendation": ""
+    },
+    {
+      "section": "Claim boundary",
+      "check": "No positive validated Physics-Aligned Encoder claim",
+      "status": "pass",
+      "evidence": "absent or explicitly negated: validated Physics-Aligned Encoder",
+      "recommendation": ""
+    },
+    {
+      "section": "Claim boundary",
+      "check": "No positive LeFFT superiority claim",
+      "status": "pass",
+      "evidence": "absent or explicitly negated: LeFFT superiority",
+      "recommendation": ""
+    },
+    {
+      "section": "Claim boundary",
+      "check": "No positive retrained CNN LOBO/LOMO generalization claim",
+      "status": "pass",
+      "evidence": "absent or explicitly negated: retrained CNN LOBO/LOMO generalization",
+      "recommendation": ""
+    },
+    {
+      "section": "Claim boundary",
+      "check": "Frequency metadata is dominant/strong metadata control",
+      "status": "pass",
+      "evidence": "phrases found",
+      "recommendation": ""
+    },
+    {
+      "section": "Claim boundary",
+      "check": "No simple modal-label necessity claim",
+      "status": "pass",
+      "evidence": "phrases found",
+      "recommendation": ""
+    },
+    {
+      "section": "Claim boundary",
+      "check": "Acoustic response outside scope/future",
+      "status": "pass",
+      "evidence": "phrases found",
+      "recommendation": ""
+    },
+    {
+      "section": "kNN protocol",
+      "check": "Primary fixed k=10 protocol stated",
+      "status": "pass",
+      "evidence": "phrases found",
+      "recommendation": ""
+    },
+    {
+      "section": "kNN protocol",
+      "check": "v6.1 fixed k=10 stratified value present",
+      "status": "pass",
+      "evidence": "phrases found",
+      "recommendation": ""
+    },
+    {
+      "section": "kNN protocol",
+      "check": "v6.2-A fixed k=10 stratified value present",
+      "status": "pass",
+      "evidence": "phrases found",
+      "recommendation": ""
+    },
+    {
+      "section": "kNN protocol",
+      "check": "v6.1 best-k diagnostic value present",
+      "status": "pass",
+      "evidence": "phrases found",
+      "recommendation": ""
+    },
+    {
+      "section": "kNN protocol",
+      "check": "Best-k diagnostic/sensitivity not primary",
+      "status": "pass",
+      "evidence": "phrases found",
+      "recommendation": ""
+    },
+    {
+      "section": "kNN protocol",
+      "check": "Grouped kNN locked at k=10",
+      "status": "pass",
+      "evidence": "phrases found",
+      "recommendation": ""
+    },
+    {
+      "section": "Dataset composition",
+      "check": "Total sample count present",
+      "status": "pass",
+      "evidence": "phrases found",
+      "recommendation": ""
+    },
+    {
+      "section": "Dataset composition",
+      "check": "Six boards present",
+      "status": "pass",
+      "evidence": "phrases found",
+      "recommendation": ""
+    },
+    {
+      "section": "Dataset composition",
+      "check": "Two materials present",
+      "status": "pass",
+      "evidence": "phrases found",
+      "recommendation": ""
+    },
+    {
+      "section": "Dataset composition",
+      "check": "All boards contain all five classes",
+      "status": "pass",
+      "evidence": "phrases found",
+      "recommendation": ""
+    },
+    {
+      "section": "Dataset composition",
+      "check": "All materials contain all five classes",
+      "status": "pass",
+      "evidence": "phrases found",
+      "recommendation": ""
+    },
+    {
+      "section": "Dataset composition",
+      "check": "No LOBO/LOMO missing held-out/reference classes",
+      "status": "pass",
+      "evidence": "phrases found",
+      "recommendation": ""
+    },
+    {
+      "section": "Material LOMO caution",
+      "check": "Material LOMO descriptive/stress-test caveat",
+      "status": "pass",
+      "evidence": "caveat present",
+      "recommendation": "State that Material LOMO is descriptive/material-held-out stress test because only two materials exist."
+    },
+    {
+      "section": "Material LOMO caution",
+      "check": "Material LOMO not over-interpreted",
+      "status": "pass",
+      "evidence": "no positive broad-population interpretation detected",
+      "recommendation": ""
+    },
+    {
+      "section": "Paired v6.1 vs v6.2-A",
+      "check": "Board LOBO delta present",
+      "status": "pass",
+      "evidence": "phrases found",
+      "recommendation": ""
+    },
+    {
+      "section": "Paired v6.1 vs v6.2-A",
+      "check": "Material LOMO delta present",
+      "status": "pass",
+      "evidence": "phrases found",
+      "recommendation": ""
+    },
+    {
+      "section": "Paired v6.1 vs v6.2-A",
+      "check": "v6.2-A wins board folds",
+      "status": "pass",
+      "evidence": "phrases found",
+      "recommendation": ""
+    },
+    {
+      "section": "Paired v6.1 vs v6.2-A",
+      "check": "v6.2-A wins material folds",
+      "status": "pass",
+      "evidence": "phrases found",
+      "recommendation": ""
+    },
+    {
+      "section": "Paired v6.1 vs v6.2-A",
+      "check": "C02 near tie present",
+      "status": "pass",
+      "evidence": "phrases found",
+      "recommendation": ""
+    },
+    {
+      "section": "Paired v6.1 vs v6.2-A",
+      "check": "W01 small margin present",
+      "status": "pass",
+      "evidence": "phrases found",
+      "recommendation": ""
+    },
+    {
+      "section": "Frequency controls",
+      "check": "Frequency-only stratified present",
+      "status": "pass",
+      "evidence": "phrases found",
+      "recommendation": ""
+    },
+    {
+      "section": "Frequency controls",
+      "check": "Frequency-only Board LOBO present",
+      "status": "pass",
+      "evidence": "phrases found",
+      "recommendation": ""
+    },
+    {
+      "section": "Frequency controls",
+      "check": "Frequency-only Material LOMO present",
+      "status": "pass",
+      "evidence": "phrases found",
+      "recommendation": ""
+    },
+    {
+      "section": "Frequency controls",
+      "check": "Frequency + v6.2-A stratified present",
+      "status": "pass",
+      "evidence": "phrases found",
+      "recommendation": ""
+    },
+    {
+      "section": "Frequency controls",
+      "check": "Frequency + v6.2-A Board LOBO present",
+      "status": "pass",
+      "evidence": "phrases found",
+      "recommendation": ""
+    },
+    {
+      "section": "Frequency controls",
+      "check": "Frequency + v6.2-A Material LOMO present",
+      "status": "pass",
+      "evidence": "phrases found",
+      "recommendation": ""
+    },
+    {
+      "section": "Frequency controls",
+      "check": "frequency_hz dominant metadata predictor",
+      "status": "pass",
+      "evidence": "phrases found",
+      "recommendation": ""
+    },
+    {
+      "section": "Frequency controls",
+      "check": "Fusion improves over embedding-only",
+      "status": "pass",
+      "evidence": "phrases found",
+      "recommendation": ""
+    },
+    {
+      "section": "Frequency controls",
+      "check": "Fusion does not clearly exceed frequency-only except Material LOMO",
+      "status": "pass",
+      "evidence": "phrases found",
+      "recommendation": ""
+    },
+    {
+      "section": "Hierarchical caveat",
+      "check": "Hierarchical technically valid",
+      "status": "pass",
+      "evidence": "phrases found",
+      "recommendation": ""
+    },
+    {
+      "section": "Hierarchical caveat",
+      "check": "Hierarchical not superior",
+      "status": "pass",
+      "evidence": "phrases found",
+      "recommendation": ""
+    },
+    {
+      "section": "Hierarchical caveat",
+      "check": "Hierarchical internal-only metadata caveat",
+      "status": "pass",
+      "evidence": "phrases found",
+      "recommendation": ""
+    },
+    {
+      "section": "Hierarchical caveat",
+      "check": "Hierarchical not validated physics-aligned encoder",
+      "status": "pass",
+      "evidence": "phrases found",
+      "recommendation": ""
+    },
+    {
+      "section": "Tables and figures",
+      "check": "Table 1 listed/referenced",
+      "status": "pass",
+      "evidence": "present",
+      "recommendation": ""
+    },
+    {
+      "section": "Tables and figures",
+      "check": "Table 2 listed/referenced",
+      "status": "pass",
+      "evidence": "present",
+      "recommendation": ""
+    },
+    {
+      "section": "Tables and figures",
+      "check": "Table 3 listed/referenced",
+      "status": "pass",
+      "evidence": "present",
+      "recommendation": ""
+    },
+    {
+      "section": "Tables and figures",
+      "check": "Table 4 listed/referenced",
+      "status": "pass",
+      "evidence": "present",
+      "recommendation": ""
+    },
+    {
+      "section": "Tables and figures",
+      "check": "Table 5 listed/referenced",
+      "status": "pass",
+      "evidence": "present",
+      "recommendation": ""
+    },
+    {
+      "section": "Tables and figures",
+      "check": "Table 6 listed/referenced",
+      "status": "pass",
+      "evidence": "present",
+      "recommendation": ""
+    },
+    {
+      "section": "Tables and figures",
+      "check": "Table 7 listed/referenced",
+      "status": "pass",
+      "evidence": "present",
+      "recommendation": ""
+    },
+    {
+      "section": "Tables and figures",
+      "check": "Table 8 listed/referenced",
+      "status": "pass",
+      "evidence": "present",
+      "recommendation": ""
+    },
+    {
+      "section": "Tables and figures",
+      "check": "Supplementary Table S1 listed/referenced",
+      "status": "pass",
+      "evidence": "present",
+      "recommendation": ""
+    },
+    {
+      "section": "Tables and figures",
+      "check": "Supplementary Table S2 listed/referenced",
+      "status": "pass",
+      "evidence": "present",
+      "recommendation": ""
+    },
+    {
+      "section": "Tables and figures",
+      "check": "Supplementary Table S3 listed/referenced",
+      "status": "pass",
+      "evidence": "present",
+      "recommendation": ""
+    },
+    {
+      "section": "Tables and figures",
+      "check": "Supplementary Table S4 listed/referenced",
+      "status": "pass",
+      "evidence": "present",
+      "recommendation": ""
+    },
+    {
+      "section": "Tables and figures",
+      "check": "Supplementary Table S5 listed/referenced",
+      "status": "pass",
+      "evidence": "present",
+      "recommendation": ""
+    },
+    {
+      "section": "Tables and figures",
+      "check": "Supplementary Table S6 listed/referenced",
+      "status": "pass",
+      "evidence": "present",
+      "recommendation": ""
+    },
+    {
+      "section": "Tables and figures",
+      "check": "Unresolved placeholders",
+      "status": "pass",
+      "evidence": "none",
+      "recommendation": ""
+    }
+  ],
+  "required_fixes": [],
+  "unresolved_placeholders": []
+}

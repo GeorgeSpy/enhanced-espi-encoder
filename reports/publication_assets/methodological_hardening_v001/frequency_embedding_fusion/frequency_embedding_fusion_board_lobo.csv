@@ -1,0 +1,109 @@
+protocol,condition,display_name,condition_type,method,held_out_group,n_train,n_test,stress_test_note,accuracy,macro_recall,macro_f1
+board_grouped,frequency_only,Frequency only,metadata_only,balanced_logistic_regression,C01,10211,2733,none,1.0,1.0,1.0
+board_grouped,frequency_only,Frequency only,metadata_only,balanced_logistic_regression,C02,10625,2319,none,0.9918068132815869,0.973049645390071,0.9741399193870677
+board_grouped,frequency_only,Frequency only,metadata_only,balanced_logistic_regression,C03,11307,1637,none,0.9932803909590715,0.9775510204081632,0.9791285162713734
+board_grouped,frequency_only,Frequency only,metadata_only,balanced_logistic_regression,W01,10525,2419,none,0.9921455146754857,0.9794594594594596,0.9789861216134674
+board_grouped,frequency_only,Frequency only,metadata_only,balanced_logistic_regression,W02,10574,2370,none,0.9852320675105485,0.9585798816568047,0.9549541161012653
+board_grouped,frequency_only,Frequency only,metadata_only,balanced_logistic_regression,W03,11478,1466,none,0.9897680763983628,0.953125,0.9619570745600651
+board_grouped,frequency_only,Frequency only,metadata_only,random_forest,C01,10211,2733,none,0.9915843395536041,0.9192982456140351,0.9234618488855777
+board_grouped,frequency_only,Frequency only,metadata_only,random_forest,C02,10625,2319,none,0.9831824062095731,0.9446808510638298,0.945804917287448
+board_grouped,frequency_only,Frequency only,metadata_only,random_forest,C03,11307,1637,none,0.9920586438607208,0.9734693877551021,0.9752660339373023
+board_grouped,frequency_only,Frequency only,metadata_only,random_forest,W01,10525,2419,none,0.9925589086399339,0.9805405405405405,0.9800953079178886
+board_grouped,frequency_only,Frequency only,metadata_only,random_forest,W02,10574,2370,none,0.9928270042194093,0.9798816568047337,0.9781124186253507
+board_grouped,frequency_only,Frequency only,metadata_only,random_forest,W03,11478,1466,none,1.0,1.0,1.0
+board_grouped,v6_1_embedding_only,v6.1 embedding only,embedding_only,balanced_logistic_regression,C01,10211,2733,none,0.9462129527991219,0.7768232814995752,0.712211305287897
+board_grouped,v6_1_embedding_only,v6.1 embedding only,embedding_only,balanced_logistic_regression,C02,10625,2319,none,0.9279862009486848,0.9492352896019829,0.8801881884930796
+board_grouped,v6_1_embedding_only,v6.1 embedding only,embedding_only,balanced_logistic_regression,C03,11307,1637,none,0.8802687843616371,0.7599419819359815,0.6893785163522168
+board_grouped,v6_1_embedding_only,v6.1 embedding only,embedding_only,balanced_logistic_regression,W01,10525,2419,none,0.9326167837949566,0.8907247704445004,0.8379249525685066
+board_grouped,v6_1_embedding_only,v6.1 embedding only,embedding_only,balanced_logistic_regression,W02,10574,2370,none,0.9248945147679325,0.8632764776238109,0.8112352677730685
+board_grouped,v6_1_embedding_only,v6.1 embedding only,embedding_only,balanced_logistic_regression,W03,11478,1466,none,0.9379263301500682,0.8785957730883525,0.8495234891989355
+board_grouped,v6_1_embedding_only,v6.1 embedding only,embedding_only,random_forest,C01,10211,2733,none,0.9710940358580314,0.8593255145184135,0.8431928677724543
+board_grouped,v6_1_embedding_only,v6.1 embedding only,embedding_only,random_forest,C02,10625,2319,none,0.9741267787839586,0.9296194975973646,0.9448686742033556
+board_grouped,v6_1_embedding_only,v6.1 embedding only,embedding_only,random_forest,C03,11307,1637,none,0.9627367135003054,0.8842515699658557,0.929591686149853
+board_grouped,v6_1_embedding_only,v6.1 embedding only,embedding_only,random_forest,W01,10525,2419,none,0.9599007854485324,0.882530875697792,0.9085693878949878
+board_grouped,v6_1_embedding_only,v6.1 embedding only,embedding_only,random_forest,W02,10574,2370,none,0.9476793248945148,0.8254765158262556,0.8525086094674362
+board_grouped,v6_1_embedding_only,v6.1 embedding only,embedding_only,random_forest,W03,11478,1466,none,0.9481582537517054,0.8686216370331232,0.8665510127541088
+board_grouped,v6_1_frequency_fusion,Frequency + v6.1 embedding,frequency_embedding_fusion,balanced_logistic_regression,C01,10211,2733,none,0.9623124771313575,0.7974202082746974,0.7351389331459898
+board_grouped,v6_1_frequency_fusion,Frequency + v6.1 embedding,frequency_embedding_fusion,balanced_logistic_regression,C02,10625,2319,none,0.9922380336351876,0.9840420938241821,0.9810971230344524
+board_grouped,v6_1_frequency_fusion,Frequency + v6.1 embedding,frequency_embedding_fusion,balanced_logistic_regression,C03,11307,1637,none,0.9346365302382407,0.8146648925093422,0.7873302428070197
+board_grouped,v6_1_frequency_fusion,Frequency + v6.1 embedding,frequency_embedding_fusion,balanced_logistic_regression,W01,10525,2419,none,0.9702356345597354,0.9201867559499586,0.919169738690014
+board_grouped,v6_1_frequency_fusion,Frequency + v6.1 embedding,frequency_embedding_fusion,balanced_logistic_regression,W02,10574,2370,none,0.9628691983122363,0.9138690955727793,0.8900770283032087
+board_grouped,v6_1_frequency_fusion,Frequency + v6.1 embedding,frequency_embedding_fusion,balanced_logistic_regression,W03,11478,1466,none,0.9645293315143247,0.9110374779136301,0.8958672798145411
+board_grouped,v6_1_frequency_fusion,Frequency + v6.1 embedding,frequency_embedding_fusion,random_forest,C01,10211,2733,none,0.9846322722283205,0.9080542046572718,0.9090878778976108
+board_grouped,v6_1_frequency_fusion,Frequency + v6.1 embedding,frequency_embedding_fusion,random_forest,C02,10625,2319,none,0.9879258300991807,0.9653428505381413,0.9777045443430762
+board_grouped,v6_1_frequency_fusion,Frequency + v6.1 embedding,frequency_embedding_fusion,random_forest,C03,11307,1637,none,0.9682345754428833,0.900629486343772,0.9408217608513694
+board_grouped,v6_1_frequency_fusion,Frequency + v6.1 embedding,frequency_embedding_fusion,random_forest,W01,10525,2419,none,0.9661016949152542,0.8987327224644857,0.9250634586495424
+board_grouped,v6_1_frequency_fusion,Frequency + v6.1 embedding,frequency_embedding_fusion,random_forest,W02,10574,2370,none,0.9628691983122363,0.8754359561266867,0.8953282533997233
+board_grouped,v6_1_frequency_fusion,Frequency + v6.1 embedding,frequency_embedding_fusion,random_forest,W03,11478,1466,none,0.970668485675307,0.9025658862177861,0.9194024559832183
+board_grouped,v6_2_a_embedding_only,v6.2-A embedding only,embedding_only,balanced_logistic_regression,C01,10211,2733,none,0.977680204903037,0.9220966353150033,0.9179971537482736
+board_grouped,v6_2_a_embedding_only,v6.2-A embedding only,embedding_only,balanced_logistic_regression,C02,10625,2319,none,0.9340232858990944,0.9405644369439783,0.8837789055610414
+board_grouped,v6_2_a_embedding_only,v6.2-A embedding only,embedding_only,balanced_logistic_regression,C03,11307,1637,none,0.9725106902871106,0.9340430174494333,0.9476322666655153
+board_grouped,v6_2_a_embedding_only,v6.2-A embedding only,embedding_only,balanced_logistic_regression,W01,10525,2419,none,0.9396444811905746,0.9247875534378774,0.8916116827894383
+board_grouped,v6_2_a_embedding_only,v6.2-A embedding only,embedding_only,balanced_logistic_regression,W02,10574,2370,none,0.9729957805907173,0.9552685383942154,0.9304520813737189
+board_grouped,v6_2_a_embedding_only,v6.2-A embedding only,embedding_only,balanced_logistic_regression,W03,11478,1466,none,0.9570259208731241,0.9144541440219559,0.9186534204252983
+board_grouped,v6_2_a_embedding_only,v6.2-A embedding only,embedding_only,random_forest,C01,10211,2733,none,0.9842663739480424,0.9087318037988729,0.9335778806382031
+board_grouped,v6_2_a_embedding_only,v6.2-A embedding only,embedding_only,random_forest,C02,10625,2319,none,0.9646399310047434,0.9187196884535209,0.9325992413312496
+board_grouped,v6_2_a_embedding_only,v6.2-A embedding only,embedding_only,random_forest,C03,11307,1637,none,0.9780085522296884,0.9341717591336792,0.9602754585994809
+board_grouped,v6_2_a_embedding_only,v6.2-A embedding only,embedding_only,random_forest,W01,10525,2419,none,0.9669284828441504,0.9249024419924978,0.9339337890802281
+board_grouped,v6_2_a_embedding_only,v6.2-A embedding only,embedding_only,random_forest,W02,10574,2370,none,0.9814345991561182,0.9355251770340841,0.9574260950029168
+board_grouped,v6_2_a_embedding_only,v6.2-A embedding only,embedding_only,random_forest,W03,11478,1466,none,0.9720327421555253,0.9277653694493738,0.9390584784812568
+board_grouped,v6_2_a_frequency_fusion,Frequency + v6.2-A embedding,frequency_embedding_fusion,balanced_logistic_regression,C01,10211,2733,none,0.9886571533113795,0.9591578337819373,0.9420947968001997
+board_grouped,v6_2_a_frequency_fusion,Frequency + v6.2-A embedding,frequency_embedding_fusion,balanced_logistic_regression,C02,10625,2319,none,0.9586028460543338,0.9491607681369189,0.9201529293819523
+board_grouped,v6_2_a_frequency_fusion,Frequency + v6.2-A embedding,frequency_embedding_fusion,balanced_logistic_regression,C03,11307,1637,none,0.9816737935247404,0.946299473416944,0.9611342041589858
+board_grouped,v6_2_a_frequency_fusion,Frequency + v6.2-A embedding,frequency_embedding_fusion,balanced_logistic_regression,W01,10525,2419,none,0.9677552707730467,0.9358907505724723,0.9254139106972843
+board_grouped,v6_2_a_frequency_fusion,Frequency + v6.2-A embedding,frequency_embedding_fusion,balanced_logistic_regression,W02,10574,2370,none,0.9890295358649789,0.9634729476955911,0.9635238020709849
+board_grouped,v6_2_a_frequency_fusion,Frequency + v6.2-A embedding,frequency_embedding_fusion,balanced_logistic_regression,W03,11478,1466,none,0.9774897680763983,0.9399838136979204,0.9419772202362197
+board_grouped,v6_2_a_frequency_fusion,Frequency + v6.2-A embedding,frequency_embedding_fusion,random_forest,C01,10211,2733,none,0.9849981705085986,0.9123275322504366,0.9378499810309217
+board_grouped,v6_2_a_frequency_fusion,Frequency + v6.2-A embedding,frequency_embedding_fusion,random_forest,C02,10625,2319,none,0.9702457956015524,0.9294062020593504,0.9431757060599042
+board_grouped,v6_2_a_frequency_fusion,Frequency + v6.2-A embedding,frequency_embedding_fusion,random_forest,C03,11307,1637,none,0.9780085522296884,0.9341717591336792,0.9602754585994809
+board_grouped,v6_2_a_frequency_fusion,Frequency + v6.2-A embedding,frequency_embedding_fusion,random_forest,W01,10525,2419,none,0.9706490285241836,0.9281535444636082,0.9424284913338485
+board_grouped,v6_2_a_frequency_fusion,Frequency + v6.2-A embedding,frequency_embedding_fusion,random_forest,W02,10574,2370,none,0.9822784810126582,0.9368154465935845,0.9576969134911228
+board_grouped,v6_2_a_frequency_fusion,Frequency + v6.2-A embedding,frequency_embedding_fusion,random_forest,W03,11478,1466,none,0.9761255115961801,0.9337708340910817,0.9457039651918748
+board_grouped,random_resnet18_embedding_only,Random ResNet-18 embedding only,embedding_only,balanced_logistic_regression,C01,10211,2733,none,0.8309549945115258,0.41031267725013476,0.41340233538526217
+board_grouped,random_resnet18_embedding_only,Random ResNet-18 embedding only,embedding_only,balanced_logistic_regression,C02,10625,2319,none,0.7723156532988357,0.32229511031950386,0.3252259294417491
+board_grouped,random_resnet18_embedding_only,Random ResNet-18 embedding only,embedding_only,balanced_logistic_regression,C03,11307,1637,none,0.6273671350030544,0.3698473672902475,0.3104071202182591
+board_grouped,random_resnet18_embedding_only,Random ResNet-18 embedding only,embedding_only,balanced_logistic_regression,W01,10525,2419,none,0.7044233154195949,0.3515491033724049,0.2807026019369698
+board_grouped,random_resnet18_embedding_only,Random ResNet-18 embedding only,embedding_only,balanced_logistic_regression,W02,10574,2370,none,0.8177215189873418,0.41719353476932647,0.3676620218746874
+board_grouped,random_resnet18_embedding_only,Random ResNet-18 embedding only,embedding_only,balanced_logistic_regression,W03,11478,1466,none,0.31036834924965895,0.3765006695304768,0.23281724837195306
+board_grouped,random_resnet18_embedding_only,Random ResNet-18 embedding only,embedding_only,random_forest,C01,10211,2733,none,0.8466886205634834,0.2164705882352941,0.21361024635636036
+board_grouped,random_resnet18_embedding_only,Random ResNet-18 embedding only,embedding_only,random_forest,C02,10625,2319,none,0.7326433807675722,0.2400249406889096,0.21857391799177858
+board_grouped,random_resnet18_embedding_only,Random ResNet-18 embedding only,embedding_only,random_forest,C03,11307,1637,none,0.7562614538790471,0.2,0.17224347826086955
+board_grouped,random_resnet18_embedding_only,Random ResNet-18 embedding only,embedding_only,random_forest,W01,10525,2419,none,0.7581645307978504,0.2,0.17257115972712303
+board_grouped,random_resnet18_embedding_only,Random ResNet-18 embedding only,embedding_only,random_forest,W02,10574,2370,none,0.7902953586497891,0.20270270270270271,0.1818669314796425
+board_grouped,random_resnet18_embedding_only,Random ResNet-18 embedding only,embedding_only,random_forest,W03,11478,1466,none,0.747612551159618,0.2,0.17111631537861044
+board_grouped,random_resnet18_frequency_fusion,Frequency + Random ResNet-18 embedding,frequency_embedding_fusion,balanced_logistic_regression,C01,10211,2733,none,0.9473106476399561,0.74077087044512,0.7237956566119431
+board_grouped,random_resnet18_frequency_fusion,Frequency + Random ResNet-18 embedding,frequency_embedding_fusion,balanced_logistic_regression,C02,10625,2319,none,0.8503665373005606,0.5035112874113705,0.49290989865516704
+board_grouped,random_resnet18_frequency_fusion,Frequency + Random ResNet-18 embedding,frequency_embedding_fusion,balanced_logistic_regression,C03,11307,1637,none,0.8423946243127672,0.578626463782245,0.563767960380463
+board_grouped,random_resnet18_frequency_fusion,Frequency + Random ResNet-18 embedding,frequency_embedding_fusion,balanced_logistic_regression,W01,10525,2419,none,0.8350558081852005,0.4926232387538816,0.4563741984535475
+board_grouped,random_resnet18_frequency_fusion,Frequency + Random ResNet-18 embedding,frequency_embedding_fusion,balanced_logistic_regression,W02,10574,2370,none,0.8915611814345992,0.6480248367595083,0.5815010634819866
+board_grouped,random_resnet18_frequency_fusion,Frequency + Random ResNet-18 embedding,frequency_embedding_fusion,balanced_logistic_regression,W03,11478,1466,none,0.616643929058663,0.46262175739546424,0.3767301843357092
+board_grouped,random_resnet18_frequency_fusion,Frequency + Random ResNet-18 embedding,frequency_embedding_fusion,random_forest,C01,10211,2733,none,0.9096231247713136,0.46070223438212493,0.4952118526828757
+board_grouped,random_resnet18_frequency_fusion,Frequency + Random ResNet-18 embedding,frequency_embedding_fusion,random_forest,C02,10625,2319,none,0.8076757222940922,0.35196014895342204,0.3699578891214911
+board_grouped,random_resnet18_frequency_fusion,Frequency + Random ResNet-18 embedding,frequency_embedding_fusion,random_forest,C03,11307,1637,none,0.7849725106902871,0.2872235872235872,0.3010789538129289
+board_grouped,random_resnet18_frequency_fusion,Frequency + Random ResNet-18 embedding,frequency_embedding_fusion,random_forest,W01,10525,2419,none,0.7767672591980157,0.27773122784402193,0.28803830446415996
+board_grouped,random_resnet18_frequency_fusion,Frequency + Random ResNet-18 embedding,frequency_embedding_fusion,random_forest,W02,10574,2370,none,0.7949367088607595,0.23056685003587657,0.23159684595392274
+board_grouped,random_resnet18_frequency_fusion,Frequency + Random ResNet-18 embedding,frequency_embedding_fusion,random_forest,W03,11478,1466,none,0.7639836289222374,0.25094850948509484,0.25812822058868756
+board_grouped,imagenet_resnet18_embedding_only,ImageNet ResNet-18 embedding only,embedding_only,balanced_logistic_regression,C01,10211,2733,none,0.5675082327113062,0.3389351802859208,0.28115926372148936
+board_grouped,imagenet_resnet18_embedding_only,ImageNet ResNet-18 embedding only,embedding_only,balanced_logistic_regression,C02,10625,2319,none,0.6218197498921949,0.43640996430212536,0.3735450796268472
+board_grouped,imagenet_resnet18_embedding_only,ImageNet ResNet-18 embedding only,embedding_only,balanced_logistic_regression,C03,11307,1637,none,0.7556505803298718,0.43458856995436734,0.4047304373966888
+board_grouped,imagenet_resnet18_embedding_only,ImageNet ResNet-18 embedding only,embedding_only,balanced_logistic_regression,W01,10525,2419,none,0.7560975609756098,0.5105998883458446,0.46568154148210644
+board_grouped,imagenet_resnet18_embedding_only,ImageNet ResNet-18 embedding only,embedding_only,balanced_logistic_regression,W02,10574,2370,none,0.7248945147679325,0.3370193948158502,0.3441807846118231
+board_grouped,imagenet_resnet18_embedding_only,ImageNet ResNet-18 embedding only,embedding_only,balanced_logistic_regression,W03,11478,1466,none,0.6875852660300137,0.44171862427359854,0.4069820388689756
+board_grouped,imagenet_resnet18_embedding_only,ImageNet ResNet-18 embedding only,embedding_only,random_forest,C01,10211,2733,none,0.8551042810098792,0.24951208390332877,0.26376762330077846
+board_grouped,imagenet_resnet18_embedding_only,ImageNet ResNet-18 embedding only,embedding_only,random_forest,C02,10625,2319,none,0.7645536869340233,0.35983855371032164,0.2866306326990717
+board_grouped,imagenet_resnet18_embedding_only,ImageNet ResNet-18 embedding only,embedding_only,random_forest,C03,11307,1637,none,0.7953573610262675,0.3189047881778092,0.32796964413906265
+board_grouped,imagenet_resnet18_embedding_only,ImageNet ResNet-18 embedding only,embedding_only,random_forest,W01,10525,2419,none,0.7796610169491526,0.2951659684176603,0.3147229292545769
+board_grouped,imagenet_resnet18_embedding_only,ImageNet ResNet-18 embedding only,embedding_only,random_forest,W02,10574,2370,none,0.789873417721519,0.2,0.17652050919377651
+board_grouped,imagenet_resnet18_embedding_only,ImageNet ResNet-18 embedding only,embedding_only,random_forest,W03,11478,1466,none,0.7646657571623465,0.26249587944431363,0.27547370679633276
+board_grouped,imagenet_resnet18_frequency_fusion,Frequency + ImageNet ResNet-18 embedding,frequency_embedding_fusion,balanced_logistic_regression,C01,10211,2733,none,0.7731430662275888,0.4718931055056359,0.42713127201725376
+board_grouped,imagenet_resnet18_frequency_fusion,Frequency + ImageNet ResNet-18 embedding,frequency_embedding_fusion,balanced_logistic_regression,C02,10625,2319,none,0.8094006037084951,0.6298574865096549,0.5870908760877936
+board_grouped,imagenet_resnet18_frequency_fusion,Frequency + ImageNet ResNet-18 embedding,frequency_embedding_fusion,balanced_logistic_regression,C03,11307,1637,none,0.8442272449602932,0.5552852446505805,0.5471536103925297
+board_grouped,imagenet_resnet18_frequency_fusion,Frequency + ImageNet ResNet-18 embedding,frequency_embedding_fusion,balanced_logistic_regression,W01,10525,2419,none,0.8272013228606863,0.6129065807257001,0.5438420996558987
+board_grouped,imagenet_resnet18_frequency_fusion,Frequency + ImageNet ResNet-18 embedding,frequency_embedding_fusion,balanced_logistic_regression,W02,10574,2370,none,0.8396624472573839,0.47407741562707095,0.4904699296337025
+board_grouped,imagenet_resnet18_frequency_fusion,Frequency + ImageNet ResNet-18 embedding,frequency_embedding_fusion,balanced_logistic_regression,W03,11478,1466,none,0.8274215552523875,0.5482070182810375,0.5545989597859483
+board_grouped,imagenet_resnet18_frequency_fusion,Frequency + ImageNet ResNet-18 embedding,frequency_embedding_fusion,random_forest,C01,10211,2733,none,0.9037687522868643,0.43440036479708166,0.46116453185287315
+board_grouped,imagenet_resnet18_frequency_fusion,Frequency + ImageNet ResNet-18 embedding,frequency_embedding_fusion,random_forest,C02,10625,2319,none,0.8257869771453212,0.4130597014925373,0.41117653443540714
+board_grouped,imagenet_resnet18_frequency_fusion,Frequency + ImageNet ResNet-18 embedding,frequency_embedding_fusion,random_forest,C03,11307,1637,none,0.8197923029932804,0.39174447174447175,0.3854961930465163
+board_grouped,imagenet_resnet18_frequency_fusion,Frequency + ImageNet ResNet-18 embedding,frequency_embedding_fusion,random_forest,W01,10525,2419,none,0.8230673832162051,0.4811311633902674,0.504229037087876
+board_grouped,imagenet_resnet18_frequency_fusion,Frequency + ImageNet ResNet-18 embedding,frequency_embedding_fusion,random_forest,W02,10574,2370,none,0.8042194092827004,0.2797656063142789,0.3076376619622567
+board_grouped,imagenet_resnet18_frequency_fusion,Frequency + ImageNet ResNet-18 embedding,frequency_embedding_fusion,random_forest,W03,11478,1466,none,0.8342428376534788,0.4789964157706093,0.49945816998551207

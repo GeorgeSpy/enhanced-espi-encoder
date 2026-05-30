@@ -1,0 +1,111 @@
+{
+  "dataset": {
+    "total_samples": 12944,
+    "number_of_boards": 6,
+    "boards": [
+      "C01",
+      "C02",
+      "C03",
+      "W01",
+      "W02",
+      "W03"
+    ],
+    "number_of_materials": 2,
+    "materials": [
+      "carbon",
+      "wood"
+    ],
+    "all_boards_contain_all_classes": true,
+    "all_materials_contain_all_classes": true,
+    "lobo_missing_heldout_folds": 0,
+    "lobo_missing_reference_folds": 0,
+    "lomo_missing_heldout_folds": 0,
+    "lomo_missing_reference_folds": 0,
+    "lomo_caution_folds": 2
+  },
+  "knn_protocol": {
+    "recommended_primary_k": 10,
+    "stratified_fixed_k10_v61_macro_f1": 0.936526975749645,
+    "stratified_fixed_k10_v62a_macro_f1": 0.927755752028969,
+    "stratified_best_k_v61": {
+      "k": 5,
+      "macro_f1": 0.9506911900286517
+    },
+    "stratified_best_k_v62a": {
+      "k": 10,
+      "macro_f1": 0.927755752028969
+    },
+    "board_grouped_available_k": [
+      10
+    ],
+    "material_grouped_available_k": [
+      10
+    ]
+  },
+  "paired_v61_v62a": {
+    "boards_total": 6,
+    "boards_v62a_wins": 5,
+    "boards_v61_wins": 1,
+    "mean_board_delta_pp": 6.466667,
+    "mean_material_delta_pp": 7.155,
+    "materials_v62a_wins": 2,
+    "materials_total": 2,
+    "c02_delta_pp": "-0.02",
+    "w01_delta_pp": "+0.27"
+  },
+  "frequency_only": {
+    "stratified_macro_f1": 0.9866861288039631,
+    "board_lobo_macro_f1": 0.9748609579888732,
+    "material_lomo_macro_f1": 0.9408561364311898
+  },
+  "frequency_v62a_fusion": {
+    "v62a_embedding_only": {
+      "stratified_train_val": {
+        "method": "random_forest",
+        "macro_f1": 0.9348100151719869
+      },
+      "board_grouped": {
+        "method": "random_forest",
+        "macro_f1": 0.9428118238555557
+      },
+      "material_grouped": {
+        "method": "random_forest",
+        "macro_f1": 0.9405498432710986
+      }
+    },
+    "v62a_frequency_fusion": {
+      "stratified_train_val": {
+        "method": "balanced_logistic_regression",
+        "macro_f1": 0.9674609129599487
+      },
+      "board_grouped": {
+        "method": "random_forest",
+        "macro_f1": 0.9478550859511922
+      },
+      "material_grouped": {
+        "method": "random_forest",
+        "macro_f1": 0.9450017247513617
+      }
+    },
+    "delta_fusion_minus_frequency_pp": {
+      "stratified_train_val": -1.9225215844014376,
+      "board_grouped": -2.700587203768101,
+      "material_grouped": 0.4145588320171867
+    },
+    "delta_fusion_minus_embedding_pp": {
+      "stratified_train_val": 3.265089778796182,
+      "board_grouped": 0.5043262095636436,
+      "material_grouped": 0.4451881480263098
+    },
+    "material_lomo_per_class_fusion_minus_frequency_pp": {
+      "1_2": 6.43,
+      "2_1": 6.73
+    }
+  },
+  "new_table_plan": {
+    "Table 7": "Frequency-only and frequency + embedding information-budget comparison",
+    "Table 8": "Fixed-k versus best-k kNN diagnostic",
+    "Supplementary Table S5": "paired v6.1 vs v6.2-A board/material fold deltas",
+    "Supplementary Table S6": "frequency-fusion per-class changes"
+  }
+}

@@ -1,0 +1,8 @@
+Condition,Stratified Macro-F1,Board LOBO Macro-F1,Material LOMO Macro-F1,Delta vs frequency-only,Delta vs v6.2-A only,Interpretation
+Frequency-only,98.67%,97.49%,94.09%,reference,"Stratified +5.19 pp, Board +3.20 pp, Material +0.03 pp",Metadata-only control
+Spectral descriptors only,52.92%,22.77%,19.72%,"Stratified -45.75 pp, Board -74.71 pp, Material -74.37 pp","Stratified -40.56 pp, Board -71.51 pp, Material -74.33 pp",Deterministic spectral / LeFFT-inspired descriptors
+v6.2-A embedding-only,93.48%,94.28%,94.05%,"Stratified -5.19 pp, Board -3.20 pp, Material -0.03 pp",reference,Image-derived frozen encoder reference
+Frequency + spectral descriptors,98.53%,93.46%,73.33%,"Stratified -0.13 pp, Board -4.03 pp, Material -20.76 pp","Stratified +5.05 pp, Board -0.82 pp, Material -20.73 pp",Metadata plus deterministic spectral descriptors
+v6.2-A + spectral descriptors,93.48%,94.35%,94.00%,"Stratified -5.19 pp, Board -3.13 pp, Material -0.08 pp","Stratified -0.00 pp, Board +0.07 pp, Material -0.05 pp",Image embedding plus deterministic spectral descriptors
+Frequency + v6.2-A,96.75%,94.79%,94.50%,"Stratified -1.92 pp, Board -2.70 pp, Material +0.41 pp","Stratified +3.27 pp, Board +0.50 pp, Material +0.45 pp",Current strongest metadata/image fusion reference
+Frequency + v6.2-A + spectral descriptors,96.41%,94.97%,94.64%,"Stratified -2.26 pp, Board -2.51 pp, Material +0.55 pp","Stratified +2.93 pp, Board +0.69 pp, Material +0.58 pp",Full deterministic spectral control fusion

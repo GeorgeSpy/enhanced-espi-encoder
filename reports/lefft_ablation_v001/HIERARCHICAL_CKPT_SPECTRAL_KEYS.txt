@@ -1,4 +1,4 @@
-Checkpoint: C:\ESPI\logs\train_v6.2_opt\ckpt_phase2_expert.pt
+Checkpoint: <PRIVATE_LOG_ROOT>\train_v6.2_opt\ckpt_phase2_expert.pt
 Total keys: 237
 Spectral/Fourier-like keys: 4
 

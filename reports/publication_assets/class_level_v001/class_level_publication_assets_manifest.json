@@ -1,0 +1,27 @@
+{
+  "created_utc": "2026-05-26T18:14:04.729498+00:00",
+  "class_dir": "reports\\encoder_baselines\\eval_v002\\class_diagnostics",
+  "out_dir": "reports\\publication_assets\\class_level_v001",
+  "generated_files": [
+    "reports\\publication_assets\\class_level_v001\\TABLE_4_CLASS_SUPPORT.md",
+    "reports\\publication_assets\\class_level_v001\\TABLE_4_CLASS_SUPPORT.csv",
+    "reports\\publication_assets\\class_level_v001\\TABLE_5_V62A_VS_V61_GROUPED_PER_CLASS_F1.md",
+    "reports\\publication_assets\\class_level_v001\\TABLE_5_V62A_VS_V61_GROUPED_PER_CLASS_F1.csv",
+    "reports\\publication_assets\\class_level_v001\\TABLE_6_ZERO_RECALL_BREAKDOWN.md",
+    "reports\\publication_assets\\class_level_v001\\TABLE_6_ZERO_RECALL_BREAKDOWN.csv",
+    "reports\\publication_assets\\class_level_v001\\FIG_4_CLASS_SUPPORT_IMBALANCE.svg",
+    "reports\\publication_assets\\class_level_v001\\FIG_5_V62A_VS_V61_PER_CLASS_GROUPED_F1.svg",
+    "reports\\publication_assets\\class_level_v001\\FIG_6_ZERO_RECALL_BREAKDOWN_BY_ENCODER.svg",
+    "reports\\publication_assets\\class_level_v001\\CLASS_LEVEL_PUBLICATION_SUMMARY.md"
+  ],
+  "zero_recall_counts_by_encoder": {
+    "Random ResNet-18": 18,
+    "ImageNet ResNet-18": 20,
+    "hierarchical v6.2 phase2": 9
+  },
+  "claim_boundary": {
+    "no_acoustic_response_claim": true,
+    "no_validated_physics_aligned_encoder_claim": true,
+    "no_lefft": true
+  }
+}

@@ -1,0 +1,10 @@
+protocol,method,macro_f1,mean_macro_f1,worst_group,worst_group_macro_f1,best_group,best_group_macro_f1,n_groups
+stratified_train_val,frequency_logistic_regression,0.9694338664635694,,,,,,
+stratified_train_val,frequency_random_forest,0.9866861288039631,,,,,,
+stratified_train_val,frequency_bin_majority_diagnostic,0.8791968642935478,,,,,,
+board_grouped,frequency_bin_majority_diagnostic,,0.8941244107953176,C01,0.7762836329085137,W01,0.9913743751869099,6
+board_grouped,frequency_logistic_regression,,0.9748609579888732,W02,0.9549541161012653,C01,1.0,6
+board_grouped,frequency_random_forest,,0.9671234211089278,C01,0.9234618488855777,W03,1.0,6
+material_grouped,frequency_bin_majority_diagnostic,,0.9040121874471116,carbon,0.8404971398264827,wood,0.9675272350677405,2
+material_grouped,frequency_logistic_regression,,0.9408561364311898,wood,0.9375317788915524,carbon,0.9441804939708274,2
+material_grouped,frequency_random_forest,,0.9408561364311898,wood,0.9375317788915524,carbon,0.9441804939708274,2

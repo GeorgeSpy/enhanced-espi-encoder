@@ -1,0 +1,148 @@
+{
+  "created_utc": "2026-05-26T07:37:59.561030+00:00",
+  "status": "pass",
+  "model_file": "C:\\Users\\George mini-PC\\Documents\\Playground\\enhanced-espi-encoder\\scripts\\v6_2\\espi_v6_2_fixed.py",
+  "checkpoint": "C:\\ESPI\\logs\\train_v6.2_opt\\ckpt_phase2_expert.pt",
+  "manifest": "C:\\Users\\George mini-PC\\Documents\\Playground\\ESPI_v62_v62A_Encoder_package_20260430_224510\\core_v62_files\\manifest\\manifest_v1_5class.npz",
+  "dependency_paths": [
+    "C:\\Users\\George mini-PC\\Documents\\Playground\\enhanced-espi-encoder\\external\\compat",
+    "C:\\Users\\George mini-PC\\Documents\\Playground\\ESPI_v62_v62A_Encoder_package_20260430_224510\\core_v62_files"
+  ],
+  "device": "cpu",
+  "n_samples": 5,
+  "sample_indices": [
+    0,
+    5,
+    10,
+    20,
+    30
+  ],
+  "sample_paths": [
+    "C:\\ESPI\\data\\W01_ESPI_90db-PseudoNoisy_MATCH_v25\\0150Hz_90.0db.png",
+    "C:\\ESPI\\data\\W01_ESPI_90db-PseudoNoisy_MATCH_v25\\0320Hz_90.0db.png",
+    "C:\\ESPI\\data\\W01_ESPI_90db-PseudoNoisy_MATCH_v25\\0500Hz_90.0db.png",
+    "C:\\ESPI\\data\\W01_ESPI_90db-PseudoNoisy_MATCH_v25\\0550Hz_90.0db.png",
+    "C:\\ESPI\\data\\W01_ESPI_90db-PseudoNoisy_MATCH_v25\\0700Hz_90.0db.png"
+  ],
+  "image_size": 64,
+  "output_stats": {
+    "z_expert_prelogit": {
+      "available": true,
+      "shape": [
+        5,
+        512
+      ],
+      "nan_count": 0,
+      "inf_count": 0,
+      "finite": true,
+      "mean": 0.251880943775177,
+      "std": 14.973020553588867
+    },
+    "z_arcface_input": {
+      "available": true,
+      "shape": [
+        5,
+        512
+      ],
+      "nan_count": 0,
+      "inf_count": 0,
+      "finite": true,
+      "mean": 0.251880943775177,
+      "std": 14.973020553588867
+    },
+    "gatekeeper_logits": {
+      "available": true,
+      "shape": [
+        5,
+        2
+      ],
+      "nan_count": 0,
+      "inf_count": 0,
+      "finite": true,
+      "mean": 3.7767906188964844,
+      "std": 134.8414764404297
+    },
+    "denoised": {
+      "available": true,
+      "shape": [
+        5,
+        1,
+        64,
+        64
+      ],
+      "nan_count": 0,
+      "inf_count": 0,
+      "finite": true,
+      "mean": -26.633214950561523,
+      "std": 13.378738403320312
+    },
+    "wrapped_phase": {
+      "available": true,
+      "shape": [
+        5,
+        1,
+        64,
+        64
+      ],
+      "nan_count": 0,
+      "inf_count": 0,
+      "finite": true,
+      "mean": -0.41664329171180725,
+      "std": 2.8442511558532715
+    },
+    "unwrapped_phase": {
+      "available": true,
+      "shape": [
+        5,
+        1,
+        64,
+        64
+      ],
+      "nan_count": 0,
+      "inf_count": 0,
+      "finite": true,
+      "mean": 1.3893187046051025,
+      "std": 2.461960554122925
+    },
+    "amplitude": {
+      "available": true,
+      "shape": [
+        5,
+        1,
+        64,
+        64
+      ],
+      "nan_count": 0,
+      "inf_count": 0,
+      "finite": true,
+      "mean": 9.751640319824219,
+      "std": 4.475862979888916
+    }
+  },
+  "max_abs_diff": {
+    "z_expert_prelogit": 0.0,
+    "z_arcface_input": 0.0,
+    "gatekeeper_logits": 0.0,
+    "denoised": 0.0,
+    "wrapped_phase": 0.0,
+    "unwrapped_phase": 0.0,
+    "amplitude": 0.0
+  },
+  "checks": {
+    "required_embeddings_available": true,
+    "no_nan": true,
+    "no_inf": true,
+    "deterministic_repeated_forward": true,
+    "expected_batch_shapes": true,
+    "z_alias_consistency": true,
+    "load_missing_keys_zero": true,
+    "load_unexpected_keys_zero": true
+  },
+  "load_missing_keys": [],
+  "load_unexpected_keys": [],
+  "import_log": "2026-05-26 10:37:58,816 - Enhanced-ESPI - WARNING - [sampler] v2 import failed -> fallback to standard DataLoader | err=No module named 'scripts.samplers'",
+  "notes": [
+    "z_expert_prelogit and z_arcface_input are aliases for outputs['embeddings'].",
+    "z_physics_fusion is intentionally not exposed."
+  ]
+}

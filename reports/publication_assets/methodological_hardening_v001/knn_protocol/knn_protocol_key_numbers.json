@@ -1,0 +1,130 @@
+{
+  "fixed_k_values_reported": [
+    1,
+    5,
+    10
+  ],
+  "all_stratified_k_values_available": [
+    1,
+    3,
+    5,
+    10,
+    20
+  ],
+  "recommended_primary_k": 10,
+  "recommended_primary_k_reason": "k=10 is the development/default grouped kNN setting in eval_v002 and avoids selecting k solely by maximum stratified score.",
+  "grouped_k_availability": {
+    "board_grouped_available_k": [
+      10
+    ],
+    "material_grouped_available_k": [
+      10
+    ],
+    "board_grouped_by_k_complete": false,
+    "material_grouped_by_k_complete": false,
+    "grouped_by_k_note": "eval_v002 stores grouped LOBO/LOMO kNN rows only for k=10; fixed-k sensitivity across k=1,3,5,20 is available for stratified train-to-val only."
+  },
+  "fixed_k_stratified_winners": {
+    "1": {
+      "protocol": "stratified_train_val",
+      "winner_encoder_id": "v6_1",
+      "winner_encoder_name": "v6.1",
+      "winner_k": 1,
+      "winner_score": 0.9485004728299975
+    },
+    "5": {
+      "protocol": "stratified_train_val",
+      "winner_encoder_id": "v6_1",
+      "winner_encoder_name": "v6.1",
+      "winner_k": 5,
+      "winner_score": 0.9506911900286517
+    },
+    "10": {
+      "protocol": "stratified_train_val",
+      "winner_encoder_id": "v6_1",
+      "winner_encoder_name": "v6.1",
+      "winner_k": 10,
+      "winner_score": 0.936526975749645
+    }
+  },
+  "board_grouped_k10_winner": {
+    "protocol": "board_grouped",
+    "winner_encoder_id": "v6_2_a",
+    "winner_encoder_name": "v6.2-A",
+    "winner_k": 10,
+    "winner_score": 0.9356408210770706
+  },
+  "material_grouped_k10_winner": {
+    "protocol": "material_grouped",
+    "winner_encoder_id": "v6_2_a",
+    "winner_encoder_name": "v6.2-A",
+    "winner_k": 10,
+    "winner_score": 0.9348717330088938
+  },
+  "v6_2_a_stratified_by_k": {
+    "1": 0.9174939833077506,
+    "3": 0.9232371214254933,
+    "5": 0.9232123506049185,
+    "10": 0.927755752028969,
+    "20": 0.92310816109167
+  },
+  "v6_1_stratified_by_k": {
+    "1": 0.9485004728299975,
+    "3": 0.9467781532512671,
+    "5": 0.9506911900286517,
+    "10": 0.936526975749645,
+    "20": 0.9301247910524812
+  },
+  "best_k_diagnostic": [
+    {
+      "encoder_id": "hierarchical_v6_2",
+      "encoder_name": "hierarchical v6.2 phase2",
+      "best_k": 1,
+      "best_stratified_macro_f1": 0.4017060761922714,
+      "fixed_k10_macro_f1": 0.3780477751043327,
+      "difference_best_minus_fixed_k10_pp": 2.3658301087938707,
+      "best_method": "knn_cosine_k1",
+      "fixed_k10_available": true
+    },
+    {
+      "encoder_id": "imagenet_resnet18",
+      "encoder_name": "ImageNet ResNet-18",
+      "best_k": 5,
+      "best_stratified_macro_f1": 0.8715130509203878,
+      "fixed_k10_macro_f1": 0.8434203551215631,
+      "difference_best_minus_fixed_k10_pp": 2.8092695798824674,
+      "best_method": "knn_cosine_k5",
+      "fixed_k10_available": true
+    },
+    {
+      "encoder_id": "random_resnet18",
+      "encoder_name": "Random ResNet-18",
+      "best_k": 5,
+      "best_stratified_macro_f1": 0.8439863653774754,
+      "fixed_k10_macro_f1": 0.8114196118916214,
+      "difference_best_minus_fixed_k10_pp": 3.2566753485854028,
+      "best_method": "knn_cosine_k5",
+      "fixed_k10_available": true
+    },
+    {
+      "encoder_id": "v6_1",
+      "encoder_name": "v6.1",
+      "best_k": 5,
+      "best_stratified_macro_f1": 0.9506911900286517,
+      "fixed_k10_macro_f1": 0.936526975749645,
+      "difference_best_minus_fixed_k10_pp": 1.4164214279006604,
+      "best_method": "knn_cosine_k5",
+      "fixed_k10_available": true
+    },
+    {
+      "encoder_id": "v6_2_a",
+      "encoder_name": "v6.2-A",
+      "best_k": 10,
+      "best_stratified_macro_f1": 0.927755752028969,
+      "fixed_k10_macro_f1": 0.927755752028969,
+      "difference_best_minus_fixed_k10_pp": 0.0,
+      "best_method": "knn_cosine_k10",
+      "fixed_k10_available": true
+    }
+  ]
+}

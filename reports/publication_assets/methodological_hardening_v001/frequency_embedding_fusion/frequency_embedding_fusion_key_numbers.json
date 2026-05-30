@@ -1,0 +1,270 @@
+{
+  "feature_paths": {
+    "v6_1": "outputs\\encoder_features_normalized_v001\\features_v61.normalized.npz",
+    "v6_2_a": "outputs\\encoder_features_normalized_v001\\features_v62a_epoch25.normalized.npz",
+    "random_resnet18": "outputs\\encoder_features_normalized_v001\\features_resnet18_random.normalized.npz",
+    "imagenet_resnet18": "outputs\\encoder_features_normalized_v001\\features_resnet18_imagenet.normalized.npz"
+  },
+  "frequency_only_reference": {
+    "n_samples": 12944,
+    "frequency_min_hz": 150.0,
+    "frequency_max_hz": 1550.0,
+    "methods": [
+      "frequency_logistic_regression",
+      "frequency_random_forest",
+      "frequency_bin_majority_diagnostic"
+    ],
+    "best_stratified_frequency_method": "frequency_random_forest",
+    "best_stratified_frequency_macro_f1": 0.9866861288039631,
+    "best_board_frequency_method": "frequency_logistic_regression",
+    "best_board_frequency_macro_f1": 0.9748609579888732,
+    "best_material_frequency_method": "frequency_logistic_regression",
+    "best_material_frequency_macro_f1": 0.9408561364311898,
+    "v61_stratified_macro_f1": 0.9506911900286517,
+    "v62a_stratified_macro_f1": 0.927755752028969,
+    "v62a_board_lobo_macro_f1": 0.9356408210770706,
+    "v62a_material_lomo_macro_f1": 0.9348717330088938,
+    "best_overall_frequency_macro_f1": 0.9866861288039631,
+    "material_lomo_caution": "descriptive stress-test only; two material groups available"
+  },
+  "best_frequency_only": {
+    "stratified_train_val": {
+      "method": "random_forest",
+      "macro_f1": 0.9866861288039631
+    },
+    "board_grouped": {
+      "method": "balanced_logistic_regression",
+      "macro_f1": 0.9748609579888732
+    },
+    "material_grouped": {
+      "method": "balanced_logistic_regression",
+      "macro_f1": 0.9408561364311898
+    }
+  },
+  "v6_1_embedding_only": {
+    "stratified_train_val": {
+      "method": "random_forest",
+      "macro_f1": 0.950836357647718
+    },
+    "board_grouped": {
+      "method": "random_forest",
+      "macro_f1": 0.8908803730403659
+    },
+    "material_grouped": {
+      "method": "random_forest",
+      "macro_f1": 0.8776757198710069
+    }
+  },
+  "v6_2_a_embedding_only": {
+    "stratified_train_val": {
+      "method": "random_forest",
+      "macro_f1": 0.9348100151719869
+    },
+    "board_grouped": {
+      "method": "random_forest",
+      "macro_f1": 0.9428118238555557
+    },
+    "material_grouped": {
+      "method": "random_forest",
+      "macro_f1": 0.9405498432710986
+    }
+  },
+  "v6_1_frequency_fusion": {
+    "stratified_train_val": {
+      "method": "balanced_logistic_regression",
+      "macro_f1": 0.9786365661023277
+    },
+    "board_grouped": {
+      "method": "random_forest",
+      "macro_f1": 0.92790139185409
+    },
+    "material_grouped": {
+      "method": "random_forest",
+      "macro_f1": 0.9019834473671781
+    }
+  },
+  "v6_2_a_frequency_fusion": {
+    "stratified_train_val": {
+      "method": "balanced_logistic_regression",
+      "macro_f1": 0.9674609129599487
+    },
+    "board_grouped": {
+      "method": "random_forest",
+      "macro_f1": 0.9478550859511922
+    },
+    "material_grouped": {
+      "method": "random_forest",
+      "macro_f1": 0.9450017247513617
+    }
+  },
+  "deltas": [
+    {
+      "protocol": "stratified_train_val",
+      "encoder_id": "v6_1",
+      "encoder_name": "v6.1",
+      "frequency_only_method": "random_forest",
+      "frequency_only_macro_f1": 0.9866861288039631,
+      "embedding_only_method": "random_forest",
+      "embedding_only_macro_f1": 0.950836357647718,
+      "fusion_method": "balanced_logistic_regression",
+      "fusion_macro_f1": 0.9786365661023277,
+      "delta_fusion_minus_frequency_pp": -0.8049562701635371,
+      "delta_fusion_minus_embedding_pp": 2.780020845460973
+    },
+    {
+      "protocol": "board_grouped",
+      "encoder_id": "v6_1",
+      "encoder_name": "v6.1",
+      "frequency_only_method": "balanced_logistic_regression",
+      "frequency_only_macro_f1": 0.9748609579888732,
+      "embedding_only_method": "random_forest",
+      "embedding_only_macro_f1": 0.8908803730403659,
+      "fusion_method": "random_forest",
+      "fusion_macro_f1": 0.92790139185409,
+      "delta_fusion_minus_frequency_pp": -4.695956613478314,
+      "delta_fusion_minus_embedding_pp": 3.7021018813724105
+    },
+    {
+      "protocol": "material_grouped",
+      "encoder_id": "v6_1",
+      "encoder_name": "v6.1",
+      "frequency_only_method": "balanced_logistic_regression",
+      "frequency_only_macro_f1": 0.9408561364311898,
+      "embedding_only_method": "random_forest",
+      "embedding_only_macro_f1": 0.8776757198710069,
+      "fusion_method": "random_forest",
+      "fusion_macro_f1": 0.9019834473671781,
+      "delta_fusion_minus_frequency_pp": -3.8872689064011756,
+      "delta_fusion_minus_embedding_pp": 2.430772749617116
+    },
+    {
+      "protocol": "stratified_train_val",
+      "encoder_id": "v6_2_a",
+      "encoder_name": "v6.2-A",
+      "frequency_only_method": "random_forest",
+      "frequency_only_macro_f1": 0.9866861288039631,
+      "embedding_only_method": "random_forest",
+      "embedding_only_macro_f1": 0.9348100151719869,
+      "fusion_method": "balanced_logistic_regression",
+      "fusion_macro_f1": 0.9674609129599487,
+      "delta_fusion_minus_frequency_pp": -1.9225215844014376,
+      "delta_fusion_minus_embedding_pp": 3.265089778796182
+    },
+    {
+      "protocol": "board_grouped",
+      "encoder_id": "v6_2_a",
+      "encoder_name": "v6.2-A",
+      "frequency_only_method": "balanced_logistic_regression",
+      "frequency_only_macro_f1": 0.9748609579888732,
+      "embedding_only_method": "random_forest",
+      "embedding_only_macro_f1": 0.9428118238555557,
+      "fusion_method": "random_forest",
+      "fusion_macro_f1": 0.9478550859511922,
+      "delta_fusion_minus_frequency_pp": -2.700587203768101,
+      "delta_fusion_minus_embedding_pp": 0.5043262095636436
+    },
+    {
+      "protocol": "material_grouped",
+      "encoder_id": "v6_2_a",
+      "encoder_name": "v6.2-A",
+      "frequency_only_method": "balanced_logistic_regression",
+      "frequency_only_macro_f1": 0.9408561364311898,
+      "embedding_only_method": "random_forest",
+      "embedding_only_macro_f1": 0.9405498432710986,
+      "fusion_method": "random_forest",
+      "fusion_macro_f1": 0.9450017247513617,
+      "delta_fusion_minus_frequency_pp": 0.4145588320171867,
+      "delta_fusion_minus_embedding_pp": 0.4451881480263098
+    },
+    {
+      "protocol": "stratified_train_val",
+      "encoder_id": "random_resnet18",
+      "encoder_name": "Random ResNet-18",
+      "frequency_only_method": "random_forest",
+      "frequency_only_macro_f1": 0.9866861288039631,
+      "embedding_only_method": "balanced_logistic_regression",
+      "embedding_only_macro_f1": 0.844113949749216,
+      "fusion_method": "balanced_logistic_regression",
+      "fusion_macro_f1": 0.9554643920733421,
+      "delta_fusion_minus_frequency_pp": -3.122173673062101,
+      "delta_fusion_minus_embedding_pp": 11.135044232412605
+    },
+    {
+      "protocol": "board_grouped",
+      "encoder_id": "random_resnet18",
+      "encoder_name": "Random ResNet-18",
+      "frequency_only_method": "balanced_logistic_regression",
+      "frequency_only_macro_f1": 0.9748609579888732,
+      "embedding_only_method": "balanced_logistic_regression",
+      "embedding_only_macro_f1": 0.3217028762048134,
+      "fusion_method": "balanced_logistic_regression",
+      "fusion_macro_f1": 0.5325131603198028,
+      "delta_fusion_minus_frequency_pp": -44.23477976690704,
+      "delta_fusion_minus_embedding_pp": 21.081028411498938
+    },
+    {
+      "protocol": "material_grouped",
+      "encoder_id": "random_resnet18",
+      "encoder_name": "Random ResNet-18",
+      "frequency_only_method": "balanced_logistic_regression",
+      "frequency_only_macro_f1": 0.9408561364311898,
+      "embedding_only_method": "balanced_logistic_regression",
+      "embedding_only_macro_f1": 0.2544191480306869,
+      "fusion_method": "balanced_logistic_regression",
+      "fusion_macro_f1": 0.38349269265029023,
+      "delta_fusion_minus_frequency_pp": -55.73634437808997,
+      "delta_fusion_minus_embedding_pp": 12.907354461960335
+    },
+    {
+      "protocol": "stratified_train_val",
+      "encoder_id": "imagenet_resnet18",
+      "encoder_name": "ImageNet ResNet-18",
+      "frequency_only_method": "random_forest",
+      "frequency_only_macro_f1": 0.9866861288039631,
+      "embedding_only_method": "balanced_logistic_regression",
+      "embedding_only_macro_f1": 0.8125247157987667,
+      "fusion_method": "balanced_logistic_regression",
+      "fusion_macro_f1": 0.9028129533785243,
+      "delta_fusion_minus_frequency_pp": -8.387317542543881,
+      "delta_fusion_minus_embedding_pp": 9.028823757975758
+    },
+    {
+      "protocol": "board_grouped",
+      "encoder_id": "imagenet_resnet18",
+      "encoder_name": "ImageNet ResNet-18",
+      "frequency_only_method": "balanced_logistic_regression",
+      "frequency_only_macro_f1": 0.9748609579888732,
+      "embedding_only_method": "balanced_logistic_regression",
+      "embedding_only_macro_f1": 0.3793798576179885,
+      "fusion_method": "balanced_logistic_regression",
+      "fusion_macro_f1": 0.5250477912621878,
+      "delta_fusion_minus_frequency_pp": -44.981316672668534,
+      "delta_fusion_minus_embedding_pp": 14.566793364419933
+    },
+    {
+      "protocol": "material_grouped",
+      "encoder_id": "imagenet_resnet18",
+      "encoder_name": "ImageNet ResNet-18",
+      "frequency_only_method": "balanced_logistic_regression",
+      "frequency_only_macro_f1": 0.9408561364311898,
+      "embedding_only_method": "random_forest",
+      "embedding_only_macro_f1": 0.23708601442737104,
+      "fusion_method": "random_forest",
+      "fusion_macro_f1": 0.39313875102273405,
+      "delta_fusion_minus_frequency_pp": -54.77173854084558,
+      "delta_fusion_minus_embedding_pp": 15.605273659536302
+    }
+  ],
+  "v61_stratified_train_val_delta_fusion_minus_frequency_pp": -0.8049562701635371,
+  "v61_stratified_train_val_delta_fusion_minus_embedding_pp": 2.780020845460973,
+  "v61_board_grouped_delta_fusion_minus_frequency_pp": -4.695956613478314,
+  "v61_board_grouped_delta_fusion_minus_embedding_pp": 3.7021018813724105,
+  "v61_material_grouped_delta_fusion_minus_frequency_pp": -3.8872689064011756,
+  "v61_material_grouped_delta_fusion_minus_embedding_pp": 2.430772749617116,
+  "v62a_stratified_train_val_delta_fusion_minus_frequency_pp": -1.9225215844014376,
+  "v62a_stratified_train_val_delta_fusion_minus_embedding_pp": 3.265089778796182,
+  "v62a_board_grouped_delta_fusion_minus_frequency_pp": -2.700587203768101,
+  "v62a_board_grouped_delta_fusion_minus_embedding_pp": 0.5043262095636436,
+  "v62a_material_grouped_delta_fusion_minus_frequency_pp": 0.4145588320171867,
+  "v62a_material_grouped_delta_fusion_minus_embedding_pp": 0.4451881480263098
+}

@@ -1,0 +1,17 @@
+protocol,condition,display_name,condition_type,method,held_out_group,n_train,n_test,stress_test_note,class_id,label_name,support,precision,recall,f1
+board_grouped,spectral_descriptors_only,Spectral descriptors only,spectral_only,balanced_logistic_regression,C01,10211,2733,none,2,1_2,57,0.0,0.0,0.0
+board_grouped,spectral_descriptors_only,Spectral descriptors only,spectral_only,random_forest,C01,10211,2733,none,2,1_2,57,0.0,0.0,0.0
+board_grouped,spectral_descriptors_only,Spectral descriptors only,spectral_only,random_forest,C01,10211,2733,none,3,2_1,77,0.0,0.0,0.0
+board_grouped,spectral_descriptors_only,Spectral descriptors only,spectral_only,random_forest,C02,10625,2319,none,2,1_2,141,0.0,0.0,0.0
+board_grouped,spectral_descriptors_only,Spectral descriptors only,spectral_only,random_forest,C02,10625,2319,none,3,2_1,157,0.0,0.0,0.0
+board_grouped,spectral_descriptors_only,Spectral descriptors only,spectral_only,random_forest,C03,11307,1637,none,2,1_2,98,0.0,0.0,0.0
+board_grouped,spectral_descriptors_only,Spectral descriptors only,spectral_only,random_forest,C03,11307,1637,none,3,2_1,117,0.0,0.0,0.0
+board_grouped,spectral_descriptors_only,Spectral descriptors only,spectral_only,random_forest,W01,10525,2419,none,2,1_2,177,0.0,0.0,0.0
+board_grouped,spectral_descriptors_only,Spectral descriptors only,spectral_only,random_forest,W01,10525,2419,none,3,2_1,185,0.0,0.0,0.0
+board_grouped,spectral_descriptors_only,Spectral descriptors only,spectral_only,random_forest,W02,10574,2370,none,0,1_1H,74,0.0,0.0,0.0
+board_grouped,spectral_descriptors_only,Spectral descriptors only,spectral_only,random_forest,W02,10574,2370,none,2,1_2,142,0.0,0.0,0.0
+board_grouped,spectral_descriptors_only,Spectral descriptors only,spectral_only,random_forest,W02,10574,2370,none,3,2_1,169,0.0,0.0,0.0
+material_grouped,spectral_descriptors_only,Spectral descriptors only,spectral_only,random_forest,carbon,6255,6689,descriptive stress-test only; two material groups available,2,1_2,296,0.0,0.0,0.0
+material_grouped,spectral_descriptors_only,Spectral descriptors only,spectral_only,random_forest,carbon,6255,6689,descriptive stress-test only; two material groups available,3,2_1,351,0.0,0.0,0.0
+material_grouped,spectral_descriptors_only,Spectral descriptors only,spectral_only,random_forest,wood,6689,6255,descriptive stress-test only; two material groups available,1,1_1T,313,0.0,0.0,0.0
+material_grouped,spectral_descriptors_only,Spectral descriptors only,spectral_only,random_forest,wood,6689,6255,descriptive stress-test only; two material groups available,3,2_1,418,0.0,0.0,0.0

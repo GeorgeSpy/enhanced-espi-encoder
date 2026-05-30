@@ -1,0 +1,40 @@
+{
+  "created_utc": "2026-05-26T11:46:14.131775+00:00",
+  "schema_version": "encoder_feature_schema_v001",
+  "output_npz": "outputs\\encoder_features_normalized_v001\\v61_smoke\\features_v61.normalized.npz",
+  "manifest": "C:\\Users\\George mini-PC\\Documents\\Playground\\ESPI_v62_v62A_Encoder_package_20260430_224510\\core_v62_files\\manifest\\manifest_v1_5class.npz",
+  "image_root": "C:\\ESPI\\data",
+  "full": false,
+  "max_samples": 200,
+  "batch_size": 32,
+  "device": "cpu",
+  "preprocessing_strategy": "v6.1 documented preprocessing: grayscale 1-channel, resize 256x256, per-image z-score normalization",
+  "model_name": "v6.1 ResNet18_HeadOnly",
+  "embedding_point": "avgpool_pre_classifier",
+  "embedding_dim": 512,
+  "quality_checks": {
+    "sample_count": 200,
+    "embedding_shape": [
+      200,
+      512
+    ],
+    "nan_count": 0,
+    "inf_count": 0,
+    "duplicate_paths": 0,
+    "nonzero_variance": true,
+    "metadata_lengths_match": true
+  },
+  "load_audit": {
+    "checkpoint_path": "C:\\ESPI\\checkpoints\\espi_modes_v6_1_head.pt",
+    "checkpoint_sha256": "28d7b06cc7da091f4924be5c2c6390f0b61c593fe5a6ac2efd1d3c7609a8a1c7",
+    "checkpoint_keys": 124,
+    "model_keys": 124,
+    "matched_keys": 124,
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "shape_mismatches": [],
+    "status": "clean"
+  },
+  "acceptable_for_internal_comparison": true,
+  "acceptable_for_final_publication_tables": true
+}

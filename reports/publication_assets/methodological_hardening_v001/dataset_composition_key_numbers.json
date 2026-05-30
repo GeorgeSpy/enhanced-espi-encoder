@@ -1,0 +1,36 @@
+{
+  "total_samples": 12944,
+  "number_of_boards": 6,
+  "boards": [
+    "C01",
+    "C02",
+    "C03",
+    "W01",
+    "W02",
+    "W03"
+  ],
+  "number_of_materials": 2,
+  "materials": [
+    "carbon",
+    "wood"
+  ],
+  "number_of_distribution_groups": 13,
+  "class_distribution": {
+    "class_0": 653,
+    "class_1": 669,
+    "class_2": 738,
+    "class_3": 769,
+    "class_4": 10115
+  },
+  "all_boards_contain_all_classes": true,
+  "all_materials_contain_all_classes": true,
+  "lobo_missing_heldout_folds": 0,
+  "lobo_missing_reference_folds": 0,
+  "lomo_missing_heldout_folds": 0,
+  "lomo_missing_reference_folds": 0,
+  "lobo_caution_folds": 0,
+  "lomo_caution_folds": 2,
+  "low_support_threshold": 30,
+  "primary_metadata_source": "outputs/encoder_features_normalized_v001/features_v62a_epoch25.normalized.npz",
+  "manifest": "<LOCAL_WORKSPACE_ROOT>/ESPI_v62_v62A_Encoder_package_20260430_224510/core_v62_files/manifest/manifest_v1_5class.npz"
+}

@@ -1,0 +1,6 @@
+Class ID,Class name,Total support,Support percentage,Notes on imbalance
+0,1_1H,653,5.04%,Minority class; grouped robustness is sensitive to errors.
+1,1_1T,669,5.17%,Minority class; grouped robustness is sensitive to errors.
+2,1_2,738,5.70%,Minority class; grouped robustness is sensitive to errors.
+3,2_1,769,5.94%,Minority class; grouped robustness is sensitive to errors.
+4,higher,10115,78.14%,Dominant majority class.

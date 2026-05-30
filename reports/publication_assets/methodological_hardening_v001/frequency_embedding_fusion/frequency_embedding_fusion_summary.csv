@@ -1,0 +1,55 @@
+protocol,condition,display_name,method,macro_f1,mean_macro_f1,accuracy,macro_recall,worst_group,worst_group_macro_f1,best_group,best_group_macro_f1,n_groups
+stratified_train_val,frequency_only,Frequency only,balanced_logistic_regression,0.9694338664635694,,0.9911162611046737,0.9695732838589983,,,,,
+stratified_train_val,frequency_only,Frequency only,random_forest,0.9866861288039631,,0.9961375048281189,0.9865182436611007,,,,,
+stratified_train_val,v6_1_embedding_only,v6.1 embedding only,balanced_logistic_regression,0.9272965397955483,,0.9671687910390112,0.9588685609167286,,,,,
+stratified_train_val,v6_1_embedding_only,v6.1 embedding only,random_forest,0.950836357647718,,0.9806875241405948,0.946930928901236,,,,,
+stratified_train_val,v6_1_frequency_fusion,Frequency + v6.1 embedding,balanced_logistic_regression,0.9786365661023277,,0.9934337582078022,0.9787508586322229,,,,,
+stratified_train_val,v6_1_frequency_fusion,Frequency + v6.1 embedding,random_forest,0.972254452330177,,0.988798764001545,0.9672199042494085,,,,,
+stratified_train_val,v6_2_a_embedding_only,v6.2-A embedding only,balanced_logistic_regression,0.9260198668851682,,0.9675550405561993,0.9354991877973319,,,,,
+stratified_train_val,v6_2_a_embedding_only,v6.2-A embedding only,random_forest,0.9348100151719869,,0.9721900347624566,0.9180915394515223,,,,,
+stratified_train_val,v6_2_a_frequency_fusion,Frequency + v6.2-A embedding,balanced_logistic_regression,0.9674609129599487,,0.988798764001545,0.9682407312851632,,,,,
+stratified_train_val,v6_2_a_frequency_fusion,Frequency + v6.2-A embedding,random_forest,0.9403228145499579,,0.9756662804171495,0.9230986972315629,,,,,
+stratified_train_val,random_resnet18_embedding_only,Random ResNet-18 embedding only,balanced_logistic_regression,0.844113949749216,,0.9227500965623793,0.9142212599019814,,,,,
+stratified_train_val,random_resnet18_embedding_only,Random ResNet-18 embedding only,random_forest,0.6054303800150843,,0.8609501738122828,0.49940345501735306,,,,,
+stratified_train_val,random_resnet18_frequency_fusion,Frequency + Random ResNet-18 embedding,balanced_logistic_regression,0.9554643920733421,,0.9860950173812283,0.9579499839701944,,,,,
+stratified_train_val,random_resnet18_frequency_fusion,Frequency + Random ResNet-18 embedding,random_forest,0.8208181216344632,,0.9262263422170722,0.7384862640302996,,,,,
+stratified_train_val,imagenet_resnet18_embedding_only,ImageNet ResNet-18 embedding only,balanced_logistic_regression,0.8125247157987667,,0.9138663576670529,0.8495669312793689,,,,,
+stratified_train_val,imagenet_resnet18_embedding_only,ImageNet ResNet-18 embedding only,random_forest,0.707981047203335,,0.8914638856701429,0.6150673426632066,,,,,
+stratified_train_val,imagenet_resnet18_frequency_fusion,Frequency + ImageNet ResNet-18 embedding,balanced_logistic_regression,0.9028129533785243,,0.9687137891077636,0.9088216047145575,,,,,
+stratified_train_val,imagenet_resnet18_frequency_fusion,Frequency + ImageNet ResNet-18 embedding,random_forest,0.8762695402875735,,0.9466975666280417,0.8132452637180905,,,,,
+board_grouped,frequency_only,Frequency only,balanced_logistic_regression,,0.9748609579888732,0.9920388104708425,0.9736275011524164,W02,0.9549541161012653,C01,1.0,6
+board_grouped,frequency_only,Frequency only,random_forest,,0.9671234211089278,0.9920352170805402,0.9663117802963735,C01,0.9234618488855777,W03,1.0,6
+board_grouped,v6_1_embedding_only,v6.1 embedding only,balanced_logistic_regression,,0.7967436199456173,0.9249842611370669,0.8530995956990338,C03,0.6893785163522168,C02,0.8801881884930796,6
+board_grouped,v6_1_embedding_only,v6.1 embedding only,random_forest,,0.8908803730403659,0.960615982039508,0.8749709351064675,C01,0.8431928677724543,C02,0.9448686742033556,6
+board_grouped,v6_1_frequency_fusion,Frequency + v6.1 embedding,balanced_logistic_regression,,0.8681133909658709,0.9644702008985138,0.8902034206740982,C01,0.7351389331459898,C02,0.9810971230344524,6
+board_grouped,v6_1_frequency_fusion,Frequency + v6.1 embedding,random_forest,,0.92790139185409,0.9734053427788636,0.9084601843913572,W02,0.8953282533997233,C02,0.9777045443430762,6
+board_grouped,v6_2_a_embedding_only,v6.2-A embedding only,balanced_logistic_regression,,0.9150209184272143,0.9589800606239431,0.9318690542604107,C02,0.8837789055610414,C03,0.9476322666655153,6
+board_grouped,v6_2_a_embedding_only,v6.2-A embedding only,random_forest,,0.9428118238555557,0.9745517802230447,0.9249693733103382,C02,0.9325992413312496,C03,0.9602754585994809,6
+board_grouped,v6_2_a_frequency_fusion,Frequency + v6.2-A embedding,balanced_logistic_regression,,0.9423828105576045,0.9772013946008129,0.9489942645502972,C02,0.9201529293819523,W02,0.9635238020709849,6
+board_grouped,v6_2_a_frequency_fusion,Frequency + v6.2-A embedding,random_forest,,0.9478550859511922,0.9770509232454768,0.9291075530986235,C01,0.9378499810309217,C03,0.9602754585994809,6
+board_grouped,random_resnet18_embedding_only,Random ResNet-18 embedding only,balanced_logistic_regression,,0.3217028762048134,0.677191827745002,0.37461641042201577,W03,0.23281724837195306,C01,0.41340233538526217,6
+board_grouped,random_resnet18_embedding_only,Random ResNet-18 embedding only,random_forest,,0.1883303415323974,0.7719443159695599,0.20986637193781774,W03,0.17111631537861044,C02,0.21857391799177858,6
+board_grouped,random_resnet18_frequency_fusion,Frequency + Random ResNet-18 embedding,balanced_logistic_regression,,0.5325131603198028,0.830555454655291,0.5710297424245983,W03,0.3767301843357092,C01,0.7237956566119431,6
+board_grouped,random_resnet18_frequency_fusion,Frequency + Random ResNet-18 embedding,random_forest,,0.324002011104011,0.8063264924561175,0.3098554263206879,W02,0.23159684595392274,C01,0.4952118526828757,6
+board_grouped,imagenet_resnet18_embedding_only,ImageNet ResNet-18 embedding only,balanced_logistic_regression,,0.3793798576179885,0.6855926507844883,0.41654527032961775,C01,0.28115926372148936,W01,0.46568154148210644,6
+board_grouped,imagenet_resnet18_embedding_only,ImageNet ResNet-18 embedding only,random_forest,,0.2741808408972665,0.7915359201338648,0.28098621227557224,W02,0.17652050919377651,C03,0.32796964413906265,6
+board_grouped,imagenet_resnet18_frequency_fusion,Frequency + ImageNet ResNet-18 embedding,balanced_logistic_regression,,0.5250477912621878,0.8201760400444723,0.5487044752166134,C01,0.42713127201725376,C02,0.5870908760877936,6
+board_grouped,imagenet_resnet18_frequency_fusion,Frequency + ImageNet ResNet-18 embedding,random_forest,,0.42819368806174024,0.8351462770963084,0.41318295391820775,W02,0.3076376619622567,W01,0.504229037087876,6
+material_grouped,frequency_only,Frequency only,balanced_logistic_regression,,0.9408561364311898,0.983179848705876,0.9398454674770464,wood,0.9375317788915524,carbon,0.9441804939708274,2
+material_grouped,frequency_only,Frequency only,random_forest,,0.9408561364311898,0.983179848705876,0.9398454674770464,wood,0.9375317788915524,carbon,0.9441804939708274,2
+material_grouped,v6_1_embedding_only,v6.1 embedding only,balanced_logistic_regression,,0.6848743148193763,0.8535038795096379,0.7847181379718202,carbon,0.6526256877229313,wood,0.7171229419158214,2
+material_grouped,v6_1_embedding_only,v6.1 embedding only,random_forest,,0.8776757198710069,0.952363240219605,0.8473629490499808,wood,0.8601791767154214,carbon,0.8951722630265924,2
+material_grouped,v6_1_frequency_fusion,Frequency + v6.1 embedding,balanced_logistic_regression,,0.7971296190574347,0.936040666644439,0.8296737583295131,carbon,0.715106821884889,wood,0.8791524162299804,2
+material_grouped,v6_1_frequency_fusion,Frequency + v6.1 embedding,random_forest,,0.9019834473671781,0.9624208541673165,0.8734685024764302,wood,0.8897739710508523,carbon,0.9141929236835038,2
+material_grouped,v6_2_a_embedding_only,v6.2-A embedding only,balanced_logistic_regression,,0.9110766490505552,0.9568585884768042,0.9294017309163742,wood,0.8899964004860413,carbon,0.932156897615069,2
+material_grouped,v6_2_a_embedding_only,v6.2-A embedding only,random_forest,,0.9405498432710986,0.9729580844219825,0.9219056682417639,wood,0.9377956484963115,carbon,0.9433040380458856,2
+material_grouped,v6_2_a_frequency_fusion,Frequency + v6.2-A embedding,balanced_logistic_regression,,0.9402706029527824,0.9746669520415959,0.9454322059652762,wood,0.9312595914006636,carbon,0.9492816145049012,2
+material_grouped,v6_2_a_frequency_fusion,Frequency + v6.2-A embedding,random_forest,,0.9450017247513617,0.9757942905654546,0.9242067984304929,wood,0.9445749221125169,carbon,0.9454285273902064,2
+material_grouped,random_resnet18_embedding_only,Random ResNet-18 embedding only,balanced_logistic_regression,,0.2544191480306869,0.6834086027634761,0.2823534753755947,carbon,0.23668563042104723,wood,0.2721526656403265,2
+material_grouped,random_resnet18_embedding_only,Random ResNet-18 embedding only,random_forest,,0.18449083903647479,0.7772496310023292,0.20461996451364495,wood,0.17513498818618473,carbon,0.19384668988676484,2
+material_grouped,random_resnet18_frequency_fusion,Frequency + Random ResNet-18 embedding,balanced_logistic_regression,,0.38349269265029023,0.7850519823340012,0.42157644076667317,carbon,0.3733124628200365,wood,0.393672922480544,2
+material_grouped,random_resnet18_frequency_fusion,Frequency + Random ResNet-18 embedding,random_forest,,0.30368352788931763,0.8034989260796477,0.2854561959124896,wood,0.24218456819867132,carbon,0.36518248757996397,2
+material_grouped,imagenet_resnet18_embedding_only,ImageNet ResNet-18 embedding only,balanced_logistic_regression,,0.23015469928263663,0.5273670015997965,0.2926520283201365,carbon,0.16826248628727253,wood,0.2920469122780007,2
+material_grouped,imagenet_resnet18_embedding_only,ImageNet ResNet-18 embedding only,random_forest,,0.23708601442737104,0.7867998798748413,0.24481188457282943,wood,0.18575991849811518,carbon,0.2884121103566269,2
+material_grouped,imagenet_resnet18_frequency_fusion,Frequency + ImageNet ResNet-18 embedding,balanced_logistic_regression,,0.2903052932569818,0.6249996922778716,0.36852795313639597,carbon,0.24956617329793582,wood,0.3310444132160278,2
+material_grouped,imagenet_resnet18_frequency_fusion,Frequency + ImageNet ResNet-18 embedding,random_forest,,0.39313875102273405,0.8273095561523572,0.3740168359419216,wood,0.2967954746728057,carbon,0.4894820273726624,2

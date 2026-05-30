@@ -1,0 +1,109 @@
+{
+  "out_dir": "reports\\publication_assets\\final_tables_v001",
+  "n_tables": 14,
+  "main_tables": 8,
+  "supplementary_tables": 6,
+  "primary_knn_protocol": "fixed k=10",
+  "best_k_use": "diagnostic only",
+  "material_lomo_caution": "descriptive stress-test only; two material groups available",
+  "outputs": [
+    {
+      "Table": "Main text Table 1",
+      "Output Markdown": "reports\\publication_assets\\final_tables_v001\\TABLE_1_ENCODER_BASELINE_SUMMARY_FIXED_K10.md",
+      "Output CSV": "reports\\publication_assets\\final_tables_v001\\TABLE_1_ENCODER_BASELINE_SUMMARY_FIXED_K10.csv",
+      "Source artifact paths": "reports/encoder_baselines/eval_v002/encoder_baseline_summary.csv; reports/publication_assets/methodological_hardening_v001/knn_protocol/knn_fixed_k_summary.csv",
+      "Notes": "Generated from locked artifacts; no experiments rerun."
+    },
+    {
+      "Table": "Main text Table 2",
+      "Output Markdown": "reports\\publication_assets\\final_tables_v001\\TABLE_2_GROUPED_ROBUSTNESS_WITH_CI.md",
+      "Output CSV": "reports\\publication_assets\\final_tables_v001\\TABLE_2_GROUPED_ROBUSTNESS_WITH_CI.csv",
+      "Source artifact paths": "reports/encoder_baselines/eval_v002/encoder_baseline_summary.csv; reports/publication_assets/methodological_hardening_v001/knn_protocol/knn_fixed_k_summary.csv",
+      "Notes": "Generated from locked artifacts; no experiments rerun."
+    },
+    {
+      "Table": "Main text Table 3",
+      "Output Markdown": "reports\\publication_assets\\final_tables_v001\\TABLE_3_CONTROLLED_ARCHITECTURE_COMPARISON.md",
+      "Output CSV": "reports\\publication_assets\\final_tables_v001\\TABLE_3_CONTROLLED_ARCHITECTURE_COMPARISON.csv",
+      "Source artifact paths": "reports/encoder_baselines/eval_v002/encoder_baseline_summary.csv; reports/publication_assets/methodological_hardening_v001/knn_protocol/knn_fixed_k_summary.csv",
+      "Notes": "Generated from locked artifacts; no experiments rerun."
+    },
+    {
+      "Table": "Main text Table 4",
+      "Output Markdown": "reports\\publication_assets\\final_tables_v001\\TABLE_4_CLASS_SUPPORT_AND_IMBALANCE.md",
+      "Output CSV": "reports\\publication_assets\\final_tables_v001\\TABLE_4_CLASS_SUPPORT_AND_IMBALANCE.csv",
+      "Source artifact paths": "reports/publication_assets/class_level_v001/TABLE_4_CLASS_SUPPORT.csv",
+      "Notes": "Generated from locked artifacts; no experiments rerun."
+    },
+    {
+      "Table": "Main text Table 5",
+      "Output Markdown": "reports\\publication_assets\\final_tables_v001\\TABLE_5_V62A_VS_V61_PER_CLASS_GROUPED_F1.md",
+      "Output CSV": "reports\\publication_assets\\final_tables_v001\\TABLE_5_V62A_VS_V61_PER_CLASS_GROUPED_F1.csv",
+      "Source artifact paths": "reports/publication_assets/class_level_v001/TABLE_5_V62A_VS_V61_GROUPED_PER_CLASS_F1.csv",
+      "Notes": "Generated from locked artifacts; no experiments rerun."
+    },
+    {
+      "Table": "Main text Table 6",
+      "Output Markdown": "reports\\publication_assets\\final_tables_v001\\TABLE_6_ZERO_RECALL_BREAKDOWN.md",
+      "Output CSV": "reports\\publication_assets\\final_tables_v001\\TABLE_6_ZERO_RECALL_BREAKDOWN.csv",
+      "Source artifact paths": "reports/publication_assets/class_level_v001/TABLE_6_ZERO_RECALL_BREAKDOWN.csv",
+      "Notes": "Generated from locked artifacts; no experiments rerun."
+    },
+    {
+      "Table": "Main text Table 7",
+      "Output Markdown": "reports\\publication_assets\\final_tables_v001\\TABLE_7_FREQUENCY_INFORMATION_BUDGET.md",
+      "Output CSV": "reports\\publication_assets\\final_tables_v001\\TABLE_7_FREQUENCY_INFORMATION_BUDGET.csv",
+      "Source artifact paths": "reports/publication_assets/methodological_hardening_v001/frequency_embedding_fusion/frequency_embedding_fusion_summary.csv",
+      "Notes": "Generated from locked artifacts; no experiments rerun."
+    },
+    {
+      "Table": "Main text Table 8",
+      "Output Markdown": "reports\\publication_assets\\final_tables_v001\\TABLE_8_FIXED_K_VS_BEST_K_DIAGNOSTIC.md",
+      "Output CSV": "reports\\publication_assets\\final_tables_v001\\TABLE_8_FIXED_K_VS_BEST_K_DIAGNOSTIC.csv",
+      "Source artifact paths": "reports/publication_assets/methodological_hardening_v001/knn_protocol/knn_best_k_diagnostic.csv",
+      "Notes": "Generated from locked artifacts; no experiments rerun."
+    },
+    {
+      "Table": "Supplementary Table S1",
+      "Output Markdown": "reports\\publication_assets\\final_tables_v001\\SUPPLEMENTARY_TABLE_S1_BOARD_LEVEL_SUPPORT.md",
+      "Output CSV": "reports\\publication_assets\\final_tables_v001\\SUPPLEMENTARY_TABLE_S1_BOARD_LEVEL_SUPPORT.csv",
+      "Source artifact paths": "reports/publication_assets/methodological_hardening_v001/dataset_composition_by_board.csv",
+      "Notes": "Generated from locked artifacts; no experiments rerun."
+    },
+    {
+      "Table": "Supplementary Table S2",
+      "Output Markdown": "reports\\publication_assets\\final_tables_v001\\SUPPLEMENTARY_TABLE_S2_MATERIAL_LEVEL_SUPPORT.md",
+      "Output CSV": "reports\\publication_assets\\final_tables_v001\\SUPPLEMENTARY_TABLE_S2_MATERIAL_LEVEL_SUPPORT.csv",
+      "Source artifact paths": "reports/publication_assets/methodological_hardening_v001/dataset_composition_by_material.csv",
+      "Notes": "Generated from locked artifacts; no experiments rerun."
+    },
+    {
+      "Table": "Supplementary Table S3",
+      "Output Markdown": "reports\\publication_assets\\final_tables_v001\\SUPPLEMENTARY_TABLE_S3_CLASS_BY_BOARD_SUPPORT.md",
+      "Output CSV": "reports\\publication_assets\\final_tables_v001\\SUPPLEMENTARY_TABLE_S3_CLASS_BY_BOARD_SUPPORT.csv",
+      "Source artifact paths": "reports/publication_assets/methodological_hardening_v001/class_by_board_support.csv",
+      "Notes": "Generated from locked artifacts; no experiments rerun."
+    },
+    {
+      "Table": "Supplementary Table S4",
+      "Output Markdown": "reports\\publication_assets\\final_tables_v001\\SUPPLEMENTARY_TABLE_S4_CLASS_BY_MATERIAL_SUPPORT.md",
+      "Output CSV": "reports\\publication_assets\\final_tables_v001\\SUPPLEMENTARY_TABLE_S4_CLASS_BY_MATERIAL_SUPPORT.csv",
+      "Source artifact paths": "reports/publication_assets/methodological_hardening_v001/class_by_material_support.csv",
+      "Notes": "Generated from locked artifacts; no experiments rerun."
+    },
+    {
+      "Table": "Supplementary Table S5",
+      "Output Markdown": "reports\\publication_assets\\final_tables_v001\\SUPPLEMENTARY_TABLE_S5_PAIRED_BOARD_AND_MATERIAL_DELTAS_V61_V62A.md",
+      "Output CSV": "reports\\publication_assets\\final_tables_v001\\SUPPLEMENTARY_TABLE_S5_PAIRED_BOARD_AND_MATERIAL_DELTAS_V61_V62A.csv",
+      "Source artifact paths": "reports/publication_assets/methodological_hardening_v001/paired_board_lobo_delta_v61_v62a.csv; reports/publication_assets/methodological_hardening_v001/paired_material_lomo_delta_v61_v62a.csv",
+      "Notes": "Generated from locked artifacts; no experiments rerun."
+    },
+    {
+      "Table": "Supplementary Table S6",
+      "Output Markdown": "reports\\publication_assets\\final_tables_v001\\SUPPLEMENTARY_TABLE_S6_FREQUENCY_FUSION_PER_CLASS_CHANGES.md",
+      "Output CSV": "reports\\publication_assets\\final_tables_v001\\SUPPLEMENTARY_TABLE_S6_FREQUENCY_FUSION_PER_CLASS_CHANGES.csv",
+      "Source artifact paths": "reports/publication_assets/methodological_hardening_v001/frequency_embedding_fusion/frequency_embedding_fusion_per_class.csv",
+      "Notes": "Generated from locked artifacts; no experiments rerun."
+    }
+  ]
+}

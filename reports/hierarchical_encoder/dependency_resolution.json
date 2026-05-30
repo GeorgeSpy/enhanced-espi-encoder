@@ -1,0 +1,92 @@
+{
+  "status": "resolved_for_load_audit",
+  "training_run": false,
+  "embedding_extraction_run": false,
+  "original_failure": {
+    "base_imported": false,
+    "reason": "enhanced_espi_pipeline.py could not be imported, causing espi_v6_2_fixed.py to fall back to placeholder physics modules.",
+    "immediate_missing_import": "balanced_batch_sampler_v2",
+    "immediate_missing_symbol": "BalancedBatchSampler",
+    "secondary_missing_import": "checkpointing",
+    "secondary_missing_symbol": "save_checkpoint"
+  },
+  "import_chain": {
+    "model_file": "scripts/v6_2/espi_v6_2_fixed.py",
+    "legacy_pipeline": "ESPI_v62_v62A_Encoder_package_20260430_224510/core_v62_files/enhanced_espi_pipeline.py",
+    "balanced_batch_sampler_imports": [
+      "from scripts.samplers.balanced_batch_sampler_v2 import BalancedBatchSampler, __version__ as BBS_VER",
+      "from balanced_batch_sampler_v2 import BalancedBatchSampler"
+    ],
+    "checkpointing_import": "from checkpointing import save_checkpoint"
+  },
+  "local_search": {
+    "searched_roots": [
+      "C:\\Users\\George mini-PC\\Documents\\Playground",
+      "C:\\ESPI"
+    ],
+    "original_balanced_batch_sampler_v2_found": false,
+    "original_checkpointing_found": false
+  },
+  "resolution": {
+    "type": "minimal_fail_closed_compatibility_shim",
+    "files_added": [
+      "external/compat/balanced_batch_sampler_v2.py",
+      "external/compat/checkpointing.py"
+    ],
+    "restored_original_dependency": false,
+    "shimmed_symbols": {
+      "balanced_batch_sampler_v2": [
+        "BalancedBatchSampler",
+        "__version__"
+      ],
+      "checkpointing": [
+        "save_checkpoint"
+      ]
+    },
+    "fail_closed_behavior": [
+      "BalancedBatchSampler raises RuntimeError if instantiated.",
+      "save_checkpoint raises RuntimeError if called."
+    ]
+  },
+  "safety_rationale": {
+    "safe_for_load_audit": true,
+    "safe_for_dummy_forward": true,
+    "safe_for_training": false,
+    "reason": "The shimmed symbols are training/data-loader/checkpoint-save helpers and are not used during model instantiation, checkpoint loading, or dummy forward inference."
+  },
+  "final_load_audit": {
+    "checkpoint": "C:\\ESPI\\logs\\train_v6.2_opt\\ckpt_phase2_expert.pt",
+    "checkpoint_sha256": "ebb0a1ed05fc480b9e7f575800db1df8e7dffa027b75cc6bd59debdd81e39e00",
+    "base_imported": true,
+    "placeholder_physics_modules_used": false,
+    "placeholder_physics_modules_still_refused": true,
+    "load_mismatch_status": "clean",
+    "matched_keys": 237,
+    "missing_keys": 0,
+    "unexpected_keys": 0,
+    "shape_mismatches": 0,
+    "dummy_forward_ok": true,
+    "output_keys": [
+      "amplitude",
+      "denoised",
+      "embeddings",
+      "expert_logits",
+      "gate_logits",
+      "unwrapped_phase",
+      "wrapped_phase"
+    ],
+    "embeddings_available": true,
+    "denoised_available": true,
+    "wrapped_phase_available": true,
+    "unwrapped_phase_available": true,
+    "amplitude_available": true,
+    "physics_feats_available": false,
+    "spectral_filter_available": false
+  },
+  "reports": {
+    "dependency_report": "reports/hierarchical_encoder/DEPENDENCY_RESOLUTION_REPORT.md",
+    "dependency_json": "reports/hierarchical_encoder/dependency_resolution.json",
+    "load_audit_report": "reports/hierarchical_encoder/LOAD_AUDIT_V62_HIERARCHICAL.md",
+    "load_audit_json": "reports/hierarchical_encoder/load_audit_v62_hierarchical.json"
+  }
+}

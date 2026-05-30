@@ -1,0 +1,31 @@
+encoder_id,encoder_name,evaluation_mode,group_field,held_out_group,method,is_published_best_grouped_method,n_train,n_test,class_id,label_name,precision,recall,f1,support
+random_resnet18,Random ResNet-18,board_grouped,board,C01,knn_cosine_k10,false,10211,2733,2,1_2,0.0,0.0,0.0,57
+random_resnet18,Random ResNet-18,board_grouped,board,C02,knn_cosine_k10,false,10625,2319,2,1_2,0.0,0.0,0.0,141
+random_resnet18,Random ResNet-18,board_grouped,board,C03,knn_cosine_k10,false,11307,1637,2,1_2,0.0,0.0,0.0,98
+random_resnet18,Random ResNet-18,board_grouped,board,W01,knn_cosine_k10,false,10525,2419,2,1_2,0.0,0.0,0.0,177
+random_resnet18,Random ResNet-18,board_grouped,board,W02,knn_cosine_k10,false,10574,2370,2,1_2,0.0,0.0,0.0,142
+random_resnet18,Random ResNet-18,board_grouped,board,W03,knn_cosine_k10,false,11478,1466,3,2_1,0.023809523809523808,0.015625,0.018867924528301886,64
+imagenet_resnet18,ImageNet ResNet-18,board_grouped,board,C01,knn_cosine_k10,true,10211,2733,2,1_2,0.0,0.0,0.0,57
+imagenet_resnet18,ImageNet ResNet-18,board_grouped,board,C02,nearest_class_prototype,false,10625,2319,2,1_2,0.0,0.0,0.0,141
+imagenet_resnet18,ImageNet ResNet-18,board_grouped,board,C03,nearest_class_prototype,false,11307,1637,2,1_2,0.0,0.0,0.0,98
+imagenet_resnet18,ImageNet ResNet-18,board_grouped,board,W01,nearest_class_prototype,false,10525,2419,3,2_1,0.0,0.0,0.0,185
+imagenet_resnet18,ImageNet ResNet-18,board_grouped,board,W02,knn_cosine_k10,true,10574,2370,2,1_2,0.0,0.0,0.0,142
+imagenet_resnet18,ImageNet ResNet-18,board_grouped,board,W03,balanced_logistic_regression,false,11478,1466,2,1_2,0.12658227848101267,0.08130081300813008,0.09900990099009901,123
+v6_1,v6.1,board_grouped,board,C01,balanced_logistic_regression,false,10211,2733,3,2_1,0.1016949152542373,0.07792207792207792,0.08823529411764705,77
+v6_1,v6.1,board_grouped,board,C02,nearest_class_prototype,false,10625,2319,3,2_1,0.3237113402061856,1.0,0.4890965732087228,157
+v6_1,v6.1,board_grouped,board,C03,balanced_logistic_regression,false,11307,1637,3,2_1,0.7857142857142857,0.09401709401709402,0.16793893129770993,117
+v6_1,v6.1,board_grouped,board,W01,nearest_class_prototype,false,10525,2419,3,2_1,0.3065326633165829,0.9891891891891892,0.4680306905370844,185
+v6_1,v6.1,board_grouped,board,W02,nearest_class_prototype,false,10574,2370,0,1_1H,0.2509090909090909,0.9324324324324325,0.3954154727793696,74
+v6_1,v6.1,board_grouped,board,W03,nearest_class_prototype,false,11478,1466,3,2_1,0.25877192982456143,0.921875,0.40410958904109595,64
+v6_2_a,v6.2-A,board_grouped,board,C01,nearest_class_prototype,false,10211,2733,2,1_2,0.30128205128205127,0.8245614035087719,0.4413145539906103,57
+v6_2_a,v6.2-A,board_grouped,board,C02,nearest_class_prototype,false,10625,2319,0,1_1H,0.3884057971014493,1.0,0.5594989561586639,134
+v6_2_a,v6.2-A,board_grouped,board,C03,nearest_class_prototype,false,11307,1637,2,1_2,0.5027932960893855,0.9183673469387755,0.6498194945848377,98
+v6_2_a,v6.2-A,board_grouped,board,W01,nearest_class_prototype,false,10525,2419,2,1_2,0.4045226130653266,0.9096045197740112,0.56,177
+v6_2_a,v6.2-A,board_grouped,board,W02,nearest_class_prototype,false,10574,2370,2,1_2,0.458041958041958,0.9225352112676056,0.6121495327102804,142
+v6_2_a,v6.2-A,board_grouped,board,W03,nearest_class_prototype,false,11478,1466,2,1_2,0.41379310344827586,0.975609756097561,0.5811138014527846,123
+hierarchical_v6_2,hierarchical v6.2 phase2,board_grouped,board,C01,knn_cosine_k10,false,10211,2733,3,2_1,0.0,0.0,0.0,77
+hierarchical_v6_2,hierarchical v6.2 phase2,board_grouped,board,C02,nearest_class_prototype,false,10625,2319,0,1_1H,0.0,0.0,0.0,134
+hierarchical_v6_2,hierarchical v6.2 phase2,board_grouped,board,C03,balanced_logistic_regression,true,11307,1637,2,1_2,0.0,0.0,0.0,98
+hierarchical_v6_2,hierarchical v6.2 phase2,board_grouped,board,W01,knn_cosine_k10,false,10525,2419,2,1_2,0.0,0.0,0.0,177
+hierarchical_v6_2,hierarchical v6.2 phase2,board_grouped,board,W02,nearest_class_prototype,false,10574,2370,1,1_1T,0.0125,0.008849557522123894,0.010362694300518135,113
+hierarchical_v6_2,hierarchical v6.2 phase2,board_grouped,board,W03,knn_cosine_k10,false,11478,1466,2,1_2,0.13333333333333333,0.04878048780487805,0.07142857142857142,123

@@ -1,0 +1,6 @@
+encoder,field,action,source,detail
+v6.2-A,embedding_point,recovered,embedding_layer,MCDropoutClassifier.global_pool.pre_fc
+v6.2-A,checkpoint_sha256,recovered,checkpoint_path,Computed SHA256 from <PRIVATE_ESPI_ROOT>\FIXED_PACKAGE\baseline_v62_5class\checkpoints\checkpoint_epoch25_20260211_035150.pt.
+hierarchical_v6.2_phase2_expert,board,recovered,manifest,Recovered 12944 values from manifest path match.
+hierarchical_v6.2_phase2_expert,material,recovered,manifest,Recovered 143 values from manifest path match.
+hierarchical_v6.2_phase2_expert,split_group,recovered,manifest,Recovered 12944 values from manifest path match.

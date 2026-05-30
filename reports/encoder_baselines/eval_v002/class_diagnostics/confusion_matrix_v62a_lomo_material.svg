@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="530" height="525" viewBox="0 0 530 525">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="265.0" y="34.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">v6.2-A Material LOMO Aggregate Confusion Matrix</text>
+<text x="310.0" y="497.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="middle">Predicted class</text>
+<text x="35.0" y="245.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="middle">True class</text>
+<text x="138.0" y="121.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="end">1_1H</text>
+<text x="182.0" y="73.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="middle">1_1H</text>
+<rect x="150" y="85" width="64" height="64" fill="rgb(234,234,255)" stroke="#ffffff"/>
+<text x="182.0" y="121.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="middle">612</text>
+<rect x="214" y="85" width="64" height="64" fill="rgb(244,244,255)" stroke="#ffffff"/>
+<text x="246.0" y="121.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="middle">1</text>
+<rect x="278" y="85" width="64" height="64" fill="rgb(245,245,255)" stroke="#ffffff"/>
+<text x="310.0" y="121.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="middle">0</text>
+<rect x="342" y="85" width="64" height="64" fill="rgb(244,244,255)" stroke="#ffffff"/>
+<text x="374.0" y="121.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="middle">1</text>
+<rect x="406" y="85" width="64" height="64" fill="rgb(244,244,255)" stroke="#ffffff"/>
+<text x="438.0" y="121.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="middle">39</text>
+<text x="138.0" y="185.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="end">1_1T</text>
+<text x="246.0" y="73.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="middle">1_1T</text>
+<rect x="150" y="149" width="64" height="64" fill="rgb(244,244,255)" stroke="#ffffff"/>
+<text x="182.0" y="185.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="middle">2</text>
+<rect x="214" y="149" width="64" height="64" fill="rgb(234,234,255)" stroke="#ffffff"/>
+<text x="246.0" y="185.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="middle">626</text>
+<rect x="278" y="149" width="64" height="64" fill="rgb(245,245,255)" stroke="#ffffff"/>
+<text x="310.0" y="185.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="middle">0</text>
+<rect x="342" y="149" width="64" height="64" fill="rgb(245,245,255)" stroke="#ffffff"/>
+<text x="374.0" y="185.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="middle">0</text>
+<rect x="406" y="149" width="64" height="64" fill="rgb(244,244,255)" stroke="#ffffff"/>
+<text x="438.0" y="185.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="middle">41</text>
+<text x="138.0" y="249.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="end">1_2</text>
+<text x="310.0" y="73.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="middle">1_2</text>
+<rect x="150" y="213" width="64" height="64" fill="rgb(244,244,255)" stroke="#ffffff"/>
+<text x="182.0" y="249.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="middle">1</text>
+<rect x="214" y="213" width="64" height="64" fill="rgb(244,244,255)" stroke="#ffffff"/>
+<text x="246.0" y="249.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="middle">1</text>
+<rect x="278" y="213" width="64" height="64" fill="rgb(233,233,255)" stroke="#ffffff"/>
+<text x="310.0" y="249.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="middle">669</text>
+<rect x="342" y="213" width="64" height="64" fill="rgb(244,244,255)" stroke="#ffffff"/>
+<text x="374.0" y="249.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="middle">13</text>
+<rect x="406" y="213" width="64" height="64" fill="rgb(244,244,255)" stroke="#ffffff"/>
+<text x="438.0" y="249.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="middle">54</text>
+<text x="138.0" y="313.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="end">2_1</text>
+<text x="374.0" y="73.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="middle">2_1</text>
+<rect x="150" y="277" width="64" height="64" fill="rgb(244,244,255)" stroke="#ffffff"/>
+<text x="182.0" y="313.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="middle">1</text>
+<rect x="214" y="277" width="64" height="64" fill="rgb(245,245,255)" stroke="#ffffff"/>
+<text x="246.0" y="313.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="middle">0</text>
+<rect x="278" y="277" width="64" height="64" fill="rgb(244,244,255)" stroke="#ffffff"/>
+<text x="310.0" y="313.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="middle">28</text>
+<rect x="342" y="277" width="64" height="64" fill="rgb(233,233,255)" stroke="#ffffff"/>
+<text x="374.0" y="313.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="middle">679</text>
+<rect x="406" y="277" width="64" height="64" fill="rgb(243,243,255)" stroke="#ffffff"/>
+<text x="438.0" y="313.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="middle">61</text>
+<text x="138.0" y="377.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="end">higher</text>
+<text x="438.0" y="73.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="middle">higher</text>
+<rect x="150" y="341" width="64" height="64" fill="rgb(244,244,255)" stroke="#ffffff"/>
+<text x="182.0" y="377.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="middle">58</text>
+<rect x="214" y="341" width="64" height="64" fill="rgb(244,244,255)" stroke="#ffffff"/>
+<text x="246.0" y="377.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="middle">26</text>
+<rect x="278" y="341" width="64" height="64" fill="rgb(244,244,255)" stroke="#ffffff"/>
+<text x="310.0" y="377.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="middle">48</text>
+<rect x="342" y="341" width="64" height="64" fill="rgb(244,244,255)" stroke="#ffffff"/>
+<text x="374.0" y="377.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="middle">26</text>
+<rect x="406" y="341" width="64" height="64" fill="rgb(75,75,255)" stroke="#ffffff"/>
+<text x="438.0" y="377.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="middle">9957</text>
+</svg>

@@ -1,0 +1,7 @@
+# Table 3 - Controlled Architecture Comparison
+
+| Encoder | Architecture role | Embedding point | Embedding dimension | Stratified kNN Macro-F1 | Board LOBO Macro-F1 | Material LOMO Macro-F1 | Publication decision |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| v6.1 | Reference frozen ResNet-18 baseline | avgpool_pre_classifier | 512 | 95.07% | 87.10% | 86.33% | Strong lineage baseline; not grouped-robust leader. |
+| v6.2-A | Official reportable baseline and frozen encoder candidate | MCDropoutClassifier.global_pool | 1280 | 92.78% | 93.56% | 93.49% | Primary reportable frozen ESPI encoder baseline. |
+| hierarchical v6.2 phase2 | Physics-aware hierarchical phase2 expert branch | z_expert_prelogit / z_arcface_input | 512 | 40.17% | 26.41% | 24.47% | Internal-only for final tables until regenerated with source board/split_group metadata. |

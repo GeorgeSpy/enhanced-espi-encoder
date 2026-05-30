@@ -1,0 +1,7 @@
+held_out_board,held_out_material,held_out_total,held_out_class_0,held_out_class_1,held_out_class_2,held_out_class_3,held_out_class_4,reference_total,reference_class_0,reference_class_1,reference_class_2,reference_class_3,reference_class_4,missing_classes_in_heldout,missing_classes_in_reference,macro_f1_caution_flag
+C01,carbon,2733,129,170,57,77,2300,10211,524,499,681,692,7815,none,none,none
+C02,carbon,2319,134,112,141,157,1775,10625,519,557,597,612,8340,none,none,none
+C03,carbon,1637,110,74,98,117,1238,11307,543,595,640,652,8877,none,none,none
+W01,wood,2419,116,107,177,185,1834,10525,537,562,561,584,8281,none,none,none
+W02,wood,2370,74,113,142,169,1872,10574,579,556,596,600,8243,none,none,none
+W03,wood,1466,90,93,123,64,1096,11478,563,576,615,705,9019,none,none,none

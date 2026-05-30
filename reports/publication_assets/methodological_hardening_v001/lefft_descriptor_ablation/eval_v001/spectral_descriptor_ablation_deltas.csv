@@ -1,0 +1,13 @@
+protocol,comparison,left_condition,right_condition,left_macro_f1,right_macro_f1,delta_left_minus_right_pp
+stratified_train_val,spectral-only minus frequency-only,spectral_descriptors_only,frequency_only,0.529208462087193,0.9866861288039631,-45.74776667167701
+stratified_train_val,frequency+spectral minus frequency-only,frequency_spectral_fusion,frequency_only,0.9853435959740521,0.9866861288039631,-0.13425328299110362
+stratified_train_val,v6.2-A+spectral minus v6.2-A,v6_2_a_spectral_fusion,v6_2_a_embedding_only,0.934808068951973,0.9348100151719869,-0.0001946220013926414
+stratified_train_val,frequency+v6.2-A+spectral minus frequency+v6.2-A,frequency_v6_2_a_spectral_fusion,v6_2_a_frequency_fusion,0.9641356080871841,0.9674609129599487,-0.3325304872764612
+board_grouped,spectral-only minus frequency-only,spectral_descriptors_only,frequency_only,0.22773641065070063,0.9748609579888732,-74.71245473381725
+board_grouped,frequency+spectral minus frequency-only,frequency_spectral_fusion,frequency_only,0.9346054422895418,0.9748609579888732,-4.025551569933139
+board_grouped,v6.2-A+spectral minus v6.2-A,v6_2_a_spectral_fusion,v6_2_a_embedding_only,0.9435480245622432,0.9428118238555557,0.0736200706687451
+board_grouped,frequency+v6.2-A+spectral minus frequency+v6.2-A,frequency_v6_2_a_spectral_fusion,v6_2_a_frequency_fusion,0.949738643728922,0.9478550859511922,0.18835577777298607
+material_grouped,spectral-only minus frequency-only,spectral_descriptors_only,frequency_only,0.19720081570542955,0.9408561364311898,-74.36553207257603
+material_grouped,frequency+spectral minus frequency-only,frequency_spectral_fusion,frequency_only,0.7332843852810769,0.9408561364311898,-20.757175115011293
+material_grouped,v6.2-A+spectral minus v6.2-A,v6_2_a_spectral_fusion,v6_2_a_embedding_only,0.9400464998332079,0.9405498432710986,-0.05033434378907131
+material_grouped,frequency+v6.2-A+spectral minus frequency+v6.2-A,frequency_v6_2_a_spectral_fusion,v6_2_a_frequency_fusion,0.9463737481607151,0.9450017247513617,0.13720234093533845

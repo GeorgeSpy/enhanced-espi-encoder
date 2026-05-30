@@ -1,0 +1,26 @@
+protocol,encoder_id,encoder_name,k,macro_f1,mean_macro_f1,worst_group,worst_group_macro_f1,best_group,best_group_macro_f1,availability_note,source
+stratified_train_val,random_resnet18,Random ResNet-18,1,0.8385579823143583,,,,,,available,knn_summary.csv
+stratified_train_val,random_resnet18,Random ResNet-18,5,0.8439863653774754,,,,,,available,knn_summary.csv
+stratified_train_val,random_resnet18,Random ResNet-18,10,0.8114196118916214,,,,,,available,knn_summary.csv
+stratified_train_val,imagenet_resnet18,ImageNet ResNet-18,1,0.870694708357586,,,,,,available,knn_summary.csv
+stratified_train_val,imagenet_resnet18,ImageNet ResNet-18,5,0.8715130509203878,,,,,,available,knn_summary.csv
+stratified_train_val,imagenet_resnet18,ImageNet ResNet-18,10,0.8434203551215631,,,,,,available,knn_summary.csv
+stratified_train_val,v6_1,v6.1,1,0.9485004728299975,,,,,,available,knn_summary.csv
+stratified_train_val,v6_1,v6.1,5,0.9506911900286517,,,,,,available,knn_summary.csv
+stratified_train_val,v6_1,v6.1,10,0.936526975749645,,,,,,available,knn_summary.csv
+stratified_train_val,v6_2_a,v6.2-A,1,0.9174939833077506,,,,,,available,knn_summary.csv
+stratified_train_val,v6_2_a,v6.2-A,5,0.9232123506049185,,,,,,available,knn_summary.csv
+stratified_train_val,v6_2_a,v6.2-A,10,0.927755752028969,,,,,,available,knn_summary.csv
+stratified_train_val,hierarchical_v6_2,hierarchical v6.2 phase2,1,0.4017060761922714,,,,,,available,knn_summary.csv
+stratified_train_val,hierarchical_v6_2,hierarchical v6.2 phase2,5,0.397284660935126,,,,,,available,knn_summary.csv
+stratified_train_val,hierarchical_v6_2,hierarchical v6.2 phase2,10,0.3780477751043327,,,,,,available,knn_summary.csv
+board_grouped,hierarchical_v6_2,hierarchical v6.2 phase2,10,,0.24987349086129806,C02,0.2042277499082381,W03,0.3189077692411215,grouped kNN available only for this k in eval_v002,lobo_board_summary.csv
+board_grouped,imagenet_resnet18,ImageNet ResNet-18,10,,0.3930272194094586,C01,0.27603304971052744,W01,0.5375053235213734,grouped kNN available only for this k in eval_v002,lobo_board_summary.csv
+board_grouped,random_resnet18,Random ResNet-18,10,,0.2617083239705258,W02,0.198524633624543,C01,0.3378849152699632,grouped kNN available only for this k in eval_v002,lobo_board_summary.csv
+board_grouped,v6_1,v6.1,10,,0.8709697195504678,C01,0.7861348174101798,C03,0.9338313540169543,grouped kNN available only for this k in eval_v002,lobo_board_summary.csv
+board_grouped,v6_2_a,v6.2-A,10,,0.9356408210770706,W01,0.9081748250444873,C03,0.9568787325554176,grouped kNN available only for this k in eval_v002,lobo_board_summary.csv
+material_grouped,hierarchical_v6_2,hierarchical v6.2 phase2,10,,0.24469544501204776,wood,0.23229839588711307,carbon,0.25709249413698243,grouped kNN available only for this k in eval_v002,lomo_material_summary.csv
+material_grouped,imagenet_resnet18,ImageNet ResNet-18,10,,0.22515158572778654,carbon,0.17244212434113235,wood,0.27786104711444076,grouped kNN available only for this k in eval_v002,lomo_material_summary.csv
+material_grouped,random_resnet18,Random ResNet-18,10,,0.2459369818476293,carbon,0.23465212417866338,wood,0.2572218395165952,grouped kNN available only for this k in eval_v002,lomo_material_summary.csv
+material_grouped,v6_1,v6.1,10,,0.8632932432336362,wood,0.8531773282001325,carbon,0.87340915826714,grouped kNN available only for this k in eval_v002,lomo_material_summary.csv
+material_grouped,v6_2_a,v6.2-A,10,,0.9348717330088938,wood,0.9300893427639704,carbon,0.9396541232538173,grouped kNN available only for this k in eval_v002,lomo_material_summary.csv

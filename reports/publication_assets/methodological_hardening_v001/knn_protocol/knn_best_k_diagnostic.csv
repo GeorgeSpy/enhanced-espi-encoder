@@ -1,0 +1,6 @@
+encoder_id,encoder_name,best_k,best_stratified_macro_f1,fixed_k10_macro_f1,difference_best_minus_fixed_k10_pp,best_method,fixed_k10_available
+hierarchical_v6_2,hierarchical v6.2 phase2,1,0.4017060761922714,0.3780477751043327,2.3658301087938707,knn_cosine_k1,True
+imagenet_resnet18,ImageNet ResNet-18,5,0.8715130509203878,0.8434203551215631,2.8092695798824674,knn_cosine_k5,True
+random_resnet18,Random ResNet-18,5,0.8439863653774754,0.8114196118916214,3.2566753485854028,knn_cosine_k5,True
+v6_1,v6.1,5,0.9506911900286517,0.936526975749645,1.4164214279006604,knn_cosine_k5,True
+v6_2_a,v6.2-A,10,0.927755752028969,0.927755752028969,0.0,knn_cosine_k10,True

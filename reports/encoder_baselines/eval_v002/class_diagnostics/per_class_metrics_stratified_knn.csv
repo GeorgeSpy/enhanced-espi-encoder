@@ -1,0 +1,36 @@
+encoder_id,encoder_name,evaluation_mode,method,held_out_group,n_train,n_test,class_id,label_name,precision,recall,f1,support
+random_resnet18,Random ResNet-18,stratified_train_to_val,knn_cosine_k5,val,10355,2589,0,1_1H,0.8602941176470589,0.8931297709923665,0.8764044943820226,131
+random_resnet18,Random ResNet-18,stratified_train_to_val,knn_cosine_k5,val,10355,2589,1,1_1T,0.8108108108108109,0.8955223880597015,0.851063829787234,134
+random_resnet18,Random ResNet-18,stratified_train_to_val,knn_cosine_k5,val,10355,2589,2,1_2,0.8416666666666667,0.6870748299319728,0.7565543071161048,147
+random_resnet18,Random ResNet-18,stratified_train_to_val,knn_cosine_k5,val,10355,2589,3,2_1,0.7748344370860927,0.7597402597402597,0.7672131147540984,154
+random_resnet18,Random ResNet-18,stratified_train_to_val,knn_cosine_k5,val,10355,2589,4,higher,0.9660766961651918,0.9713297083539298,0.9686960808479173,2023
+random_resnet18,Random ResNet-18,stratified_train_to_val,knn_cosine_k5,val,10355,2589,macro_avg,macro_avg,0.8507365456751641,0.8413593914156461,0.8439863653774754,2589
+random_resnet18,Random ResNet-18,stratified_train_to_val,knn_cosine_k5,val,10355,2589,weighted_avg,weighted_avg,0.9342486820061238,0.9347238315952106,0.9339080789220043,2589
+imagenet_resnet18,ImageNet ResNet-18,stratified_train_to_val,knn_cosine_k5,val,10355,2589,0,1_1H,0.92,0.8778625954198473,0.8984375,131
+imagenet_resnet18,ImageNet ResNet-18,stratified_train_to_val,knn_cosine_k5,val,10355,2589,1,1_1T,0.917910447761194,0.917910447761194,0.917910447761194,134
+imagenet_resnet18,ImageNet ResNet-18,stratified_train_to_val,knn_cosine_k5,val,10355,2589,2,1_2,0.8582677165354331,0.7414965986394558,0.7956204379562045,147
+imagenet_resnet18,ImageNet ResNet-18,stratified_train_to_val,knn_cosine_k5,val,10355,2589,3,2_1,0.8115942028985508,0.7272727272727273,0.767123287671233,154
+imagenet_resnet18,ImageNet ResNet-18,stratified_train_to_val,knn_cosine_k5,val,10355,2589,4,higher,0.9685230024213075,0.9886307464162135,0.9784735812133072,2023
+imagenet_resnet18,ImageNet ResNet-18,stratified_train_to_val,knn_cosine_k5,val,10355,2589,macro_avg,macro_avg,0.8952590739232971,0.8506346231018878,0.8715130509203878,2589
+imagenet_resnet18,ImageNet ResNet-18,stratified_train_to_val,knn_cosine_k5,val,10355,2589,weighted_avg,weighted_avg,0.9478535710604058,0.9497875627655465,0.9483354800986683,2589
+v6_1,v6.1,stratified_train_to_val,knn_cosine_k5,val,10355,2589,0,1_1H,0.9393939393939394,0.9465648854961832,0.9429657794676807,131
+v6_1,v6.1,stratified_train_to_val,knn_cosine_k5,val,10355,2589,1,1_1T,0.9851851851851852,0.9925373134328358,0.9888475836431226,134
+v6_1,v6.1,stratified_train_to_val,knn_cosine_k5,val,10355,2589,2,1_2,0.9013157894736842,0.9319727891156463,0.9163879598662207,147
+v6_1,v6.1,stratified_train_to_val,knn_cosine_k5,val,10355,2589,3,2_1,0.9324324324324325,0.8961038961038961,0.9139072847682119,154
+v6_1,v6.1,stratified_train_to_val,knn_cosine_k5,val,10355,2589,4,higher,0.9915924826904056,0.9911023232822541,0.9913473423980222,2023
+v6_1,v6.1,stratified_train_to_val,knn_cosine_k5,val,10355,2589,macro_avg,macro_avg,0.9499839658351293,0.9516562414861631,0.9506911900286517,2589
+v6_1,v6.1,stratified_train_to_val,knn_cosine_k5,val,10355,2589,weighted_avg,weighted_avg,0.9799749049846803,0.9799150251062186,0.9799075005578535,2589
+v6_2_a,v6.2-A,stratified_train_to_val,knn_cosine_k10,val,10355,2589,0,1_1H,0.9448818897637795,0.916030534351145,0.9302325581395349,131
+v6_2_a,v6.2-A,stratified_train_to_val,knn_cosine_k10,val,10355,2589,1,1_1T,0.9689922480620154,0.9328358208955224,0.9505703422053232,134
+v6_2_a,v6.2-A,stratified_train_to_val,knn_cosine_k10,val,10355,2589,2,1_2,0.8843537414965986,0.8843537414965986,0.8843537414965986,147
+v6_2_a,v6.2-A,stratified_train_to_val,knn_cosine_k10,val,10355,2589,3,2_1,0.910958904109589,0.8636363636363636,0.8866666666666667,154
+v6_2_a,v6.2-A,stratified_train_to_val,knn_cosine_k10,val,10355,2589,4,higher,0.9828431372549019,0.9911023232822541,0.9869554516367216,2023
+v6_2_a,v6.2-A,stratified_train_to_val,knn_cosine_k10,val,10355,2589,macro_avg,macro_avg,0.938405984137377,0.9175917567323768,0.927755752028969,2589
+v6_2_a,v6.2-A,stratified_train_to_val,knn_cosine_k10,val,10355,2589,weighted_avg,weighted_avg,0.9703375151405594,0.9706450366937042,0.9704111380067774,2589
+hierarchical_v6_2,hierarchical v6.2 phase2,stratified_train_to_val,knn_cosine_k1,val,10355,2589,0,1_1H,0.39344262295081966,0.366412213740458,0.37944664031620556,131
+hierarchical_v6_2,hierarchical v6.2 phase2,stratified_train_to_val,knn_cosine_k1,val,10355,2589,1,1_1T,0.4222222222222222,0.4253731343283582,0.42379182156133827,134
+hierarchical_v6_2,hierarchical v6.2 phase2,stratified_train_to_val,knn_cosine_k1,val,10355,2589,2,1_2,0.17365269461077845,0.19727891156462585,0.18471337579617833,147
+hierarchical_v6_2,hierarchical v6.2 phase2,stratified_train_to_val,knn_cosine_k1,val,10355,2589,3,2_1,0.18796992481203006,0.16233766233766234,0.17421602787456444,154
+hierarchical_v6_2,hierarchical v6.2 phase2,stratified_train_to_val,knn_cosine_k1,val,10355,2589,4,higher,0.844488188976378,0.8482451804251112,0.8463625154130704,2023
+hierarchical_v6_2,hierarchical v6.2 phase2,stratified_train_to_val,knn_cosine_k1,val,10355,2589,macro_avg,macro_avg,0.4043551307144456,0.39992942047924307,0.4017060761922714,2589
+hierarchical_v6_2,hierarchical v6.2 phase2,stratified_train_to_val,knn_cosine_k1,val,10355,2589,weighted_avg,weighted_avg,0.7226700201670085,0.7242178447276941,0.7233175423661665,2589

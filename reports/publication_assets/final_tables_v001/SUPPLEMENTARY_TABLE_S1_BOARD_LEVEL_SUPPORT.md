@@ -1,0 +1,8 @@
+| board | material | distribution_group_count | distribution_groups | class_0 | class_1 | class_2 | class_3 | class_4 | total_samples |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| C01 | carbon | 2 | C01_ESPI_90db;C01_ESPI_90db-Averaged | 129 | 170 | 57 | 77 | 2300 | 2733 |
+| C02 | carbon | 2 | C02_ESPI_90db;C02_ESPI_90db-Averaged | 134 | 112 | 141 | 157 | 1775 | 2319 |
+| C03 | carbon | 2 | C03_ESPI_90db;C03_ESPI_90db-Averaged | 110 | 74 | 98 | 117 | 1238 | 1637 |
+| W01 | wood | 3 | W01_ESPI_90db;W01_ESPI_90db-Averaged;W01_ESPI_90db-PseudoNoisy_MATCH_v25 | 116 | 107 | 177 | 185 | 1834 | 2419 |
+| W02 | wood | 2 | W02_ESPI_90db;W02_ESPI_90db-Averaged | 74 | 113 | 142 | 169 | 1872 | 2370 |
+| W03 | wood | 2 | W03_ESPI_90db;W03_ESPI_90db-Averaged | 90 | 93 | 123 | 64 | 1096 | 1466 |

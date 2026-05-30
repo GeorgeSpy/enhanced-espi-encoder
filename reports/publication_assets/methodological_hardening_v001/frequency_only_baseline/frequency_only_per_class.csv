@@ -1,0 +1,136 @@
+protocol,method,held_out_group,stress_test_note,class_id,label_name,support,precision,recall,f1
+stratified_train_val,frequency_logistic_regression,val,none,0,1_1H,131,1.0,1.0,1.0
+stratified_train_val,frequency_logistic_regression,val,none,1,1_1T,134,1.0,1.0,1.0
+stratified_train_val,frequency_logistic_regression,val,none,2,1_2,147,0.9078947368421053,0.9387755102040817,0.923076923076923
+stratified_train_val,frequency_logistic_regression,val,none,3,2_1,154,0.9395973154362416,0.9090909090909091,0.9240924092409241
+stratified_train_val,frequency_logistic_regression,val,none,4,higher,2023,1.0,1.0,1.0
+stratified_train_val,frequency_random_forest,val,none,0,1_1H,131,1.0,1.0,1.0
+stratified_train_val,frequency_random_forest,val,none,1,1_1T,134,1.0,1.0,1.0
+stratified_train_val,frequency_random_forest,val,none,2,1_2,147,0.9858156028368794,0.9455782312925171,0.9652777777777778
+stratified_train_val,frequency_random_forest,val,none,3,2_1,154,0.95,0.987012987012987,0.9681528662420381
+stratified_train_val,frequency_random_forest,val,none,4,higher,2023,1.0,1.0,1.0
+stratified_train_val,frequency_bin_majority_diagnostic,val,none,0,1_1H,131,1.0,0.8702290076335878,0.9306122448979592
+stratified_train_val,frequency_bin_majority_diagnostic,val,none,1,1_1T,134,0.8776978417266187,0.9104477611940298,0.8937728937728937
+stratified_train_val,frequency_bin_majority_diagnostic,val,none,2,1_2,147,0.9,0.7346938775510204,0.8089887640449438
+stratified_train_val,frequency_bin_majority_diagnostic,val,none,3,2_1,154,0.75625,0.7857142857142857,0.7707006369426751
+stratified_train_val,frequency_bin_majority_diagnostic,val,none,4,higher,2023,0.9839494163424124,1.0,0.9919097818092669
+board_grouped,frequency_logistic_regression,C01,none,0,1_1H,129,1.0,1.0,1.0
+board_grouped,frequency_logistic_regression,C01,none,1,1_1T,170,1.0,1.0,1.0
+board_grouped,frequency_logistic_regression,C01,none,2,1_2,57,1.0,1.0,1.0
+board_grouped,frequency_logistic_regression,C01,none,3,2_1,77,1.0,1.0,1.0
+board_grouped,frequency_logistic_regression,C01,none,4,higher,2300,1.0,1.0,1.0
+board_grouped,frequency_random_forest,C01,none,0,1_1H,129,1.0,1.0,1.0
+board_grouped,frequency_random_forest,C01,none,1,1_1T,170,1.0,1.0,1.0
+board_grouped,frequency_random_forest,C01,none,2,1_2,57,1.0,0.5964912280701754,0.7472527472527472
+board_grouped,frequency_random_forest,C01,none,3,2_1,77,0.77,1.0,0.8700564971751412
+board_grouped,frequency_random_forest,C01,none,4,higher,2300,1.0,1.0,1.0
+board_grouped,frequency_bin_majority_diagnostic,C01,none,0,1_1H,129,1.0,0.8217054263565892,0.902127659574468
+board_grouped,frequency_bin_majority_diagnostic,C01,none,1,1_1T,170,0.8685714285714285,0.8941176470588236,0.8811594202898549
+board_grouped,frequency_bin_majority_diagnostic,C01,none,2,1_2,57,0.5135135135135135,0.3333333333333333,0.4042553191489361
+board_grouped,frequency_bin_majority_diagnostic,C01,none,3,2_1,77,0.5384615384615384,1.0,0.7000000000000001
+board_grouped,frequency_bin_majority_diagnostic,C01,none,4,higher,2300,1.0,0.9878260869565217,0.9938757655293089
+board_grouped,frequency_logistic_regression,C02,none,0,1_1H,134,1.0,1.0,1.0
+board_grouped,frequency_logistic_regression,C02,none,1,1_1T,112,1.0,1.0,1.0
+board_grouped,frequency_logistic_regression,C02,none,2,1_2,141,1.0,0.8652482269503546,0.9277566539923954
+board_grouped,frequency_logistic_regression,C02,none,3,2_1,157,0.8920454545454546,1.0,0.942942942942943
+board_grouped,frequency_logistic_regression,C02,none,4,higher,1775,1.0,1.0,1.0
+board_grouped,frequency_random_forest,C02,none,0,1_1H,134,1.0,1.0,1.0
+board_grouped,frequency_random_forest,C02,none,1,1_1T,112,1.0,1.0,1.0
+board_grouped,frequency_random_forest,C02,none,2,1_2,141,1.0,0.723404255319149,0.8395061728395062
+board_grouped,frequency_random_forest,C02,none,3,2_1,157,0.8010204081632653,1.0,0.8895184135977336
+board_grouped,frequency_random_forest,C02,none,4,higher,1775,1.0,1.0,1.0
+board_grouped,frequency_bin_majority_diagnostic,C02,none,0,1_1H,134,1.0,1.0,1.0
+board_grouped,frequency_bin_majority_diagnostic,C02,none,1,1_1T,112,1.0,0.7767857142857143,0.8743718592964823
+board_grouped,frequency_bin_majority_diagnostic,C02,none,2,1_2,141,0.7727272727272727,0.6028368794326241,0.6772908366533864
+board_grouped,frequency_bin_majority_diagnostic,C02,none,3,2_1,157,0.6291390728476821,0.6050955414012739,0.6168831168831169
+board_grouped,frequency_bin_majority_diagnostic,C02,none,4,higher,1775,0.9662493195427327,1.0,0.9828349944629015
+board_grouped,frequency_logistic_regression,C03,none,0,1_1H,110,1.0,1.0,1.0
+board_grouped,frequency_logistic_regression,C03,none,1,1_1T,74,1.0,1.0,1.0
+board_grouped,frequency_logistic_regression,C03,none,2,1_2,98,1.0,0.8877551020408163,0.9405405405405405
+board_grouped,frequency_logistic_regression,C03,none,3,2_1,117,0.9140625,1.0,0.9551020408163265
+board_grouped,frequency_logistic_regression,C03,none,4,higher,1238,1.0,1.0,1.0
+board_grouped,frequency_random_forest,C03,none,0,1_1H,110,1.0,1.0,1.0
+board_grouped,frequency_random_forest,C03,none,1,1_1T,74,1.0,1.0,1.0
+board_grouped,frequency_random_forest,C03,none,2,1_2,98,1.0,0.8673469387755102,0.9289617486338798
+board_grouped,frequency_random_forest,C03,none,3,2_1,117,0.9,1.0,0.9473684210526316
+board_grouped,frequency_random_forest,C03,none,4,higher,1238,1.0,1.0,1.0
+board_grouped,frequency_bin_majority_diagnostic,C03,none,0,1_1H,110,1.0,1.0,1.0
+board_grouped,frequency_bin_majority_diagnostic,C03,none,1,1_1T,74,1.0,0.8108108108108109,0.8955223880597014
+board_grouped,frequency_bin_majority_diagnostic,C03,none,2,1_2,98,0.8082191780821918,0.6020408163265306,0.6900584795321637
+board_grouped,frequency_bin_majority_diagnostic,C03,none,3,2_1,117,0.6176470588235294,0.5384615384615384,0.5753424657534247
+board_grouped,frequency_bin_majority_diagnostic,C03,none,4,higher,1238,0.958204334365325,1.0,0.9786561264822135
+board_grouped,frequency_logistic_regression,W01,none,0,1_1H,116,1.0,1.0,1.0
+board_grouped,frequency_logistic_regression,W01,none,1,1_1T,107,1.0,1.0,1.0
+board_grouped,frequency_logistic_regression,W01,none,2,1_2,177,0.9030612244897959,1.0,0.9490616621983915
+board_grouped,frequency_logistic_regression,W01,none,3,2_1,185,1.0,0.8972972972972973,0.9458689458689459
+board_grouped,frequency_logistic_regression,W01,none,4,higher,1834,1.0,1.0,1.0
+board_grouped,frequency_random_forest,W01,none,0,1_1H,116,1.0,1.0,1.0
+board_grouped,frequency_random_forest,W01,none,1,1_1T,107,1.0,1.0,1.0
+board_grouped,frequency_random_forest,W01,none,2,1_2,177,0.9076923076923077,1.0,0.9516129032258065
+board_grouped,frequency_random_forest,W01,none,3,2_1,185,1.0,0.9027027027027027,0.9488636363636364
+board_grouped,frequency_random_forest,W01,none,4,higher,1834,1.0,1.0,1.0
+board_grouped,frequency_bin_majority_diagnostic,W01,none,0,1_1H,116,1.0,1.0,1.0
+board_grouped,frequency_bin_majority_diagnostic,W01,none,1,1_1T,107,1.0,1.0,1.0
+board_grouped,frequency_bin_majority_diagnostic,W01,none,2,1_2,177,1.0,1.0,1.0
+board_grouped,frequency_bin_majority_diagnostic,W01,none,3,2_1,185,1.0,0.9243243243243243,0.9606741573033708
+board_grouped,frequency_bin_majority_diagnostic,W01,none,4,higher,1834,0.9924242424242424,1.0,0.9961977186311787
+board_grouped,frequency_logistic_regression,W02,none,0,1_1H,74,1.0,1.0,1.0
+board_grouped,frequency_logistic_regression,W02,none,1,1_1T,113,1.0,1.0,1.0
+board_grouped,frequency_logistic_regression,W02,none,2,1_2,142,0.8022598870056498,1.0,0.8902821316614421
+board_grouped,frequency_logistic_regression,W02,none,3,2_1,169,1.0,0.7928994082840237,0.8844884488448845
+board_grouped,frequency_logistic_regression,W02,none,4,higher,1872,1.0,1.0,1.0
+board_grouped,frequency_random_forest,W02,none,0,1_1H,74,1.0,1.0,1.0
+board_grouped,frequency_random_forest,W02,none,1,1_1T,113,1.0,1.0,1.0
+board_grouped,frequency_random_forest,W02,none,2,1_2,142,0.8930817610062893,1.0,0.9435215946843853
+board_grouped,frequency_random_forest,W02,none,3,2_1,169,1.0,0.8994082840236687,0.9470404984423676
+board_grouped,frequency_random_forest,W02,none,4,higher,1872,1.0,1.0,1.0
+board_grouped,frequency_bin_majority_diagnostic,W02,none,0,1_1H,74,1.0,1.0,1.0
+board_grouped,frequency_bin_majority_diagnostic,W02,none,1,1_1T,113,1.0,1.0,1.0
+board_grouped,frequency_bin_majority_diagnostic,W02,none,2,1_2,142,1.0,0.9154929577464789,0.9558823529411764
+board_grouped,frequency_bin_majority_diagnostic,W02,none,3,2_1,169,0.9172413793103448,0.7869822485207101,0.8471337579617834
+board_grouped,frequency_bin_majority_diagnostic,W02,none,4,higher,1872,0.9811320754716981,1.0,0.9904761904761905
+board_grouped,frequency_logistic_regression,W03,none,0,1_1H,90,1.0,1.0,1.0
+board_grouped,frequency_logistic_regression,W03,none,1,1_1T,93,1.0,1.0,1.0
+board_grouped,frequency_logistic_regression,W03,none,2,1_2,123,0.8913043478260869,1.0,0.9425287356321839
+board_grouped,frequency_logistic_regression,W03,none,3,2_1,64,1.0,0.765625,0.8672566371681416
+board_grouped,frequency_logistic_regression,W03,none,4,higher,1096,1.0,1.0,1.0
+board_grouped,frequency_random_forest,W03,none,0,1_1H,90,1.0,1.0,1.0
+board_grouped,frequency_random_forest,W03,none,1,1_1T,93,1.0,1.0,1.0
+board_grouped,frequency_random_forest,W03,none,2,1_2,123,1.0,1.0,1.0
+board_grouped,frequency_random_forest,W03,none,3,2_1,64,1.0,1.0,1.0
+board_grouped,frequency_random_forest,W03,none,4,higher,1096,1.0,1.0,1.0
+board_grouped,frequency_bin_majority_diagnostic,W03,none,0,1_1H,90,1.0,1.0,1.0
+board_grouped,frequency_bin_majority_diagnostic,W03,none,1,1_1T,93,1.0,1.0,1.0
+board_grouped,frequency_bin_majority_diagnostic,W03,none,2,1_2,123,1.0,1.0,1.0
+board_grouped,frequency_bin_majority_diagnostic,W03,none,3,2_1,64,1.0,0.828125,0.905982905982906
+board_grouped,frequency_bin_majority_diagnostic,W03,none,4,higher,1096,0.990063233965673,1.0,0.9950068088969587
+material_grouped,frequency_logistic_regression,carbon,descriptive stress-test only; two material groups available,0,1_1H,373,1.0,1.0,1.0
+material_grouped,frequency_logistic_regression,carbon,descriptive stress-test only; two material groups available,1,1_1T,356,1.0,1.0,1.0
+material_grouped,frequency_logistic_regression,carbon,descriptive stress-test only; two material groups available,2,1_2,296,1.0,0.7094594594594594,0.8300395256916996
+material_grouped,frequency_logistic_regression,carbon,descriptive stress-test only; two material groups available,3,2_1,351,0.8032036613272311,1.0,0.8908629441624365
+material_grouped,frequency_logistic_regression,carbon,descriptive stress-test only; two material groups available,4,higher,5313,1.0,1.0,1.0
+material_grouped,frequency_random_forest,carbon,descriptive stress-test only; two material groups available,0,1_1H,373,1.0,1.0,1.0
+material_grouped,frequency_random_forest,carbon,descriptive stress-test only; two material groups available,1,1_1T,356,1.0,1.0,1.0
+material_grouped,frequency_random_forest,carbon,descriptive stress-test only; two material groups available,2,1_2,296,1.0,0.7094594594594594,0.8300395256916996
+material_grouped,frequency_random_forest,carbon,descriptive stress-test only; two material groups available,3,2_1,351,0.8032036613272311,1.0,0.8908629441624365
+material_grouped,frequency_random_forest,carbon,descriptive stress-test only; two material groups available,4,higher,5313,1.0,1.0,1.0
+material_grouped,frequency_bin_majority_diagnostic,carbon,descriptive stress-test only; two material groups available,0,1_1H,373,1.0,1.0,1.0
+material_grouped,frequency_bin_majority_diagnostic,carbon,descriptive stress-test only; two material groups available,1,1_1T,356,1.0,1.0,1.0
+material_grouped,frequency_bin_majority_diagnostic,carbon,descriptive stress-test only; two material groups available,2,1_2,296,1.0,0.3141891891891892,0.4781491002570694
+material_grouped,frequency_bin_majority_diagnostic,carbon,descriptive stress-test only; two material groups available,3,2_1,351,0.574468085106383,1.0,0.7297297297297298
+material_grouped,frequency_bin_majority_diagnostic,carbon,descriptive stress-test only; two material groups available,4,higher,5313,1.0,0.9892715979672502,0.9946068691456146
+material_grouped,frequency_logistic_regression,wood,descriptive stress-test only; two material groups available,0,1_1H,280,1.0,1.0,1.0
+material_grouped,frequency_logistic_regression,wood,descriptive stress-test only; two material groups available,1,1_1T,313,1.0,1.0,1.0
+material_grouped,frequency_logistic_regression,wood,descriptive stress-test only; two material groups available,2,1_2,442,0.7727272727272727,1.0,0.8717948717948718
+material_grouped,frequency_logistic_regression,wood,descriptive stress-test only; two material groups available,3,2_1,418,1.0,0.6889952153110048,0.8158640226628896
+material_grouped,frequency_logistic_regression,wood,descriptive stress-test only; two material groups available,4,higher,4802,1.0,1.0,1.0
+material_grouped,frequency_random_forest,wood,descriptive stress-test only; two material groups available,0,1_1H,280,1.0,1.0,1.0
+material_grouped,frequency_random_forest,wood,descriptive stress-test only; two material groups available,1,1_1T,313,1.0,1.0,1.0
+material_grouped,frequency_random_forest,wood,descriptive stress-test only; two material groups available,2,1_2,442,0.7727272727272727,1.0,0.8717948717948718
+material_grouped,frequency_random_forest,wood,descriptive stress-test only; two material groups available,3,2_1,418,1.0,0.6889952153110048,0.8158640226628896
+material_grouped,frequency_random_forest,wood,descriptive stress-test only; two material groups available,4,higher,4802,1.0,1.0,1.0
+material_grouped,frequency_bin_majority_diagnostic,wood,descriptive stress-test only; two material groups available,0,1_1H,280,1.0,1.0,1.0
+material_grouped,frequency_bin_majority_diagnostic,wood,descriptive stress-test only; two material groups available,1,1_1T,313,1.0,1.0,1.0
+material_grouped,frequency_bin_majority_diagnostic,wood,descriptive stress-test only; two material groups available,2,1_2,442,0.8649706457925636,1.0,0.9275970619097587
+material_grouped,frequency_bin_majority_diagnostic,wood,descriptive stress-test only; two material groups available,3,2_1,418,1.0,0.8349282296650717,0.910039113428944
+material_grouped,frequency_bin_majority_diagnostic,wood,descriptive stress-test only; two material groups available,4,higher,4802,1.0,1.0,1.0
