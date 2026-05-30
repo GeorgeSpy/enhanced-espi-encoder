@@ -1,0 +1,6 @@
+artifact_id,artifact_type,description,local_path_placeholder,sha256,tracked_in_git,public_release_plan,required_for_reproduction
+ART-001,manifest,Sanitized five-class ESPI manifest,<ARTIFACT_BUNDLE_ROOT>/manifests/manifest_v1_5class.npz,<sha256>,no,DOI-backed review artifact,yes
+ART-002,feature_dump,Normalized v6.2-A frozen embedding dump,<ARTIFACT_BUNDLE_ROOT>/features/features_v62a_epoch25.normalized.npz,<sha256>,no,DOI-backed review artifact,yes
+ART-003,feature_dump,Normalized v6.1 frozen embedding dump,<ARTIFACT_BUNDLE_ROOT>/features/features_v61.normalized.npz,<sha256>,no,DOI-backed review artifact,yes
+ART-004,checkpoint,v6.1 checkpoint,<PRIVATE_CHECKPOINT_ROOT>/espi_modes_v6_1_head.pt,<sha256>,no,restricted/private,conditional
+ART-005,checkpoint,v6.2-A checkpoint,<PRIVATE_CHECKPOINT_ROOT>/checkpoint_epoch25_20260211_035150.pt,<sha256>,no,restricted/private,conditional

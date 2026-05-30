@@ -1,15 +1,40 @@
-# Data Availability
+# Data Availability and Artifact Policy
 
-Raw data are not included in this repository.
+Raw ESPI images, model checkpoints, full feature dumps, and private manifests are not tracked in this Git repository. They may contain large binary artifacts, local acquisition structure, or private file-system metadata.
 
-## ESPI Data
+## What Is Tracked in Git
 
-Raw ESPI images remain outside Git until laboratory policy, dataset ownership, and journal sharing requirements are settled.
+- Source scripts required to reproduce extraction, evaluation, controls, and table generation.
+- Small Markdown, CSV, and JSON report summaries.
+- Claim-boundary and reproducibility documentation.
+- Final manuscript source, figures, and small submission-support files.
+- Artifact manifest templates.
 
-## Acoustic-Response Data
+## What Is Excluded from Git
 
-The future acoustic-response layer should be represented by manifests. A minimal placeholder is provided in `examples/sample_acoustic_manifest.csv`.
+- Raw ESPI image directories.
+- Checkpoints (`*.pt`, `*.pth`, `*.ckpt`).
+- Full feature dumps (`*.npz`, `*.npy`).
+- Local logs and intermediate outputs.
+- Private manifest bundles.
 
-## Large Artifacts
+## Review Artifact Bundle
 
-Checkpoints, features, and datasets should be released through Zenodo, OSF, or institutional storage if publication requires sharing.
+For review or DOI-backed release, the following can be provided outside Git:
+
+- sanitized manifest,
+- normalized feature dumps,
+- checkpoint and feature SHA256 checksums,
+- final table CSVs,
+- final figures,
+- source scripts,
+- environment or dependency notes,
+- claim checklist and audit reports.
+
+## Checksums
+
+Every external binary artifact used in the manuscript should have a recorded SHA256 checksum in a non-Git or DOI-backed artifact manifest. Use `docs/templates/ARTIFACT_MANIFEST_TEMPLATE.csv` as the starting point.
+
+## Release Plan
+
+The public repository can support code-level and report-level reproducibility. Full numerical reproduction requires access to the private or DOI-backed artifact bundle described above.
