@@ -1,0 +1,53 @@
+**[Date]** May 27, 2026
+
+**To:**
+The Editor-in-Chief
+*Optics and Lasers in Engineering*
+Elsevier
+
+**Subject: Submission of original research manuscript for publication**
+
+Dear Editor-in-Chief and Editorial Board Members,
+
+We are pleased to submit our original research manuscript entitled **"Grouped and Frequency-Controlled Audits of Frozen ESPI Representations for Full-Field Vibration Pattern Analysis"** for consideration for publication as a regular research paper in *Optics and Lasers in Engineering*.
+
+### Core Metrology & Representation Novelty
+
+Electronic speckle pattern interferometry (ESPI) is a cornerstone of full-field optical metrology, providing high-resolution measurements of vibration mode shapes. While deep learning models have achieved remarkable success in classifying these interferometric patterns, standard stratified evaluations often overestimate a model’s actual robustness. A model can easily exploit local specular textures or frequency-correlated shortcuts rather than learning a reusable, physically meaningful representation of the underlying modal deformation.
+
+This study addresses this fundamental gap by establishing a **rigorous representation-level audit protocol for frozen ESPI encoders** under strict specimen-level distribution shifts. Our work evaluates generic visual backbones, ESPI-specific deep classifiers (v6.1 and v6.2-A), and a custom physics-aware hierarchical CNN under newly defined **Board-grouped (Leave-One-Board-Out, LOBO)** and **Material-grouped (Leave-One-Material-Out, LOMO)** validation designs.
+
+The key contributions and findings presented in this manuscript include:
+1. **Specimen-Invariant Feature Spaces:** We demonstrate that our domain-mixed, distribution-aware encoder (**v6.2-A**) learns an embedding space organized primarily by modal shape rather than specimen geometry. Under strict Board LOBO, v6.2-A emerges as the strongest image-derived frozen encoder baseline, achieving **93.56% Board LOBO Macro-F1** and **93.49% Material LOMO Macro-F1**, significantly outperforming the standard v6.1 baseline which drops to 87.10% and 86.33% respectively.
+2. **Suppression of Metrological Confusions:** Per-class diagnostics reveal that the v6.2-A representation heavily suppresses cross-class confusions between structurally similar minority modes (e.g., the confusion between complex torsional mode `2_1` and two-axial bending mode `1_2` is reduced from 13.7% in v6.1 to only **2.2%** in v6.2-A).
+3. **Information-Budget Metadata Controls:** We introduce a strict frequency-only baseline control, establishing that the five-class modal protocol is heavily frequency-structured (excitation frequency alone yields 97.49% Board LOBO Macro-F1). This critical finding sets a rigorous information-budget boundary, showing that image-derived performance must be evaluated alongside excitation frequency to prevent overclaiming.
+4. **Architectural vs. Objective Trade-offs:** We audit a technically valid 17-layer physics-aware hierarchical CNN containing denoising, Fourier-prior, and phase-unwrapping layers. While structurally elegant, its frozen embedding performance (~26% Board LOBO) demonstrates that architectural priors alone do not guarantee robust post-hoc embedding geometry without representation-aligned training objectives.
+
+### Alignment with the Scope of *Optics and Lasers in Engineering*
+
+*Optics and Lasers in Engineering* is the premier international venue for research on the practical application of optical metrology, interferometry, and the integration of machine learning in optical diagnostics. Our work directly aligns with this scope by:
+* Moving the conversation from simple deep classification to **reusable visual representations** of interferometric fringe fields.
+* Offering a reusable **open methodology** for auditing deep learning models as frozen metrology backbones.
+* Grounding deep learning evaluation in strict physical specimen-invariance and information-budget controls.
+
+### Declarations
+
+* **Originality:** This manuscript is an original work that has not been published previously and is not under consideration for publication elsewhere.
+* **Approvals:** The submission has been approved by all co-authors, and all authors have contributed significantly to the research reported.
+* **Conflicts of Interest:** The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+
+We suggest the following potential reviewers who are experts in deep learning applications for interferometry, fringe analysis, and structural vibration metrology:
+1. **[Suggested Reviewer 1 Name & Affiliation / Email]** — Expert in neural networks for fringe and phase analysis.
+2. **[Suggested Reviewer 2 Name & Affiliation / Email]** — Expert in digital speckle pattern interferometry (DSPI/ESPI) and modal testing.
+3. **[Suggested Reviewer 3 Name & Affiliation / Email]** — Expert in representation learning and domain generalization in scientific imaging.
+
+Thank you very much for your time and for considering our manuscript. We look forward to receiving the reviewers' feedback.
+
+Sincerely,
+
+**[Corresponding Author Name]**
+[Academic Title / Position]
+[Department / Institution]
+[Postal Address]
+[Email Address]
+[Phone Number]

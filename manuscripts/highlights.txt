@@ -1,0 +1,7 @@
+Highlights
+
+- Audits frozen ESPI representations under grouped board/material evaluation.
+- Identifies v6.2-A as the strongest image-derived frozen ESPI encoder baseline.
+- Shows frequency_hz is the dominant metadata-only predictor for the current modal-label task.
+- Demonstrates v6.2-A complementary morphology information in frequency-ambiguous 1_2 / 2_1 modes.
+- Adds PCA dimension matching, balanced subsets, embedding geometry, and spectral-control hardening.
