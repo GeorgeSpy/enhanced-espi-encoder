@@ -1,9 +1,9 @@
 {
   "created_utc": "2026-05-26T11:19:27.134338+00:00",
-  "root": "C:\\Users\\George mini-PC\\Documents\\Playground\\enhanced-espi-encoder",
+  "root": "<LOCAL_REPO_ROOT>",
   "manifest": {
     "exists": true,
-    "path": "C:\\Users\\George mini-PC\\Documents\\Playground\\ESPI_v62_v62A_Encoder_package_20260430_224510\\core_v62_files\\manifest\\manifest_v1_5class.npz",
+    "path": "<PRIVATE_ESPI_PACKAGE_ROOT>\\core_v62_files\\manifest\\manifest_v1_5class.npz",
     "keys": [
       "paths",
       "labels",
@@ -30,14 +30,14 @@
     "existing_image_paths_checked": 25,
     "existing_image_paths_found": 25
   },
-  "image_root": "C:\\ESPI\\data",
+  "image_root": "<PRIVATE_ESPI_ROOT>\\data",
   "v61_checkpoint_candidates": [
-    "C:\\ESPI\\checkpoints\\espi_modes_v6_1_head.pt"
+    "<PRIVATE_ESPI_ROOT>\\checkpoints\\espi_modes_v6_1_head.pt"
   ],
-  "v61_checkpoint": "C:\\ESPI\\checkpoints\\espi_modes_v6_1_head.pt",
+  "v61_checkpoint": "<PRIVATE_ESPI_ROOT>\\checkpoints\\espi_modes_v6_1_head.pt",
   "v62a_features": {
     "exists": true,
-    "path": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\features_v62a_epoch25.npz",
+    "path": "<PRIVATE_V62_ENCODER_EVIDENCE_ROOT>\\features_v62a_epoch25.npz",
     "keys": [
       "embeddings",
       "logits",
@@ -124,30 +124,30 @@
     "checkpoint_sha256": "ebb0a1ed05fc480b9e7f575800db1df8e7dffa027b75cc6bd59debdd81e39e00",
     "embedding_point": "z_expert_prelogit / z_arcface_input from outputs['embeddings']"
   },
-  "hierarchical_checkpoint": "C:\\ESPI\\logs\\train_v6.2_opt\\ckpt_phase2_expert.pt",
+  "hierarchical_checkpoint": "<PRIVATE_ESPI_ROOT>\\logs\\train_v6.2_opt\\ckpt_phase2_expert.pt",
   "required_scripts": {
     "random_imagenet_extraction": {
-      "path": "C:\\Users\\George mini-PC\\Documents\\Playground\\enhanced-espi-encoder\\scripts\\encoder\\extract_v62_embeddings.py",
+      "path": "<LOCAL_REPO_ROOT>\\scripts\\encoder\\extract_v62_embeddings.py",
       "exists": true
     },
     "v62a_audit": {
-      "path": "C:\\Users\\George mini-PC\\Documents\\Playground\\enhanced-espi-encoder\\scripts\\encoder\\audit_v62_embeddings.py",
+      "path": "<LOCAL_REPO_ROOT>\\scripts\\encoder\\audit_v62_embeddings.py",
       "exists": true
     },
     "hierarchical_wrapper": {
-      "path": "C:\\Users\\George mini-PC\\Documents\\Playground\\enhanced-espi-encoder\\src\\enhanced_espi_encoder\\v62_hierarchical_encoder.py",
+      "path": "<LOCAL_REPO_ROOT>\\src\\enhanced_espi_encoder\\v62_hierarchical_encoder.py",
       "exists": true
     },
     "hierarchical_extraction": {
-      "path": "C:\\Users\\George mini-PC\\Documents\\Playground\\enhanced-espi-encoder\\scripts\\encoder\\extract_v62_hierarchical_embeddings.py",
+      "path": "<LOCAL_REPO_ROOT>\\scripts\\encoder\\extract_v62_hierarchical_embeddings.py",
       "exists": true
     },
     "grouped_evaluation": {
-      "path": "C:\\Users\\George mini-PC\\Documents\\Playground\\enhanced-espi-encoder\\scripts\\encoder\\evaluate_encoder_grouped_generalization.py",
+      "path": "<LOCAL_REPO_ROOT>\\scripts\\encoder\\evaluate_encoder_grouped_generalization.py",
       "exists": true
     },
     "v61_training_script": {
-      "path": "C:\\Users\\George mini-PC\\Documents\\Playground\\enhanced-espi-encoder\\scripts\\v6_1\\train_v6_1_head_only.py",
+      "path": "<LOCAL_REPO_ROOT>\\scripts\\v6_1\\train_v6_1_head_only.py",
       "exists": true
     }
   },
@@ -156,7 +156,7 @@
       "Encoder": "all baselines",
       "Required artifact": "manifest file with expected metadata",
       "Found?": "yes",
-      "Path": "C:\\Users\\George mini-PC\\Documents\\Playground\\ESPI_v62_v62A_Encoder_package_20260430_224510\\core_v62_files\\manifest\\manifest_v1_5class.npz",
+      "Path": "<PRIVATE_ESPI_PACKAGE_ROOT>\\core_v62_files\\manifest\\manifest_v1_5class.npz",
       "Status": "incomplete",
       "Blocking issue": "Missing fields: material, split_group"
     },
@@ -164,7 +164,7 @@
       "Encoder": "random ResNet-18 embeddings",
       "Required artifact": "image paths / root",
       "Found?": "yes",
-      "Path": "C:\\ESPI\\data",
+      "Path": "<PRIVATE_ESPI_ROOT>\\data",
       "Status": "available",
       "Blocking issue": ""
     },
@@ -172,7 +172,7 @@
       "Encoder": "ImageNet-pretrained ResNet-18 embeddings",
       "Required artifact": "image paths / root",
       "Found?": "yes",
-      "Path": "C:\\ESPI\\data",
+      "Path": "<PRIVATE_ESPI_ROOT>\\data",
       "Status": "available",
       "Blocking issue": ""
     },
@@ -196,7 +196,7 @@
       "Encoder": "v6.1 embeddings",
       "Required artifact": "v6.1 model/checkpoint",
       "Found?": "yes",
-      "Path": "C:\\ESPI\\checkpoints\\espi_modes_v6_1_head.pt",
+      "Path": "<PRIVATE_ESPI_ROOT>\\checkpoints\\espi_modes_v6_1_head.pt",
       "Status": "available",
       "Blocking issue": ""
     },
@@ -212,7 +212,7 @@
       "Encoder": "v6.2-A frozen embeddings",
       "Required artifact": "existing v6.2-A feature dump",
       "Found?": "yes",
-      "Path": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\features_v62a_epoch25.npz",
+      "Path": "<PRIVATE_V62_ENCODER_EVIDENCE_ROOT>\\features_v62a_epoch25.npz",
       "Status": "usable-with-caveat",
       "Blocking issue": "Metadata issue requires regeneration before final publication tables."
     },
@@ -228,7 +228,7 @@
       "Encoder": "hierarchical v6.2 phase2 expert embeddings",
       "Required artifact": "hierarchical phase2 checkpoint",
       "Found?": "yes",
-      "Path": "C:\\ESPI\\logs\\train_v6.2_opt\\ckpt_phase2_expert.pt",
+      "Path": "<PRIVATE_ESPI_ROOT>\\logs\\train_v6.2_opt\\ckpt_phase2_expert.pt",
       "Status": "available",
       "Blocking issue": ""
     },

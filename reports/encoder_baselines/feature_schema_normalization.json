@@ -1,12 +1,12 @@
 {
   "created_utc": "2026-05-26T11:24:25.974597+00:00",
   "schema_version": "encoder_feature_schema_v001",
-  "manifest": "C:\\Users\\George mini-PC\\Documents\\Playground\\ESPI_v62_v62A_Encoder_package_20260430_224510\\core_v62_files\\manifest\\manifest_v1_5class.npz",
+  "manifest": "<PRIVATE_ESPI_PACKAGE_ROOT>\\core_v62_files\\manifest\\manifest_v1_5class.npz",
   "out_dir": "outputs\\encoder_features_normalized_v001",
   "summaries": [
     {
       "encoder": "v6.2-A",
-      "source_npz": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\features_v62a_epoch25.npz",
+      "source_npz": "<PRIVATE_V62_ENCODER_EVIDENCE_ROOT>\\features_v62a_epoch25.npz",
       "output_npz": "outputs\\encoder_features_normalized_v001\\features_v62a_epoch25.normalized.npz",
       "original_fields": [
         "embeddings",
@@ -65,7 +65,7 @@
       },
       "n_samples": 12944,
       "embedding_dim": 1280,
-      "checkpoint_path": "C:\\ESPI\\FIXED_PACKAGE\\baseline_v62_5class\\checkpoints\\checkpoint_epoch25_20260211_035150.pt",
+      "checkpoint_path": "<PRIVATE_ESPI_ROOT>\\FIXED_PACKAGE\\baseline_v62_5class\\checkpoints\\checkpoint_epoch25_20260211_035150.pt",
       "checkpoint_sha256": "96a0111976442617517ca3eda0b13476d2d853cf78f72bab66d3932ecae1c2e9",
       "embedding_point": "MCDropoutClassifier.global_pool.pre_fc",
       "model_name": "v6.2-A MCDropoutClassifier",
@@ -147,7 +147,7 @@
       "field": "checkpoint_sha256",
       "action": "recovered",
       "source": "checkpoint_path",
-      "detail": "Computed SHA256 from C:\\ESPI\\FIXED_PACKAGE\\baseline_v62_5class\\checkpoints\\checkpoint_epoch25_20260211_035150.pt."
+      "detail": "Computed SHA256 from <PRIVATE_ESPI_ROOT>\\FIXED_PACKAGE\\baseline_v62_5class\\checkpoints\\checkpoint_epoch25_20260211_035150.pt."
     },
     {
       "encoder": "hierarchical_v6.2_phase2_expert",

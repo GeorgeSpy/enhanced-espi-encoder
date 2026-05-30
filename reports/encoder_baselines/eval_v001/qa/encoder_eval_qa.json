@@ -97,7 +97,7 @@
         "sample_count": 12944,
         "embedding_dim": 1280,
         "model_name": "v6.2-A MCDropoutClassifier",
-        "source_npz": "C:\\Users\\George mini-PC\\Documents\\Playground\\v62_encoder_evidence\\features_v62a_epoch25.npz"
+        "source_npz": "<PRIVATE_V62_ENCODER_EVIDENCE_ROOT>\\features_v62a_epoch25.npz"
       },
       "hierarchical_v6_2": {
         "sample_count": 12944,

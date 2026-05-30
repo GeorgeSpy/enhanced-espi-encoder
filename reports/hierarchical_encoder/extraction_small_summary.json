@@ -1,10 +1,10 @@
 {
   "created_utc": "2026-05-26T08:01:32.826527+00:00",
   "status": "pass",
-  "checkpoint": "C:\\ESPI\\logs\\train_v6.2_opt\\ckpt_phase2_expert.pt",
+  "checkpoint": "<PRIVATE_ESPI_ROOT>\\logs\\train_v6.2_opt\\ckpt_phase2_expert.pt",
   "checkpoint_sha256": "ebb0a1ed05fc480b9e7f575800db1df8e7dffa027b75cc6bd59debdd81e39e00",
-  "manifest": "C:\\Users\\George mini-PC\\Documents\\Playground\\ESPI_v62_v62A_Encoder_package_20260430_224510\\core_v62_files\\manifest\\manifest_v1_5class.npz",
-  "output_npz": "C:\\Users\\George mini-PC\\Documents\\Playground\\enhanced-espi-encoder\\outputs\\hierarchical_embeddings_v001\\features_hier_z_expert_prelogit.npz",
+  "manifest": "<PRIVATE_ESPI_PACKAGE_ROOT>\\core_v62_files\\manifest\\manifest_v1_5class.npz",
+  "output_npz": "<LOCAL_REPO_ROOT>\\outputs\\hierarchical_embeddings_v001\\features_hier_z_expert_prelogit.npz",
   "device": "cpu",
   "full": false,
   "max_samples_arg": 200,

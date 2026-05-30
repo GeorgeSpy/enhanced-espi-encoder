@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 from datetime import datetime, timezone
 from pathlib import Path
@@ -21,6 +22,7 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[2]
 PLAYGROUND = ROOT.parent
+PRIVATE_ESPI_ROOT = Path(os.environ["ESPI_PRIVATE_ROOT"]) if os.environ.get("ESPI_PRIVATE_ROOT") else None
 
 DEFAULT_OUT_DIR = Path("reports/encoder_baselines")
 
@@ -250,13 +252,11 @@ def inspect_manifest(path: Path | None) -> dict[str, Any]:
 
 
 def candidate_paths() -> dict[str, list[Path]]:
-    return {
+    candidates = {
         "manifest": [
             ROOT / "artifacts/manifests/manifest_v1_5class.npz",
             ROOT / "manifest/manifest_v1_5class.npz",
             PLAYGROUND / "ESPI_v62_v62A_Encoder_package_20260430_224510/core_v62_files/manifest/manifest_v1_5class.npz",
-            Path(r"C:\ESPI\manifest\manifest_v1_5class.npz"),
-            Path(r"C:\ESPI\manifest\manifest_v1.npz"),
         ],
         "v62a_features": [
             ROOT / "outputs/features_v62a_epoch25.npz",
@@ -270,19 +270,27 @@ def candidate_paths() -> dict[str, list[Path]]:
         "v62a_checkpoint": [
             ROOT / "artifacts/checkpoints/checkpoint_epoch25_20260211_035150.pt",
             PLAYGROUND / "ESPI_v62_v62A_Encoder_package_20260430_224510/core_v62_files/checkpoints/checkpoint_epoch25_20260211_035150.pt",
-            Path(r"C:\ESPI\checkpoints\checkpoint_epoch25_20260211_035150.pt"),
-            Path(r"C:\ESPI\logs\checkpoint_epoch25_20260211_035150.pt"),
         ],
         "hier_checkpoint": [
-            Path(r"C:\ESPI\logs\train_v6.2_opt\ckpt_phase2_expert.pt"),
             ROOT / "artifacts/checkpoints/ckpt_phase2_expert.pt",
         ],
         "image_roots": [
-            Path(r"C:\ESPI\data"),
             PLAYGROUND / "ESPI_v62_v62A_Encoder_package_20260430_224510/core_v62_files/data",
             ROOT / "data",
         ],
     }
+    if PRIVATE_ESPI_ROOT is not None:
+        candidates["manifest"].extend([
+            PRIVATE_ESPI_ROOT / "manifest/manifest_v1_5class.npz",
+            PRIVATE_ESPI_ROOT / "manifest/manifest_v1.npz",
+        ])
+        candidates["v62a_checkpoint"].extend([
+            PRIVATE_ESPI_ROOT / "checkpoints/checkpoint_epoch25_20260211_035150.pt",
+            PRIVATE_ESPI_ROOT / "logs/checkpoint_epoch25_20260211_035150.pt",
+        ])
+        candidates["hier_checkpoint"].append(PRIVATE_ESPI_ROOT / "logs/train_v6.2_opt/ckpt_phase2_expert.pt")
+        candidates["image_roots"].append(PRIVATE_ESPI_ROOT / "data")
+    return candidates
 
 
 def derive_status(found: bool, missing: list[str] | None = None, metadata_issue: bool = False) -> tuple[str, str]:
@@ -306,8 +314,11 @@ def build_audit(args: argparse.Namespace) -> tuple[list[dict[str, Any]], dict[st
     if args.v61_checkpoint:
         candidates["v61_checkpoint"] = [args.v61_checkpoint]
     else:
+        search_roots = [ROOT, PLAYGROUND]
+        if PRIVATE_ESPI_ROOT is not None:
+            search_roots.append(PRIVATE_ESPI_ROOT)
         candidates["v61_checkpoint"] = search_files(
-            [ROOT, PLAYGROUND, Path(r"C:\ESPI")],
+            search_roots,
             ["*v6*1*.pt", "*v61*.pt", "*v6*1*.pth", "*v61*.pth", "*v6*1*.ckpt", "*v61*.ckpt"],
             max_results=8,
         )

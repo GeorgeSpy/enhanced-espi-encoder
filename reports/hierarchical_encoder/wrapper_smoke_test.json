@@ -1,12 +1,12 @@
 {
   "created_utc": "2026-05-26T07:37:59.561030+00:00",
   "status": "pass",
-  "model_file": "C:\\Users\\George mini-PC\\Documents\\Playground\\enhanced-espi-encoder\\scripts\\v6_2\\espi_v6_2_fixed.py",
-  "checkpoint": "C:\\ESPI\\logs\\train_v6.2_opt\\ckpt_phase2_expert.pt",
-  "manifest": "C:\\Users\\George mini-PC\\Documents\\Playground\\ESPI_v62_v62A_Encoder_package_20260430_224510\\core_v62_files\\manifest\\manifest_v1_5class.npz",
+  "model_file": "<LOCAL_REPO_ROOT>\\scripts\\v6_2\\espi_v6_2_fixed.py",
+  "checkpoint": "<PRIVATE_ESPI_ROOT>\\logs\\train_v6.2_opt\\ckpt_phase2_expert.pt",
+  "manifest": "<PRIVATE_ESPI_PACKAGE_ROOT>\\core_v62_files\\manifest\\manifest_v1_5class.npz",
   "dependency_paths": [
-    "C:\\Users\\George mini-PC\\Documents\\Playground\\enhanced-espi-encoder\\external\\compat",
-    "C:\\Users\\George mini-PC\\Documents\\Playground\\ESPI_v62_v62A_Encoder_package_20260430_224510\\core_v62_files"
+    "<LOCAL_REPO_ROOT>\\external\\compat",
+    "<PRIVATE_ESPI_PACKAGE_ROOT>\\core_v62_files"
   ],
   "device": "cpu",
   "n_samples": 5,
@@ -18,11 +18,11 @@
     30
   ],
   "sample_paths": [
-    "C:\\ESPI\\data\\W01_ESPI_90db-PseudoNoisy_MATCH_v25\\0150Hz_90.0db.png",
-    "C:\\ESPI\\data\\W01_ESPI_90db-PseudoNoisy_MATCH_v25\\0320Hz_90.0db.png",
-    "C:\\ESPI\\data\\W01_ESPI_90db-PseudoNoisy_MATCH_v25\\0500Hz_90.0db.png",
-    "C:\\ESPI\\data\\W01_ESPI_90db-PseudoNoisy_MATCH_v25\\0550Hz_90.0db.png",
-    "C:\\ESPI\\data\\W01_ESPI_90db-PseudoNoisy_MATCH_v25\\0700Hz_90.0db.png"
+    "<PRIVATE_ESPI_ROOT>\\data\\W01_ESPI_90db-PseudoNoisy_MATCH_v25\\0150Hz_90.0db.png",
+    "<PRIVATE_ESPI_ROOT>\\data\\W01_ESPI_90db-PseudoNoisy_MATCH_v25\\0320Hz_90.0db.png",
+    "<PRIVATE_ESPI_ROOT>\\data\\W01_ESPI_90db-PseudoNoisy_MATCH_v25\\0500Hz_90.0db.png",
+    "<PRIVATE_ESPI_ROOT>\\data\\W01_ESPI_90db-PseudoNoisy_MATCH_v25\\0550Hz_90.0db.png",
+    "<PRIVATE_ESPI_ROOT>\\data\\W01_ESPI_90db-PseudoNoisy_MATCH_v25\\0700Hz_90.0db.png"
   ],
   "image_size": 64,
   "output_stats": {

@@ -1,7 +1,7 @@
 {
   "created_utc": "2026-05-27T14:16:19.558118+00:00",
-  "manifest": "C:\\Users\\George mini-PC\\Documents\\Playground\\ESPI_v62_v62A_Encoder_package_20260430_224510\\core_v62_files\\manifest\\manifest_v1_5class.npz",
-  "image_root": "C:\\ESPI\\data",
+  "manifest": "<PRIVATE_ESPI_PACKAGE_ROOT>\\core_v62_files\\manifest\\manifest_v1_5class.npz",
+  "image_root": "<PRIVATE_ESPI_ROOT>\\data",
   "out_dir": "outputs\\encoder_features_normalized_v001",
   "output_npz": "outputs\\encoder_features_normalized_v001\\features_spectral_descriptors.normalized.npz",
   "full": true,

@@ -1,7 +1,7 @@
 {
   "created_utc": "2026-05-26T07:25:08.735233+00:00",
-  "model_file": "C:\\Users\\George mini-PC\\Documents\\Playground\\enhanced-espi-encoder\\scripts\\v6_2\\espi_v6_2_fixed.py",
-  "checkpoint_path": "C:\\ESPI\\logs\\train_v6.2_opt\\ckpt_phase2_expert.pt",
+  "model_file": "<LOCAL_REPO_ROOT>\\scripts\\v6_2\\espi_v6_2_fixed.py",
+  "checkpoint_path": "<PRIVATE_ESPI_ROOT>\\logs\\train_v6.2_opt\\ckpt_phase2_expert.pt",
   "checkpoint_sha256": "ebb0a1ed05fc480b9e7f575800db1df8e7dffa027b75cc6bd59debdd81e39e00",
   "device": "cpu",
   "model_class": "v62_hierarchical_model_audit.EnhancedHybridPhysicsESPI_V6_2",

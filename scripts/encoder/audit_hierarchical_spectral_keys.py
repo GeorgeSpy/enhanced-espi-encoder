@@ -1,8 +1,27 @@
 import torch
+import argparse
+import os
 from pathlib import Path
 
-ckpt_path = Path(r"C:\ESPI\logs\train_v6.2_opt\ckpt_phase2_expert.pt")
-out_path = Path(r"reports\lefft_ablation_v001\HIERARCHICAL_CKPT_SPECTRAL_KEYS.txt")
+parser = argparse.ArgumentParser(description="Audit spectral/Fourier-like keys in a hierarchical checkpoint.")
+parser.add_argument(
+    "--checkpoint",
+    type=Path,
+    default=Path(os.environ["HIERARCHICAL_CKPT_PATH"]) if os.environ.get("HIERARCHICAL_CKPT_PATH") else None,
+    help="Path to the hierarchical checkpoint. Defaults to HIERARCHICAL_CKPT_PATH if set.",
+)
+parser.add_argument(
+    "--out",
+    type=Path,
+    default=Path(r"reports\lefft_ablation_v001\HIERARCHICAL_CKPT_SPECTRAL_KEYS.txt"),
+    help="Output report path.",
+)
+args = parser.parse_args()
+if args.checkpoint is None:
+    raise SystemExit("Provide --checkpoint or set HIERARCHICAL_CKPT_PATH.")
+
+ckpt_path = args.checkpoint
+out_path = args.out
 out_path.parent.mkdir(parents=True, exist_ok=True)
 
 try:
