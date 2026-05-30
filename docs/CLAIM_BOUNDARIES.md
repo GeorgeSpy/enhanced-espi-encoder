@@ -1,8 +1,10 @@
-# Claim Boundaries
+﻿# Claim Boundaries
 
-This document defines the supported and unsupported scientific claims for the frozen ESPI representation-audit evidence package.
+This document defines the supported, unsupported, and development-only scientific claims for the Enhanced ESPI Encoder repository.
 
-## Supported Claims
+The repository contains both a locked OLEN manuscript evidence release and active development work. The locked manuscript snapshot is tagged as `v0.9-olen-pre-submission-evidence`. The `main` branch may evolve beyond that snapshot.
+
+## Supported Claims in the Locked OLEN Evidence Release
 
 | Claim | Status | Evidence scope |
 |---|---|---|
@@ -30,7 +32,7 @@ This document defines the supported and unsupported scientific claims for the fr
 ## Architecture-Specific Boundaries
 
 - v6.1 is a reference frozen ResNet18-style baseline.
-- v6.2-A is the main reportable image-derived frozen ESPI encoder candidate.
+- v6.2-A is the main reportable image-derived frozen ESPI encoder candidate in the locked OLEN evidence release.
 - v6.2-A is not LeFFT-based and is not the hierarchical physics-aware branch.
 - Hierarchical v6.2 phase2 is a controlled physics-aware architecture comparison, not a validated Physics-Aligned Encoder.
 - Deterministic spectral descriptors are LeFFT-inspired controls, not a trained LeFFT model.
@@ -39,6 +41,23 @@ This document defines the supported and unsupported scientific claims for the fr
 
 The present five-class modal-label task is strongly frequency-structured. Frequency-only metadata controls exceed image-derived embeddings for the current label protocol. This does not invalidate the image-derived representation audit; it defines the information budget and motivates frequency-controlled, frequency-residual, or acoustic-response targets for future studies.
 
+## Development Claims vs Manuscript Claims
+
+This repository contains both locked manuscript evidence and active development work.
+
+A result is not considered manuscript-supported unless it has:
+
+- a reproducible script,
+- a sanitized report,
+- matched baseline comparison,
+- grouped validation where applicable,
+- claim-boundary entry,
+- release/tag association.
+
+Development branches may contain exploratory experiments that do not yet support manuscript claims. Exploratory code, negative results, prototype reports, or partial validations must not be promoted to manuscript-level claims until they satisfy the claim-promotion requirements above.
+
 ## Manuscript-Safe Central Claim
 
-The manuscript may state that v6.2-A is the strongest evaluated image-derived frozen ESPI representation under grouped board/material evaluation, while `frequency_hz` is the dominant metadata-only predictor for the current five-class modal-label protocol.
+The locked OLEN manuscript may state that v6.2-A is the strongest evaluated image-derived frozen ESPI representation under grouped board/material evaluation, while `frequency_hz` is the dominant metadata-only predictor for the current five-class modal-label protocol.
+
+Future manuscripts may promote additional claims only after the evidence is added to this document and associated with a release tag.
