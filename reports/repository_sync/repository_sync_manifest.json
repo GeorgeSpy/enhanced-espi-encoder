@@ -1,0 +1,52 @@
+{
+  "sync_name": "OLEN frozen ESPI representation evidence package sync",
+  "status": "prepared_not_pushed",
+  "created_files": [
+    "docs/EXPERIMENT_REGISTRY.md",
+    "docs/EVIDENCE_LEDGER.md",
+    "docs/ARTIFACT_POLICY.md",
+    "docs/templates/ARTIFACT_MANIFEST_TEMPLATE.csv",
+    "scripts/utils/sanitize_report_paths.py",
+    "scripts/publication/format_olen_submission.py",
+    "scripts/publication/make_uniform_appendix_tables.py",
+    "scripts/publication/enhance_representative_patterns.py",
+    "manuscripts/OLEN_ESPI_frozen_representation_submission.tex",
+    "manuscripts/cover_letter_draft.txt",
+    "manuscripts/highlights.txt",
+    "manuscripts/ALL_TABLES_S1_S7_1_8.md",
+    "manuscripts/figures/Figure_1_Representative_Patterns.pdf",
+    "manuscripts/figures/Figure_1_Representative_Patterns.png",
+    "manuscripts/figures/central_result_comparison.pdf",
+    "manuscripts/figures/central_result_comparison.png",
+    "manuscripts/figures/Figure_PCA_UMAP_Embeddings.pdf",
+    "manuscripts/figures/Figure_PCA_UMAP_Embeddings.png",
+    "manuscripts/figures/Figure_Confusion_Matrices_Board_LOBO.pdf",
+    "manuscripts/figures/Figure_Confusion_Matrices_Board_LOBO.png"
+  ],
+  "updated_files": [
+    "README.md",
+    "REPRODUCE.md",
+    "CLAIM_BOUNDARIES.md",
+    "docs/CLAIM_BOUNDARIES.md",
+    "docs/MANUSCRIPT_MAP.md",
+    "docs/REPRODUCE.md",
+    "docs/DATA_AVAILABILITY.md",
+    "docs/MODEL_ARCHITECTURE.md"
+  ],
+  "excluded_private_artifacts": [
+    "raw ESPI images",
+    "model checkpoints",
+    "full feature dumps",
+    "private manifests",
+    "local logs",
+    "intermediate outputs"
+  ],
+  "checks": {
+    "submission_package_files_exist": true,
+    "latex_graphics_resolve": true,
+    "local_paths_sanitized_in_small_reports": true,
+    "sanitization_replacements": 43,
+    "push_performed": false
+  },
+  "recommended_tag": "v0.9-frozen-espi-representation-evidence"
+}

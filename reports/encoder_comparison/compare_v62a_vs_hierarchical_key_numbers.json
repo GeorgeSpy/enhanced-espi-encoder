@@ -1,0 +1,67 @@
+{
+  "created_utc": "2026-05-26T11:09:27.055790+00:00",
+  "v62a": {
+    "encoder_name": "v6.2-A frozen encoder",
+    "architecture_role": "Official reportable 5-class baseline and primary frozen ESPI encoder candidate",
+    "checkpoint": "artifacts\\checkpoints\\checkpoint_epoch25_20260211_035150.pt",
+    "embedding_point": "MCDropoutClassifier.global_pool",
+    "embedding_dimension": 1280,
+    "knn_macro_f1": 0.93441252019111,
+    "linear_probe_macro_f1": 0.9284742775848847,
+    "prototype_macro_f1": 0.8641524644167206,
+    "board_lobo_mean_macro_f1": 0.9356408210770706,
+    "material_lomo_mean_macro_f1": 0.9348717330088938,
+    "source_report": "reports\\encoder\\FROZEN_ENCODER_TECHNICAL_REPORT.md",
+    "source_grouped_report": "reports\\encoder\\GROUPED_ENCODER_EVAL_SUMMARY.md",
+    "source_key_numbers": "reports/encoder/encoder_report_key_numbers.json",
+    "source_grouped_key_numbers": "reports/encoder/grouped_encoder_key_numbers.json"
+  },
+  "hierarchical": {
+    "encoder_name": "hierarchical v6.2 phase2 expert",
+    "architecture_role": "Controlled physics-aware architectural candidate branch",
+    "checkpoint": "ebb0a1ed05fc480b9e7f575800db1df8e7dffa027b75cc6bd59debdd81e39e00",
+    "embedding_point": "z_expert_prelogit / z_arcface_input from outputs['embeddings']",
+    "embedding_dimension": 512,
+    "knn_macro_f1": 0.4017060761922714,
+    "linear_probe_macro_f1": 0.29282189300229006,
+    "prototype_macro_f1": 0.2655281444589326,
+    "board_lobo_mean_macro_f1": 0.26406063562183807,
+    "board_lobo_best_method": "balanced_logistic_regression",
+    "material_lomo_mean_macro_f1": 0.24469544501204776,
+    "material_lomo_best_method": "knn_cosine_k10",
+    "quality": {
+      "n_samples": 12944,
+      "embedding_dim": 512,
+      "nan_count": 0,
+      "inf_count": 0,
+      "duplicate_paths": 0,
+      "nonzero_variance": true,
+      "consistent_embedding_shape": true,
+      "metadata_lengths_match": true,
+      "train_val_path_overlap_count": 0,
+      "train_val_split_group_overlap_count": 13
+    },
+    "metadata_sources": {
+      "board": "derived_from_distribution_group_or_path",
+      "material": "saved_with_board_path_fallback",
+      "domain": "derived_from_distribution_group_or_path",
+      "split_group": "fallback_distribution_group"
+    },
+    "source_key_numbers": "reports\\hierarchical_encoder\\audit_v001\\hierarchical_audit_key_numbers.json",
+    "source_report": "reports\\hierarchical_encoder\\audit_v001\\HIERARCHICAL_ENCODER_AUDIT_SUMMARY.md"
+  },
+  "decision": {
+    "primary_reportable_frozen_encoder": "v6.2-A",
+    "hierarchical_status": "technically valid but not superior in current frozen embedding evaluation",
+    "validated_physics_aligned_encoder_claim_supported": false
+  },
+  "warnings": [
+    "Requested report not found: reports\\encoder\\ENCODER_TECHNICAL_REPORT_GR.md",
+    "Using fallback report: reports\\encoder\\FROZEN_ENCODER_TECHNICAL_REPORT.md",
+    "Hierarchical metadata caveat: board/split_group were recovered from distribution_group/path because the NPZ stored them as unknown."
+  ],
+  "outputs": {
+    "report": "reports\\encoder_comparison\\COMPARE_V62A_vs_HIERARCHICAL.md",
+    "key_numbers": "reports\\encoder_comparison\\compare_v62a_vs_hierarchical_key_numbers.json"
+  }
+}
