@@ -27,3 +27,7 @@ logs/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Local manuscript working drafts
+manuscript/
+manuscripts/FROZEN_REPRESENTATION_AUDITS_DRAFT_*.md
