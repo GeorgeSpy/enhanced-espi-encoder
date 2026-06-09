@@ -18,18 +18,32 @@ Completed evidence blocks:
 
 Stage 0 supports the locked OLEN claim that v6.2-A is the strongest evaluated image-derived frozen ESPI representation under grouped board/material evaluation, while `frequency_hz` is the dominant metadata-only predictor for the current five-class modal-label task.
 
-## Stage 1 — Learned Spectral / LeFFT Ablation
+## Stage 1 — Learned Spectral / LeFFT Diagnostics
 
-Goal: test learned spectral modules under matched representation-audit protocols.
+Status: archived development evidence.
 
-Planned work:
+Outcome:
 
-- Implement trained LeFFT / spectral module under matched protocols.
-- Compare frequency-only, v6.2-A, LeFFT, frequency+LeFFT, and v6.2-A+LeFFT conditions.
-- Test grouped Board LOBO and Material LOMO.
-- Avoid LeFFT superiority claims until matched ablations support them.
+- H2 standalone CE-only LeFFT v001/v002 did not pass the grouped Board LOBO threshold.
+- H3 auxiliary LeFFT trained safely but did not produce transfer-positive representation evidence.
+- No LeFFT superiority claim is supported.
+- No H3.2 fusion run is justified at this stage.
+- Further simple scaling is not recommended.
+
+## Stage 1B — Conditional Representation-Aligned Rescue
+
+Status: optional / planned-conditional.
+
+Possible future work:
+
+- Teacher-guided distillation from frozen v6.2-A.
+- Stronger backbone or representation head redesign.
+- Representation-aligned training under explicit grouped go/no-go criteria.
+- H3.2 no-harm fusion design-only, not execution, unless transfer-positive evidence and no-harm protocol exist.
 
 ## Stage 2 — Acoustic-Response Prediction
+
+Status: next substantive research direction.
 
 Goal: test whether ESPI representations predict acoustic-response targets beyond metadata-only controls.
 
@@ -62,3 +76,17 @@ Planned work:
 - External-laboratory or cross-setup evaluation if data become available.
 - Cross-setup metadata audits and data-sharing policy updates.
 - Release-tagged evidence snapshots for any promoted external-validation claims.
+
+<!-- BEGIN H2_H3_ARCHIVED_LEFFT_ROADMAP -->
+## Archived LeFFT Development Tracks
+
+- H2 standalone CE-only LeFFT track is archived.
+- H2.5 remains blocked.
+- H3.1 auxiliary LeFFT track is archived.
+- H3.2 run remains blocked.
+- H3.2 no-harm fusion design-only is optional.
+- No further simple H2/H3 scaling is recommended.
+- Future LeFFT work requires stronger objectives, anchored/fusion design, downstream acoustic validation, or new transfer-positive evidence.
+- Next high-value direction: acoustic-response target acquisition and downstream validation.
+- OLEN submission remains focused on H0/H1/v6.2-A locked evidence.
+<!-- END H2_H3_ARCHIVED_LEFFT_ROADMAP -->

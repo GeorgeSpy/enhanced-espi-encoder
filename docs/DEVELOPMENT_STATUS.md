@@ -51,3 +51,31 @@ Recommended branch names for future work:
 - `dev/external-validation`
 
 The `main` branch remains evolving development history. The existing tag `v0.9-olen-pre-submission-evidence` remains the locked OLEN evidence snapshot.
+
+<!-- BEGIN H2_H3_ARCHIVED_DEVELOPMENT_STATUS -->
+## Archived H2/H3 LeFFT Development Tracks
+
+### H2 Clean LeFFT Standalone Track
+
+Status: completed and archived as a negative diagnostic development track.
+
+Outcome:
+
+- Design, module skeleton, synthetic smoke tests, physics-loss tests, and pair audits completed.
+- Grouped transfer failed under H2.4B and H2.4C.
+- H2.5 remains blocked.
+- No further standalone CE-only H2 scaling is recommended.
+
+### H3 LeFFT Auxiliary Track
+
+Status: completed and archived as a diagnostic development track.
+
+Outcome:
+
+- Real-data Phase-1 auxiliary training mechanics passed.
+- Safety guardrails passed.
+- Representation transfer evidence is insufficient or negative.
+- No further simple scaling is recommended.
+- H3.2 no-harm fusion design-only is optional; H3.2 run remains blocked.
+- Acoustic-response target acquisition remains a future research direction.
+<!-- END H2_H3_ARCHIVED_DEVELOPMENT_STATUS -->

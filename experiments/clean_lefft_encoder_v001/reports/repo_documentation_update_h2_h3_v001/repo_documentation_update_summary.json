@@ -1,0 +1,22 @@
+{
+  "repo_doc_update_completed": true,
+  "created_at_utc": "2026-06-09T10:11:00.762227+00:00",
+  "output_report_dir": "experiments/clean_lefft_encoder_v001/reports/repo_documentation_update_h2_h3_v001",
+  "h2_docs_created": true,
+  "h3_docs_created": true,
+  "shared_docs_updated": true,
+  "readme_changed": true,
+  "olen_manuscript_changed": false,
+  "raw_data_added": false,
+  "checkpoints_added": false,
+  "private_manifests_added": false,
+  "h2_final_status": "standalone_ce_only_grouped_transfer_failed",
+  "h3_final_status": "mechanics_pass_safety_pass_transfer_insufficient_or_negative",
+  "h2_5_ready": false,
+  "h3_1l_ready": false,
+  "h3_2_design_ready": true,
+  "h3_2_ready": false,
+  "no_further_simple_scaling_recommended": true,
+  "final_repo_decision": "H2/H3 LeFFT development work is indexed as development-only diagnostic evidence and does not alter the locked OLEN v6.2-A claim boundary.",
+  "warnings": []
+}

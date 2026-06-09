@@ -36,6 +36,8 @@ Use `main` for current development. This layer may contain evolving documentatio
 - representation-aligned training,
 - external validation.
 
+Completed H2/H3 LeFFT development reports are indexed in `docs/H2_TRACK_STATUS.md` and `docs/H3_TRACK_STATUS.md` and remain development-only diagnostic evidence; they do not alter the locked OLEN v6.2-A claim boundary.
+
 Exploratory development does not automatically create manuscript-supported claims. Manuscript-level claims require matched baselines, grouped validation where applicable, information-budget controls, sanitized reports, reproducible scripts, claim-boundary updates, and release/tag association.
 
 ## Repository Status

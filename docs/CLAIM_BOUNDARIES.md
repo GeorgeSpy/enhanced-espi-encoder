@@ -61,3 +61,43 @@ Development branches may contain exploratory experiments that do not yet support
 The locked OLEN manuscript may state that v6.2-A is the strongest evaluated image-derived frozen ESPI representation under grouped board/material evaluation, while `frequency_hz` is the dominant metadata-only predictor for the current five-class modal-label protocol.
 
 Future manuscripts may promote additional claims only after the evidence is added to this document and associated with a release tag.
+
+<!-- BEGIN H2_H3_DEVELOPMENT_ONLY_BOUNDARIES -->
+## Development-only H2 Clean LeFFT Track
+
+### Supported
+
+- Standalone CE-only clean LeFFT variants failed grouped LOBO threshold.
+- H2.4C best condition S2_v002_W0 reached LOBO Macro-F1 0.294294 versus the 0.608 threshold.
+- H2.5 remains blocked.
+- H2 results motivate anchored/fusion/distillation or stronger domain-invariant objectives.
+
+### Unsupported
+
+- LeFFT generally failed.
+- Physics-informed ESPI encoding failed.
+- Acoustic-response prediction failed.
+- Physics losses failed on real data.
+- SupCon failed.
+- v6.2-A fine-tuning failed.
+- H2 supports any OLEN core claim.
+
+## Development-only H3 LeFFT Auxiliary Track
+
+### Supported
+
+- Stable LeFFT auxiliary Phase-1 training is feasible on real ESPI data.
+- H3 guardrails and audit infrastructure worked.
+- H3.1K showed board-local consistency increase under scaled J1.
+- H3.1K degraded cross-board same-class geometry.
+- H3.2 run remains blocked.
+
+### Unsupported
+
+- LeFFT improves v6.2-A.
+- H3.1 objectives improve grouped transfer.
+- Board invariance achieved.
+- Physics-informed representation validated.
+- Acoustic-response prediction tested.
+- H3.2 fusion ready.
+<!-- END H2_H3_DEVELOPMENT_ONLY_BOUNDARIES -->
