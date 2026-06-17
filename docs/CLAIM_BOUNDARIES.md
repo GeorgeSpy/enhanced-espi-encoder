@@ -1,76 +1,92 @@
-﻿# Claim Boundaries
+# Claim Boundaries
 
-This document defines the supported, unsupported, and development-only scientific claims for the Enhanced ESPI Encoder repository.
+This document defines supported, historical/diagnostic, unsupported, and future-gated claims for the Enhanced ESPI Encoder repository after the v62 forensic audits, cross-model audits, visual leakage audit, and H2/H3 consolidation.
 
-The repository contains both a locked OLEN manuscript evidence release and active development work. The locked manuscript snapshot is tagged as `v0.9-olen-pre-submission-evidence`. The `main` branch may evolve beyond that snapshot.
+The repository contains a historical locked OLEN evidence release and active v32 PhD development. The locked manuscript snapshot remains tagged as `v0.9-olen-pre-submission-evidence`, but it is not the current active strong-representation submission framing.
 
-## Supported Claims in the Locked OLEN Evidence Release
+## Post-forensic v32 Claim Boundaries
 
-| Claim | Status | Evidence scope |
+### Supported
+
+| Claim | Status | Scope |
 |---|---|---|
-| v6.2-A is the strongest evaluated image-derived frozen ESPI representation under grouped board/material evaluation. | supported | unified encoder baseline evaluation, paired board/material deltas, fixed k=10 protocol |
-| `frequency_hz` is the dominant metadata-only predictor for the present five-class modal-label task. | supported | frequency-only and frequency-fusion controls |
-| v6.2-A adds complementary morphology information in localized frequency-ambiguous `1_2` / `2_1` cases. | supported as targeted diagnostic | overlap-pair and frequency-residual correction analyses |
-| v6.2-A grouped advantage persists under fold-local PCA dimension matching. | supported | PCA projections to 512, 256, and 128 dimensions |
-| v6.2-A grouped advantage persists under balanced class/material/frequency subset controls. | supported | class-balanced, class-material-balanced, and class-material-frequency-matched subset evaluation |
-| Quantitative embedding geometry supports stronger class structure for v6.2-A than v6.1. | supported | Silhouette, Davies-Bouldin, intra/inter distance ratio, same-class nearest-neighbor consistency |
-| Hierarchical v6.2 phase2 is technically valid but not superior as a frozen representation source. | supported | hierarchical load audit, extraction audit, and frozen embedding comparison |
-| Deterministic FFT/spectral descriptors do not support a LeFFT superiority claim. | supported as supplementary control | spectral descriptor extraction and ablation evaluation |
+| v6.2-A is the strongest available historical image-derived frozen ESPI baseline in this repository. | supported | historical WP1 diagnostic baseline only |
+| The current five-class modal-label protocol is strongly frequency-structured. | supported | frequency-only LOBO Macro-F1 approximately `0.932677` in the primary-safe forensic audit |
+| H2/H3 LeFFT development results are archived diagnostic evidence and do not change the OLEN decision. | supported | H2/H3 consolidation reports |
+| Clean ROI/no-overlay controls are required before promoting future image-derived morphology claims. | supported | visual/domain leakage audit and cleaned ROI rerun |
+| The active PhD direction is measurement-consistent representation validation via `M_ESPI` and independent response targets. | supported as roadmap | future evidence still required |
 
-## Unsupported or Out-of-Scope Claims
+### Historical / Diagnostic Only
+
+| Claim or artifact | Classification | Allowed use |
+|---|---|---|
+| `z_ESPI^hist` | historical/diagnostic only | v6.2-A frozen embedding for forensic baselines and historical comparison |
+| Targeted exact-frequency morphology diagnostics | historical/local/underpowered only | local diagnostic, not global morphology recognition |
+| Locked OLEN v6.2-A grouped tables | historical evidence semantics | audit trail and WP1 methodological motivation |
+| H2 standalone LeFFT results | development-only diagnostic | negative grouped-transfer development evidence |
+| H3 auxiliary LeFFT results | development-only diagnostic | mechanics/safety evidence; insufficient or negative transfer evidence |
+
+### Unsupported
 
 | Claim | Status |
 |---|---|
-| Validated Physics-Aligned ESPI Encoder | not claimed |
-| Acoustic-response prediction | future work |
-| LeFFT superiority | not claimed |
-| Neural operator, PNO, FNO, or DeepONet implementation | not included |
-| Full retrained CNN LOBO/LOMO generalization | not claimed |
-| External-laboratory generalization | not yet evaluated |
-| Metamaterials-ready encoder | not claimed |
+| Global frequency-independent ESPI morphology recognition from the current five-class labels | unsupported |
+| Independent topology labels for the current five-class task | unsupported |
+| Strong material generalization from LOMO | unsupported because material/board provenance is not cleanly separable |
+| LeFFT/H3 rescue of the current modal-label task | unsupported |
+| H3.2 fusion ready to run | unsupported |
+| Validated physics-aware ESPI representation | unsupported |
+| Acoustic-response prediction | unsupported |
+| Clean image-derived morphology signal from historical overlaid images | unsupported |
 
-## Architecture-Specific Boundaries
+### Future / Gated
 
-- v6.1 is a reference frozen ResNet18-style baseline.
-- v6.2-A is the main reportable image-derived frozen ESPI encoder candidate in the locked OLEN evidence release.
-- v6.2-A is not LeFFT-based and is not the hierarchical physics-aware branch.
-- Hierarchical v6.2 phase2 is a controlled physics-aware architecture comparison, not a validated Physics-Aligned Encoder.
-- Deterministic spectral descriptors are LeFFT-inspired controls, not a trained LeFFT model.
+| Future claim | Required gate |
+|---|---|
+| `z_ESPI^ROI` supports image-derived information | clean ROI/no-overlay dataset, visual leakage controls, grouped validation, and frequency/metadata baselines |
+| `z_ESPI^MC` supports measurement-consistent ESPI representation learning | `M_ESPI` operator specification, synthetic validation, differentiability tests, and physical/reference-field validation |
+| `M_ESPI` is a useful observation operator | Bessel `J_0^2` kernel tests, probabilistic likelihood tests, gradient checks, and comparison against SLDV/FEM/reference fields |
+| ESPI adds value for independent response targets | B0-B6 response-target baselines with B6 residual improvement under grouped-OOD evaluation |
+| Acoustic or response prediction | paired response measurements, target feasibility screening, frequency-coordinate baseline failure or residual headroom, and grouped-OOD validation |
 
-## Frequency Information Budget
+## Historical Locked OLEN Evidence Semantics, Not Current Active Submission Framing
 
-The present five-class modal-label task is strongly frequency-structured. Frequency-only metadata controls exceed image-derived embeddings for the current label protocol. This does not invalidate the image-derived representation audit; it defines the information budget and motivates frequency-controlled, frequency-residual, or acoustic-response targets for future studies.
+The table below preserves the older locked OLEN evidence semantics for historical reproducibility. It must not be read as the current v32 active manuscript framing.
+
+| Claim | Historical status | Current post-forensic interpretation |
+|---|---|---|
+| v6.2-A is the strongest evaluated image-derived frozen ESPI representation under grouped board/material evaluation. | supported in locked snapshot | retained as historical baseline language, not global morphology proof |
+| `frequency_hz` is the dominant metadata-only predictor for the present five-class modal-label task. | supported | strengthened by forensic audit; central limitation |
+| v6.2-A adds complementary morphology information in localized frequency-ambiguous cases. | targeted diagnostic | local/underpowered only; not a global claim |
+| v6.2-A grouped advantage persists under fold-local PCA dimension matching. | historical diagnostic | useful audit record; not sufficient for beyond-frequency morphology |
+| v6.2-A grouped advantage persists under balanced class/material/frequency subset controls. | historical diagnostic | constrained by label provenance, frequency dominance, and visual/domain leakage risks |
+| Quantitative embedding geometry supports stronger class structure for v6.2-A than v6.1. | historical diagnostic | domain/frequency organization must be reported; not sufficient for global morphology |
+| Hierarchical v6.2 phase2 is technically valid but not superior as a frozen representation source. | supported | remains historical model-family audit |
+| Deterministic FFT/spectral descriptors do not support a LeFFT superiority claim. | supplementary control | remains negative-control evidence |
 
 ## Development Claims vs Manuscript Claims
 
-This repository contains both locked manuscript evidence and active development work.
+A result is not manuscript-supported unless it has:
 
-A result is not considered manuscript-supported unless it has:
+1. a reproducible script,
+2. a sanitized report,
+3. matched baseline comparison,
+4. grouped validation where applicable,
+5. frequency/metadata/numerical information-budget controls where applicable,
+6. leakage and ROI controls where image pixels are used,
+7. claim-boundary entry,
+8. release/tag association.
 
-- a reproducible script,
-- a sanitized report,
-- matched baseline comparison,
-- grouped validation where applicable,
-- claim-boundary entry,
-- release/tag association.
+Development branches may contain exploratory experiments, negative results, prototype reports, or partial validations. These must not be promoted to manuscript-level claims until the promotion requirements above are satisfied.
 
-Development branches may contain exploratory experiments that do not yet support manuscript claims. Exploratory code, negative results, prototype reports, or partial validations must not be promoted to manuscript-level claims until they satisfy the claim-promotion requirements above.
-
-## Manuscript-Safe Central Claim
-
-The locked OLEN manuscript may state that v6.2-A is the strongest evaluated image-derived frozen ESPI representation under grouped board/material evaluation, while `frequency_hz` is the dominant metadata-only predictor for the current five-class modal-label protocol.
-
-Future manuscripts may promote additional claims only after the evidence is added to this document and associated with a release tag.
-
-<!-- BEGIN H2_H3_DEVELOPMENT_ONLY_BOUNDARIES -->
 ## Development-only H2 Clean LeFFT Track
 
 ### Supported
 
-- Standalone CE-only clean LeFFT variants failed grouped LOBO threshold.
-- H2.4C best condition S2_v002_W0 reached LOBO Macro-F1 0.294294 versus the 0.608 threshold.
+- Standalone CE-only clean LeFFT variants failed the grouped LOBO threshold.
+- H2.4C best condition S2_v002_W0 reached LOBO Macro-F1 `0.294294` versus the `0.608` threshold.
 - H2.5 remains blocked.
-- H2 results motivate anchored/fusion/distillation or stronger domain-invariant objectives.
+- H2 results motivate redesign, distillation, anchored/fusion design, or stronger domain-invariant objectives if future work explicitly reopens LeFFT.
 
 ### Unsupported
 
@@ -96,8 +112,7 @@ Future manuscripts may promote additional claims only after the evidence is adde
 
 - LeFFT improves v6.2-A.
 - H3.1 objectives improve grouped transfer.
-- Board invariance achieved.
-- Physics-informed representation validated.
-- Acoustic-response prediction tested.
-- H3.2 fusion ready.
-<!-- END H2_H3_DEVELOPMENT_ONLY_BOUNDARIES -->
+- Board invariance was achieved.
+- Physics-informed representation was validated.
+- Acoustic-response prediction was tested.
+- H3.2 fusion is ready.

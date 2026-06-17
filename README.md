@@ -1,101 +1,105 @@
-﻿# Enhanced ESPI Encoder
+# Enhanced ESPI Encoder
 
-This repository is the ongoing research and development home for the Enhanced ESPI Encoder project. It tracks code, documentation, sanitized reports, manuscript-support artifacts, and reproducibility records for image-derived ESPI representation research.
+This repository is the research and development home for the Enhanced ESPI Encoder project. It now contains three clearly separated layers:
 
-The repository contains one locked paper-evidence milestone:
+1. a historical locked WP1 OLEN evidence snapshot,
+2. archived H2/H3 LeFFT diagnostic development evidence,
+3. the active v32 PhD roadmap centered on measurement-consistent ESPI representations and independent response targets.
 
-- `v0.9-olen-pre-submission-evidence`: frozen evidence snapshot for the OLEN frozen ESPI representation-audit manuscript.
+The repository does not track raw ESPI images, model checkpoints, full feature dumps, private manifests, or large binary artifacts.
 
-The `main` branch remains active for future encoder, learned spectral / LeFFT, acoustic-response, physics-aware representation, and external-validation work. The OLEN paper is one locked milestone within a broader research-development trajectory.
+## Current Repository Status
 
-The repository does not track raw ESPI images, model checkpoints, full feature dumps, or private binary artifacts.
-
-## How to Read This Repository
-
-### 1. Frozen paper evidence layer
-
-Use the release tag `v0.9-olen-pre-submission-evidence` when reproducing or auditing the locked OLEN manuscript evidence package. This layer includes:
-
-- reproducible reports,
-- final tables,
-- final figures,
-- evaluation and audit scripts,
-- claim-boundary documentation,
-- stable release tag: `v0.9-olen-pre-submission-evidence`.
-
-The locked paper-evidence layer supports grouped frozen ESPI representation auditing, frequency-controlled interpretation, dimensionality controls, balanced-subset controls, targeted frequency-overlap diagnostics, and embedding-geometry diagnostics.
-
-### 2. Ongoing development layer
-
-Use `main` for current development. This layer may contain evolving documentation and future work for:
-
-- learned spectral modules,
-- LeFFT ablations,
-- acoustic-response prediction,
-- physics-aware representations,
-- representation-aligned training,
-- external validation.
-
-Completed H2/H3 LeFFT development reports are indexed in `docs/H2_TRACK_STATUS.md` and `docs/H3_TRACK_STATUS.md` and remain development-only diagnostic evidence; they do not alter the locked OLEN v6.2-A claim boundary.
-
-Exploratory development does not automatically create manuscript-supported claims. Manuscript-level claims require matched baselines, grouped validation where applicable, information-budget controls, sanitized reports, reproducible scripts, claim-boundary updates, and release/tag association.
-
-## Repository Status
-
-| Branch / Tag | Purpose | Stability |
+| Layer | Purpose | Current status |
 |---|---|---|
-| `main` | Active development of Enhanced ESPI Encoder | evolving |
-| `v0.9-olen-pre-submission-evidence` | Frozen OLEN manuscript evidence package | locked |
-| future `v1.0-olen-submitted` | Exact submitted manuscript snapshot | planned |
-| future `dev/lefft-ablation` | Learned spectral / LeFFT ablation work | planned |
-| future `dev/acoustic-response` | Acoustic-response prediction validation | planned |
+| Historical OLEN / WP1 evidence | Locked forensic evidence around v6.2-A frozen ESPI representations | retained as historical and diagnostic evidence |
+| H2/H3 LeFFT development | Standalone and auxiliary LeFFT diagnostics | archived as development-only evidence |
+| Active v32 roadmap | Measurement-consistent ESPI representation learning and response-target validation | active direction |
 
-## Current Locked Evidence Snapshot
+The release tag `v0.9-olen-pre-submission-evidence` is a historical locked WP1 evidence snapshot. It remains useful for forensic review and reproducibility, but it is no longer the active strong standalone representation-submission path.
 
-The following values describe the frozen OLEN evidence snapshot and must not be changed without a new tagged release.
+The previous planned `v1.0-olen-submitted` milestone is deprecated as the active next milestone. Any future manuscript snapshot must be based on the post-forensic claim boundaries in `docs/CLAIM_BOUNDARIES.md`.
 
-- Dataset: 12,944 ESPI samples.
-- Boards: C01, C02, C03, W01, W02, W03.
-- Materials: carbon and wood.
-- Task: five-class modal-label protocol.
-- Coverage: all boards and both materials contain all five modal classes.
+## Current Scientific Direction
 
-| Condition | Stratified Macro-F1 | Board LOBO Macro-F1 | Material LOMO Macro-F1 |
-|---|---:|---:|---:|
-| v6.1, fixed k=10 | 93.65% | 87.10% | 86.33% |
-| v6.2-A, fixed k=10 | 92.78% | 93.56% | 93.49% |
-| frequency-only | 98.67% | 97.49% | 94.09% |
-| frequency + v6.2-A | 96.75% | 94.79% | 94.50% |
+The active PhD direction is no longer "show that the current five-class modal-label task proves frequency-independent morphology recognition." The active direction is:
 
-## Locked Methodological Hardening
+- define a probabilistic differentiable ESPI observation operator, `M_ESPI`;
+- distinguish historical, clean-ROI, and measurement-consistent representations:
+  - `z_ESPI^hist`: historical v6.2-A frozen embedding, diagnostic only;
+  - `z_ESPI^ROI`: clean ROI/no-overlay candidate embedding for response-target tests;
+  - `z_ESPI^MC`: future measurement-consistent representation constrained by `M_ESPI`;
+- build clean ROI/no-overlay image controls before promoting image-derived representation claims;
+- screen independent WP2 response targets with frequency-coordinate, metadata, and numerical/FEM baselines;
+- use B0-B6 information-budget controls, with B6 residual response prediction as the decisive validation gate.
 
-- v6.2-A grouped advantage persists under fold-local PCA dimension matching to 512, 256, and 128 components.
-- v6.2-A provides complementary morphology information in the targeted `1_2` / `2_1` frequency-overlap analysis.
-- v6.2-A grouped advantage persists under class-balanced, class-material-balanced, and class-material-frequency-matched subset controls.
-- Quantitative embedding-geometry diagnostics support stronger class structure and cross-group consistency for v6.2-A.
-- Deterministic spectral descriptors are included only as supplementary controls and do not support a LeFFT superiority claim.
+`M_ESPI` is the planned core artifact: a probabilistic differentiable ESPI observation/measurement operator based on the time-averaged ESPI `J_0^2` Bessel-kernel observation model.
+
+## Historical OLEN / WP1 Evidence
+
+The locked OLEN evidence remains historically useful because it documents grouped representation audits, frequency controls, dimensionality controls, balanced-subset controls, visual/metadata risks, and forensic limitations.
+
+Key post-forensic interpretation:
+
+- v6.2-A remains the strongest available historical image-derived frozen baseline.
+- The current five-class modal-label protocol is strongly frequency-structured.
+- Frequency-only LOBO Macro-F1 is approximately `0.932677` in the primary-safe forensic audit.
+- v6.2-A does not support a global frequency-independent morphology-recognition claim.
+- Clean LOMO/material generalization is not supported because material and board provenance are not cleanly separable.
+- Exact-frequency morphology diagnostics are local/underpowered and cannot support global morphology recognition.
+
+Older locked numerical OLEN evidence is retained as historical context, not as current active submission framing.
+
+## Archived H2/H3 LeFFT Diagnostics
+
+H2 and H3 remain development-only diagnostic evidence.
+
+- H2 standalone CE-only LeFFT variants failed the grouped LOBO gate.
+- H2.5 remains blocked.
+- H3 auxiliary LeFFT Phase-1 training was mechanically stable but transfer-insufficient or negative.
+- H3.2 fusion remains blocked.
+- H2/H3 do not rescue the current frequency-structured modal-label task.
+- H2/H3 do not support claims of LeFFT superiority, validated physics-aware representation, or acoustic-response prediction.
+
+See:
+
+- `docs/H2_TRACK_STATUS.md`
+- `docs/H3_TRACK_STATUS.md`
+- `docs/LEFFT_DEVELOPMENT_SUMMARY.md`
+
+## v32 Documentation Entry Points
+
+- `docs/CLAIM_BOUNDARIES.md`: post-forensic claim boundaries and historical OLEN semantics.
+- `docs/ROADMAP.md`: active v32 M_ESPI / response-target roadmap.
+- `docs/DEVELOPMENT_STATUS.md`: current development status and claim-promotion policy.
+- `docs/Z_ESPI_SEMANTICS.md`: `z_ESPI^hist`, `z_ESPI^ROI`, and `z_ESPI^MC` semantics.
+- `docs/MESPI_OPERATOR_SPEC.md`: planned `M_ESPI` observation-operator specification.
+- `docs/CLEAN_ROI_REQUIREMENTS.md`: clean ROI/no-overlay requirements.
+- `docs/WP2_RESPONSE_TARGET_SCREENING.md`: WP2 response-target gates.
+- `docs/B0_B6_INFORMATION_BUDGET.md`: information-budget baseline ladder.
+- `docs/EXPERIMENT_REGISTRY.md`: locked, archived, and future experiment registry.
 
 ## Claim Boundary
 
-The central locked OLEN claim is that v6.2-A is the strongest evaluated image-derived frozen ESPI representation under grouped board/material evaluation. The current five-class modal-label task remains strongly frequency-structured, and `frequency_hz` is the dominant metadata-only predictor.
+This repository does not currently claim:
 
-This repository does not claim acoustic-response prediction, a validated Physics-Aligned ESPI Encoder, LeFFT superiority, neural-operator implementation, full retrained CNN LOBO/LOMO generalization, or external-laboratory generalization.
+- global frequency-independent ESPI morphology recognition,
+- independent topology labels for the current five-class task,
+- strong clean material generalization from LOMO,
+- validated physics-aware ESPI representation,
+- LeFFT superiority,
+- H3.2 fusion readiness,
+- acoustic-response prediction,
+- neural/operator-model validation.
 
-Development branches may explore these directions, but exploratory results remain development evidence until they satisfy the claim-promotion policy in `docs/DEVELOPMENT_STATUS.md` and `docs/CLAIM_BOUNDARIES.md`.
+Future image-derived representation claims require clean ROI/no-overlay images, visual leakage controls, grouped validation, frequency/metadata/numerical baselines, residual B6 testing, sanitized reports, reproducible scripts, and explicit claim-boundary updates.
 
 ## Repository Guide
 
 - `scripts/encoder/`: feature extraction, normalized-schema utilities, audits, hardening controls, and table generation.
-- `docs/ROADMAP.md`: staged development roadmap beyond the locked OLEN milestone.
-- `docs/DEVELOPMENT_STATUS.md`: locked evidence, active development areas, and claim-promotion policy.
-- `docs/CLAIM_BOUNDARIES.md`: supported, unsupported, and development-only claims.
-- `docs/MANUSCRIPT_MAP.md`: final manuscript table/figure/evidence mapping for the locked OLEN package.
-- `docs/REPRODUCE.md`: layered reproduction guide using private-artifact placeholders.
-- `docs/DATA_AVAILABILITY.md`: data and review-artifact release policy.
-- `docs/EXPERIMENT_REGISTRY.md`: locked and planned experiment registry.
-- `docs/EVIDENCE_LEDGER.md`: manuscript-claim to evidence-artifact map.
+- `docs/`: claim boundaries, roadmap, status, evidence maps, operator specs, and reproducibility documentation.
 - `reports/`: small CSV/JSON/Markdown evidence summaries.
-- `manuscripts/`: final OLEN submission source and figures.
+- `manuscripts/`: historical OLEN manuscript source and figures.
 
 ## Private Artifacts
 

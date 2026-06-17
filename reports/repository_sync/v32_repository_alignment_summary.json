@@ -1,0 +1,43 @@
+{
+  "update_completed": true,
+  "files_updated": [
+    "README.md",
+    "docs/CLAIM_BOUNDARIES.md",
+    "docs/DEVELOPMENT_STATUS.md",
+    "docs/ROADMAP.md",
+    "docs/EXPERIMENT_REGISTRY.md",
+    "docs/MANUSCRIPT_MAP.md"
+  ],
+  "files_created": [
+    "docs/PROPOSAL_V32_MAP.md",
+    "docs/WP1_FORENSIC_EVIDENCE_MAP.md",
+    "docs/MESPI_OPERATOR_EVIDENCE_MAP.md",
+    "docs/Z_ESPI_SEMANTICS.md",
+    "docs/MESPI_OPERATOR_SPEC.md",
+    "docs/CLEAN_ROI_REQUIREMENTS.md",
+    "docs/WP2_RESPONSE_TARGET_SCREENING.md",
+    "docs/B0_B6_INFORMATION_BUDGET.md",
+    "reports/repository_sync/V32_REPOSITORY_ALIGNMENT_REPORT.md",
+    "reports/repository_sync/v32_repository_alignment_summary.json"
+  ],
+  "olen_submission_deprecated_as_strong_representation_paper": true,
+  "v62a_status": "historical_image_derived_frozen_baseline_diagnostic_only",
+  "h2_h3_status": "archived_development_only_diagnostic_evidence",
+  "h32_status": "blocked_for_run_design_only_optional",
+  "active_core_artifact": "M_ESPI_probabilistic_differentiable_espi_observation_operator",
+  "required_next_audits": [
+    "M_ESPI_J0_squared_kernel_tests",
+    "M_ESPI_probabilistic_likelihood_tests",
+    "M_ESPI_differentiability_gradient_tests",
+    "WP2_response_target_frequency_metadata_baseline_screening",
+    "B0_B6_grouped_OOD_residual_validation"
+  ],
+  "recommended_next_branch": "dev/v32-mespi-response-roadmap",
+  "warnings": [
+    "No manuscript LaTeX was edited.",
+    "No model training or H2/H3 execution was performed.",
+    "No raw data, checkpoints, private manifests, or feature dumps were added.",
+    "Global frequency-independent morphology recognition remains unsupported.",
+    "Future image-derived claims require clean ROI/no-overlay controls and B6 residual validation."
+  ]
+}

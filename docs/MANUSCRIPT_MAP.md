@@ -1,5 +1,7 @@
 # Manuscript Evidence Map
 
+> Note: this file maps the historical locked OLEN package. It is not the active v32 PhD proposal map. For the active v32 direction, see `docs/PROPOSAL_V32_MAP.md`, `docs/WP1_FORENSIC_EVIDENCE_MAP.md`, and `docs/MESPI_OPERATOR_EVIDENCE_MAP.md`.
+
 This map tracks the final OLEN frozen ESPI representation-audit manuscript evidence package. Acoustic-response prediction is future work and is not a pending table in the current manuscript.
 
 ## Main Tables

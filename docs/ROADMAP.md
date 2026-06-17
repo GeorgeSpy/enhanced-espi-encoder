@@ -1,92 +1,131 @@
-﻿# Development Roadmap
+# Development Roadmap
 
-This roadmap describes the broader Enhanced ESPI Encoder development trajectory. It separates the completed OLEN frozen representation audit from future learned spectral, acoustic-response, physics-aware, and external-validation work.
+This roadmap reflects the post-forensic v32 direction. The repository now separates historical OLEN/v6.2-A evidence, archived H2/H3 LeFFT diagnostics, and the active measurement-consistent ESPI representation program.
 
-## Stage 0 — Completed: OLEN Frozen Representation Audit
+## Stage 0 - Historical OLEN/v6.2-A Forensic Baseline
 
-Status: completed and locked at `v0.9-olen-pre-submission-evidence`.
+Status: retained as historical locked WP1 evidence.
 
-Completed evidence blocks:
+Scope:
 
 - v6.1 vs v6.2-A frozen encoder comparison.
 - Grouped Board LOBO / Material LOMO evaluation.
 - Frequency-only and frequency-fusion controls.
 - Dimension-matched PCA audit.
-- Targeted `1_2` / `2_1` frequency-overlap analysis.
 - Balanced subset robustness analysis.
 - Quantitative embedding geometry diagnostics.
+- v62 frequency-label forensic audit.
+- Cross-model forensic audit.
 
-Stage 0 supports the locked OLEN claim that v6.2-A is the strongest evaluated image-derived frozen ESPI representation under grouped board/material evaluation, while `frequency_hz` is the dominant metadata-only predictor for the current five-class modal-label task.
+Post-forensic decision:
 
-## Stage 1 — Learned Spectral / LeFFT Diagnostics
+- v6.2-A remains the strongest available historical image-derived frozen baseline.
+- The current modal-label task is frequency-structured and partly frequency-derived.
+- Frequency-only LOBO Macro-F1 is approximately `0.932677`.
+- Global frequency-independent morphology recognition is unsupported.
+- Clean LOMO/material generalization is unsupported.
 
-Status: archived development evidence.
+## Stage 1 - Visual Leakage and Clean ROI/No-overlay Audit
 
-Outcome:
+Status: active hardening requirement.
 
-- H2 standalone CE-only LeFFT v001/v002 did not pass the grouped Board LOBO threshold.
-- H3 auxiliary LeFFT trained safely but did not produce transfer-positive representation evidence.
-- No LeFFT superiority claim is supported.
-- No H3.2 fusion run is justified at this stage.
-- Further simple scaling is not recommended.
+Purpose:
 
-## Stage 1B — Conditional Representation-Aligned Rescue
+- Determine whether actual model images contain visible `Freq:` text, source-pressure text, borders, axes, or acquisition overlays.
+- Verify ROI masks/crops before embedding extraction.
+- Build clean ROI/no-overlay image requirements.
+- Run patch, border, background, shuffled-label, and cleaned ROI diagnostics.
 
-Status: optional / planned-conditional.
+Decision rule:
 
-Possible future work:
+- No future image-derived representation claim is promoted without clean ROI/no-overlay controls and leakage-sensitive baselines.
 
-- Teacher-guided distillation from frozen v6.2-A.
-- Stronger backbone or representation head redesign.
-- Representation-aligned training under explicit grouped go/no-go criteria.
-- H3.2 no-harm fusion design-only, not execution, unless transfer-positive evidence and no-harm protocol exist.
+## Stage 2 - `M_ESPI` Operator Specification and Synthetic Validation
 
-## Stage 2 — Acoustic-Response Prediction
+Status: active design target.
 
-Status: next substantive research direction.
+Purpose:
 
-Goal: test whether ESPI representations predict acoustic-response targets beyond metadata-only controls.
+- Specify `M_ESPI`, a probabilistic differentiable ESPI observation operator.
+- Use the time-averaged ESPI `J_0^2` Bessel-kernel observation model.
+- Include background `A(x,y)`, visibility `B(x,y)`, sensitivity coefficient `c`, speckle/noise likelihoods, and differentiability requirements.
+- Validate with synthetic fields and controlled re-render smoke tests before using real response targets.
 
-Planned work:
+## Stage 3 - Measurement-consistent Representation Learning (`z_ESPI^MC`)
 
-- Define acoustic-response targets.
-- Build metadata-only, frequency-only, geometry-only, ESPI-only, and fusion baselines.
-- Test whether ESPI embeddings add predictive value beyond scalar frequency and geometry.
-- Preserve explicit separation between modal-label classification and acoustic-response prediction.
+Status: future gated work.
 
-## Stage 3 — Physics-Aware Encoder Validation
+Purpose:
 
-Goal: validate physics-aware representation learning rather than only architecture naming.
+- Move beyond historical `z_ESPI^hist` and clean candidate `z_ESPI^ROI`.
+- Train or constrain `z_ESPI^MC` through measurement consistency under `M_ESPI`.
+- Use encode-field-re-render self-supervision only after operator validation.
 
-Planned work:
+Required gates:
 
-- Representation-aligned training objectives.
-- Contrastive / metric-learning objectives.
-- Phase/fringe morphology diagnostics.
-- Material/specimen/domain robustness.
-- Matched comparisons against frozen encoder, frequency-only, and spectral controls.
+- synthetic operator tests pass,
+- gradients are stable,
+- clean ROI/no-overlay data are available,
+- no hidden frequency/metadata leakage enters the representation objective.
 
-## Stage 4 — External Validation
+## Stage 4 - WP2 Response-target Screening and B0-B6 Baselines
 
-Goal: test robustness beyond the current laboratory evidence set.
+Status: next substantive research gate.
 
-Planned work:
+Candidate targets:
 
-- Additional instruments, boards, materials, or acquisition campaigns.
-- External-laboratory or cross-setup evaluation if data become available.
-- Cross-setup metadata audits and data-sharing policy updates.
-- Release-tagged evidence snapshots for any promoted external-validation claims.
+- measured `TL(f)`,
+- FRF or response curves,
+- damping / Q-factor / bandwidth,
+- broadband/transient response descriptors,
+- radiated-field descriptors,
+- residual response after frequency-coordinate regression.
 
-<!-- BEGIN H2_H3_ARCHIVED_LEFFT_ROADMAP -->
+Required baselines:
+
+- B0 frequency-coordinate / mean-response baseline,
+- B1 metadata baseline,
+- B2 FEM/numerical descriptors,
+- B3 hand-crafted ESPI descriptors,
+- B4 `z_ESPI` embedding,
+- B5 fusion,
+- B6 residual prediction.
+
+Decision rule:
+
+- A target is viable only if frequency-coordinate and metadata baselines leave measurable residual headroom under grouped-OOD evaluation.
+
+## Stage 5 - B6 Residual Response Prediction Under Grouped-OOD Evaluation
+
+Status: future decisive validation gate.
+
+Purpose:
+
+- Test whether ESPI information explains response residuals beyond frequency, metadata, and numerical/FEM descriptors.
+- Use grouped-OOD splits by board, material, specimen, acquisition campaign, or condition where applicable.
+- Report residual improvement, confidence intervals, fold-wise results, and failure modes.
+
+Promotion rule:
+
+- A strong ESPI representation claim requires B6 residual improvement under grouped-OOD evaluation. Raw response prediction alone is not sufficient.
+
+## Stage 6 - Optional Neural / Operator Models After Target Gates
+
+Status: future optional.
+
+Scope:
+
+- Neural operators, differentiable simulators, or response-field models may be explored only after response targets pass screening gates.
+- These models must not be claimed as validated unless they beat B0-B6 baselines under grouped-OOD evaluation.
+
 ## Archived LeFFT Development Tracks
+
+H2/H3 are archived, not active roadmap drivers.
 
 - H2 standalone CE-only LeFFT track is archived.
 - H2.5 remains blocked.
 - H3.1 auxiliary LeFFT track is archived.
 - H3.2 run remains blocked.
-- H3.2 no-harm fusion design-only is optional.
+- H3.2 no-harm fusion design-only is optional, but execution is not ready.
 - No further simple H2/H3 scaling is recommended.
-- Future LeFFT work requires stronger objectives, anchored/fusion design, downstream acoustic validation, or new transfer-positive evidence.
-- Next high-value direction: acoustic-response target acquisition and downstream validation.
-- OLEN submission remains focused on H0/H1/v6.2-A locked evidence.
-<!-- END H2_H3_ARCHIVED_LEFFT_ROADMAP -->
+- Future LeFFT work would require new objectives, clean ROI controls, response-target validation, or new transfer-positive evidence.
