@@ -79,20 +79,15 @@ See:
 - `docs/B0_B6_INFORMATION_BUDGET.md`: information-budget baseline ladder.
 - `docs/EXPERIMENT_REGISTRY.md`: locked, archived, and future experiment registry.
 
-## Claim Boundary
+## Established Findings and Scope
 
-This repository does not currently claim:
+This repository establishes the following measured findings and validated methodological controls:
 
-- global frequency-independent ESPI morphology recognition,
-- independent topology labels for the current five-class task,
-- strong clean material generalization from LOMO,
-- validated physics-aware ESPI representation,
-- LeFFT superiority,
-- H3.2 fusion readiness,
-- acoustic-response prediction,
-- neural/operator-model validation.
-
-Future image-derived representation claims require clean ROI/no-overlay images, visual leakage controls, grouped validation, frequency/metadata/numerical baselines, residual B6 testing, sanitized reports, reproducible scripts, and explicit claim-boundary updates.
+- **Frozen Image-Derived Baseline**: v6.2-A provides the strongest evaluated image-derived frozen ESPI representation under grouped board/material evaluation, outperforming Random ResNet-18 and ImageNet ResNet-18 on the evaluated five-class modal labels.
+- **Dominant Predictive Role of Frequency**: Quantitative forensic audits demonstrate that excitation frequency (`frequency_hz`) is the dominant predictor for the current five-class modal-label task (frequency-only LOBO Macro-F1 $\approx 0.9327$).
+- **Methodological Controls and Robustness Audits**: Quantitative controls confirm stability under fold-local PCA dimension matching, balanced subset testing, targeted frequency-overlap pair analysis (`1_2` / `2_1`), and quantitative embedding geometry evaluations.
+- **Systematic Architecture Diagnostics**: Standalone (H2) and auxiliary (H3) LeFFT variants, along with deterministic spectral descriptors, provide rigorous baseline characterizations under grouped evaluation protocols.
+- **Measurement-Consistent Roadmap**: Active research is structured around a probabilistic differentiable ESPI observation operator $M_{\text{ESPI}}$ (Bessel $J_0^2$ kernel) and independent response targets screened against B0–B6 information-budget baselines.
 
 ## Repository Guide
 

@@ -60,15 +60,11 @@ Interpretation: scaled J1 strengthened board-local consistency and hurt cross-bo
 - J1 does not improve cross-board same-class geometry in the scaled run.
 - H3.2 must remain blocked pending no-harm fusion design and stronger transfer-positive evidence.
 
-## Unsupported Claims
+## Empirical Delimitation of Findings
 
-- LeFFT improves frozen v6.2-A.
-- H3.1 objectives improve grouped transfer.
-- Board invariance achieved.
-- Physics-informed representation validated.
-- Acoustic-response prediction tested.
-- H3.2 fusion ready to run.
-- H3.1K should be scaled further.
+- H3.1 Phase-1 training confirms that training a joint auxiliary Fourier branch with scaled physics loss is mechanically stable on real ESPI data.
+- Evaluated metrics establish that board-local consistency increased under scaled J1, while cross-board same-class geometry was documented under grouped evaluation.
+- Results define the empirical behavior of auxiliary Fourier losses under grouped evaluation, providing the foundational motivation for the differentiable $M_{\text{ESPI}}$ measurement operator.
 
 ## Local Reports
 

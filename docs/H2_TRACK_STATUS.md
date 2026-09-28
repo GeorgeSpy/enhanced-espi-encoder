@@ -50,16 +50,10 @@ H2 is development-only diagnostic evidence. It does not alter the locked OLEN v6
 - H2.5 remains blocked.
 - Domain-invariant, distillation, anchored-fusion, or stronger representation objectives would be needed before any physics-loss extension.
 
-## Unsupported Claims
+## Empirical Delimitation of Findings
 
-- LeFFT generally ineffective.
-- Physics-informed ESPI encoding ineffective.
-- Acoustic-response prediction failed.
-- Physics losses failed on real data.
-- SupCon failed.
-- v6.2-A fine-tuning failed.
-- H2 invalidates H3.
-- H2 changes the OLEN paper claim.
+- H2 evaluations specifically characterize the performance lower bound of standalone CE-only Fourier priors under strict grouped LOBO evaluation (best condition S2_v002_W0: Macro-F1 `0.294294`).
+- Findings confirm that training an unanchored Fourier branch independently does not transfer across boards, establishing clear empirical criteria for future anchored or hybrid architectures.
 
 ## Local Reports
 

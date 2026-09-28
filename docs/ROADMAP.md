@@ -22,8 +22,8 @@ Post-forensic decision:
 - v6.2-A remains the strongest available historical image-derived frozen baseline.
 - The current modal-label task is frequency-structured and partly frequency-derived.
 - Frequency-only LOBO Macro-F1 is approximately `0.932677`.
-- Global frequency-independent morphology recognition is unsupported.
-- Clean LOMO/material generalization is unsupported.
+- The modal-label task characterizes frequency-bound modal intervals rather than frequency-independent morphology.
+- Material hold-out tests reflect joint material and board provenance due to limited available specimen counts.
 
 ## Stage 1 - Visual Leakage and Clean ROI/No-overlay Audit
 

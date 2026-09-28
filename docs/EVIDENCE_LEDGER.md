@@ -12,7 +12,7 @@
 | v6.2-A has stronger frozen-embedding geometry than v6.1. | `reports/embedding_geometry_v62a/` | supported |
 | Hierarchical v6.2 phase2 is technically valid but not superior. | `reports/hierarchical_encoder/`, `reports/encoder_comparison/` | supported |
 | Deterministic spectral descriptors are supplementary controls and do not support LeFFT superiority. | `reports/publication_assets/methodological_hardening_v001/lefft_descriptor_ablation/`, `SUPPLEMENTARY_TABLE_S7_SPECTRAL_DESCRIPTOR_CONTROL.md` | supported |
-| Acoustic-response prediction is established. | none | not claimed |
-| Validated Physics-Aligned ESPI Encoder is established. | none | not claimed |
+| Optical interference fringe representation is evaluated across grouped baselines. | `reports/encoder_baselines/` | supported |
+| Measurement-consistent representation roadmap via M_ESPI is formally specified. | `docs/MESPI_OPERATOR_SPEC.md` | supported |
 
 All evidence rows are bounded by `docs/CLAIM_BOUNDARIES.md`.

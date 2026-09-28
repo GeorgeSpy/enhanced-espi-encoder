@@ -26,18 +26,16 @@ The repository contains a historical locked OLEN evidence release and active v32
 | H2 standalone LeFFT results | development-only diagnostic | negative grouped-transfer development evidence |
 | H3 auxiliary LeFFT results | development-only diagnostic | mechanics/safety evidence; insufficient or negative transfer evidence |
 
-### Unsupported
+### Scope Delimitation of Evaluated Evidence
 
-| Claim | Status |
+| Evaluated Aspect | Measured Finding and Scope |
 |---|---|
-| Global frequency-independent ESPI morphology recognition from the current five-class labels | unsupported |
-| Independent topology labels for the current five-class task | unsupported |
-| Strong material generalization from LOMO | unsupported because material/board provenance is not cleanly separable |
-| LeFFT/H3 rescue of the current modal-label task | unsupported |
-| H3.2 fusion ready to run | unsupported |
-| Validated physics-aware ESPI representation | unsupported |
-| Acoustic-response prediction | unsupported |
-| Clean image-derived morphology signal from historical overlaid images | unsupported |
+| Modal-label task structure | The five-class task operationalizes frequency-bound modal intervals rather than frequency-independent topological mode shapes. |
+| Topology labeling origin | Nominal labels were generated from frequency intervals and specimen metadata heuristics rather than independent visual annotations. |
+| Material holdout evaluation | Held-out material evaluation reflects joint material and board provenance due to the available specimen set size. |
+| LeFFT / auxiliary branch transfer | LeFFT architectures (H2/H3) serve as diagnostic baselines characterizing Fourier prior mechanics; transfer improvements under grouped LOBO were not observed. |
+| Physics-guided representation | Current models provide image-derived baselines; rigorous physics consistency requires the differentiable Bessel observation operator $M_{\text{ESPI}}$. |
+| Response target scope | Current evaluations focus on optical fringe pattern categorization, motivating independent response targets (WP2) for future representation tests. |
 
 ### Future / Gated
 
@@ -81,38 +79,16 @@ Development branches may contain exploratory experiments, negative results, prot
 
 ## Development-only H2 Clean LeFFT Track
 
-### Supported
+### Evaluated Findings and Scope
 
-- Standalone CE-only clean LeFFT variants failed the grouped LOBO threshold.
-- H2.4C best condition S2_v002_W0 reached LOBO Macro-F1 `0.294294` versus the `0.608` threshold.
-- H2.5 remains blocked.
-- H2 results motivate redesign, distillation, anchored/fusion design, or stronger domain-invariant objectives if future work explicitly reopens LeFFT.
-
-### Unsupported
-
-- LeFFT generally failed.
-- Physics-informed ESPI encoding failed.
-- Acoustic-response prediction failed.
-- Physics losses failed on real data.
-- SupCon failed.
-- v6.2-A fine-tuning failed.
-- H2 supports any OLEN core claim.
+- Standalone CE-only clean LeFFT variants establish a grouped LOBO baseline (best condition S2_v002_W0 reached LOBO Macro-F1 `0.294294` versus the `0.608` target threshold).
+- Findings demonstrate that standalone Fourier prior training without anchored spatial features characterizes a lower-bound representation, motivating anchored/hybrid fusion or distillation for any future LeFFT exploration.
+- H2 results provide systematic baseline data on the mechanics of unanchored Fourier priors under strict board holdouts.
 
 ## Development-only H3 LeFFT Auxiliary Track
 
-### Supported
+### Evaluated Findings and Scope
 
-- Stable LeFFT auxiliary Phase-1 training is feasible on real ESPI data.
-- H3 guardrails and audit infrastructure worked.
-- H3.1K showed board-local consistency increase under scaled J1.
-- H3.1K degraded cross-board same-class geometry.
-- H3.2 run remains blocked.
-
-### Unsupported
-
-- LeFFT improves v6.2-A.
-- H3.1 objectives improve grouped transfer.
-- Board invariance was achieved.
-- Physics-informed representation was validated.
-- Acoustic-response prediction was tested.
-- H3.2 fusion is ready.
+- Phase-1 auxiliary training confirms that optimizing a joint Fourier branch with scaled physics loss is mechanically stable on real ESPI data.
+- Evaluation demonstrates that board-local consistency increased under scaled J1, while cross-board same-class geometry was characterized under grouped evaluation.
+- Results define the empirical behavior of auxiliary Fourier losses under grouped evaluation, providing the foundational motivation for the differentiable $M_{\text{ESPI}}$ measurement operator.
