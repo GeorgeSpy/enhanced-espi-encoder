@@ -2,7 +2,7 @@
 
 This repository is the research and development home for the Enhanced ESPI Encoder project. It now contains three clearly separated layers:
 
-1. a historical locked WP1 OLEN evidence snapshot,
+1. a historical locked WP1 Oprics Laser in Engineering evidence snapshot,
 2. archived H2/H3 LeFFT diagnostic development evidence,
 3. the active v32 PhD roadmap centered on measurement-consistent ESPI representations and independent response targets.
 
