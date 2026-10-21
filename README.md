@@ -4,7 +4,7 @@ This repository is the research and development home for the Enhanced ESPI Encod
 
 1. a historical locked WP1 Oprics Laser in Engineering evidence snapshot,
 2. archived H2/H3 LeFFT diagnostic development evidence,
-3. the active v32 PhD roadmap centered on measurement-consistent ESPI representations and independent response targets.
+3. the active v32  roadmap centered on measurement-consistent ESPI representations and independent response targets.
 
 The repository does not track raw ESPI images, model checkpoints, full feature dumps, private manifests, or large binary artifacts.
 
@@ -22,7 +22,7 @@ The previous planned `v1.0-olen-submitted` milestone is deprecated as the active
 
 ## Current Scientific Direction
 
-The active PhD direction is no longer "show that the current five-class modal-label task proves frequency-independent morphology recognition." The active direction is:
+The active direction is no longer "show that the current five-class modal-label task proves frequency-independent morphology recognition." The active direction is:
 
 - define a probabilistic differentiable ESPI observation operator, `M_ESPI`;
 - distinguish historical, clean-ROI, and measurement-consistent representations:
